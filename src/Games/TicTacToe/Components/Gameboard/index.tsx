@@ -1,5 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '../../../../Components/Button';
+import { ButtonVariant } from '../../../../Components/Button/IButton';
 
 import { PlayersContext } from '../../Context/Players';
 import { ITicTacToePlayer } from '../../DataModels/ITicTacToePlayer';
@@ -181,12 +183,20 @@ export function Gameboard (): JSX.Element {
                 ))}
             </S.Gameboard>
             <div>
-                <button onClick={ handleRestartGameButtonClick }>Restart game</button>
-                <Link to='../'>Home</Link>
+                <Button 
+                    inline={ true } 
+                    onClick={ handleRestartGameButtonClick }
+                >Restart game</Button>
+                <Button 
+                    inline={ true } 
+                    renderAs={ Link } 
+                    to='../' 
+                    variant={ ButtonVariant.Outlined }
+                >Home</Button>
             </div>
             <dialog ref={ turnDialogRef }>
                 <div>{ currentPlayer.displayName }'s turn</div>
-                <button onClick={ handleTurnButtonClick }>OK</button>
+                <Button onClick={ handleTurnButtonClick }>OK</Button>
             </dialog>
             <dialog ref={ endDialogRef }>
                 { outcome === Outcome.Draw ?
@@ -194,7 +204,7 @@ export function Gameboard (): JSX.Element {
                     : 
                     <div>{ currentPlayer.displayName } won!</div>
                 }
-                <button onClick={ handleNewGameButtonClick }>New game</button>
+                <Button onClick={ handleNewGameButtonClick }>New game</Button>
             </dialog>
         </>
     )
