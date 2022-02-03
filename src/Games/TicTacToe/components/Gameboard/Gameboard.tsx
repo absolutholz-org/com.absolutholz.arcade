@@ -1,76 +1,29 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../../../../Components/Button';
 import { ButtonVariant } from '../../../../Components/Button/IButton';
 
-import { PlayersContext } from '../../Context/Players';
-import { ITicTacToePlayer } from '../../DataModels/ITicTacToePlayer';
-import { TicTacToePiece } from '../../Enums/TicTacToePiece';
+import { IGameCell } from '../../dataModels/IGameCell';
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { Cell } from '../Cell';
 
 import * as S from './Gameboard.styled';
-
-interface IGameCell {
-    row: number;
-    column: number;
-    piece?: TicTacToePiece;
-}
-
-const GAMEBOARD_DEFAULT_SETUP = [
-    {
-        row: 0,
-        column: 0,
-    },
-    {
-        row: 0,
-        column: 1,
-    },
-    {
-        row: 0,
-        column: 2,
-    },
-    {
-        row: 1,
-        column: 0,
-    },
-    {
-        row: 1,
-        column: 1,
-    },
-    {
-        row: 1,
-        column: 2,
-    },
-    {
-        row: 2,
-        column: 0,
-    },
-    {
-        row: 2,
-        column: 1,
-    },
-    {
-        row: 2,
-        column: 2,
-    },
-];
-
-enum Outcome {
-    Playing,
-    Win,
-    Draw,
-}
+import { DEFAULT_CELL_SETUP, useCells, useCurrentPlayer, useGameState } from '../../context/Game';
+import { GameState } from '../../enums/GameState';
+import { PlayersContext } from '../../context/Players';
 
 export function Gameboard (): JSX.Element {
-    const { player1, player2 } = useContext(PlayersContext);
-    const [ gameState, setGameState ] = useState<IGameCell[]>(GAMEBOARD_DEFAULT_SETUP);
-    const [ currentPlayer, setCurrentPlayer ] = useState<ITicTacToePlayer>(player1.piece === TicTacToePiece.x ? player1 : player2);
+    const { currentPlayer, setCurrentPlayer } = useCurrentPlayer();
+    const { cells, setCells } = useCells();
+    const { gameState, setGameState } = useGameState();
+
     const turnDialogRef = useRef<HTMLDialogElement>(null);
     const endDialogRef = useRef<HTMLDialogElement>(null);
-    const [ outcome, setOutcome ] = useState<Outcome>(Outcome.Playing);
+
+    const { player1, player2 } = useContext(PlayersContext);
 
     const handleCellClick = (row: number, column: number) => {
-        setGameState(prevState => (
+        setCells(prevState => (
             prevState.map(
               cell => cell.row === row && cell.column === column ? { ...cell, piece: currentPlayer.piece } : cell
             )
@@ -89,7 +42,7 @@ export function Gameboard (): JSX.Element {
                 throw `Incorrect directional params, row: ${ directionRow }, column: ${ directionColumn }`;
             }
 
-            const neighbor = gameState.find(cell => (
+            const neighbor = cells.find(cell => (
                 cell.column === column + directionColumn && 
                 cell.row === row + directionRow
             ));
@@ -123,13 +76,13 @@ export function Gameboard (): JSX.Element {
         console.log({rowMatch, colMatch, diagonalMatchNWSE, diagonalMatchNESW});
 
         if (rowMatch.length === 2 || colMatch.length === 2 || diagonalMatchNWSE.length === 2 || diagonalMatchNESW.length === 2) {
-            setOutcome(Outcome.Win);
+            setGameState(GameState.Win);
             return;
         }
         
-        const cells = gameState.filter(cell => !(cell.column === column && cell.row === row));
-        if (!cells.some(cell => cell.piece === undefined)) {
-            setOutcome(Outcome.Draw);
+        const foundCells = cells.filter(cell => !(cell.column === column && cell.row === row));
+        if (!foundCells.some(cell => cell.piece === undefined)) {
+            setGameState(GameState.Draw);
             return;
         }
         
@@ -142,14 +95,14 @@ export function Gameboard (): JSX.Element {
     };
 
     const handleNewGameButtonClick = () => {
-        setGameState(GAMEBOARD_DEFAULT_SETUP);
-        setOutcome(Outcome.Playing);
+        setCells(DEFAULT_CELL_SETUP);
+        setGameState(GameState.Playing);
         setCurrentPlayer(player => player === player1 ? player2 : player1);
     };
 
     const handleRestartGameButtonClick = () => {
-        setGameState(GAMEBOARD_DEFAULT_SETUP);
-        setOutcome(Outcome.Playing);
+        setCells(DEFAULT_CELL_SETUP);
+        setGameState(GameState.Playing);
     };
     
     useEffect(() => {
@@ -158,21 +111,21 @@ export function Gameboard (): JSX.Element {
     }, [ currentPlayer ]);
 
     useEffect(() => {
-        if (outcome === Outcome.Draw || outcome === Outcome.Win) {
+        if (gameState === GameState.Draw || gameState === GameState.Win) {
             // @ts-ignore
             endDialogRef.current.showModal();
         } else {
             // @ts-ignore
             endDialogRef.current.close();
         }
-    }, [ outcome ]);
+    }, [ gameState ]);
     
     console.log('RENDER: Gameboard')
 
     return (
         <>
             <S.Gameboard>
-                { gameState.map(({row, column, piece}) => (
+                { cells.map(({row, column, piece}) => (
                     <Cell 
                         column={ column } 
                         row={ row } 
@@ -199,7 +152,7 @@ export function Gameboard (): JSX.Element {
                 <Button onClick={ handleTurnButtonClick }>OK</Button>
             </dialog>
             <dialog ref={ endDialogRef }>
-                { outcome === Outcome.Draw ?
+                { gameState === GameState.Draw ?
                     <div>It's a draw!</div>
                     : 
                     <div>{ currentPlayer.displayName } won!</div>

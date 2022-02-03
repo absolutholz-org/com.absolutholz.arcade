@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 
-import { ITicTacToePlayer } from '../../DataModels/ITicTacToePlayer';
-import { TicTacToePiece } from '../../Enums/TicTacToePiece';
+import { ITicTacToePlayer } from '../../dataModels/ITicTacToePlayer';
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
 
 export interface IPlayerConfigProps {
     id: string;

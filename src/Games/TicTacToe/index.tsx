@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { PlayersProvider } from './Context/Players';
+import { PlayersProvider } from './context/Players';
 import { Game } from './Pages/Game';
 import { Home } from './Pages/Home';
 

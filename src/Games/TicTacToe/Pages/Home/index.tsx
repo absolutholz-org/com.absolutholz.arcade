@@ -1,10 +1,10 @@
 import { FormEvent, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { TicTacToePiece } from '../../Enums/TicTacToePiece';
-import { PlayerConfig } from '../../Components/PlayerConfig';
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
+import { PlayerConfig } from '../../components/PlayerConfig';
 import { Button } from '../../../../Components/Button';
-import { PlayersContext } from '../../Context/Players';
+import { PlayersContext } from '../../context/Players';
 import { ButtonVariant } from '../../../../Components/Button/IButton';
 import { PageLayoutContainer } from '../../../../Components/PageLayoutContainer';
 

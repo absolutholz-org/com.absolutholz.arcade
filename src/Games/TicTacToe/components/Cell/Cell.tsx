@@ -1,4 +1,4 @@
-import { TicTacToePiece } from '../../Enums/TicTacToePiece';
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import * as S from './Cell.styled';
 import { ICellProps } from './ICell';
 

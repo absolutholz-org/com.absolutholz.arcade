@@ -1,4 +1,4 @@
-import { TicTacToePiece } from '../../Enums/TicTacToePiece';
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { IPlayerConfigProps } from './IPlayerConfig';
 
 export function PlayerConfig ({ id, player, setPlayer, onPieceSelection }: IPlayerConfigProps): JSX.Element {
