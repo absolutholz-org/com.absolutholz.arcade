@@ -5,7 +5,6 @@ import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { PlayerConfig } from '../../components/PlayerConfig';
 import { Button } from '../../../../Components/Button';
 import { PlayersContext } from '../../context/Players';
-import { ButtonVariant } from '../../../../Components/Button/IButton';
 import { PageLayoutContainer } from '../../../../Components/PageLayoutContainer';
 
 export function Home (): JSX.Element {

@@ -39,7 +39,7 @@ export function Gameboard (): JSX.Element {
             let matches: IGameCell[] = [];
 
             if (directionColumn === 0 && directionRow === 0) {
-                throw `Incorrect directional params, row: ${ directionRow }, column: ${ directionColumn }`;
+                throw new Error(`Incorrect directional params, row: ${ directionRow }, column: ${ directionColumn }`);
             }
 
             const neighbor = cells.find(cell => (
