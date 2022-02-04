@@ -19,7 +19,6 @@ export function PlayerForm ({ formID, onSubmit }: IPlayerFormProps): JSX.Element
                 <div>Name</div>
                 <input id={ `${ formID }_name` } ref={ nameRef } required type='text' />
             </label>
-            <button>Save</button>
         </form>
     )
 }

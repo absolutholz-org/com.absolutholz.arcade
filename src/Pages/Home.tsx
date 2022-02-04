@@ -1,23 +1,23 @@
-import { useContext, useRef } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { PlayerForm } from '../Components/PlayerForm';
-import { PageLayoutContainer } from '../Components/PageLayoutContainer';
+import { PlayerForm } from '../components/PlayerForm';
+import { PageLayoutContainer } from '../components/PageLayoutContainer';
 import { UserContext } from "../Context/User";
+import { Dialog } from "../components/Dialog";
+import { Button } from "../components/Button";
 
 export function Home (): JSX.Element {
-    const loginDialogRef = useRef<HTMLDialogElement>(null);
+    const [ isPlayerDialogOpen, setIsPlayerDialogOpen ] = useState(false);
 
     const { user, saveUser, clearUser } = useContext(UserContext);
 
     const closePlayerDialog = () => {
-        // @ts-ignore
-        loginDialogRef.current.close();
+        setIsPlayerDialogOpen(false);
     }
 
     const openPlayerDialog = () => {
-        // @ts-ignore
-        loginDialogRef.current.showModal();
+        setIsPlayerDialogOpen(true);
     }
 
     const handlePlayerFormSubmit = (name: string) => {
@@ -85,12 +85,17 @@ export function Home (): JSX.Element {
                     <button onClick={ openPlayerDialog }>Log in</button>
                 }
 
-                <dialog ref={ loginDialogRef }>
+                <Dialog 
+                    isOpen={ isPlayerDialogOpen }
+                    slotFooter={
+                        <Button form='homePlayer' type='submit'>Save</Button>
+                    }
+                >
                     <PlayerForm 
                         formID='homePlayer' 
                         onSubmit={ handlePlayerFormSubmit } 
                     />
-                </dialog>
+                </Dialog>
             </main>
         </PageLayoutContainer>
     );

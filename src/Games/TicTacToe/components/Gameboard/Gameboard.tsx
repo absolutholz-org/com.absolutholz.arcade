@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button } from '../../../../Components/Button';
-import { ButtonVariant } from '../../../../Components/Button/IButton';
+import { Button } from '../../../../components/Button';
+import { ButtonVariant } from '../../../../components/Button/IButton';
+import { Dialog } from '../../../../components/Dialog';
 
 import { useGameState } from '../../context/Game';
 import { GameAction } from '../../enums/GameAction';
@@ -14,9 +15,6 @@ import * as S from './Gameboard.styled';
 
 export function Gameboard (): JSX.Element {
     const { gameState, cells, currentPlayer, dispatch } = useGameState();
-
-    const turnDialogRef = useRef<HTMLDialogElement>(null);
-    const endDialogRef = useRef<HTMLDialogElement>(null);
 
     const [ isEndGameDialogOpen, setIsEndGameDialogOpen ] = useState(false);
     const [ isTurnDialogOpen, setIsTurnDialogOpen ] = useState(false);
@@ -79,19 +77,27 @@ export function Gameboard (): JSX.Element {
                 >Home</Button>
             </div>
 
-            <dialog ref={ turnDialogRef } open={ isTurnDialogOpen }>
+            <Dialog 
+                isOpen={ isTurnDialogOpen } 
+                slotFooter={
+                    <Button onClick={ handleTurnButtonClick }>OK</Button>
+                }
+            >
                 <div>{ currentPlayer.displayName }'s turn</div>
-                <Button onClick={ handleTurnButtonClick }>OK</Button>
-            </dialog>
+            </Dialog>
             
-            <dialog ref={ endDialogRef } open={ isEndGameDialogOpen }>
+            <Dialog 
+                isOpen={ isEndGameDialogOpen }
+                slotFooter={
+                    <Button onClick={ handleNewGameButtonClick }>New game</Button>
+                }
+            >
                 { gameState === GameState.Draw ?
                     <div>It's a draw!</div>
                     : 
                     <div>{ currentPlayer.displayName } won!</div>
                 }
-                <Button onClick={ handleNewGameButtonClick }>New game</Button>
-            </dialog>
+            </Dialog>
         </>
     )
 }

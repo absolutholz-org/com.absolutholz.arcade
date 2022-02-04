@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { PlayerConfig } from '../../components/PlayerConfig';
-import { Button } from '../../../../Components/Button';
+import { Button } from '../../../../components/Button';
 import { PlayersContext } from '../../context/Players';
-import { PageLayoutContainer } from '../../../../Components/PageLayoutContainer';
+import { PageLayoutContainer } from '../../../../components/PageLayoutContainer';
 
 export function Home (): JSX.Element {
     const { player1, setPlayer1, player2, setPlayer2 } = useContext(PlayersContext);
