@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+
 import * as S from './Dialog.styled';
 import { IDialogProps } from './IDialog';
 

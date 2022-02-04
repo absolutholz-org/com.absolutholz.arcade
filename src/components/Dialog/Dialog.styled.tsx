@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
+import { Elevation } from '../Elevation';
 
 const appear = keyframes`
     from {
@@ -13,7 +14,8 @@ const appear = keyframes`
 `;
 
 export const Dialog = styled.dialog`
-    background: var(--surface);
+    ${ Elevation(4) }
+    background-color: var(--surface);
     border: 0;
     border-radius: 3px;
     color: var(--on-surface);
@@ -21,7 +23,7 @@ export const Dialog = styled.dialog`
     min-width: min(250px, 100% - (var(--page-padding) * 2));
 
     &::backdrop {
-        background: hsl(0, 0%, 0%, 0.9);
+        background: hsl(0, 0%, 0%, 0);
     }
 
     &[open] {
