@@ -7,6 +7,15 @@ import { GameState } from "../enums/GameState";
 import { GameAction } from "../enums/GameAction";
 import { TicTacToePiece } from "../enums/TicTacToePiece";
 
+const DEFAULT_CELL_SETUP = Array.from(Array(3)).map((n, row, array) => {
+    return Array.from(Array(array.length)).map((n, col) => {
+        return {
+            row: row % array.length,
+            column: col % array.length,
+        };
+    });
+}).flat();
+
 interface Action { 
     type: GameAction;
     payload?: {
@@ -159,42 +168,3 @@ export function useGameState () {
  
     return { gameState, cells, currentPlayer, dispatch };
 }
-
-const DEFAULT_CELL_SETUP = [
-    {
-        row: 0,
-        column: 0,
-    },
-    {
-        row: 0,
-        column: 1,
-    },
-    {
-        row: 0,
-        column: 2,
-    },
-    {
-        row: 1,
-        column: 0,
-    },
-    {
-        row: 1,
-        column: 1,
-    },
-    {
-        row: 1,
-        column: 2,
-    },
-    {
-        row: 2,
-        column: 0,
-    },
-    {
-        row: 2,
-        column: 1,
-    },
-    {
-        row: 2,
-        column: 2,
-    },
-];
