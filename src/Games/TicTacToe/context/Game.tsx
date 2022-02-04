@@ -1,25 +1,166 @@
-// import { turn } from "core-js/library/js/array";
-// import { createContext, ReactNode, useContext, useState } from "react";
-// import { TicTacToePiece } from "../Enums/TicTacToePiece";
-
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
+import { createContext, useContext, useReducer } from "react";
 
 import { PlayersContext } from '../context/Players';
 import { ITicTacToePlayer } from "../dataModels/ITicTacToePlayer";
 import { IGameCell } from "../dataModels/IGameCell";
 import { GameState } from "../enums/GameState";
+import { GameAction } from "../enums/GameAction";
 import { TicTacToePiece } from "../enums/TicTacToePiece";
 
-interface IGameContext {
+interface Action { 
+    type: GameAction;
+    payload?: {
+        cell?: IGameCell;
+    };
+};
+type Dispatch = (action: Action) => void
+type State = {
     gameState: GameState,
-    setGameState: Dispatch<SetStateAction<GameState>>;
     cells: IGameCell[],
-    setCells: Dispatch<SetStateAction<IGameCell[]>>;
     currentPlayer: ITicTacToePlayer,
-    setCurrentPlayer: Dispatch<SetStateAction<ITicTacToePlayer>>;
+    players: {
+        player1: ITicTacToePlayer,
+        player2: ITicTacToePlayer,
+    }
+}
+type GameProviderProps = { children: React.ReactNode }
+
+const GameStateContext = createContext<
+  { state: State; dispatch: Dispatch } | undefined
+>(undefined);
+
+const isNeighborSamePiece = (
+    cells: IGameCell[],
+    piece: TicTacToePiece, 
+    row: number, 
+    column: number, 
+    directionRow: 0 | 1 | -1, 
+    directionColumn: 0 | 1 | -1
+): IGameCell[] => {
+    let matches: IGameCell[] = [];
+
+    if (directionColumn === 0 && directionRow === 0) {
+        throw new Error(`Incorrect directional params, row: ${ directionRow }, column: ${ directionColumn }`);
+    }
+
+    const neighbor = cells.find(cell => (
+        cell.column === column + directionColumn && 
+        cell.row === row + directionRow
+    ));
+    
+    // neighbor matches current player piece, check its neighbor
+    if (neighbor?.piece === piece) {
+        matches.push(neighbor);
+        matches = [...matches, ...isNeighborSamePiece(cells, piece, neighbor.row , neighbor.column, directionRow, directionColumn)];
+    }
+
+    return matches;
 }
 
-export const DEFAULT_CELL_SETUP = [
+function gameReducer (state: State, action: Action) {
+    const { type, payload } = action;
+    console.log({ state, type, payload });
+
+    switch (type) {
+        case GameAction.Move: {
+            if (payload?.cell === undefined) {
+                return state;
+            }
+
+            const { row, column } = payload.cell;
+            const cells = state.cells.map(
+                cell => cell.row === row && cell.column === column ? { ...cell, piece: state.currentPlayer.piece } : cell
+            );
+
+            const rowMatch: IGameCell[] = [
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, 0, 1),
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, 0, -1)
+            ];
+            const colMatch: IGameCell[] = [
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, 1, 0),
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, -1, 0)
+            ];
+            const diagonalMatchNWSE: IGameCell[] = [
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, -1, -1),
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, 1, 1)
+            ];
+            const diagonalMatchNESW: IGameCell[] = [
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, -1, 1),
+                ...isNeighborSamePiece(cells, state.currentPlayer.piece, row, column, 1, -1)
+            ];
+            
+            console.log({rowMatch, colMatch, diagonalMatchNWSE, diagonalMatchNESW});
+
+            let gameState = state.gameState;
+            
+            const foundCells = cells.filter(cell => !(cell.column === column && cell.row === row));
+            if (!foundCells.some(cell => cell.piece === undefined)) {
+                gameState = GameState.Draw;
+            }
+
+            if (rowMatch.length === 2 || colMatch.length === 2 || diagonalMatchNWSE.length === 2 || diagonalMatchNESW.length === 2) {
+                gameState = GameState.Win;
+            }    
+
+            const currentPlayer = state.currentPlayer === state.players.player1 ? state.players.player2 : state.players.player1;
+
+            return { ...state, cells, currentPlayer, gameState };
+        }
+        case GameAction.NewGame: {
+            const cells = DEFAULT_CELL_SETUP;
+            const gameState = GameState.Playing;
+            const currentPlayer = state.currentPlayer === state.players.player1 ? state.players.player2 : state.players.player1;
+            
+            return { ...state, cells, currentPlayer, gameState };
+        }
+        case GameAction.Restart: {
+            const cells = DEFAULT_CELL_SETUP;
+            const gameState = GameState.Playing;
+
+            return { ...state, cells, gameState };
+        }
+        default: {
+            throw new Error(`Unhandled action type: ${type}`)
+        }
+    }
+}  
+
+export function GameProvider ({ children }: GameProviderProps) {
+    const { player1, player2 } = useContext(PlayersContext);
+    const [ state, dispatch ] = useReducer(gameReducer, {
+        gameState: GameState.Playing,
+        cells: DEFAULT_CELL_SETUP,
+        currentPlayer: player1.piece === TicTacToePiece.x ? player1 : player2,
+        players: {
+            player1,
+            player2,
+        },
+    });
+
+    // NOTE: you *might* need to memoize this value
+    // Learn more in http://kcd.im/optimize-context
+    const value = { state, dispatch };
+
+    return (
+        <GameStateContext.Provider value={value}>
+            {children}
+        </GameStateContext.Provider>
+    )
+}
+
+export function useGameState () {
+    const context = useContext(GameStateContext);
+ 
+    if (context === undefined) {
+      throw new Error('useGameState must be used within a GameStateProvider')
+    }
+
+    const { state: { gameState, cells, currentPlayer }, dispatch } = context;
+ 
+    return { gameState, cells, currentPlayer, dispatch };
+}
+
+const DEFAULT_CELL_SETUP = [
     {
         row: 0,
         column: 0,
@@ -57,134 +198,3 @@ export const DEFAULT_CELL_SETUP = [
         column: 2,
     },
 ];
-
-export const GameContext = createContext<IGameContext>({
-    gameState: GameState.Paused,
-    setGameState: () => {},
-    cells: DEFAULT_CELL_SETUP,
-    setCells: () => {},
-    currentPlayer: {
-        displayName: '',
-        piece: TicTacToePiece.x,
-    },
-    setCurrentPlayer: () => {},
-});
-
-export function CountProvider({ children }: { children: ReactNode }): JSX.Element {
-    const [ cells, setCells ] = useState<IGameCell[]>(DEFAULT_CELL_SETUP);
-    const [ gameState, setGameState ] = useState<GameState>(GameState.Paused);
-    const { player1, player2 } = useContext(PlayersContext);
-    const [ currentPlayer, setCurrentPlayer ] = useState<ITicTacToePlayer>(player1.piece === TicTacToePiece.x ? player1 : player2);
-
-    return (
-      <GameContext.Provider value={{ cells, setCells, gameState, setGameState, currentPlayer, setCurrentPlayer }}>
-        { children }
-      </GameContext.Provider>
-    );
-}
-
-export function useCells () {
-    const { cells, setCells } = useContext(GameContext);
-
-    if (cells === undefined || setCells === undefined) {
-      throw new Error('useCells must be used within a GameProvider')
-    }
-
-    return { cells, setCells };
-}
-
-export function useCurrentPlayer () {
-    const { currentPlayer, setCurrentPlayer } = useContext(GameContext);
-
-    if (currentPlayer === undefined || setCurrentPlayer === undefined) {
-      throw new Error('useCurrentPlayer must be used within a GameProvider')
-    }
-
-    return { currentPlayer, setCurrentPlayer };
-}
-
-export function useGameState () {
-    const { gameState, setGameState } = useContext(GameContext);
-
-    if (gameState === undefined || setGameState === undefined) {
-      throw new Error('useGameState must be used within a GameProvider')
-    }
-
-    return { gameState, setGameState };
-}
-  
-
-// interface IGameContext {
-//     currentPlayer: IPlayer;
-//     gameboardState: {
-//         piece: TicTacToePiece | null;
-//     }[];
-//     history: {
-//         player: IPlayer;
-//         position: {
-//             row: number;
-//             column: number;
-//         }
-//     }[];
-// }
-
-// const GameContext = createContext<IGameContext | undefined>(undefined);
-
-// export enum GameAction {
-//     Move,
-// }
-
-// function gameReducer(state, action) {
-//     switch (action.type) {
-//       case GameAction.Move: {
-//         return {count: state.count + 1}
-//       }
-//       default: {
-//         throw new Error(`Unhandled action type: ${action.type}`)
-//       }
-//     }
-//   }
-
-// export function GameProvider({ children }: { children: ReactNode }): JSX.Element {
-
-//     return (
-//       <GameContext.Provider value={{  }}>
-//           { children }
-//       </GameContext.Provider>
-//     );
-// }
-
-// export function usePlayerTurn () {
-//     const context = useContext(PlayerTurnContext);
-
-//     if (context === undefined) {
-//       throw new Error('usePlayerTurn must be used within a PlayerTurnProvider');
-//     }
-
-//     return context
-// }
-
-// gamestate: {
-//     currentPlayerTurn: Player
-//     gameboardState: [
-//         {
-//             piece: TicTacToePiece | null
-//         },
-//         {
-//             piece: TicTacToePiece | null
-//         },
-//         {
-//             piece: TicTacToePiece | null
-//         },
-//         ...
-//     ]
-//     history: [
-//         {
-//             player: Player,
-//             position: {
-//                 row: number
-//                 column: number
-//             }
-//         }
-//     ]
-// }
