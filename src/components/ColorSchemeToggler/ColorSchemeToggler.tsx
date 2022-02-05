@@ -65,37 +65,6 @@ export function ColorSchemeToggler ({ id }: IColorSchemeTogglerProps): JSX.Eleme
                 title='Click to toggle light, dark or system color schemes'
                 onClick={ toggleState }
             >{ scheme }</S.Toggler>
-
-            {/* <label htmlFor={`${id}_theme-mode-state-light`}>
-                <input 
-                    checked={ scheme === ColorScheme.Light } 
-                    id={`${id}_theme-mode-state-light`} 
-                    name='theme-mode-state-light' 
-                    onChange={ () => setScheme(ColorScheme.Light) }
-                    type='radio' 
-                    value={ ColorScheme.Light } 
-                />
-            </label>
-            <label htmlFor={`${id}_theme-mode-state-auto`}>
-                <input 
-                    checked={ scheme === ColorScheme.Auto } 
-                    id={`${id}_theme-mode-state-auto`} 
-                    name='theme-mode-state-auto' 
-                    onChange={ () => setScheme(ColorScheme.Auto) }
-                    type='radio' 
-                    value={ ColorScheme.Auto } 
-                />
-            </label>
-            <label htmlFor={`${id}_theme-mode-state-dark`}>
-                <input 
-                    checked={ scheme === ColorScheme.Dark } 
-                    id={`${id}_theme-mode-state-dark`} 
-                    name='theme-mode-state-dark' 
-                    onChange={ () => setScheme(ColorScheme.Dark) }
-                    type='radio' 
-                    value={ ColorScheme.Dark } 
-                />
-            </label> */}
         </S.Wrapper>
     );
 }
