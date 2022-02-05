@@ -2,6 +2,7 @@ import { css } from 'styled-components';
 
 // https://material.io/archive/guidelines/material-design/elevation-shadows.html#elevation-shadows-elevation-android
 // https://material.io/design/environment/elevation.html#default-elevations
+// https://material-components.github.io/material-components-web-catalog/#/component/elevation
 
 type ElevationLevel = 0 | 1 | 2 | 3 | 4 | 6 | 8 | 12 | 16 | 24;
 
