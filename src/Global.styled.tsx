@@ -1,6 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 // https://github.com/absolutholz/semantic-reboot
+
+const DarkColorSchemeCSS = css`
+    --accent: #007eff;
+    --surface: #1a1a1a;
+    --on-surface: #fff;
+`;
 
 export const GlobalStyle = createGlobalStyle`
     *, ::after, ::before {
@@ -16,11 +22,15 @@ export const GlobalStyle = createGlobalStyle`
         --on-accent: #fff;
         --surface: #fffff8;
         --on-surface: #11111a;
-        
+
+        &[data-color-scheme="dark"] {
+            ${ DarkColorSchemeCSS }
+        }
+
         @media (prefers-color-scheme: dark) {
-            --accent: #007eff;
-            --surface: #1a1a1a;
-            --on-surface: #fff;
+            &:not([data-color-scheme="light"]) {
+                ${ DarkColorSchemeCSS }
+            }
         }   
     }
 
@@ -52,21 +62,43 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--accent);
     }
 
+    button,
     input,
+    optgroup,
     select,
     textarea {
         background: none;
         color: inherit;
         font: inherit;
+        margin: 0;
+    }
+
+    input,
+    select,
+    textarea {
     }
 
     button {
-        background: none;
         border: 0;
         border-radius: 0;
-        color: inherit;
-        font: inherit;
         margin: 0;
+        padding: 0;
+    }
+
+    label {
+	    display: inline-block;
+    }
+
+    legend {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    fieldset {
+        border: 0;
+        margin: 0;
+        min-width: 0;
         padding: 0;
     }
 `;

@@ -6,6 +6,7 @@ import { PageLayoutContainer } from '../components/PageLayoutContainer';
 import { UserContext } from "../Context/User";
 import { Dialog } from "../components/Dialog";
 import { Button } from "../components/Button";
+import { ColorSchemeToggler } from "../components/ColorSchemeToggler";
 
 export function Home (): JSX.Element {
     const [ isPlayerDialogOpen, setIsPlayerDialogOpen ] = useState(false);
@@ -30,6 +31,9 @@ export function Home (): JSX.Element {
 
     return (
         <PageLayoutContainer>
+            <header>
+                <ColorSchemeToggler />
+            </header>
             <main>
                 <h1>Arcade</h1>
 
