@@ -68,7 +68,6 @@ function getElevationDarkModeOverlayOpacity (level: ElevationLevel): number {
 
 export function Elevation ( level: ElevationLevel ) {
     return css`
-        
         /* This is the overlay used to lighten the element as it is "elevated" */
         background-image: linear-gradient(
             red,
