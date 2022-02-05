@@ -1,4 +1,4 @@
-import { FormEvent, useRef } from "react";
+import { FormEvent, useRef } from 'react';
 
 import { IPlayerFormProps } from './IPlayerForm';
 

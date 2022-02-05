@@ -43,26 +43,26 @@ export function PlayerConfig ({ id, player, setPlayer, onPieceSelection }: IPlay
                 <label htmlFor={ `player-${ id }_piece-x `}>
                     <span>X</span>
                     <input 
-                        checked={ player.piece === TicTacToePiece.x } 
+                        checked={ player.piece === TicTacToePiece.X } 
                         id={ `player-${ id }_piece-x `} 
                         name={  `player-${ id }_piece `} 
-                        onChange={ (e) => handlePieceChange(TicTacToePiece.x) }
+                        onChange={ (e) => handlePieceChange(TicTacToePiece.X) }
                         required 
                         type='radio' 
-                        value={ TicTacToePiece.x } 
+                        value={ TicTacToePiece.X } 
                     />
                 </label>
 
                 <label htmlFor={ `player-${ id }_piece-o `}>
                     <span>O</span>
                     <input 
-                        checked={ player.piece === TicTacToePiece.o } 
+                        checked={ player.piece === TicTacToePiece.O } 
                         id={ `player-${ id }_piece-o `} 
                         name={ `player-${ id }_piece `} 
-                        onChange={ (e) => handlePieceChange(TicTacToePiece.o) }
+                        onChange={ (e) => handlePieceChange(TicTacToePiece.O) }
                         required 
                         type='radio' 
-                        value={ TicTacToePiece.o } 
+                        value={ TicTacToePiece.O } 
                     />
                 </label>
             </fieldset>

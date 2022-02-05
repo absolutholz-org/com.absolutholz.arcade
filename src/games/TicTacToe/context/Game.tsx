@@ -1,11 +1,11 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from 'react';
 
 import { PlayersContext } from '../context/Players';
-import { ITicTacToePlayer } from "../dataModels/ITicTacToePlayer";
-import { IGameCell } from "../dataModels/IGameCell";
-import { GameState } from "../enums/GameState";
-import { GameAction } from "../enums/GameAction";
-import { TicTacToePiece } from "../enums/TicTacToePiece";
+import { ITicTacToePlayer } from '../dataModels/ITicTacToePlayer';
+import { IGameCell } from '../dataModels/IGameCell';
+import { GameState } from '../enums/GameState';
+import { GameAction } from '../enums/GameAction';
+import { TicTacToePiece } from '../enums/TicTacToePiece';
 
 const DEFAULT_CELL_SETUP = Array.from(Array(3)).map((n, row, array) => {
     return Array.from(Array(array.length)).map((n, col) => {
@@ -139,7 +139,7 @@ export function GameProvider ({ children }: GameProviderProps) {
     const [ state, dispatch ] = useReducer(gameReducer, {
         gameState: GameState.Playing,
         cells: DEFAULT_CELL_SETUP,
-        currentPlayer: player1.piece === TicTacToePiece.x ? player1 : player2,
+        currentPlayer: player1.piece === TicTacToePiece.X ? player1 : player2,
         players: {
             player1,
             player2,

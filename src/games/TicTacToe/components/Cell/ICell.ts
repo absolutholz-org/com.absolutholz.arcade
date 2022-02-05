@@ -1,4 +1,4 @@
-import { TicTacToePiece } from "../../enums/TicTacToePiece";
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
 
 export interface ICellProps {
     row: number;

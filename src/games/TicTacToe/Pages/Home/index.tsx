@@ -15,7 +15,7 @@ export function Home (): JSX.Element {
         setPlayer2((player) => {
             return {
                 ...player,
-                piece: piece === TicTacToePiece.x ? TicTacToePiece.o : TicTacToePiece.x,
+                piece: piece === TicTacToePiece.X ? TicTacToePiece.O : TicTacToePiece.X,
             };
         });
 
@@ -26,7 +26,7 @@ export function Home (): JSX.Element {
         setPlayer1((player) => {
             return {
                 ...player,
-                piece: piece === TicTacToePiece.x ? TicTacToePiece.o : TicTacToePiece.x,
+                piece: piece === TicTacToePiece.X ? TicTacToePiece.O : TicTacToePiece.X,
             };
         });
 

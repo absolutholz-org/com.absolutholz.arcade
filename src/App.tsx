@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import * as S from './Global.styled';
 
-import { Home } from './Pages/Home';
-import { Games } from './Games';
-import { UserProvider } from './Context/User';
+import { Home } from './pages/Home';
+import { Games } from './games';
+import { UserProvider } from './context/User';
 
 function App(): JSX.Element {
     return (
@@ -12,8 +12,8 @@ function App(): JSX.Element {
         <S.GlobalStyle />
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/*" element={<Games />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/*' element={<Games />} />
             </Routes>
         </BrowserRouter>
       </UserProvider>

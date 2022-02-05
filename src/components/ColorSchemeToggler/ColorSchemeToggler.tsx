@@ -34,7 +34,6 @@ export function ColorSchemeToggler ({ id }: IColorSchemeTogglerProps): JSX.Eleme
     };
 
     useEffect(() => {
-        console.log(localStorage.getItem(STORAGE_KEY));
         switch (localStorage.getItem(STORAGE_KEY)) {
             case ColorScheme.Light:
                 setScheme(ColorScheme.Light);
@@ -48,7 +47,6 @@ export function ColorSchemeToggler ({ id }: IColorSchemeTogglerProps): JSX.Eleme
     }, []);
 
     useEffect(() => {
-        console.log({scheme});
         if (scheme === ColorScheme.Light) {
             elHtml.setAttribute(HTML_SCHEME_ATTRIBUTE, 'light');
             setSchemeIcon(SvgSchemeLight);

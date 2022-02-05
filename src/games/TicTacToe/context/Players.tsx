@@ -1,8 +1,8 @@
-import { useState, createContext, ReactNode, useEffect, Dispatch, SetStateAction, useContext } from "react";
-import { UserContext } from "../../../Context/User";
+import { useState, createContext, ReactNode, useEffect, Dispatch, SetStateAction, useContext } from 'react';
+import { UserContext } from '../../../context/User';
 
-import { ITicTacToePlayer } from "../dataModels/ITicTacToePlayer";
-import { TicTacToePiece } from "../enums/TicTacToePiece";
+import { ITicTacToePlayer } from '../dataModels/ITicTacToePlayer';
+import { TicTacToePiece } from '../enums/TicTacToePiece';
 
 interface IPlayersContext {
     player1: ITicTacToePlayer;
@@ -14,12 +14,12 @@ interface IPlayersContext {
 const defaultState = {
     player1: {
         displayName: '',
-        piece: TicTacToePiece.x,
+        piece: TicTacToePiece.X,
     },
     setPlayer1: () => {},
     player2: {
         displayName: '',
-        piece: TicTacToePiece.o,
+        piece: TicTacToePiece.O,
     },
     setPlayer2: () => {},
 }
