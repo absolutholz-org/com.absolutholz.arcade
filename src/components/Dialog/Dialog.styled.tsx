@@ -24,7 +24,8 @@ export const Dialog = styled.dialog`
     min-width: min(250px, 100% - (var(--page-padding) * 2));
 
     &::backdrop {
-        background: hsl(0, 0%, 0%, 0);
+        background: hsl(0, 0%, 0%, 0.7);
+        filter: blur(5px);
     }
 
     &[open] {

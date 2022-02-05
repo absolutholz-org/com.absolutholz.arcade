@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { PlayersProvider } from './context/Players';
-import { Game } from './Pages/Game';
-import { Home } from './Pages/Home';
+import { Game } from './pages/Game';
+import { Home } from './pages/Home';
 
 export function TicTacToe (): JSX.Element {
     return (
@@ -14,5 +14,3 @@ export function TicTacToe (): JSX.Element {
         </PlayersProvider>
     )
 }
-
-export default TicTacToe;
