@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+
 import { Elevation } from '../Elevation';
 
 const appear = keyframes`
@@ -14,7 +15,7 @@ const appear = keyframes`
 `;
 
 export const Dialog = styled.dialog`
-    ${ Elevation(4) }
+    ${ Elevation(24) }
     background-color: var(--surface);
     border: 0;
     border-radius: 3px;
