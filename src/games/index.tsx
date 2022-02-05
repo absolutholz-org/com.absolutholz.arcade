@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Checkers from './Checkers';
-import Connect4 from './Connect4';
-import DotsAndBoxes from './DotsAndBoxes';
-import Memory from './Memory';
-import Minesweeper from './Minesweeper';
-import Sudoku from './Sudoku';
+import { Checkers } from './Checkers';
+import { Connect4 } from './Connect4';
+import { DotsAndBoxes } from './DotsAndBoxes';
+import { Memory } from './Memory';
+import { Minesweeper } from './Minesweeper';
+import { Sudoku } from './Sudoku';
 import { TicTacToe } from './TicTacToe';
 
 export function Games (): JSX.Element {
