@@ -1,17 +1,19 @@
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { UserContext } from '../context/User';
 import { PlayerForm } from '../components/PlayerForm';
 import { PageLayoutContainer } from '../components/PageLayoutContainer';
 import { Button } from '../components/Button';
-import { Card } from '../components/Card';
+import { CardBillboard, CardBillboardCoverLink, CardBillboardHeadline } from '../components/CardBillboard';
 import { Dialog } from '../components/Dialog';
 import { IconText } from '../components/IconText';
 import { ColorSchemeToggler } from '../components/ColorSchemeToggler';
+import { VisuallyHidden } from '../components/VisuallyHidden';
 
 import { ReactComponent as SvgJoystick } from '../assets/joystick.svg';
 import { Icon } from '../components/Icon';
+
+import * as S from './Home.styled';
 
 export function Home (): JSX.Element {
     const [ isPlayerDialogOpen, setIsPlayerDialogOpen ] = useState(false);
@@ -36,14 +38,104 @@ export function Home (): JSX.Element {
 
     return (
         <PageLayoutContainer>
-            <header>
-                <ColorSchemeToggler />
-            </header>
             <main>
                 <IconText tag='h1' slotIconPrefix={ <Icon>{ SvgJoystick }</Icon> }>
                     <div>absolutholz</div>
                     Arcade
                 </IconText>
+
+                <nav>
+                    <VisuallyHidden as='h2'>Games</VisuallyHidden>
+
+                    <S.Section>
+                        <S.SectionHeadline as='h3'>Single Player</S.SectionHeadline>
+
+                        <S.CardGrid>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/purple-mountain-lake.jpg'
+                            >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/sudoku'>Sudoku</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/purple-flowers-sunset.jpg'
+                            >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/minesweeper'>Minesweeper</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                        </S.CardGrid>
+
+                    </S.Section>
+
+                    <S.Section>
+                        <S.SectionHeadline as='h3'>Two Players</S.SectionHeadline>
+
+                        <S.CardGrid>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/green-hills.jpg'
+                                >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/tictactoe'>Tic Tac Toe</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/desert-river.jpg'
+                                >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/connect4'>Connect 4</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/dead-tree-prairie.jpg'
+                            >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/checkers'>Checkers</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                        </S.CardGrid>
+
+                    </S.Section>
+
+                    <S.Section>
+                        <S.SectionHeadline as='h3'>Multiple Players</S.SectionHeadline>
+
+                        <S.CardGrid>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/bright-forest-stump.jpg'
+                            >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/memory'>Memory</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                            <CardBillboard 
+                                imgUri='/img/bg/original/autumn-trees.jpg'
+                            >
+                                <CardBillboardHeadline tag='h4'>
+                                    <CardBillboardCoverLink to='/dotsandboxes'>Dots & Boxes</CardBillboardCoverLink>
+                                </CardBillboardHeadline>
+                            </CardBillboard>
+
+                        </S.CardGrid>
+
+                    </S.Section>
+                </nav>
+            </main>
+
+            <footer>
+                <div>
+                    <ColorSchemeToggler />
+                </div>
 
                 { user?.displayName &&
                     <div>
@@ -52,63 +144,22 @@ export function Home (): JSX.Element {
                     </div>
                 }
 
-                <nav>
-                    <h2>Games</h2>
-                    <section>
-                        <h3>Single Player</h3>
-                        <Card tag='article'>
-                            <h4>Sudoku</h4>
-                            <Link to='/sudoku'>Play</Link>
-                        </Card>
-                        <Card tag='article'>
-                            <h4>Minesweeper</h4>
-                            <Link to='/minesweeper'>Play</Link>
-                        </Card>
-                    </section>
-                    <section>
-                        <h3>Two Players</h3>
-                        <Card tag='article'>
-                            <h4>TicTacToe</h4>
-                            <Link to='/tictactoe'>Play</Link>
-                        </Card>
-                        <Card tag='article'>
-                            <h4>Connect 4</h4>
-                            <Link to='/connect4'>Play</Link>
-                        </Card>
-                        <Card tag='article'>
-                            <h4>Checkers</h4>
-                            <Link to='/checkers'>Play</Link>
-                        </Card>
-                    </section>
-                    <section>
-                        <h3>Multiple Players</h3>
-                        <Card tag='article'>
-                            <h4>Memory</h4>
-                            <Link to='/memory'>Play</Link>
-                        </Card>
-                        <Card tag='article'>
-                            <h4>Dots & Boxes</h4>
-                            <Link to='/dotsandboxes'>Play</Link>
-                        </Card>
-                    </section>
-                </nav>
-
                 { !user &&
                     <button onClick={ openPlayerDialog }>Log in</button>
                 }
+            </footer>
 
-                <Dialog 
-                    isOpen={ isPlayerDialogOpen }
-                    slotFooter={
-                        <Button form='homePlayer' type='submit'>Save</Button>
-                    }
-                >
-                    <PlayerForm 
-                        formID='homePlayer' 
-                        onSubmit={ handlePlayerFormSubmit } 
-                    />
-                </Dialog>
-            </main>
+            <Dialog 
+                isOpen={ isPlayerDialogOpen }
+                slotFooter={
+                    <Button form='homePlayer' type='submit'>Save</Button>
+                }
+            >
+                <PlayerForm 
+                    formID='homePlayer' 
+                    onSubmit={ handlePlayerFormSubmit } 
+                />
+            </Dialog>
         </PageLayoutContainer>
     );
 }
