@@ -3,7 +3,7 @@ import { IIconTextProps } from './IIconText';
 
 export function IconText ({ children, slotIconPrefix, slotIconSuffix, tag = 'div', ...props }: IIconTextProps): JSX.Element {
     return (
-        <S.IconText as={ tag } {...props}>
+        <S.IconText as={ tag } { ...props }>
             { slotIconPrefix &&
                 <div>
                     { slotIconPrefix }
