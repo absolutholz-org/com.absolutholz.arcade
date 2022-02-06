@@ -15,8 +15,63 @@ import { Icon } from '../components/Icon';
 
 import * as S from './Home.styled';
 
+const GAME_GROUPS = [
+    {
+        name: 'Single Player',
+        games: [
+            {
+                imgUri: '/img/bg/original/purple-mountain-lake.jpg',
+                url: '/sudoku',
+                name: 'Sudoku',
+            }, 
+            {
+                imgUri: '/img/bg/original/purple-flowers-sunset.jpg',
+                url: '/minesweeper',
+                name: 'Minesweeper',
+            }, 
+        ],
+    },
+    {
+        name: 'Two Players',
+        games: [
+            {
+                imgUri: '/img/bg/original/green-hills.jpg',
+                url: '/tictactoe',
+                name: 'Tic Tac Toe',
+            }, 
+            {
+                imgUri: '/img/bg/original/desert-river.jpg',
+                url: '/connect4',
+                name: 'Connect 4',
+            }, 
+            {
+                imgUri: '/img/bg/original/dead-tree-prairie.jpg',
+                url: '/checkers',
+                name: 'Checkers',
+            }, 
+        ],
+    },
+    {
+        name: 'Multiple Players',
+        games: [
+            {
+                imgUri: '/img/bg/original/bright-forest-stump.jpg',
+                url: '/memory',
+                name: 'Memory',
+            }, 
+            {
+                imgUri: '/img/bg/original/autumn-trees.jpg',
+                url: '/dotsandboxes',
+                name: 'Dots & Boxes',
+            },
+        ],
+    }, 
+{}
+]
+
 export function Home (): JSX.Element {
     const [ isPlayerDialogOpen, setIsPlayerDialogOpen ] = useState(false);
+    const [ gameGroups ] = useState(GAME_GROUPS);
 
     const { user, saveUser, clearUser } = useContext(UserContext);
 
@@ -47,88 +102,25 @@ export function Home (): JSX.Element {
                 <nav>
                     <VisuallyHidden as='h2'>Games</VisuallyHidden>
 
-                    <S.Section>
-                        <S.SectionHeadline as='h3'>Single Player</S.SectionHeadline>
+                    { gameGroups.map(({ name, games }) => (
+                        <S.Section>
+                            <S.SectionHeadline as='h3'>{ name }</S.SectionHeadline>
 
-                        <S.CardGrid>
+                            <S.CardGrid>
+                                { games && games.map(({ name, url, imgUri }) => (
+                                    <CardBillboard 
+                                        imgUri={ imgUri }
+                                    >
+                                        <CardBillboardHeadline tag='h4'>
+                                            <CardBillboardCoverLink to={ url }>{ name }</CardBillboardCoverLink>
+                                        </CardBillboardHeadline>
+                                    </CardBillboard>
+                                ))}
+                            </S.CardGrid>
 
-                            <CardBillboard 
-                                imgUri='/img/bg/original/purple-mountain-lake.jpg'
-                            >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/sudoku'>Sudoku</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
+                        </S.Section>
 
-                            <CardBillboard 
-                                imgUri='/img/bg/original/purple-flowers-sunset.jpg'
-                            >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/minesweeper'>Minesweeper</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
-
-                        </S.CardGrid>
-
-                    </S.Section>
-
-                    <S.Section>
-                        <S.SectionHeadline as='h3'>Two Players</S.SectionHeadline>
-
-                        <S.CardGrid>
-
-                            <CardBillboard 
-                                imgUri='/img/bg/original/green-hills.jpg'
-                                >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/tictactoe'>Tic Tac Toe</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
-
-                            <CardBillboard 
-                                imgUri='/img/bg/original/desert-river.jpg'
-                                >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/connect4'>Connect 4</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
-
-                            <CardBillboard 
-                                imgUri='/img/bg/original/dead-tree-prairie.jpg'
-                            >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/checkers'>Checkers</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
-
-                        </S.CardGrid>
-
-                    </S.Section>
-
-                    <S.Section>
-                        <S.SectionHeadline as='h3'>Multiple Players</S.SectionHeadline>
-
-                        <S.CardGrid>
-
-                            <CardBillboard 
-                                imgUri='/img/bg/original/bright-forest-stump.jpg'
-                            >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/memory'>Memory</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
-
-                            <CardBillboard 
-                                imgUri='/img/bg/original/autumn-trees.jpg'
-                            >
-                                <CardBillboardHeadline tag='h4'>
-                                    <CardBillboardCoverLink to='/dotsandboxes'>Dots & Boxes</CardBillboardCoverLink>
-                                </CardBillboardHeadline>
-                            </CardBillboard>
-
-                        </S.CardGrid>
-
-                    </S.Section>
+                    ))}
                 </nav>
             </main>
 
