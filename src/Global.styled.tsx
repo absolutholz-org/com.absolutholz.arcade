@@ -4,8 +4,9 @@ import { createGlobalStyle, css } from 'styled-components';
 
 const DarkColorSchemeCSS = css`
     --accent: #007eff;
-    --surface: #1a1a1a;
-    --on-surface: #fff;
+    --surface-hsl: 0, 0%, 10%;
+    --surface: hsl(var(--surface-hsl));
+    --on-surface: hsla(0, 0%, 100%, var(--on-surface-alpha, 1));
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -19,9 +20,10 @@ export const GlobalStyle = createGlobalStyle`
 
     :root {
         --accent: #006ecd;
-        --on-accent: #fff;
-        --surface: #fffff8;
-        --on-surface: #11111a;
+        --on-accent: hsla(0, 0%, 10%, var(--on-accent-alpha, 1));
+        --surface-hsl: 60, 100%, 99%;
+        --surface: hsl(var(--surface-hsl));
+        --on-surface: hsl(240, 21%, 8%);
 
         &[data-color-scheme="dark"] {
             ${ DarkColorSchemeCSS }
@@ -32,6 +34,19 @@ export const GlobalStyle = createGlobalStyle`
                 ${ DarkColorSchemeCSS }
             }
         }   
+
+        --gutter: 0.5rem;
+        --offset: 1rem;
+
+        @media (min-width: 600px) {
+            --gutter: 1rem;
+            --offset: 1.5rem;
+        }
+        
+        @media (min-width: 900px) {
+            --gutter: 1.25rem;
+            --offset: 2rem;
+        }
     }
 
     html {
@@ -56,10 +71,6 @@ export const GlobalStyle = createGlobalStyle`
 
     [tabindex="-1"]:focus {
         outline: none !important;
-    }
-
-    a {
-        color: var(--accent);
     }
 
     button,
@@ -100,5 +111,14 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         min-width: 0;
         padding: 0;
+    }
+
+    a {
+        color: var(--accent);
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
     }
 `;
