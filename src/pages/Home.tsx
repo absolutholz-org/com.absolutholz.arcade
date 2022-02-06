@@ -7,7 +7,11 @@ import { PageLayoutContainer } from '../components/PageLayoutContainer';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { Dialog } from '../components/Dialog';
+import { IconText } from '../components/IconText';
 import { ColorSchemeToggler } from '../components/ColorSchemeToggler';
+
+import { ReactComponent as SvgJoystick } from '../assets/joystick.svg';
+import { Icon } from '../components/Icon';
 
 export function Home (): JSX.Element {
     const [ isPlayerDialogOpen, setIsPlayerDialogOpen ] = useState(false);
@@ -36,7 +40,10 @@ export function Home (): JSX.Element {
                 <ColorSchemeToggler />
             </header>
             <main>
-                <h1>Arcade</h1>
+                <IconText tag='h1' slotIconPrefix={ <Icon>{ SvgJoystick }</Icon> }>
+                    <div>absolutholz</div>
+                    Arcade
+                </IconText>
 
                 { user?.displayName &&
                     <div>
