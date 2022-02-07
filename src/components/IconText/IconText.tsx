@@ -1,13 +1,13 @@
 import * as S from './IconText.styled';
 import { IIconTextProps } from './IIconText';
 
-export function IconText ({ children, slotIconPrefix, slotIconSuffix, tag = 'div', ...props }: IIconTextProps): JSX.Element {
+export function IconText ({ children, slotIconPrefix, slotIconSuffix, tag = 'div', verticalAlignment = 'center', ...props }: IIconTextProps): JSX.Element {
     return (
-        <S.IconText as={ tag } { ...props }>
+        <S.IconText as={ tag } $verticalAlignment={ verticalAlignment } { ...props }>
             { slotIconPrefix &&
-                <div>
+                <S.IconWrapper>
                     { slotIconPrefix }
-                </div>
+                </S.IconWrapper>
             }
             <div>
                 { children }

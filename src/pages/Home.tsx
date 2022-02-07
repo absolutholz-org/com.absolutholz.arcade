@@ -23,12 +23,12 @@ const GAME_GROUPS = [
                 imgUri: '/img/bg/original/purple-mountain-lake.jpg',
                 url: '/sudoku',
                 name: 'Sudoku',
-            }, 
+            },
             {
                 imgUri: '/img/bg/original/purple-flowers-sunset.jpg',
                 url: '/minesweeper',
                 name: 'Minesweeper',
-            }, 
+            },
         ],
     },
     {
@@ -38,17 +38,17 @@ const GAME_GROUPS = [
                 imgUri: '/img/bg/original/green-hills.jpg',
                 url: '/tictactoe',
                 name: 'Tic Tac Toe',
-            }, 
+            },
             {
                 imgUri: '/img/bg/original/desert-river.jpg',
                 url: '/connect4',
                 name: 'Connect 4',
-            }, 
+            },
             {
                 imgUri: '/img/bg/original/dead-tree-prairie.jpg',
                 url: '/checkers',
                 name: 'Checkers',
-            }, 
+            },
         ],
     },
     {
@@ -58,14 +58,14 @@ const GAME_GROUPS = [
                 imgUri: '/img/bg/original/bright-forest-stump.jpg',
                 url: '/memory',
                 name: 'Memory',
-            }, 
+            },
             {
                 imgUri: '/img/bg/original/autumn-trees.jpg',
                 url: '/dotsandboxes',
                 name: 'Dots & Boxes',
             },
         ],
-    }, 
+    },
 {}
 ]
 
@@ -94,22 +94,27 @@ export function Home (): JSX.Element {
     return (
         <PageLayoutContainer>
             <main>
-                <IconText tag='h1' slotIconPrefix={ <Icon>{ SvgJoystick }</Icon> }>
-                    <div>absolutholz</div>
-                    Arcade
-                </IconText>
+                <S.SectionHeader
+					tag='h1'
+					slotIconPrefix={ <S.PageHeadlineIcon>{ SvgJoystick }</S.PageHeadlineIcon> }
+					verticalAlignment='end'
+				>
+                    <S.PageHeadlineSub>absolutholz</S.PageHeadlineSub>
+                    <S.PageHeadline>Arcade</S.PageHeadline>
+                </S.SectionHeader>
 
                 <nav>
                     <VisuallyHidden as='h2'>Games</VisuallyHidden>
 
                     { gameGroups.map(({ name, games }) => (
-                        <S.Section>
+                        <S.Section key={ `game-group_${ name }` }>
                             <S.SectionHeadline as='h3'>{ name }</S.SectionHeadline>
 
                             <S.CardGrid>
                                 { games && games.map(({ name, url, imgUri }) => (
-                                    <CardBillboard 
+                                    <CardBillboard
                                         imgUri={ imgUri }
+										key={ `game_${ name }` }
                                     >
                                         <CardBillboardHeadline tag='h4'>
                                             <CardBillboardCoverLink to={ url }>{ name }</CardBillboardCoverLink>
@@ -141,15 +146,15 @@ export function Home (): JSX.Element {
                 }
             </footer>
 
-            <Dialog 
+            <Dialog
                 isOpen={ isPlayerDialogOpen }
                 slotFooter={
                     <Button form='homePlayer' type='submit'>Save</Button>
                 }
             >
-                <PlayerForm 
-                    formID='homePlayer' 
-                    onSubmit={ handlePlayerFormSubmit } 
+                <PlayerForm
+                    formID='homePlayer'
+                    onSubmit={ handlePlayerFormSubmit }
                 />
             </Dialog>
         </PageLayoutContainer>

@@ -5,4 +5,5 @@ export interface IIconTextProps {
     slotIconPrefix?: ReactNode;
     slotIconSuffix?: ReactNode;
     tag?: keyof JSX.IntrinsicElements;
+	verticalAlignment?: 'center' | 'end' | 'start';
 }
