@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../../../../components/Button';
 import { ButtonVariant } from '../../../../components/Button/IButton';
-import { Dialog } from '../../../../components/Dialog';
+import { DialogAlert } from '../../../../components/DialogAlert';
+import { DialogConfirm } from '../../../../components/DialogConfirm';
 
 import { useGameState } from '../../context/Game';
 import { GameAction } from '../../enums/GameAction';
@@ -13,7 +14,7 @@ import { Cell } from '../Cell';
 
 import * as S from './Gameboard.styled';
 
-export function Gameboard (): JSX.Element {
+export function Gameboard ({ ...props }): JSX.Element {
     const { gameState, cells, currentPlayer, dispatch } = useGameState();
 
     const [ isEndGameDialogOpen, setIsEndGameDialogOpen ] = useState(false);
@@ -34,7 +35,7 @@ export function Gameboard (): JSX.Element {
     const handleRestartGameButtonClick = () => {
         dispatch({ type: GameAction.Restart });
     };
-    
+
     useEffect(() => {
         console.log({ currentPlayer });
         setIsTurnDialogOpen(true);
@@ -48,56 +49,57 @@ export function Gameboard (): JSX.Element {
             setIsEndGameDialogOpen(false);
         }
     }, [ gameState ]);
-    
+
     console.log('RENDER: Gameboard')
 
     return (
         <>
-            <S.Gameboard>
+            <S.Gameboard { ...props }>
                 { cells.map(({row, column, piece}) => (
-                    <Cell 
-                        column={ column } 
-                        row={ row } 
-                        onClick={ handleCellClick } 
+                    <Cell
+                        column={ column }
+                        row={ row }
+                        onClick={ handleCellClick }
                         mark={ piece }
                         key={ `tictactoe-cell-${ row }x${ column }` }
                     />
                 ))}
             </S.Gameboard>
-            <div>
-                <Button 
-                    inline={ true } 
+            <S.Buttons>
+                <Button
+                    inline={ true }
                     onClick={ handleRestartGameButtonClick }
+                    variant={ ButtonVariant.Outlined }
                 >Restart game</Button>
-                <Button 
-                    inline={ true } 
-                    renderAs={ Link } 
-                    to='../' 
+                <Button
+                    inline={ true }
+                    renderAs={ Link }
+                    to='../'
                     variant={ ButtonVariant.Outlined }
                 >Home</Button>
-            </div>
+            </S.Buttons>
 
-            <Dialog 
-                isOpen={ isTurnDialogOpen } 
-                slotFooter={
-                    <Button onClick={ handleTurnButtonClick }>OK</Button>
-                }
+            <DialogAlert
+                isOpen={ isTurnDialogOpen }
+                onConfirm={ handleTurnButtonClick }
             >
                 <div>{ currentPlayer.displayName }'s turn</div>
-            </Dialog>
-            
-            <Dialog 
+            </DialogAlert>
+
+            <DialogConfirm
                 isOpen={ isEndGameDialogOpen }
-                slotFooter={
-                    <Button onClick={ handleNewGameButtonClick }>New game</Button>
-                }
+                onConfirm={ handleNewGameButtonClick }
+				slotConfirmButton='New game'
+                onCancel={ handleNewGameButtonClick }
+				slotCancelButton='No thanks'
             >
                 { gameState === GameState.Draw ?
                     <div>It's a draw!</div>
-                    : 
+                    :
                     <div>{ currentPlayer.displayName } won!</div>
                 }
-            </Dialog>
+				<div>Play again?</div>
+            </DialogConfirm>
         </>
     )
 }

@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :root {
         --accent: #006ecd;
-        --on-accent: hsla(0, 0%, 10%, var(--on-accent-alpha, 1));
+        --on-accent: #fff;
         --surface-hsl: 60, 100%, 99%;
         --surface: hsl(var(--surface-hsl));
         --on-surface-hsl: 240, 21%, 8%;

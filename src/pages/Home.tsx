@@ -6,12 +6,10 @@ import { PageLayoutContainer } from '../components/PageLayoutContainer';
 import { Button } from '../components/Button';
 import { CardBillboard, CardBillboardCoverLink, CardBillboardHeadline } from '../components/CardBillboard';
 import { Dialog } from '../components/Dialog';
-import { IconText } from '../components/IconText';
 import { ColorSchemeToggler } from '../components/ColorSchemeToggler';
 import { VisuallyHidden } from '../components/VisuallyHidden';
 
 import { ReactComponent as SvgJoystick } from '../assets/joystick.svg';
-import { Icon } from '../components/Icon';
 
 import * as S from './Home.styled';
 
