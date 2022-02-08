@@ -5,15 +5,14 @@ import { createGlobalStyle, css } from 'styled-components';
 const DarkColorSchemeCSS = css`
     --accent: #007eff;
     --surface-hsl: 0, 0%, 10%;
-    --surface: hsl(var(--surface-hsl));
-    --on-surface: hsla(0, 0%, 100%, var(--on-surface-alpha, 1));
+    --on-surface-hsl: 0, 0%, 100%;
 `;
 
 export const GlobalStyle = createGlobalStyle`
     *, ::after, ::before {
         box-sizing: border-box;
     }
-    
+
     @viewport {
 		width: device-width;
 	}
@@ -23,7 +22,8 @@ export const GlobalStyle = createGlobalStyle`
         --on-accent: hsla(0, 0%, 10%, var(--on-accent-alpha, 1));
         --surface-hsl: 60, 100%, 99%;
         --surface: hsl(var(--surface-hsl));
-        --on-surface: hsl(240, 21%, 8%);
+        --on-surface-hsl: 240, 21%, 8%;
+		--on-surface: hsl(var(--on-surface-hsl));
 
         &[data-color-scheme="dark"] {
             ${ DarkColorSchemeCSS }
@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
             &:not([data-color-scheme="light"]) {
                 ${ DarkColorSchemeCSS }
             }
-        }   
+        }
 
         --gutter: 0.5rem;
         --offset: 1rem;
@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
             --gutter: 1rem;
             --offset: 1.5rem;
         }
-        
+
         @media (min-width: 900px) {
             --gutter: 1.25rem;
             --offset: 2rem;
