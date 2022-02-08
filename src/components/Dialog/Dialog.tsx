@@ -3,11 +3,12 @@ import { useEffect, useRef } from 'react';
 import * as S from './Dialog.styled';
 import { IDialogProps } from './IDialog';
 
-export function Dialog ({ 
-    children, 
-    isOpen = false, 
-    isModal = true, 
-    slotFooter, 
+export function Dialog ({
+    children,
+    isOpen = false,
+    isModal = true,
+    slotFooter,
+	slotButtonBar
 }: IDialogProps): JSX.Element {
     const ref = useRef<HTMLDialogElement>(null);
 
@@ -28,13 +29,16 @@ export function Dialog ({
             // @ts-ignore
             ref.current.close();
         }
-    }, [ isOpen ])
+    }, [ isOpen ]);
 
     return (
         <S.Dialog ref={ ref }>
             { children }
-            { slotFooter && 
+            { slotFooter &&
                 <S.Footer>{ slotFooter }</S.Footer>
+            }
+            { slotButtonBar &&
+                <S.ButtonBar>{ slotButtonBar }</S.ButtonBar>
             }
         </S.Dialog>
     )

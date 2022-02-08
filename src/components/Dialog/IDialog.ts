@@ -5,4 +5,5 @@ export interface IDialogProps {
     isOpen?: boolean;
     isModal?: boolean;
     slotFooter?: ReactNode;
+    slotButtonBar?: ReactNode;
 }
