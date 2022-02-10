@@ -65,6 +65,7 @@ export function Gameboard ({ ...props }): JSX.Element {
                     />
                 ))}
             </S.Gameboard>
+
             <S.Buttons>
                 <Button
                     inline={ true }

@@ -13,15 +13,15 @@ export function Cell ({ row, column, mark, onClick}: ICellProps): JSX.Element {
     console.log('RENDER: Cell')
 
     return (
-        <S.Cell 
+        <S.Cell
             id={ `${ row }x${ column }` }
         >
             <S.Button disabled={ mark !== undefined } onClick={ handleButtonClick }>
                 { mark && mark === TicTacToePiece.X &&
-                    <Icon>{ SvgO }</Icon>
+                    <Icon>{ SvgX }</Icon>
                 }
                 { mark && mark === TicTacToePiece.O &&
-                    <Icon>{ SvgX }</Icon>
+                    <Icon>{ SvgO }</Icon>
                 }
             </S.Button>
         </S.Cell>
