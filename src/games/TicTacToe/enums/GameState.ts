@@ -1,6 +1,6 @@
 export const enum GameState {
-    Draw,
-    Paused,
-    Playing,
-    Win,
+	Draw,
+	Paused,
+	Playing,
+	Win,
 }

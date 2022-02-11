@@ -4,16 +4,16 @@ import { Scoreboard } from '../../components/Scoreboard';
 import { GameProvider } from '../../context/Game';
 import * as S from './Game.styled';
 
-export function Game (): JSX.Element {
-    return (
-        <GameProvider>
+export function Game(): JSX.Element {
+	return (
+		<GameProvider>
 			<SiteHeader />
-            <PageLayoutContainer>
-                <main>
-                    <S.Gameboard />
-                    <Scoreboard />
-                </main>
-            </PageLayoutContainer>
-        </GameProvider>
-    );
+			<PageLayoutContainer>
+				<main>
+					<S.Gameboard />
+					<Scoreboard />
+				</main>
+			</PageLayoutContainer>
+		</GameProvider>
+	);
 }

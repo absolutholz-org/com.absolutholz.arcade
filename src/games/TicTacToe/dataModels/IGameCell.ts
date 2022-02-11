@@ -1,7 +1,7 @@
 import { TicTacToePiece } from '../enums/TicTacToePiece';
 
 export interface IGameCell {
-    row: number;
-    column: number;
-    piece?: TicTacToePiece;
+	row: number;
+	column: number;
+	piece?: TicTacToePiece;
 }

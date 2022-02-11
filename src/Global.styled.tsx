@@ -3,9 +3,9 @@ import { createGlobalStyle, css } from 'styled-components';
 // https://github.com/absolutholz/semantic-reboot
 
 const DarkColorSchemeCSS = css`
-    --accent: #007eff;
-    --surface-hsl: 0, 0%, 10%;
-    --on-surface-hsl: 0, 0%, 100%;
+	--accent: #007eff;
+	--surface-hsl: 0, 0%, 10%;
+	--on-surface-hsl: 0, 0%, 100%;
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -26,12 +26,12 @@ export const GlobalStyle = createGlobalStyle`
 		--on-surface: hsl(var(--on-surface-hsl));
 
         &[data-color-scheme="dark"] {
-            ${ DarkColorSchemeCSS }
+            ${DarkColorSchemeCSS}
         }
 
         @media (prefers-color-scheme: dark) {
             &:not([data-color-scheme="light"]) {
-                ${ DarkColorSchemeCSS }
+                ${DarkColorSchemeCSS}
             }
         }
 

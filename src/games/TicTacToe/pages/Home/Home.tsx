@@ -9,42 +9,49 @@ import { SiteFooter } from '../../../../components/SiteFooter';
 import { PlayersContext } from '../../context/Players';
 import { PageLayoutContainer } from '../../../../components/PageLayoutContainer';
 
-export function Home (): JSX.Element {
-    const { player1, setPlayer1, player2, setPlayer2 } = useContext(PlayersContext);
-    const navigate = useNavigate();
+export function Home(): JSX.Element {
+	const { player1, setPlayer1, player2, setPlayer2 } =
+		useContext(PlayersContext);
+	const navigate = useNavigate();
 
-    const handlePlayer1PieceSelection = (piece: TicTacToePiece): void => {
-        setPlayer2((player) => {
-            return {
-                ...player,
-                piece: piece === TicTacToePiece.X ? TicTacToePiece.O : TicTacToePiece.X,
-            };
-        });
+	const handlePlayer1PieceSelection = (piece: TicTacToePiece): void => {
+		setPlayer2((player) => {
+			return {
+				...player,
+				piece:
+					piece === TicTacToePiece.X
+						? TicTacToePiece.O
+						: TicTacToePiece.X,
+			};
+		});
 
-        return;
-    }
+		return;
+	};
 
-    const handlePlayer2PieceSelection = (piece: TicTacToePiece): void => {
-        setPlayer1((player) => {
-            return {
-                ...player,
-                piece: piece === TicTacToePiece.X ? TicTacToePiece.O : TicTacToePiece.X,
-            };
-        });
+	const handlePlayer2PieceSelection = (piece: TicTacToePiece): void => {
+		setPlayer1((player) => {
+			return {
+				...player,
+				piece:
+					piece === TicTacToePiece.X
+						? TicTacToePiece.O
+						: TicTacToePiece.X,
+			};
+		});
 
-        return;
-    }
+		return;
+	};
 
-    const handleStartGame = (event: FormEvent) => {
-        event.preventDefault();
-        navigate('game');
-    };
+	const handleStartGame = (event: FormEvent) => {
+		event.preventDefault();
+		navigate('game');
+	};
 
-    return (
+	return (
 		<>
 			<SiteHeader />
 			<PageLayoutContainer>
-				<form onSubmit={ handleStartGame }>
+				<form onSubmit={handleStartGame}>
 					<h1>Tic Tac Toe</h1>
 
 					<fieldset>
@@ -52,16 +59,16 @@ export function Home (): JSX.Element {
 
 						<PlayerConfig
 							id='1'
-							player={ player1 }
-							setPlayer={ setPlayer1 }
-							onPieceSelection={ handlePlayer1PieceSelection }
+							player={player1}
+							setPlayer={setPlayer1}
+							onPieceSelection={handlePlayer1PieceSelection}
 						/>
 
 						<PlayerConfig
 							id='2'
-							player={ player2 }
-							setPlayer={ setPlayer2 }
-							onPieceSelection={ handlePlayer2PieceSelection }
+							player={player2}
+							setPlayer={setPlayer2}
+							onPieceSelection={handlePlayer2PieceSelection}
 						/>
 					</fieldset>
 
@@ -74,11 +81,15 @@ export function Home (): JSX.Element {
 					</fieldset>
 
 					<Button
-						disabled={ player1.displayName === '' || player2.displayName === '' }
-					>Start Game</Button>
+						disabled={
+							player1.displayName === '' ||
+							player2.displayName === ''
+						}>
+						Start Game
+					</Button>
 				</form>
 			</PageLayoutContainer>
 			<SiteFooter />
 		</>
-    )
+	);
 }

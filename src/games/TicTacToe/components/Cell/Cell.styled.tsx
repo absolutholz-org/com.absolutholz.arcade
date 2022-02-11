@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import { Icon } from '../../../../components/Icon/Icon.styled';
 
 export const Cell = styled.div`
-    aspect-ratio: 1 / 1;
-    background: var(--surface);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	aspect-ratio: 1 / 1;
+	background: var(--surface);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const Button = styled.button`
-    height: calc(100% - 1rem);
-    width: calc(100% - 1rem);
+	height: calc(100% - 1rem);
+	width: calc(100% - 1rem);
 
-    > ${ Icon } {
-        height: 100%;
-    }
+	> ${Icon} {
+		height: 100%;
+	}
 `;

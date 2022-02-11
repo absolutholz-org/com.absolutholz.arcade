@@ -22,6 +22,7 @@ module.exports = {
 		// 'react/jsx-curly-spacing': ['error', 'always'],
 		'react/jsx-uses-react': 'off',
 		'react/react-in-jsx-scope': 'off',
+		'react/no-unescaped-entities': 'off',
 		'object-curly-spacing': ['error', 'always'],
 	},
 	overrides: [

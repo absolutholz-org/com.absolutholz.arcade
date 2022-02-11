@@ -1,4 +1,4 @@
 export const enum TicTacToePiece {
-    X = 'X',
-    O = 'O',
+	X = 'X',
+	O = 'O',
 }
