@@ -3,7 +3,7 @@ import { Button } from '../Button';
 
 import { IDialogAlertProps } from './IDialogAlert';
 
-export function DialogAlert ({
+export function DialogAlert({
 	children,
 	onConfirm,
 	slotConfirmButton = 'OK',
@@ -20,14 +20,14 @@ export function DialogAlert ({
 		<Dialog
 			slotButtonBar={
 				<>
-					{ slotButtonBar }
-					<Button
-						inline={ true }
-						onClick={ handleConfirm }
-					>{ slotConfirmButton }</Button>
+					{slotButtonBar}
+					<Button inline={true} onClick={handleConfirm}>
+						{slotConfirmButton}
+					</Button>
 				</>
 			}
-			{ ...props }
-		>{ children }</Dialog>
-	)
+			{...props}>
+			{children}
+		</Dialog>
+	);
 }

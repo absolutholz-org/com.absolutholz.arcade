@@ -1,11 +1,11 @@
-import { FunctionComponent, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 export interface ICardBillboardProps {
-    children: ReactNode;
-    imgUri: string;
+	children: ReactNode;
+	imgUri: string;
 }
 
 export interface ICardBillboardHeadlineProps {
-    children: ReactNode;
-    tag?: keyof JSX.IntrinsicElements;
+	children: ReactNode;
+	tag?: keyof JSX.IntrinsicElements;
 }

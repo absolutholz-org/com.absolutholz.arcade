@@ -34,20 +34,17 @@ import { IButtonProps } from './IButton';
 import * as S from './Button.styled';
 import { ElementType } from 'react';
 
-export function Button <T extends ElementType = 'button'>({ 
-    renderAs, 
-    children,
-    inline,
-    variant, 
-    ...props 
+export function Button<T extends ElementType = 'button'>({
+	renderAs,
+	children,
+	inline,
+	variant,
+	...props
 }: IButtonProps<T>): JSX.Element {
-    return (
-        // @ts-ignore
-        <S.Button 
-            as={ renderAs } 
-            $inline={ inline }
-            $variant={ variant }
-            { ...props }
-        >{ children }</S.Button>
-    );
+	return (
+		// @ts-ignore
+		<S.Button as={renderAs} $inline={inline} $variant={variant} {...props}>
+			{children}
+		</S.Button>
+	);
 }

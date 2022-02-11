@@ -1,8 +1,8 @@
 export interface IPlayerFormSubmitReturn {
-    name: string,
+	name: string;
 }
 
 export interface IPlayerFormProps {
-    formID: string;
-    onSubmit: (name: string) => void;
+	formID: string;
+	onSubmit: (name: string) => void;
 }

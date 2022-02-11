@@ -1,5 +1,5 @@
 export const enum ColorScheme {
-    Light = 'light',
-    Auto = 'auto',
-    Dark = 'dark',
+	Light = 'light',
+	Auto = 'auto',
+	Dark = 'dark',
 }

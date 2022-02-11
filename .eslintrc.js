@@ -2,17 +2,34 @@
 // https://glebbahmutov.com/blog/configure-prettier-in-vscode/
 
 module.exports = {
+	env: {
+		node: true,
+		browser: true,
+		es6: true,
+	},
 	parser: '@typescript-eslint/parser',
 	extends: [
-		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
 		'eslint:recommended',
-		'prettier',
+		'plugin:react/recommended',
+		// 'react-app',
+		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
-		'prettier/@typescript-eslint',
+		'prettier',
 	],
 	plugins: ['prettier'],
 	rules: {
 		'prettier/prettier': 'error',
+		// 'react/jsx-curly-spacing': ['error', 'always'],
+		'react/jsx-uses-react': 'off',
+		'react/react-in-jsx-scope': 'off',
+		'object-curly-spacing': ['error', 'always'],
 	},
+	overrides: [
+		{
+			files: ['*.ts', '*.tsx'],
+			rules: {
+				'no-undef': 'off',
+			},
+		},
+	],
 };

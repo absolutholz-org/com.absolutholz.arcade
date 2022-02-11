@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 
-import { ISiteHeaderProps } from './ISiteHeader';
 import * as S from './SiteHeader.styled';
 import { Icon } from '../Icon';
 import { UserContext } from '../../context/User';
@@ -11,56 +10,60 @@ import { Dialog } from '../Dialog';
 import { Button } from '../Button';
 import { PlayerForm } from '../PlayerForm';
 
-export function SiteHeader ({}: ISiteHeaderProps): JSX.Element {
+export function SiteHeader(): JSX.Element {
 	const { user, saveUser, clearUser } = useContext(UserContext);
-    const [ isPlayerDialogOpen, setIsPlayerDialogOpen ] = useState(false);
+	const [isPlayerDialogOpen, setIsPlayerDialogOpen] = useState(false);
 
 	const closePlayerDialog = () => {
-        setIsPlayerDialogOpen(false);
-    }
+		setIsPlayerDialogOpen(false);
+	};
 
-    const openPlayerDialog = () => {
-        setIsPlayerDialogOpen(true);
-    }
+	const openPlayerDialog = () => {
+		setIsPlayerDialogOpen(true);
+	};
 
-    const handlePlayerFormSubmit = (name: string) => {
-        console.log({name});
-        closePlayerDialog();
-        saveUser({
-            displayName: name
-        });
-    };
+	const handlePlayerFormSubmit = (name: string) => {
+		console.log({ name });
+		closePlayerDialog();
+		saveUser({
+			displayName: name,
+		});
+	};
 
 	return (
 		<S.SiteHeader>
 			<S.SiteHeaderContainer>
 				<div>
 					<S.LogoLink to='/'>
-						<S.LogoIconText slotIconPrefix={ <Icon>{ SvgJoystick }</Icon> }>
+						<S.LogoIconText
+							slotIconPrefix={<Icon>{SvgJoystick}</Icon>}>
 							Arcade
 						</S.LogoIconText>
 					</S.LogoLink>
 				</div>
 
 				<div>
-					{ user?.displayName ?
-						<button onClick={ clearUser }>{ user.displayName }</button>
-						:
-						<button onClick={ openPlayerDialog }><Icon>{ SvgLogin }</Icon></button>
-					}
+					{user?.displayName ? (
+						<button onClick={clearUser}>{user.displayName}</button>
+					) : (
+						<button onClick={openPlayerDialog}>
+							<Icon>{SvgLogin}</Icon>
+						</button>
+					)}
 				</div>
 				<Dialog
-					isOpen={ isPlayerDialogOpen }
+					isOpen={isPlayerDialogOpen}
 					slotFooter={
-						<Button form='homePlayer' type='submit'>Save</Button>
-					}
-				>
+						<Button form='homePlayer' type='submit'>
+							Save
+						</Button>
+					}>
 					<PlayerForm
 						formID='homePlayer'
-						onSubmit={ handlePlayerFormSubmit }
+						onSubmit={handlePlayerFormSubmit}
 					/>
 				</Dialog>
 			</S.SiteHeaderContainer>
 		</S.SiteHeader>
-	)
+	);
 }

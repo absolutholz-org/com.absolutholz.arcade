@@ -7,17 +7,17 @@ import { Games } from './games';
 import { UserProvider } from './context/User';
 
 function App(): JSX.Element {
-    return (
-      <UserProvider>
-        <S.GlobalStyle />
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/*' element={<Games />} />
-            </Routes>
-        </BrowserRouter>
-      </UserProvider>
-    );
+	return (
+		<UserProvider>
+			<S.GlobalStyle />
+			<BrowserRouter>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/*' element={<Games />} />
+				</Routes>
+			</BrowserRouter>
+		</UserProvider>
+	);
 }
 
 export default App;

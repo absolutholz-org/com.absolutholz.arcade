@@ -4,7 +4,7 @@ import { IDialogConfirmProps } from './IDialogConfirm';
 import { ButtonVariant } from '../Button/IButton';
 import { DialogAlert } from '../DialogAlert';
 
-export function DialogConfirm ({
+export function DialogConfirm({
 	children,
 	onCancel,
 	slotCancelButton = 'Cancel',
@@ -21,13 +21,15 @@ export function DialogConfirm ({
 			slotButtonBar={
 				<>
 					<Button
-						inline={ true }
-						onClick={ handleCancel }
-						variant={ ButtonVariant.Outlined }
-					>{ slotCancelButton }</Button>
+						inline={true}
+						onClick={handleCancel}
+						variant={ButtonVariant.Outlined}>
+						{slotCancelButton}
+					</Button>
 				</>
 			}
-			{ ...props }
-		>{ children }</DialogAlert>
-	)
+			{...props}>
+			{children}
+		</DialogAlert>
+	);
 }
