@@ -12,7 +12,7 @@ interface IUserContext {
 
 const defaultState = {
 	user: null,
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
+	// eslint-disable-next-line @typescript-eslint/no-empty-function , @typescript-eslint/no-unused-vars
 	saveUser: (user: IUser) => {},
 	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	clearUser: () => {},

@@ -51,7 +51,7 @@ export function PlayerConfig({
 						checked={player.piece === TicTacToePiece.X}
 						id={`player-${id}_piece-x `}
 						name={`player-${id}_piece `}
-						onChange={(e) => handlePieceChange(TicTacToePiece.X)}
+						onChange={() => handlePieceChange(TicTacToePiece.X)}
 						required
 						type='radio'
 						value={TicTacToePiece.X}
@@ -64,7 +64,7 @@ export function PlayerConfig({
 						checked={player.piece === TicTacToePiece.O}
 						id={`player-${id}_piece-o `}
 						name={`player-${id}_piece `}
-						onChange={(e) => handlePieceChange(TicTacToePiece.O)}
+						onChange={() => handlePieceChange(TicTacToePiece.O)}
 						required
 						type='radio'
 						value={TicTacToePiece.O}

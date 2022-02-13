@@ -13,11 +13,7 @@ export function IconText({
 		<S.IconText as={tag} $verticalAlignment={verticalAlignment} {...props}>
 			{slotIconPrefix && <S.IconWrapper>{slotIconPrefix}</S.IconWrapper>}
 			<div>{children}</div>
-			{/* { slotIconSuffix &&
-                <div>
-                    { slotIconSuffix }
-                </div>
-            } */}
+			{slotIconSuffix && <div>{slotIconSuffix}</div>}
 		</S.IconText>
 	);
 }
