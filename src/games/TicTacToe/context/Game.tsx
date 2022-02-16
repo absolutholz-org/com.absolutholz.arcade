@@ -256,9 +256,9 @@ export function useGameState() {
 	}
 
 	const {
-		state: { gameState, cells, currentPlayer },
+		state: { gameState, cells, currentPlayer, players },
 		dispatch,
 	} = context;
 
-	return { gameState, cells, currentPlayer, dispatch };
+	return { gameState, cells, currentPlayer, dispatch, players };
 }

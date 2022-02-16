@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { PlayersProvider } from './context/Players';
-import { Game } from './pages/Game';
-import { Home } from './pages/Home';
+import { GamePage } from './pages/GamePage';
+import { HomePage } from './pages/HomePage';
 
 export function TicTacToe(): JSX.Element {
 	return (
 		<PlayersProvider>
 			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='game' element={<Game />} />
+				<Route path='/' element={<HomePage />} />
+				<Route path='game' element={<GamePage />} />
 			</Routes>
 		</PlayersProvider>
 	);

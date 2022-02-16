@@ -9,7 +9,7 @@ import { SiteFooter } from '../../../../components/SiteFooter';
 import { PlayersContext } from '../../context/Players';
 import { PageLayoutContainer } from '../../../../components/PageLayoutContainer';
 
-export function Home(): JSX.Element {
+export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
 		useContext(PlayersContext);
 	const navigate = useNavigate();
