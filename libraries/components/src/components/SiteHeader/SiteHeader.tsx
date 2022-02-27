@@ -2,10 +2,19 @@ import { useContext, useState } from 'react';
 
 import * as S from './SiteHeader.styled';
 import { Icon } from '../Icon';
-import { UserContext } from '../../context/User';
+import { UserContext } from '@arcade/common/context/User';
 
-import { ReactComponent as SvgJoystick } from '../../assets/joystick.svg';
-import { ReactComponent as SvgLogin } from '@mdi/svg/svg/login-variant.svg';
+// import { ReactComponent as SvgJoystick } from '@arcade/common/assets/joystick.svg';
+// import { ReactComponent as SvgLogin } from '@mdi/svg/svg/login-variant.svg';
+
+function SvgJoystick(): JSX.Element {
+	return <>JS</>;
+}
+
+function SvgLogin(): JSX.Element {
+	return <>Login</>;
+}
+
 import { Dialog } from '../Dialog';
 import { Button } from '../Button';
 import { PlayerForm } from '../PlayerForm';

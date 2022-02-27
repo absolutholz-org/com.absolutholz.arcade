@@ -1,19 +1,31 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 
-import { ColorScheme } from '../../enums/ColorScheme';
+import { ColorScheme } from '@arcade/common/enums/ColorScheme';
 import { Icon } from '../Icon';
-import { IconSize } from '../../enums/IconSize';
+import { IconSize } from '@arcade/common/enums/IconSize';
 
 import * as S from './ColorSchemeToggler.styled';
 
-import { ReactComponent as SvgSchemeAuto } from '@mdi/svg/svg/theme-light-dark.svg';
-import { ReactComponent as SvgSchemeLight } from '@mdi/svg/svg/weather-sunny.svg';
-import { ReactComponent as SvgSchemeDark } from '@mdi/svg/svg/weather-night.svg';
+// import { ReactComponent as SvgSchemeAuto } from '@mdi/svg/svg/theme-light-dark.svg';
+// import { ReactComponent as SvgSchemeLight } from '@mdi/svg/svg/weather-sunny.svg';
+// import { ReactComponent as SvgSchemeDark } from '@mdi/svg/svg/weather-night.svg';
 
 const STORAGE_KEY = 'absolutholz.arcade:color-theme';
 const HTML_SCHEME_ATTRIBUTE = 'data-color-scheme';
 
 const elHtml = document.getElementsByTagName('html')[0];
+
+function SvgSchemeAuto(): JSX.Element {
+	return <>Auto</>;
+}
+
+function SvgSchemeLight(): JSX.Element {
+	return <>Light</>;
+}
+
+function SvgSchemeDark(): JSX.Element {
+	return <>Dark</>;
+}
 
 export function ColorSchemeToggler(): JSX.Element {
 	const [scheme, setScheme] = useState<ColorScheme>(ColorScheme.Auto);
@@ -68,7 +80,8 @@ export function ColorSchemeToggler(): JSX.Element {
 				aria-label='Click to toggle light, dark or system color schemes'
 				title='Click to toggle light, dark or system color schemes'
 				onClick={toggleState}>
-				<Icon size={IconSize.x150}>{schemeIcon}</Icon>
+				{schemeIcon}
+				{/* <Icon size={IconSize.x150}>{schemeIcon}</Icon> */}
 			</S.Toggler>
 		</S.Wrapper>
 	);
