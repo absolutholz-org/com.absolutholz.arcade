@@ -7,7 +7,7 @@ import {
 	SetStateAction,
 	useContext,
 } from 'react';
-import { UserContext } from '../../../context/User';
+import { UserContext } from '@arcade/common/context/User';
 
 import { ITicTacToePlayer } from '../dataModels/ITicTacToePlayer';
 import { TicTacToePiece } from '../enums/TicTacToePiece';

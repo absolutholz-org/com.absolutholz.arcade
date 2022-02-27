@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 
 import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { PlayerConfig } from '../../components/PlayerConfig';
-import { Button } from '../../../../components/Button';
-import { SiteHeader } from '../../../../components/SiteHeader';
-import { SiteFooter } from '../../../../components/SiteFooter';
+import {
+	Button,
+	PageLayoutContainer,
+	SiteHeader,
+	SiteFooter,
+} from '@arcade/components';
 import { PlayersContext } from '../../context/Players';
-import { PageLayoutContainer } from '../../../../components/PageLayoutContainer';
 
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =

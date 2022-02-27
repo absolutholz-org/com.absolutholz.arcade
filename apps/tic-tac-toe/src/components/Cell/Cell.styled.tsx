@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Icon } from '../../../../components/Icon/Icon.styled';
+import { Icon } from '@arcade/components';
 
 export const Cell = styled.div`
 	aspect-ratio: 1 / 1;

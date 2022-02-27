@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button } from '../../../../components/Button';
-import { ButtonVariant } from '../../../../components/Button/IButton';
-import { DialogAlert } from '../../../../components/DialogAlert';
-import { DialogConfirm } from '../../../../components/DialogConfirm';
+import {
+	Button,
+	ButtonVariant,
+	DialogAlert,
+	DialogConfirm,
+} from '@arcade/components';
 
 import { useGameState } from '../../context/Game';
 import { GameAction } from '../../enums/GameAction';

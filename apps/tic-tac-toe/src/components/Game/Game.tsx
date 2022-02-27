@@ -1,7 +1,7 @@
 import { useGameState } from '../../context/Game';
 import * as S from './Game.styled';
 import { Scoreboard } from '../Scoreboard';
-import { useMediaQuery } from '../../../../hooks/useMediaQuery';
+import { useMediaQuery } from '@arcade/common/hooks/useMediaQuery';
 
 export function Game(): JSX.Element {
 	const {

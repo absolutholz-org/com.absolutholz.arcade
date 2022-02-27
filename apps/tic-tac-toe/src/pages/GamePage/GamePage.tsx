@@ -1,5 +1,4 @@
-import { PageLayoutContainer } from '../../../../components/PageLayoutContainer';
-import { SiteHeader } from '../../../../components/SiteHeader';
+import { PageLayoutContainer, SiteHeader } from '@arcade/components';
 import { GameProvider } from '../../context/Game';
 import { Game } from '../../components/Game';
 
