@@ -7,12 +7,10 @@ import { UserContext } from '@arcade/common/context/User';
 // import { ReactComponent as SvgJoystick } from '@arcade/common/assets/joystick.svg';
 // import { ReactComponent as SvgLogin } from '@mdi/svg/svg/login-variant.svg';
 
+import SvgLogin from 'mdi-react/LoginVariantIcon';
+
 function SvgJoystick(): JSX.Element {
 	return <>JS</>;
-}
-
-function SvgLogin(): JSX.Element {
-	return <>Login</>;
 }
 
 import { Dialog } from '../Dialog';
@@ -56,7 +54,8 @@ export function SiteHeader(): JSX.Element {
 						<button onClick={clearUser}>{user.displayName}</button>
 					) : (
 						<button onClick={openPlayerDialog}>
-							<Icon>{SvgLogin}</Icon>
+							{/* <Icon>{SvgLogin}</Icon> */}
+							<SvgLogin />
 						</button>
 					)}
 				</div>

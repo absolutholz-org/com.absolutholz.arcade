@@ -11,6 +11,7 @@
     "@arcade/common": "*",
     "@arcade/components": "*",
     "@mdi/svg": "^6.5.95",
+    "mdi-react": "^8.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
