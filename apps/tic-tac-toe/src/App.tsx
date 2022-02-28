@@ -10,7 +10,7 @@ export function App(): JSX.Element {
 	return (
 		<PlayersProvider>
 			<GlobalStyle />
-			<BrowserRouter basename='/tic-tac-toe'>
+			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='game' element={<GamePage />} />
