@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-import { Icon } from '../components/Icon';
-import { IconText } from '../components/IconText';
+import { Icon, IconText } from '@arcade/components';
 
 export const Section = styled.section`
 	padding-bottom: 1.5rem;

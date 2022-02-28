@@ -1,19 +1,19 @@
 import { useContext, useState } from 'react';
 
-import { UserContext } from '../context/User';
-import { PlayerForm } from '../components/PlayerForm';
-import { PageLayoutContainer } from '../components/PageLayoutContainer';
-import { Button } from '../components/Button';
+import { UserContext } from '@arcade/common/context/User';
 import {
+	Button,
 	CardBillboard,
 	CardBillboardCoverLink,
 	CardBillboardHeadline,
-} from '../components/CardBillboard';
-import { Dialog } from '../components/Dialog';
-import { ColorSchemeToggler } from '../components/ColorSchemeToggler';
-import { VisuallyHidden } from '../components/VisuallyHidden';
+	ColorSchemeToggler,
+	Dialog,
+	PageLayoutContainer,
+	PlayerForm,
+	VisuallyHidden,
+} from '@arcade/components';
 
-import { ReactComponent as SvgJoystick } from '../assets/joystick.svg';
+// import { ReactComponent as SvgJoystick } from '../assets/joystick.svg';
 
 import * as S from './Home.styled';
 
@@ -98,9 +98,9 @@ export function Home(): JSX.Element {
 			<main>
 				<S.SectionHeader
 					tag='h1'
-					slotIconPrefix={
-						<S.PageHeadlineIcon>{SvgJoystick}</S.PageHeadlineIcon>
-					}
+					// slotIconPrefix={
+					// 	<S.PageHeadlineIcon>{SvgJoystick}</S.PageHeadlineIcon>
+					// }
 					verticalAlignment='end'>
 					<S.PageHeadlineSub>absolutholz</S.PageHeadlineSub>
 					<S.PageHeadline>Arcade</S.PageHeadline>
