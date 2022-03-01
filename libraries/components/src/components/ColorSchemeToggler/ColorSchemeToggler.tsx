@@ -1,7 +1,7 @@
-import { FunctionComponent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ColorScheme } from '@arcade/common/enums/ColorScheme';
-import { IconSize } from '@arcade/common/enums/IconSize';
+import { IconSize } from '@arcade/components';
 
 import MdiReactIconComponentType from 'mdi-react';
 

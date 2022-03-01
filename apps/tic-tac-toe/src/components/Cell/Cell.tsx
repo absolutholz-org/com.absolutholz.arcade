@@ -8,6 +8,7 @@ import { ICellProps } from './ICell';
 
 import SvgO from 'mdi-react/CircleOutlineIcon';
 import SvgX from 'mdi-react/WindowCloseIcon';
+import { IconSize } from '@arcade/components';
 
 export function Cell({ row, column, mark, onClick }: ICellProps): JSX.Element {
 	const handleButtonClick = (): void => {
@@ -18,10 +19,12 @@ export function Cell({ row, column, mark, onClick }: ICellProps): JSX.Element {
 	return (
 		<S.Cell id={`${row}x${column}`}>
 			<S.Button disabled={mark !== undefined} onClick={handleButtonClick}>
-				{/* {mark && mark === TicTacToePiece.X && <Icon>{SvgX}</Icon>}
-				{mark && mark === TicTacToePiece.O && <Icon>{SvgO}</Icon>} */}
-				{mark && mark === TicTacToePiece.X && <SvgX size='inherit' />}
-				{mark && mark === TicTacToePiece.O && <SvgO size='inherit' />}
+				{mark && mark === TicTacToePiece.X && (
+					<Icon size={IconSize.Full} icon={SvgX} />
+				)}
+				{mark && mark === TicTacToePiece.O && (
+					<Icon size={IconSize.Full} icon={SvgO} />
+				)}
 			</S.Button>
 		</S.Cell>
 	);
