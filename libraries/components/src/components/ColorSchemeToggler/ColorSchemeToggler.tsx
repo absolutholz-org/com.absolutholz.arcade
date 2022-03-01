@@ -9,10 +9,6 @@ import { Icon } from '../Icon';
 
 import * as S from './ColorSchemeToggler.styled';
 
-// import { ReactComponent as SvgSchemeAuto } from '@mdi/svg/svg/theme-light-dark.svg';
-// import { ReactComponent as SvgSchemeLight } from '@mdi/svg/svg/weather-sunny.svg';
-// import { ReactComponent as SvgSchemeDark } from '@mdi/svg/svg/weather-night.svg';
-
 import SvgSchemeAuto from 'mdi-react/ThemeLightDarkIcon';
 import SvgSchemeLight from 'mdi-react/WeatherSunnyIcon';
 import SvgSchemeDark from 'mdi-react/WeatherNightIcon';
@@ -24,9 +20,8 @@ const elHtml = document.getElementsByTagName('html')[0];
 
 export function ColorSchemeToggler(): JSX.Element {
 	const [scheme, setScheme] = useState<ColorScheme>(ColorScheme.Auto);
-	const [schemeIcon, setSchemeIcon] = useState<
-		typeof MdiReactIconComponentType
-	>(<SvgSchemeAuto />);
+	const [schemeIcon, setSchemeIcon] =
+		useState<typeof MdiReactIconComponentType>(SvgSchemeAuto);
 
 	const toggleState = () => {
 		switch (scheme) {
@@ -57,15 +52,15 @@ export function ColorSchemeToggler(): JSX.Element {
 	useEffect(() => {
 		if (scheme === ColorScheme.Light) {
 			elHtml.setAttribute(HTML_SCHEME_ATTRIBUTE, 'light');
-			setSchemeIcon(<SvgSchemeLight />);
+			setSchemeIcon(SvgSchemeLight);
 			localStorage.setItem(STORAGE_KEY, ColorScheme.Light);
 		} else if (scheme === ColorScheme.Dark) {
 			elHtml.setAttribute(HTML_SCHEME_ATTRIBUTE, 'dark');
-			setSchemeIcon(<SvgSchemeDark />);
+			setSchemeIcon(SvgSchemeDark);
 			localStorage.setItem(STORAGE_KEY, ColorScheme.Dark);
 		} else {
 			elHtml.removeAttribute(HTML_SCHEME_ATTRIBUTE);
-			setSchemeIcon(<SvgSchemeAuto />);
+			setSchemeIcon(SvgSchemeAuto);
 			localStorage.removeItem(STORAGE_KEY);
 		}
 	}, [scheme]);
@@ -76,8 +71,7 @@ export function ColorSchemeToggler(): JSX.Element {
 				aria-label='Click to toggle light, dark or system color schemes'
 				title='Click to toggle light, dark or system color schemes'
 				onClick={toggleState}>
-				{/* <Icon size={IconSize.x150}>{schemeIcon}</Icon> */}
-				{schemeIcon}
+				<Icon icon={schemeIcon} size={IconSize.x150} />
 			</S.Toggler>
 		</S.Wrapper>
 	);
