@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
-import { Icon, IconText } from '@arcade/components';
+import {
+	Icon,
+	IconText,
+	SpacingSize,
+	TypoSize,
+	TypoWeight,
+} from '@arcade/components';
 
 export const Section = styled.section`
-	padding-bottom: 1.5rem;
-	padding-top: 1.5rem;
+	padding-bottom: ${SpacingSize.x150};
+	padding-top: ${SpacingSize.x150};
 `;
 
 export const SectionHeadline = styled.div`
-	font-size: 1.25rem;
-	font-weight: 400;
-	margin: 0 0 1rem 0;
+	font-size: ${TypoSize.x125};
+	font-weight: ${TypoWeight.Normal};
+	margin: 0 0 ${SpacingSize.x100} 0;
 `;
 
 export const CardGrid = styled.div`
@@ -18,7 +24,7 @@ export const CardGrid = styled.div`
 	--tsr-list-tsr-width: 300px;
 
 	display: grid;
-	gap: 2rem var(--gutter);
+	gap: ${SpacingSize.x200} var(--gutter);
 	grid-auto-rows: 1fr;
 	grid-template-columns: repeat(
 		auto-fill,
@@ -34,23 +40,23 @@ export const CardGrid = styled.div`
 `;
 
 export const PageHeadline = styled.div`
-	font-size: 4rem;
-	font-weight: 100;
+	font-size: ${TypoSize.x400};
+	font-weight: ${TypoWeight.Light};
 	line-height: 1;
 `;
 
 export const PageHeadlineSub = styled.div`
-	font-size: 1.25rem;
-	font-weight: 400;
+	font-size: ${TypoSize.x125};
+	font-weight: ${TypoWeight.Normal};
 	line-height: 1;
 `;
 
 export const PageHeadlineIcon = styled(Icon)`
-	font-size: 3.5rem;
+	font-size: ${TypoSize.x300};
 `;
 
 export const SectionHeader = styled(IconText)`
 	margin: 0;
-	padding-bottom: 1.5rem;
+	padding-bottom: ${SpacingSize.x150};
 	padding-top: 6rem;
 `;

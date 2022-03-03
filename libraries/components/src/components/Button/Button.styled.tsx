@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { SpacingSize } from '../../enums';
 import { ButtonVariant } from './IButton';
 
 // export const BTN = styled.button``;
@@ -17,7 +18,7 @@ export const Button = styled.button<{
 	justify-content: center;
 	line-height: 1;
 	min-height: 2.5em;
-	padding: 0 1.5rem;
+	padding: 0 ${SpacingSize.x150};
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;

@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { SpacingSize } from '../../enums';
 
 import { Elevation } from '../Elevation';
 
@@ -34,7 +35,7 @@ export const Dialog = styled.dialog`
 `;
 
 export const Footer = styled.div`
-	margin-top: 1rem;
+	margin-top: ${SpacingSize.x100};
 `;
 
 export const ButtonBar = styled(Footer)`

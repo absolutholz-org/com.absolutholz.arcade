@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components';
+import { SpacingSize } from '../enums';
 
 // https://github.com/absolutholz/semantic-reboot
 
@@ -35,17 +36,17 @@ export const GlobalStyle = createGlobalStyle`
             }
         }
 
-        --gutter: 0.5rem;
-        --offset: 1rem;
+        --gutter: ${SpacingSize.x050};
+        --offset: ${SpacingSize.x100};
 
         @media (min-width: 600px) {
-            --gutter: 1rem;
-            --offset: 1.5rem;
+            --gutter: ${SpacingSize.x100};
+            --offset: ${SpacingSize.x150};
         }
 
         @media (min-width: 900px) {
-            --gutter: 1.25rem;
-            --offset: 2rem;
+            --gutter: ${SpacingSize.x125};
+            --offset: ${SpacingSize.x200};
         }
     }
 
@@ -97,7 +98,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     label {
-	    display: inline-block;
+        display: inline-block;
     }
 
     legend {
