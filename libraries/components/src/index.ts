@@ -1,5 +1,6 @@
 export * from './components/Global.styled';
 export * from './components/Button';
+export * from './components/ButtonIcon';
 export * from './components/Card';
 export * from './components/CardBillboard';
 export * from './components/ColorSchemeToggler';
