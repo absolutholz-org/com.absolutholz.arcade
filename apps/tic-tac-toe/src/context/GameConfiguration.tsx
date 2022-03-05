@@ -14,6 +14,8 @@ type State = {
 };
 type GameConfigurationProps = { children: React.ReactNode };
 
+const STORAGE_KEY_THEME = 'absolutholz.arcade.tictactoe:theme';
+
 const GameConfigurationContext = createContext<
 	{ state: State; dispatch: Dispatch } | undefined
 >(undefined);
@@ -23,6 +25,7 @@ function gameReducer(state: State, action: Action) {
 
 	switch (type) {
 		case GameConfigurationAction.SetTheme: {
+			localStorage.setItem(STORAGE_KEY_THEME, payload.theme);
 			return { ...state, gameTheme: payload.theme };
 		}
 		default: {
@@ -31,9 +34,13 @@ function gameReducer(state: State, action: Action) {
 	}
 }
 
-export function GameConfiguration({ children }: GameConfigurationProps) {
+export function GameConfigurationProvider({
+	children,
+}: GameConfigurationProps) {
 	const [state, dispatch] = useReducer(gameReducer, {
-		gameTheme: GameTheme.HugsKisses,
+		gameTheme:
+			(localStorage.getItem(STORAGE_KEY_THEME) as GameTheme) ||
+			GameTheme.HugsKisses,
 	});
 
 	// NOTE: you *might* need to memoize this value
