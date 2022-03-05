@@ -10,5 +10,6 @@ export type IButtonProps<T extends ElementType> = {
 	renderAs?: T;
 	children: ReactNode;
 	inline?: boolean;
+	type?: string;
 	variant?: ButtonVariant;
 } & ComponentPropsWithoutRef<T>;

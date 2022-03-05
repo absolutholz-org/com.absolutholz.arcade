@@ -8,6 +8,8 @@ export * from './components/Dialog';
 export * from './components/DialogAlert';
 export * from './components/DialogConfirm';
 export * from './components/Elevation';
+export * from './components/HeadlinePage';
+export * from './components/HeadlineSectionLevel1';
 export * from './components/Icon';
 export * from './components/IconText';
 export * from './components/PageLayoutContainer';

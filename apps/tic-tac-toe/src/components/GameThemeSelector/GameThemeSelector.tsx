@@ -1,5 +1,14 @@
-import { IconSize, VisuallyHidden } from '@arcade/components';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useState } from 'react';
+
+import SvgChange from 'mdi-react/PencilIcon';
+
+import {
+	ButtonIcon,
+	ButtonVariant,
+	DialogConfirm,
+	Icon,
+	IconSize,
+} from '@arcade/components';
 
 import * as S from './GameThemeSelector.styled';
 import { useGameConfiguration } from '../../context/GameConfiguration';
@@ -9,49 +18,68 @@ import { IconX } from '../IconX';
 
 export function GameThemeSelector(): JSX.Element {
 	const { gameTheme, dispatch } = useGameConfiguration();
+	const [isDialogOpen, setIsDialogOpen] = useState(false);
+	const [theme, setTheme] = useState(gameTheme);
 
-	const handleThemeSelection = (event: ChangeEvent) => {
-		const elSelect = event.target as HTMLSelectElement;
-		const theme = elSelect.value as GameTheme;
-
+	const handleDialogConfirm = () => {
 		dispatch({
 			type: GameConfigurationAction.SetTheme,
 			payload: { theme },
 		});
+		setIsDialogOpen(false);
 	};
 
 	return (
-		<S.GameThemeSelector>
-			{Object.keys(GameTheme).map((gameThemeID) => (
-				<S.GameTheme
-					as='label'
-					htmlFor={`gameTheme-${gameThemeID}`}
-					key={`gameTheme-${gameThemeID}`}>
-					{/* {gameTheme === gameThemeID && <S.Flag>selected</S.Flag>} */}
+		<div>
+			<S.ThemeName>
+				<span>{gameTheme}</span>
+				<ButtonIcon
+					inline={true}
+					onClick={() => setIsDialogOpen(true)}
+					variant={ButtonVariant.Ghost}>
+					<Icon icon={SvgChange} />
+				</ButtonIcon>
+			</S.ThemeName>
 
-					<input
-						checked={gameTheme === gameThemeID}
-						id={`gameTheme-${gameThemeID}`}
-						name='gameTheme'
-						onChange={handleThemeSelection}
-						type='radio'
-						value={gameThemeID}
-					/>
+			<DialogConfirm
+				isOpen={isDialogOpen}
+				onCancel={() => setIsDialogOpen(false)}
+				onConfirm={handleDialogConfirm}>
+				<S.ThemeGrid>
+					{Object.keys(GameTheme).map((gameThemeID) => (
+						<S.GameTheme
+							as='label'
+							htmlFor={`gameTheme-${gameThemeID}`}
+							key={`gameTheme-${gameThemeID}`}>
+							{/* {gameTheme === gameThemeID && <S.Flag>selected</S.Flag>} */}
 
-					<S.Title>{gameThemeID}</S.Title>
+							<input
+								checked={theme === gameThemeID}
+								id={`gameTheme-${gameThemeID}`}
+								name='gameTheme'
+								onChange={() =>
+									setTheme(gameThemeID as GameTheme)
+								}
+								type='radio'
+								value={gameThemeID}
+							/>
 
-					<S.IconWrapper>
-						<IconX
-							iconSize={IconSize.x400}
-							theme={gameThemeID as GameTheme}
-						/>
-						<IconO
-							iconSize={IconSize.x400}
-							theme={gameThemeID as GameTheme}
-						/>
-					</S.IconWrapper>
-				</S.GameTheme>
-			))}
-		</S.GameThemeSelector>
+							<S.Title>{gameThemeID}</S.Title>
+
+							<S.IconWrapper>
+								<IconX
+									iconSize={IconSize.x400}
+									theme={gameThemeID as GameTheme}
+								/>
+								<IconO
+									iconSize={IconSize.x400}
+									theme={gameThemeID as GameTheme}
+								/>
+							</S.IconWrapper>
+						</S.GameTheme>
+					))}
+				</S.ThemeGrid>
+			</DialogConfirm>
+		</div>
 	);
 }

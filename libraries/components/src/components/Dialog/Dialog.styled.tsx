@@ -23,6 +23,7 @@ export const Dialog = styled.dialog`
 	color: var(--on-surface);
 	max-width: min(500px, 100% - (var(--offset) * 2));
 	min-width: min(250px, 100% - (var(--offset) * 2));
+	text-align: start;
 
 	&::backdrop {
 		background: hsl(0, 0%, 0%, 0.7);

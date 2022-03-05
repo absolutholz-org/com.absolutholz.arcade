@@ -7,6 +7,8 @@ import {
 	Button,
 	ButtonIcon,
 	PageLayoutContainer,
+	HeadlinePage,
+	HeadlineSectionLevel1,
 	SiteHeader,
 	SiteFooter,
 	Icon,
@@ -61,10 +63,13 @@ export function HomePage(): JSX.Element {
 			<SiteHeader />
 			<PageLayoutContainer>
 				<form onSubmit={handleStartGame}>
-					<h1>Tic Tac Toe</h1>
+					<HeadlinePage as='h1'>Tic Tac Toe</HeadlinePage>
 
-					<fieldset>
-						<legend>Players</legend>
+					<S.Section as='fieldset'>
+						<S.SectionHeadline as='legend'>
+							Players
+						</S.SectionHeadline>
+
 						<S.PlayersContainer>
 							<PlayerConfig
 								id='1'
@@ -86,25 +91,17 @@ export function HomePage(): JSX.Element {
 								setPlayer={setPlayer2}
 							/>
 						</S.PlayersContainer>
-					</fieldset>
+					</S.Section>
 
-					<fieldset>
-						<legend>Theme</legend>
+					<S.Section as='fieldset'>
+						<S.SectionHeadline as='legend'>Theme</S.SectionHeadline>
 
 						<GameThemeSelector />
-					</fieldset>
+					</S.Section>
 
-					<fieldset>
-						<legend>Rules</legend>
-					</fieldset>
-
-					<Button
-						disabled={
-							player1.displayName === '' ||
-							player2.displayName === ''
-						}>
-						Start Game
-					</Button>
+					<S.Section>
+						<Button type='submit'>Start Game</Button>
+					</S.Section>
 				</form>
 			</PageLayoutContainer>
 			<SiteFooter />

@@ -51,10 +51,6 @@ export const PageHeadlineSub = styled.div`
 	line-height: 1;
 `;
 
-export const PageHeadlineIcon = styled(Icon)`
-	font-size: ${TypoSize.x300};
-`;
-
 export const SectionHeader = styled(IconText)`
 	margin: 0;
 	padding-bottom: ${SpacingSize.x150};

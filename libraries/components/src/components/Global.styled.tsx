@@ -51,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font: normal 1em / 1.42 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font: normal 1em / 1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
         height: 100%;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
@@ -66,6 +66,7 @@ export const GlobalStyle = createGlobalStyle`
         accent-color: var(--accent);
         background: var(--surface);
         color: var(--on-surface);
+        font-size: 1.125em;
         margin: 0;
         min-height: 100%;
     }
