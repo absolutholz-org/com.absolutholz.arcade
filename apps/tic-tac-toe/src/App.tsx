@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { GameConfiguration } from './context/GameConfiguration';
+import { GameConfigurationProvider } from './context/GameConfiguration';
 import { PlayersProvider } from './context/Players';
 import { GamePage } from './pages/GamePage';
 import { HomePage } from './pages/HomePage';
@@ -9,7 +9,7 @@ import { GlobalStyle } from '@arcade/components';
 
 export function App(): JSX.Element {
 	return (
-		<GameConfiguration>
+		<GameConfigurationProvider>
 			<PlayersProvider>
 				<GlobalStyle />
 				<BrowserRouter>
@@ -19,6 +19,6 @@ export function App(): JSX.Element {
 					</Routes>
 				</BrowserRouter>
 			</PlayersProvider>
-		</GameConfiguration>
+		</GameConfigurationProvider>
 	);
 }
