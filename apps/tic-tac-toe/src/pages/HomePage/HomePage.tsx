@@ -1,4 +1,4 @@
-import { FormEvent, useContext } from 'react';
+import { ChangeEvent, FormEvent, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { TicTacToePiece } from '../../enums/TicTacToePiece';
@@ -10,11 +10,14 @@ import {
 	SiteFooter,
 } from '@arcade/components';
 import { PlayersContext } from '../../context/Players';
+import { GameConfigurationAction, GameTheme } from '../../enums';
+import { useGameConfiguration } from '../../context/GameConfiguration';
 
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
 		useContext(PlayersContext);
 	const navigate = useNavigate();
+	const { gameTheme, dispatch } = useGameConfiguration();
 
 	const handlePlayer1PieceSelection = (piece: TicTacToePiece): void => {
 		setPlayer2((player) => {
@@ -49,6 +52,16 @@ export function HomePage(): JSX.Element {
 		navigate('game');
 	};
 
+	const handleThemeSelection = (event: ChangeEvent) => {
+		const elSelect = event.target as HTMLSelectElement;
+		const theme = elSelect.value as GameTheme;
+
+		dispatch({
+			type: GameConfigurationAction.SetTheme,
+			payload: { theme },
+		});
+	};
+
 	return (
 		<>
 			<SiteHeader />
@@ -76,6 +89,16 @@ export function HomePage(): JSX.Element {
 
 					<fieldset>
 						<legend>Theme</legend>
+
+						<select
+							onChange={handleThemeSelection}
+							defaultValue={gameTheme}>
+							{Object.keys(GameTheme).map((gameThemeID) => (
+								<option key={gameThemeID} value={gameThemeID}>
+									{gameThemeID}
+								</option>
+							))}
+						</select>
 					</fieldset>
 
 					<fieldset>
