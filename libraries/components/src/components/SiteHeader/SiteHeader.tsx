@@ -43,7 +43,7 @@ export function SiteHeader(): JSX.Element {
 				<div>
 					<S.LogoLink to='/'>
 						<S.LogoIconText
-							slotIconPrefix={<Icon>{SvgJoystick}</Icon>}>
+							slotIconPrefix={<Icon icon={SvgJoystick} />}>
 							Arcade
 						</S.LogoIconText>
 					</S.LogoLink>
