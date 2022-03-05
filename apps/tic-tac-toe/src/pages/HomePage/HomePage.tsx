@@ -5,46 +5,50 @@ import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { PlayerConfig } from '../../components/PlayerConfig';
 import {
 	Button,
+	ButtonIcon,
 	PageLayoutContainer,
 	SiteHeader,
 	SiteFooter,
+	Icon,
+	IconSize,
+	ButtonVariant,
 } from '@arcade/components';
 import { PlayersContext } from '../../context/Players';
 import { GameConfigurationAction, GameTheme } from '../../enums';
 import { useGameConfiguration } from '../../context/GameConfiguration';
 import { GameThemeSelector } from '../../components/GameThemeSelector';
 
+import SvgSwap from 'mdi-react/SwapHorizontalIcon';
+
+import * as S from './HomePage.styled';
+
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
 		useContext(PlayersContext);
 	const navigate = useNavigate();
 
-	const handlePlayer1PieceSelection = (piece: TicTacToePiece): void => {
-		setPlayer2((player) => {
-			return {
-				...player,
-				piece:
-					piece === TicTacToePiece.X
-						? TicTacToePiece.O
-						: TicTacToePiece.X,
-			};
-		});
+	const handleSwapPlayerPieces = () => {
+		let player1Piece = TicTacToePiece.X;
+		let player2Piece = TicTacToePiece.O;
 
-		return;
-	};
+		if (player1.piece === TicTacToePiece.X) {
+			player1Piece = TicTacToePiece.O;
+			player2Piece = TicTacToePiece.X;
+		}
 
-	const handlePlayer2PieceSelection = (piece: TicTacToePiece): void => {
 		setPlayer1((player) => {
 			return {
 				...player,
-				piece:
-					piece === TicTacToePiece.X
-						? TicTacToePiece.O
-						: TicTacToePiece.X,
+				piece: player1Piece,
 			};
 		});
 
-		return;
+		setPlayer2((player) => {
+			return {
+				...player,
+				piece: player2Piece,
+			};
+		});
 	};
 
 	const handleStartGame = (event: FormEvent) => {
@@ -61,36 +65,33 @@ export function HomePage(): JSX.Element {
 
 					<fieldset>
 						<legend>Players</legend>
+						<S.PlayersContainer>
+							<PlayerConfig
+								id='1'
+								player={player1}
+								setPlayer={setPlayer1}
+							/>
 
-						<PlayerConfig
-							id='1'
-							player={player1}
-							setPlayer={setPlayer1}
-							onPieceSelection={handlePlayer1PieceSelection}
-						/>
+							<ButtonIcon
+								inline={true}
+								onClick={handleSwapPlayerPieces}
+								type='button'
+								variant={ButtonVariant.Ghost}>
+								<Icon icon={SvgSwap} size={IconSize.x400} />
+							</ButtonIcon>
 
-						<PlayerConfig
-							id='2'
-							player={player2}
-							setPlayer={setPlayer2}
-							onPieceSelection={handlePlayer2PieceSelection}
-						/>
+							<PlayerConfig
+								id='2'
+								player={player2}
+								setPlayer={setPlayer2}
+							/>
+						</S.PlayersContainer>
 					</fieldset>
 
 					<fieldset>
 						<legend>Theme</legend>
 
 						<GameThemeSelector />
-
-						{/* <select
-							onChange={handleThemeSelection}
-							defaultValue={gameTheme}>
-							{Object.keys(GameTheme).map((gameThemeID) => (
-								<option key={gameThemeID} value={gameThemeID}>
-									{gameThemeID}
-								</option>
-							))}
-						</select> */}
 					</fieldset>
 
 					<fieldset>

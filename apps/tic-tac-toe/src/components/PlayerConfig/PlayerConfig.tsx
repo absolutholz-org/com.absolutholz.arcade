@@ -1,11 +1,13 @@
 import { TicTacToePiece } from '../../enums/TicTacToePiece';
+import { IconO } from '../IconO';
+import { IconX } from '../IconX';
 import { IPlayerConfigProps } from './IPlayerConfig';
+import * as S from './PlayerConfig.styled';
 
 export function PlayerConfig({
 	id,
 	player,
 	setPlayer,
-	onPieceSelection,
 }: IPlayerConfigProps): JSX.Element {
 	const handleNameChange = (name: string): void => {
 		setPlayer((player) => {
@@ -16,19 +18,9 @@ export function PlayerConfig({
 		});
 	};
 
-	const handlePieceChange = (piece: TicTacToePiece): void => {
-		setPlayer((player) => {
-			return {
-				...player,
-				piece,
-			};
-		});
-		onPieceSelection(piece);
-	};
-
 	return (
-		<fieldset>
-			<legend>Player {id}</legend>
+		<div>
+			{/* <legend>Player {id}</legend>
 
 			<label htmlFor={`player-${id}_name `}>
 				<div>Name</div>
@@ -40,37 +32,13 @@ export function PlayerConfig({
 					type='text'
 					value={player.displayName}
 				/>
-			</label>
+			</label> */}
 
-			<fieldset>
-				<legend>Piece</legend>
+			<S.PlayerName>{player.displayName}</S.PlayerName>
 
-				<label htmlFor={`player-${id}_piece-x `}>
-					<span>X</span>
-					<input
-						checked={player.piece === TicTacToePiece.X}
-						id={`player-${id}_piece-x `}
-						name={`player-${id}_piece `}
-						onChange={() => handlePieceChange(TicTacToePiece.X)}
-						required
-						type='radio'
-						value={TicTacToePiece.X}
-					/>
-				</label>
-
-				<label htmlFor={`player-${id}_piece-o `}>
-					<span>O</span>
-					<input
-						checked={player.piece === TicTacToePiece.O}
-						id={`player-${id}_piece-o `}
-						name={`player-${id}_piece `}
-						onChange={() => handlePieceChange(TicTacToePiece.O)}
-						required
-						type='radio'
-						value={TicTacToePiece.O}
-					/>
-				</label>
-			</fieldset>
-		</fieldset>
+			<S.IconWrapper>
+				{player.piece === TicTacToePiece.X ? <IconX /> : <IconO />}
+			</S.IconWrapper>
+		</div>
 	);
 }
