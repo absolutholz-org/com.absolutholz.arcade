@@ -4,4 +4,5 @@ export const enum IconSize {
 	x125 = '1.25em',
 	x150 = '1.5em',
 	x200 = '2em',
+	x400 = '4em',
 }

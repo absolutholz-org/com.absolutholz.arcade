@@ -9,15 +9,19 @@ import { IIconOProps } from './IIconO';
 import { useGameConfiguration } from '../../context/GameConfiguration';
 import { GameTheme } from '../../enums';
 
-export function IconO({ iconSize = IconSize.Full }: IIconOProps): JSX.Element {
+export function IconO({
+	theme,
+	iconSize = IconSize.Full,
+}: IIconOProps): JSX.Element {
 	const { gameTheme } = useGameConfiguration();
+	theme = theme ?? gameTheme;
 
 	let icon;
-	if (gameTheme === GameTheme.CatsDogs) {
+	if (theme === GameTheme.CatsDogs) {
 		icon = SvgCat;
-	} else if (gameTheme === GameTheme.SunMoon) {
+	} else if (theme === GameTheme.SunMoon) {
 		icon = SvgSun;
-	} else if (gameTheme === GameTheme.HamburgerHotDog) {
+	} else if (theme === GameTheme.HamburgerHotDog) {
 		icon = SvgHamburger;
 	} else {
 		icon = SvgO;

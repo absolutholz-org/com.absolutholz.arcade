@@ -12,12 +12,12 @@ import {
 import { PlayersContext } from '../../context/Players';
 import { GameConfigurationAction, GameTheme } from '../../enums';
 import { useGameConfiguration } from '../../context/GameConfiguration';
+import { GameThemeSelector } from '../../components/GameThemeSelector';
 
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
 		useContext(PlayersContext);
 	const navigate = useNavigate();
-	const { gameTheme, dispatch } = useGameConfiguration();
 
 	const handlePlayer1PieceSelection = (piece: TicTacToePiece): void => {
 		setPlayer2((player) => {
@@ -52,16 +52,6 @@ export function HomePage(): JSX.Element {
 		navigate('game');
 	};
 
-	const handleThemeSelection = (event: ChangeEvent) => {
-		const elSelect = event.target as HTMLSelectElement;
-		const theme = elSelect.value as GameTheme;
-
-		dispatch({
-			type: GameConfigurationAction.SetTheme,
-			payload: { theme },
-		});
-	};
-
 	return (
 		<>
 			<SiteHeader />
@@ -90,7 +80,9 @@ export function HomePage(): JSX.Element {
 					<fieldset>
 						<legend>Theme</legend>
 
-						<select
+						<GameThemeSelector />
+
+						{/* <select
 							onChange={handleThemeSelection}
 							defaultValue={gameTheme}>
 							{Object.keys(GameTheme).map((gameThemeID) => (
@@ -98,7 +90,7 @@ export function HomePage(): JSX.Element {
 									{gameThemeID}
 								</option>
 							))}
-						</select>
+						</select> */}
 					</fieldset>
 
 					<fieldset>
