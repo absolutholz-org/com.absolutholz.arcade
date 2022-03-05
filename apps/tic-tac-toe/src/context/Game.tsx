@@ -3,9 +3,7 @@ import { createContext, useContext, useReducer } from 'react';
 import { PlayersContext } from '../context/Players';
 import { ITicTacToePlayer } from '../dataModels/ITicTacToePlayer';
 import { IGameCell } from '../dataModels/IGameCell';
-import { GameState } from '../enums/GameState';
-import { GameAction } from '../enums/GameAction';
-import { TicTacToePiece } from '../enums/TicTacToePiece';
+import { GameAction, GameState, TicTacToePiece } from '../enums';
 
 const DEFAULT_CELL_SETUP = Array.from(Array(3))
 	.map((n, row, array) => {
