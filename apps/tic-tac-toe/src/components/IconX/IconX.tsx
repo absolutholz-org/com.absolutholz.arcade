@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-import MdiReactIconComponentType from 'mdi-react';
-
 import SvgX from 'mdi-react/WindowCloseIcon';
 import SvgDog from 'mdi-react/DogIcon';
 import SvgMoon from 'mdi-react/WeatherNightIcon';

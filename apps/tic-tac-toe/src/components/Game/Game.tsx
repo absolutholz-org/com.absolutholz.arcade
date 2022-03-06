@@ -1,7 +1,9 @@
+import { useMediaQuery } from '@arcade/common/hooks/useMediaQuery';
+
 import { useGameState } from '../../context/Game';
 import * as S from './Game.styled';
 import { Scoreboard } from '../Scoreboard';
-import { useMediaQuery } from '@arcade/common/hooks/useMediaQuery';
+import { SectionPadded } from '@arcade/components';
 
 export function Game(): JSX.Element {
 	const {
@@ -12,33 +14,41 @@ export function Game(): JSX.Element {
 
 	return (
 		<>
-			{isLandscape ? (
+			{/* {isLandscape ? (
 				<S.LayoutLandscape>
 					<Scoreboard
 						displayName={player1.displayName}
 						gamesWon={0}
+						piece={player1.piece}
 					/>
 					<S.Gameboard />
 					<Scoreboard
 						displayName={player2.displayName}
 						gamesWon={0}
+						piece={player2.piece}
 					/>
 				</S.LayoutLandscape>
-			) : (
-				<S.LayoutPortrait>
+			) : ( */}
+			<S.LayoutPortrait>
+				<div>
 					<S.Gameboard />
+				</div>
+				<div>
 					<S.LayoutPortraitScoreboards>
 						<Scoreboard
 							displayName={player1.displayName}
 							gamesWon={0}
+							piece={player1.piece}
 						/>
 						<Scoreboard
 							displayName={player2.displayName}
 							gamesWon={0}
+							piece={player2.piece}
 						/>
 					</S.LayoutPortraitScoreboards>
-				</S.LayoutPortrait>
-			)}
+				</div>
+			</S.LayoutPortrait>
+			{/* )} */}
 		</>
 	);
 }

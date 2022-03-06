@@ -68,7 +68,7 @@ export function Gameboard({ ...props }): JSX.Element {
 				))}
 			</S.Gameboard>
 
-			<S.Buttons>
+			{/* <S.Buttons>
 				<Button
 					inline={true}
 					onClick={handleRestartGameButtonClick}
@@ -82,7 +82,7 @@ export function Gameboard({ ...props }): JSX.Element {
 					variant={ButtonVariant.Outlined}>
 					Home
 				</Button>
-			</S.Buttons>
+			</S.Buttons> */}
 
 			<DialogAlert
 				isOpen={isTurnDialogOpen}

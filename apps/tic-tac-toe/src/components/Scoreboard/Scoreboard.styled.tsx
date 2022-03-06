@@ -2,13 +2,11 @@ import styled from 'styled-components';
 
 import { TypoSize } from '@arcade/components';
 
-export const PlayerConfig = styled.div`
+export const Scoreboard = styled.div`
 	text-align: center;
 `;
 
-export const IconWrapper = styled.div`
-	aspect-ratio: 1 / 1;
-`;
+export const IconWrapper = styled.div``;
 
 export const PlayerName = styled.div`
 	display: inline-grid;

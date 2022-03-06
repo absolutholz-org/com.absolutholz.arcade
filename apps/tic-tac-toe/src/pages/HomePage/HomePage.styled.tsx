@@ -13,6 +13,6 @@ export const Section = styled.div`
 `;
 
 export const SectionHeadline = styled(HeadlineSectionLevel1)`
-	margin-bottom: 0;
+	margin-bottom: ${SpacingSize.x050};
 	margin-top: ${SpacingSize.x100};
 `;

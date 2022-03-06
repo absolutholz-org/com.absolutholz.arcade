@@ -16,6 +16,7 @@ function SvgJoystick(): JSX.Element {
 import { Dialog } from '../Dialog';
 import { Button } from '../Button';
 import { PlayerForm } from '../PlayerForm';
+import { ColorSchemeToggler } from '../ColorSchemeToggler';
 
 export function SiteHeader(): JSX.Element {
 	const { user, saveUser, clearUser } = useContext(UserContext);
@@ -42,14 +43,15 @@ export function SiteHeader(): JSX.Element {
 			<S.SiteHeaderContainer>
 				<div>
 					<S.LogoLink to='/'>
-						<S.LogoIconText
-							slotIconPrefix={<Icon icon={SvgJoystick} />}>
-							Arcade
-						</S.LogoIconText>
+						{/* <S.LogoIconText
+							slotIconPrefix={<Icon icon={SvgJoystick} />}> */}
+						<S.Logo />
+						{/* </S.LogoIconText> */}
 					</S.LogoLink>
 				</div>
 
-				<div>
+				<S.ActionBlock>
+					<ColorSchemeToggler />
 					{user?.displayName ? (
 						<button onClick={clearUser}>{user.displayName}</button>
 					) : (
@@ -58,7 +60,8 @@ export function SiteHeader(): JSX.Element {
 							<SvgLogin />
 						</button>
 					)}
-				</div>
+				</S.ActionBlock>
+
 				<Dialog
 					isOpen={isPlayerDialogOpen}
 					slotFooter={

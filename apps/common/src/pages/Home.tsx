@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 
 import { UserContext } from '@arcade/common/context/User';
 import {
+	ArcadeLogo,
 	Button,
 	CardBillboard,
 	CardBillboardCoverLink,
@@ -96,7 +97,8 @@ export function Home(): JSX.Element {
 	return (
 		<PageLayoutContainer>
 			<main>
-				<S.SectionHeader
+				<ArcadeLogo as='h1' />
+				{/* <S.SectionHeader
 					tag='h1'
 					// slotIconPrefix={
 					// 	<S.PageHeadlineIcon>{SvgJoystick}</S.PageHeadlineIcon>
@@ -104,7 +106,7 @@ export function Home(): JSX.Element {
 					verticalAlignment='end'>
 					<S.PageHeadlineSub>absolutholz</S.PageHeadlineSub>
 					<S.PageHeadline>Arcade</S.PageHeadline>
-				</S.SectionHeader>
+				</S.SectionHeader> */}
 
 				<nav>
 					<VisuallyHidden as='h2'>Games</VisuallyHidden>

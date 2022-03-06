@@ -62,47 +62,43 @@ export function HomePage(): JSX.Element {
 		<>
 			<SiteHeader />
 			<PageLayoutContainer>
-				<form onSubmit={handleStartGame}>
-					<HeadlinePage as='h1'>Tic Tac Toe</HeadlinePage>
+				<HeadlinePage as='h1'>Tic Tac Toe</HeadlinePage>
 
-					<S.Section as='fieldset'>
-						<S.SectionHeadline as='legend'>
-							Players
-						</S.SectionHeadline>
+				<S.Section>
+					<S.SectionHeadline as='h2'>Players</S.SectionHeadline>
 
-						<S.PlayersContainer>
-							<PlayerConfig
-								id='1'
-								player={player1}
-								setPlayer={setPlayer1}
-							/>
+					<S.PlayersContainer>
+						<PlayerConfig
+							id='1'
+							player={player1}
+							setPlayer={setPlayer1}
+						/>
 
-							<ButtonIcon
-								inline={true}
-								onClick={handleSwapPlayerPieces}
-								type='button'
-								variant={ButtonVariant.Ghost}>
-								<Icon icon={SvgSwap} size={IconSize.x400} />
-							</ButtonIcon>
+						<ButtonIcon
+							inline={true}
+							onClick={handleSwapPlayerPieces}
+							type='button'
+							variant={ButtonVariant.Ghost}>
+							<Icon icon={SvgSwap} size={IconSize.x400} />
+						</ButtonIcon>
 
-							<PlayerConfig
-								id='2'
-								player={player2}
-								setPlayer={setPlayer2}
-							/>
-						</S.PlayersContainer>
-					</S.Section>
+						<PlayerConfig
+							id='2'
+							player={player2}
+							setPlayer={setPlayer2}
+						/>
+					</S.PlayersContainer>
+				</S.Section>
 
-					<S.Section as='fieldset'>
-						<S.SectionHeadline as='legend'>Theme</S.SectionHeadline>
+				<S.Section>
+					<S.SectionHeadline as='h2'>Theme</S.SectionHeadline>
 
-						<GameThemeSelector />
-					</S.Section>
+					<GameThemeSelector />
+				</S.Section>
 
-					<S.Section>
-						<Button type='submit'>Start Game</Button>
-					</S.Section>
-				</form>
+				<S.Section>
+					<Button onClick={handleStartGame}>Start Game</Button>
+				</S.Section>
 			</PageLayoutContainer>
 			<SiteFooter />
 		</>
