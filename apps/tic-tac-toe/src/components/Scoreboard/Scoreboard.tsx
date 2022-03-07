@@ -1,7 +1,3 @@
-import { IconSize } from '@arcade/components/src/components/Icon/enums/IconSize';
-import { TicTacToePiece } from '../../enums';
-import { IconO } from '../IconO';
-import { IconX } from '../IconX';
 import { IScoreboardProps } from './IScoreboard';
 import * as S from './Scoreboard.styled';
 
@@ -13,11 +9,7 @@ export function Scoreboard({
 	return (
 		<S.Scoreboard>
 			<S.IconWrapper>
-				{piece === TicTacToePiece.X ? (
-					<IconX iconSize={IconSize.x800} />
-				) : (
-					<IconO iconSize={IconSize.x800} />
-				)}
+				<S.Icon piece={piece} />
 			</S.IconWrapper>
 
 			<S.PlayerName>

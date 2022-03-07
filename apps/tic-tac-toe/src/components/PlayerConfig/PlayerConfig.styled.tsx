@@ -8,6 +8,7 @@ export const PlayerConfig = styled.div`
 
 export const IconWrapper = styled.div`
 	aspect-ratio: 1 / 1;
+	display: flex;
 `;
 
 export const PlayerName = styled.div`

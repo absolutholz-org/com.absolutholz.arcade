@@ -9,11 +9,9 @@ import {
 	Icon,
 } from '@arcade/components';
 
-import { TicTacToePiece } from '../../enums/TicTacToePiece';
-import { IconO } from '../IconO';
-import { IconX } from '../IconX';
 import { IPlayerConfigProps } from './IPlayerConfig';
 import * as S from './PlayerConfig.styled';
+import { GamePieceIcon } from '../GamePieceIcon';
 
 export function PlayerConfig({
 	id,
@@ -48,7 +46,7 @@ export function PlayerConfig({
 			</S.PlayerName>
 
 			<S.IconWrapper>
-				{player.piece === TicTacToePiece.X ? <IconX /> : <IconO />}
+				<GamePieceIcon piece={player.piece} />
 			</S.IconWrapper>
 
 			<DialogConfirm

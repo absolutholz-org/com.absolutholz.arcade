@@ -12,9 +12,12 @@ import {
 
 import * as S from './GameThemeSelector.styled';
 import { useGameConfiguration } from '../../context/GameConfiguration';
-import { GameConfigurationAction, GameTheme } from '../../enums';
-import { IconO } from '../IconO';
-import { IconX } from '../IconX';
+import {
+	GameConfigurationAction,
+	GameTheme,
+	TicTacToePiece,
+} from '../../enums';
+import { GamePieceIcon } from '../GamePieceIcon';
 
 export function GameThemeSelector(): JSX.Element {
 	const { gameTheme, dispatch } = useGameConfiguration();
@@ -67,12 +70,14 @@ export function GameThemeSelector(): JSX.Element {
 							<S.Title>{gameThemeID}</S.Title>
 
 							<S.IconWrapper>
-								<IconX
+								<GamePieceIcon
 									iconSize={IconSize.x400}
+									piece={TicTacToePiece.X}
 									theme={gameThemeID as GameTheme}
 								/>
-								<IconO
+								<GamePieceIcon
 									iconSize={IconSize.x400}
+									piece={TicTacToePiece.O}
 									theme={gameThemeID as GameTheme}
 								/>
 							</S.IconWrapper>
