@@ -21,13 +21,13 @@ interface IPlayersContext {
 
 const defaultState = {
 	player1: {
-		displayName: '',
+		displayName: 'Player 1',
 		piece: TicTacToePiece.X,
 	},
 	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	setPlayer1: () => {},
 	player2: {
-		displayName: '',
+		displayName: 'Player 2',
 		piece: TicTacToePiece.O,
 	},
 	// eslint-disable-next-line @typescript-eslint/no-empty-function
