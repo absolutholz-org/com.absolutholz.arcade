@@ -20,15 +20,15 @@ export function Gameboard({ ...props }): JSX.Element {
 	const { gameState, cells, currentPlayer, dispatch } = useGameState();
 
 	const [isEndGameDialogOpen, setIsEndGameDialogOpen] = useState(false);
-	const [isTurnDialogOpen, setIsTurnDialogOpen] = useState(false);
+	// const [isTurnDialogOpen, setIsTurnDialogOpen] = useState(false);
 
 	const handleCellClick = (row: number, column: number) => {
 		dispatch({ type: GameAction.Move, payload: { cell: { row, column } } });
 	};
 
-	const handleTurnButtonClick = () => {
-		setIsTurnDialogOpen(false);
-	};
+	// const handleTurnButtonClick = () => {
+	// 	setIsTurnDialogOpen(false);
+	// };
 
 	const handleNewGameButtonClick = () => {
 		dispatch({ type: GameAction.NewGame });
@@ -38,10 +38,10 @@ export function Gameboard({ ...props }): JSX.Element {
 		dispatch({ type: GameAction.Restart });
 	};
 
-	useEffect(() => {
-		console.log({ currentPlayer });
-		setIsTurnDialogOpen(true);
-	}, [currentPlayer]);
+	// useEffect(() => {
+	// 	console.log({ currentPlayer });
+	// 	setIsTurnDialogOpen(true);
+	// }, [currentPlayer]);
 
 	useEffect(() => {
 		console.log({ gameState });
@@ -84,11 +84,11 @@ export function Gameboard({ ...props }): JSX.Element {
 				</Button>
 			</S.Buttons> */}
 
-			<DialogAlert
+			{/* <DialogAlert
 				isOpen={isTurnDialogOpen}
 				onConfirm={handleTurnButtonClick}>
 				<div>{currentPlayer.displayName}'s turn</div>
-			</DialogAlert>
+			</DialogAlert> */}
 
 			<DialogConfirm
 				isOpen={isEndGameDialogOpen}

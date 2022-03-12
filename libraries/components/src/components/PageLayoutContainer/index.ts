@@ -1,1 +1,1 @@
-export * from './PageLayoutContainer';
+export * from './PageLayoutContainer.styled';

@@ -68,7 +68,11 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--on-surface);
         font-size: 1.125em;
         margin: 0;
-        min-height: 100%;
+        height: 100%;
+    }
+
+    #root {
+        height: inherit;
     }
 
     [tabindex="-1"]:focus {

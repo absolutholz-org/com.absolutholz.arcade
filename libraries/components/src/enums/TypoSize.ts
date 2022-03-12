@@ -5,5 +5,6 @@ export const enum TypoSize {
 	x125 = '1.25rem',
 	x150 = '1.5rem',
 	x200 = '2rem',
+	x300 = '3rem',
 	x400 = '4rem',
 }
