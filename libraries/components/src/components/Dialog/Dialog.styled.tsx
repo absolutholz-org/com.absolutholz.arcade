@@ -27,7 +27,7 @@ export const Dialog = styled.dialog`
 
 	&::backdrop {
 		background: hsl(0, 0%, 0%, 0.7);
-		filter: blur(5px);
+		backdrop-filter: blur(5px);
 	}
 
 	&[open] {

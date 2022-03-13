@@ -38,7 +38,6 @@ export function GamePage(): JSX.Element {
 
 					<S.GameWrapper>
 						<S.GameboardColumn>
-							{/* <S.TurnDisplay /> */}
 							<S.GameboardWrapper>
 								<S.Gameboard />
 							</S.GameboardWrapper>
@@ -56,6 +55,7 @@ export function GamePage(): JSX.Element {
 					</S.GameWrapper>
 				</>
 			)}
+			<S.TurnDisplay />
 		</GameProvider>
 	);
 }
