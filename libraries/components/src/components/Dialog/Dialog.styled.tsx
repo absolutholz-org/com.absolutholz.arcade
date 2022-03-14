@@ -32,6 +32,10 @@ export const Dialog = styled.dialog`
 
 	&[open] {
 		animation: ${appear} 150ms cubic-bezier(0, 1.8, 1, 1.8);
+
+		@media (prefers-reduced-motion) {
+			animation: none;
+		}
 	}
 `;
 

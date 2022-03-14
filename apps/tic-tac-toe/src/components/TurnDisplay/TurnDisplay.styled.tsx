@@ -60,6 +60,10 @@ export const DialogBackground = styled.div`
 	justify-content: center;
 	overflow: hidden;
 	padding: ${SpacingSize.x150};
+
+	@media (prefers-reduced-motion) {
+		animation: none;
+	}
 `;
 
 export const Content = styled.div`
@@ -83,4 +87,8 @@ export const Content = styled.div`
 	}
 
 	animation: textFadeInOut 2s forwards ease-in-out;
+
+	@media (prefers-reduced-motion) {
+		animation: none;
+	}
 `;
