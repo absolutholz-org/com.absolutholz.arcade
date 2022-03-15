@@ -1,10 +1,10 @@
-import { PageLayoutContainer, SiteHeader } from '@arcade/components';
 import { useMediaQuery } from '@arcade/common/hooks/useMediaQuery';
 
 import { GameProvider } from '../../context/Game';
-import * as S from './GamePage.styled';
+import { Gameboard } from '../../components/Gameboard';
 import { Scoreboard } from '../../components/Scoreboard';
-import { TurnDisplay } from '../../components/TurnDisplay';
+
+import * as S from './GamePage.styled';
 
 export function GamePage(): JSX.Element {
 	const isLandscape = useMediaQuery(S.MEDIA_QUERY);
@@ -15,21 +15,12 @@ export function GamePage(): JSX.Element {
 				<S.GameWrapper>
 					<S.GameboardColumn>
 						<S.GameboardWrapper>
-							<S.Gameboard />
+							<Gameboard />
 						</S.GameboardWrapper>
 					</S.GameboardColumn>
 
 					<S.ScoreboardColumn>
-						<S.ScoreboardHeadWrapper>
-							{/* <SiteHeader /> */}
-							{/* <S.TurnDisplay /> */}
-						</S.ScoreboardHeadWrapper>
-						<S.ScoreboardBodyWrapper>
-							<S.Scoreboard />
-						</S.ScoreboardBodyWrapper>
-						<S.ScoreboardFootWrapper>
-							{/* Scoreboard Foot */}
-						</S.ScoreboardFootWrapper>
+						<Scoreboard />
 					</S.ScoreboardColumn>
 				</S.GameWrapper>
 			) : (
@@ -39,18 +30,12 @@ export function GamePage(): JSX.Element {
 					<S.GameWrapper>
 						<S.GameboardColumn>
 							<S.GameboardWrapper>
-								<S.Gameboard />
+								<Gameboard />
 							</S.GameboardWrapper>
 						</S.GameboardColumn>
 
 						<S.ScoreboardColumn>
-							<S.ScoreboardHeadWrapper></S.ScoreboardHeadWrapper>
-							<S.ScoreboardBodyWrapper>
-								<S.Scoreboard />
-							</S.ScoreboardBodyWrapper>
-							<S.ScoreboardFootWrapper>
-								{/* Scoreboard Foot */}
-							</S.ScoreboardFootWrapper>
+							<Scoreboard />
 						</S.ScoreboardColumn>
 					</S.GameWrapper>
 				</>

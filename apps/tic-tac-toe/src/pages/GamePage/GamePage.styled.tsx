@@ -1,33 +1,12 @@
 import styled from 'styled-components';
 
-import { PageLayoutContainer, SpacingSize } from '@arcade/components';
-
-import { Gameboard as GameboardComponent } from '../../components/Gameboard';
-import { Scoreboard as ScoreboardComponent } from '../../components/Scoreboard';
 import { TurnDisplay as TurnDisplayComponent } from '../../components/TurnDisplay';
 
-export const MEDIA_QUERY = '(min-width: 50rem)';
-
-export const GamePage = styled(PageLayoutContainer)`
-	display: flex;
-	flex-direction: column;
-	gap: ${SpacingSize.x100};
-	height: 100vh;
-
-	@media (orientation: landscape) {
-		flex-direction: row;
-	}
-`;
+export const MEDIA_QUERY = '(min-width: 32rem)';
 
 export const TurnDisplay = styled(TurnDisplayComponent)`
 	text-align: center;
 `;
-
-export const Gameboard = styled(GameboardComponent)``;
-
-export const Scoreboard = styled(ScoreboardComponent)``;
-
-export const GameboardContainer = styled.div``;
 
 export const GameWrapper = styled.div`
 	display: grid;
@@ -63,6 +42,3 @@ export const ScoreboardColumn = styled.div`
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 `;
-export const ScoreboardHeadWrapper = styled.div``;
-export const ScoreboardBodyWrapper = styled.div``;
-export const ScoreboardFootWrapper = styled.div``;
