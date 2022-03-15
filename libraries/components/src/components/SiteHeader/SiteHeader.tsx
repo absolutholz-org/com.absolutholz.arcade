@@ -18,7 +18,7 @@ import { Button } from '../Button';
 import { PlayerForm } from '../PlayerForm';
 import { ColorSchemeToggler } from '../ColorSchemeToggler';
 
-export function SiteHeader(): JSX.Element {
+export function SiteHeader({ ...props }): JSX.Element {
 	const { user, saveUser, clearUser } = useContext(UserContext);
 	const [isPlayerDialogOpen, setIsPlayerDialogOpen] = useState(false);
 
@@ -39,7 +39,7 @@ export function SiteHeader(): JSX.Element {
 	};
 
 	return (
-		<S.SiteHeader>
+		<S.SiteHeader {...props}>
 			<S.SiteHeaderContainer>
 				<div>
 					<S.LogoLink to='/'>
