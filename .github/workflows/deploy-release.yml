@@ -22,7 +22,7 @@ jobs:
           - working-directory: './apps/common'
             target-directory: '/'
           - working-directory: './apps/tic-tac-toe'
-            target-directory: '/tictactoe'
+            target-directory: 'tictactoe/'
 
     runs-on: ubuntu-latest
     env:
