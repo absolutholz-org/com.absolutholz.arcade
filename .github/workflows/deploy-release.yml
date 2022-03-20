@@ -41,7 +41,7 @@ jobs:
 
       - name: Install packages
         run: yarn
-        working-directory: ${{ matrix.working-directory }}
+        working-directory: .
 
       - name: Compile source
         run: yarn workdpace ${{ matrix.package-name }} build
