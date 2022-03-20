@@ -44,7 +44,7 @@ jobs:
         working-directory: .
 
       - name: Compile source
-        run: yarn workdpace ${{ matrix.package-name }} build
+        run: yarn workspace ${{ matrix.package-name }} build
         working-directory: ${{ matrix.working-directory }}
 
       - name: Upload to host via FTP
