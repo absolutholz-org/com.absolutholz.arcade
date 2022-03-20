@@ -21,8 +21,10 @@ jobs:
         include:
           - working-directory: './apps/common'
             target-directory: '/'
+            package-name: common
           - working-directory: './apps/tic-tac-toe'
             target-directory: 'tictactoe/'
+            package-name: tic-tac-toe
 
     runs-on: ubuntu-latest
     env:
@@ -42,7 +44,7 @@ jobs:
         working-directory: ${{ matrix.working-directory }}
 
       - name: Compile source
-        run: yarn run build
+        run: yarn workdpace ${{ matrix.package-name }} build
         working-directory: ${{ matrix.working-directory }}
 
       - name: Upload to host via FTP
