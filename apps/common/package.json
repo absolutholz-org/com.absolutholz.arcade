@@ -1,15 +1,15 @@
 {
   "name": "common",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arcade/common": "*",
-    "@arcade/components": "*",
+    "@arcade/common": "^1.0.0",
+    "@arcade/components": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
