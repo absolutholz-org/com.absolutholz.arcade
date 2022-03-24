@@ -1,6 +1,7 @@
 {
   "name": "@arcade/tictactoe",
   "version": "0.1.0",
+  "homepage": "/tictactoe",
   "private": true,
   "dependencies": {
     "@arcade/components": "0.1.0",
