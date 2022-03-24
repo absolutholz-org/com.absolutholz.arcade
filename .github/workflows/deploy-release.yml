@@ -19,12 +19,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - working-directory: './apps/common'
-            target-directory: '/'
-            package-name: common
-          - working-directory: './apps/tic-tac-toe'
+          - working-directory: './apps/tictactoe'
             target-directory: 'tictactoe/'
-            package-name: tic-tac-toe
+            package-name: @arcade/tictactoe
 
     runs-on: ubuntu-latest
     env:
