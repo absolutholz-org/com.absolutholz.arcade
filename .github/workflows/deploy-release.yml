@@ -52,6 +52,6 @@ jobs:
           username: ${{ secrets.WEBGO_SFTP_USERNAME }}
           password: ${{ secrets.WEBGO_SFTP_PASSWORD }}
           protocol: ftp
-          local-dir: ${{ matrix.working-directory }}/dist/
+          local-dir: ${{ matrix.working-directory }}/build/
           server-dir: /home/www/de.absolutholz.arcade/${{ matrix.target-directory }}
           log-level: ${{ github.event.inputs.logLevel }}
