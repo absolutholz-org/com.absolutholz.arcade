@@ -24,7 +24,7 @@ jobs:
             package-name: "@arcade/landing-pages"
 
           - working-directory: "./apps/tictactoe"
-            target-directory: "/tictactoe"
+            target-directory: "/tictactoe/"
             package-name: "@arcade/tictactoe"
 
     runs-on: ubuntu-latest
