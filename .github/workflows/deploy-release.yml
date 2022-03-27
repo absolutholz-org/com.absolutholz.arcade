@@ -22,7 +22,6 @@ jobs:
           - working-directory: "./apps/landing-pages"
             target-directory: "/"
             package-name: "@arcade/landing-pages"
-        include:
           - working-directory: "./apps/tictactoe"
             target-directory: "tictactoe/"
             package-name: "@arcade/tictactoe"
