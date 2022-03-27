@@ -41,8 +41,8 @@ jobs:
         working-directory: .
 
       - name: Compile source
-        run: yarn build
-        working-directory: ${{ matrix.working-directory }}
+        run: yarn workspace ${{ matrix.package-name }} build
+        working-directory: .
 
       - name: Upload to host via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
