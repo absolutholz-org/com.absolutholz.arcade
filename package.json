@@ -1,16 +1,14 @@
 {
   "name": "@arcade/root",
+  "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "lerna": "^4.0.0"
-  },
-  "workspaces": {
-    "packages": [
-      "apps/**",
-      "libraries/**"
-    ]
-  },
-  "dependencies": {
-    "craco": "^0.0.3"
+  "workspaces": [
+    "./libraries/*",
+    "./apps/*"
+  ],
+  "scripts": {},
+  "engines": {
+    "node": ">=16.14.0",
+    "yarn": "^1.22.17"
   }
 }

@@ -16,6 +16,7 @@ function App() {
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<p>Hello Vite + React!</p>
+					<Test />
 					<p>
 						<button
 							type="button"
@@ -24,7 +25,6 @@ function App() {
 							count is: {count}
 						</button>
 					</p>
-					<Test />
 					<p>
 						Edit <code>App.tsx</code> and save to test HMR updates.
 					</p>
