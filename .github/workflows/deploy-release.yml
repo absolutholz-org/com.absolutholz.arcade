@@ -23,6 +23,10 @@ jobs:
             target-directory: "/"
             package-name: "@arcade/landing-pages"
 
+          - working-directory: "./apps/tictactoe"
+            target-directory: "/tictactoe"
+            package-name: "@arcade/tictactoe"
+
     runs-on: ubuntu-latest
     env:
       working-directory: .
@@ -53,5 +57,5 @@ jobs:
           password: ${{ secrets.WEBGO_SFTP_PASSWORD }}
           protocol: ftp
           local-dir: ${{ matrix.working-directory }}/dist/
-          server-dir: /home/www/de.absolutholz.arcade/${{ matrix.target-directory }}
+          server-dir: /home/www/de.absolutholz.arcade${{ matrix.target-directory }}
           log-level: ${{ github.event.inputs.logLevel }}
