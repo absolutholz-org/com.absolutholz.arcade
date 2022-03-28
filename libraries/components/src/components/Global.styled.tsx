@@ -1,5 +1,5 @@
-import { createGlobalStyle, css } from 'styled-components';
-import { SpacingSize } from '../enums';
+import { createGlobalStyle, css } from "styled-components";
+import { SpacingSize } from "../enums";
 
 // https://github.com/absolutholz/semantic-reboot
 
@@ -13,10 +13,12 @@ export const GlobalStyle = createGlobalStyle`
     *, ::after, ::before {
         box-sizing: border-box;
     }
-
+    
+    /* 
+    This kills the build render
     @viewport {
 		width: device-width;
-	}
+	} */
 
     :root {
         --accent: #006ecd;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Test } from "@arcade/library-components/src/components/Test";
-import { GlobalStyle } from "@arcade/library-components/src/components/globalStyles";
+import { GlobalStyle } from "@arcade/library-components";
 
 import logo from "./logo.svg";
 import "./App.css";
