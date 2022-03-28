@@ -58,9 +58,9 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
         -ms-overflow-style: scrollbar;
-        @if ($root-momentum-scrolling) {
+//         @if ($root-momentum-scrolling) {
             -webkit-overflow-scrolling: touch;
-        }
+//         }
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
