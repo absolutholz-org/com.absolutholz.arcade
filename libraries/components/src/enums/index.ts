@@ -1,3 +1,4 @@
-export * from './SpacingSize';
-export * from './TypoSize';
-export * from './TypoWeight';
+export * from "./ColorScheme";
+export * from "./SpacingSize";
+export * from "./TypoSize";
+export * from "./TypoWeight";

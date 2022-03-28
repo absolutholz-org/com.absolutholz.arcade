@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Test } from "@arcade/library-components/src/components/Test";
-import { GlobalStyle } from "@arcade/library-components";
+import { ColorSchemeToggler, GlobalStyle } from "@arcade/library-components";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -13,6 +13,7 @@ function App() {
 		<>
 			<GlobalStyle />
 			<div className="App">
+				<ColorSchemeToggler />
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<p>Hello Vite + React!</p>
