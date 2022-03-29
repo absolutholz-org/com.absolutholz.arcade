@@ -1,5 +1,6 @@
 // import { ChangeEvent, FormEvent, useContext } from 'react';
 // import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // import { TicTacToePiece } from '../../enums/TicTacToePiece';
 // import { PlayerConfig } from '../../components/PlayerConfig';
@@ -60,7 +61,10 @@ export function HomePage(): JSX.Element {
 
 	return (
 		<>
-			Tic Tac Toe
+			<h1>
+				Tic Tac Toe <u>Home</u>
+			</h1>
+			<Link to="game">Game</Link>
 			{/* <SiteHeader />
 			<PageLayoutContainer>
 				<HeadlinePage as='h1'>Tic Tac Toe</HeadlinePage>

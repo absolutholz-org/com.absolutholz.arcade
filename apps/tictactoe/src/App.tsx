@@ -10,14 +10,13 @@ import { HomePage } from "./pages/HomePage";
 export function App(): JSX.Element {
 	return (
 		<>
-			wesdrtfy
 			{/* <GameConfigurationProvider> */}
 			{/* <PlayersProvider> */}
 			<GlobalStyle />
-			<BrowserRouter>
+			<BrowserRouter basename="/tictactoe">
 				<Routes>
-					<Route path="/tictactoe/" element={<HomePage />} />
-					<Route path="/tictactoe/game/" element={<GamePage />} />
+					<Route path="/" element={<HomePage />} />
+					<Route path="game" element={<GamePage />} />
 				</Routes>
 			</BrowserRouter>
 			{/* </PlayersProvider> */}

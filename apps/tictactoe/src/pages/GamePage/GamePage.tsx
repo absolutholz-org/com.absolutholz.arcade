@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // import { useMediaQuery } from '@arcade/common/hooks/useMediaQuery';
 
 // import { GameProvider } from '../../context/Game';
@@ -10,7 +12,12 @@ export function GamePage(): JSX.Element {
 	// const isLandscape = useMediaQuery(S.MEDIA_QUERY);
 
 	return (
-		<>Tic Tac Toe Game</>
+		<>
+			<h1>
+				Tic Tac Toe <u>Game</u>
+			</h1>
+			<Link to="/">Home</Link>
+		</>
 		// <GameProvider>
 		// 	{isLandscape ? (
 		// 		<S.GameWrapper>
