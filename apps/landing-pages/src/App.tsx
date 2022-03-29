@@ -1,55 +1,18 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Test } from "@arcade/library-components/src/components/Test";
-import { ColorSchemeToggler, GlobalStyle } from "@arcade/library-components";
+import { GlobalStyle } from "@arcade/library-components";
 
-import logo from "./logo.svg";
-import "./App.css";
+import { Home } from "./pages/Home";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<>
 			<GlobalStyle />
-			<div className="App">
-				<ColorSchemeToggler />
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<p>Hello Vite + React!</p>
-					<Test />
-					<p>
-						<button
-							type="button"
-							onClick={() => setCount((count) => count + 1)}
-						>
-							count is: {count}
-						</button>
-					</p>
-					<p>
-						Edit <code>App.tsx</code> and save to test HMR updates.
-					</p>
-					<p>
-						<a
-							className="App-link"
-							href="https://reactjs.org"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Learn React
-						</a>
-						{" | "}
-						<a
-							className="App-link"
-							href="https://vitejs.dev/guide/features.html"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Vite Docs
-						</a>
-					</p>
-				</header>
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }
