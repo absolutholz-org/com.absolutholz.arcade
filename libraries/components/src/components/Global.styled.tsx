@@ -53,14 +53,14 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font: normal 1em / 1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font: normal 1em / 1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         height: 100%;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
         -ms-overflow-style: scrollbar;
-        @if ($root-momentum-scrolling) {
+//         @if ($root-momentum-scrolling) {
             -webkit-overflow-scrolling: touch;
-        }
+//         }
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
@@ -71,6 +71,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 1.125em;
         margin: 0;
         height: 100%;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
     }
 
     #root {
