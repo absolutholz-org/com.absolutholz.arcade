@@ -16,12 +16,12 @@ const GAME_GROUPS = [
 		games: [
 			{
 				imgUri: "/img/bg/original/purple-mountain-lake.jpg",
-				url: "/sudoku",
+				url: "/sudoku/",
 				name: "Sudoku",
 			},
 			{
 				imgUri: "/img/bg/original/purple-flowers-sunset.jpg",
-				url: "/minesweeper",
+				url: "/minesweeper/",
 				name: "Minesweeper",
 			},
 		],
@@ -31,17 +31,17 @@ const GAME_GROUPS = [
 		games: [
 			{
 				imgUri: "/img/bg/original/green-hills.jpg",
-				url: "/tictactoe",
+				url: "/tictactoe/",
 				name: "Tic Tac Toe",
 			},
 			{
 				imgUri: "/img/bg/original/desert-river.jpg",
-				url: "/connect4",
+				url: "/connect4/",
 				name: "Connect 4",
 			},
 			{
 				imgUri: "/img/bg/original/dead-tree-prairie.jpg",
-				url: "/checkers",
+				url: "/checkers/",
 				name: "Checkers",
 			},
 		],
@@ -51,12 +51,12 @@ const GAME_GROUPS = [
 		games: [
 			{
 				imgUri: "/img/bg/original/bright-forest-stump.jpg",
-				url: "/memory",
+				url: "/memory/",
 				name: "Memory",
 			},
 			{
 				imgUri: "/img/bg/original/autumn-trees.jpg",
-				url: "/dotsandboxes",
+				url: "/dotsandboxes/",
 				name: "Dots & Boxes",
 			},
 		],
