@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import { Card } from '../Card';
-import { Elevation } from '../Elevation';
-import { SpacingSize, TypoSize, TypoWeight } from '../..';
+import { Card } from "../Card";
+import { Elevation } from "../Elevation";
+import { SpacingSize, TypoSize, TypoWeight } from "../..";
 
 export const CardBillboard = styled(Card).attrs({
-	tag: 'article',
+	tag: "article",
 })`
 	aspect-ratio: 16 / 9;
 	display: flex;
@@ -41,12 +41,12 @@ export const CardBillboardHeadline = styled.h3`
 	margin: 0;
 `;
 
-export const CardBillboardCoverLink = styled(Link)`
+export const CardBillboardCoverLink = styled.a`
 	color: inherit;
 	text-decoration: none;
 
 	&::before {
-		content: '';
+		content: "";
 		display: block;
 		height: 100%;
 		left: 0;

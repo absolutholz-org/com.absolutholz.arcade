@@ -88,7 +88,7 @@ export function Home() {
 										>
 											<CardBillboardHeadline tag="h4">
 												<CardBillboardCoverLink
-													to={url}
+													href={url}
 												>
 													{name}
 												</CardBillboardCoverLink>
