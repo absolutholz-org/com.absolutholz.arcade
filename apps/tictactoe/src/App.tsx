@@ -1,55 +1,27 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Test } from "@arcade/library-components/src/components/Test";
-import { ColorSchemeToggler, GlobalStyle } from "@arcade/library-components";
+import { GlobalStyle } from "@arcade/library-components";
 
-import logo from "./logo.svg";
-import "./App.css";
+// import { GameConfigurationProvider } from './context/GameConfiguration';
+// import { PlayersProvider } from './context/Players';
+import { GamePage } from "./pages/GamePage";
+import { HomePage } from "./pages/HomePage";
 
-function App() {
-	const [count, setCount] = useState(0);
-
+export function App(): JSX.Element {
 	return (
 		<>
+			wesdrtfy
+			{/* <GameConfigurationProvider> */}
+			{/* <PlayersProvider> */}
 			<GlobalStyle />
-			<div className="App">
-				<ColorSchemeToggler />
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<p>Hello Vite + React!</p>
-					<p>
-						<button
-							type="button"
-							onClick={() => setCount((count) => count + 1)}
-						>
-							count is: {count}
-						</button>
-					</p>
-					<Test />
-					<p>
-						Edit <code>App.tsx</code> and save to test HMR updates.
-					</p>
-					<p>
-						<a
-							className="App-link"
-							href="https://reactjs.org"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Learn React
-						</a>
-						{" | "}
-						<a
-							className="App-link"
-							href="https://vitejs.dev/guide/features.html"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Vite Docs
-						</a>
-					</p>
-				</header>
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/tictactoe/" element={<HomePage />} />
+					<Route path="/tictactoe/game/" element={<GamePage />} />
+				</Routes>
+			</BrowserRouter>
+			{/* </PlayersProvider> */}
+			{/* </GameConfigurationProvider> */}
 		</>
 	);
 }
