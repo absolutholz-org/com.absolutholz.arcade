@@ -4,8 +4,7 @@ import { GlobalStyle } from "@arcade/library-components";
 
 import { GameConfigurationProvider } from "./context/GameConfiguration";
 import { PlayersProvider } from "./context/Players";
-import { GamePage } from "./pages/GamePage";
-import { HomePage } from "./pages/HomePage";
+import { GamePage, HomePage } from "./pages";
 
 export function App(): JSX.Element {
 	return (
