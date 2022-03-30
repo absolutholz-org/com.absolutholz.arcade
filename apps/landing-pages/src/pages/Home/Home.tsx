@@ -16,12 +16,12 @@ const GAME_GROUPS = [
 		games: [
 			{
 				imgUri: "/img/bg/original/purple-mountain-lake.jpg",
-				url: "/sudoku/",
+				url: "https://sudoku.absolutholz.de/",
 				name: "Sudoku",
 			},
 			{
 				imgUri: "/img/bg/original/purple-flowers-sunset.jpg",
-				url: "/minesweeper/",
+				url: "https://minesweeper.absolutholz.de/",
 				name: "Minesweeper",
 			},
 		],
@@ -51,7 +51,7 @@ const GAME_GROUPS = [
 		games: [
 			{
 				imgUri: "/img/bg/original/bright-forest-stump.jpg",
-				url: "/memory/",
+				url: "https://memory.absolutholz.de/",
 				name: "Memory",
 			},
 			{
