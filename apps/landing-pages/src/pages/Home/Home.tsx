@@ -52,7 +52,7 @@ const GAME_GROUPS = [
 			{
 				imgUri: "/img/bg/original/autumn-trees.jpg",
 				url: "https://memory.absolutholz.de/",
-				name: "Dots & Boxes",
+				name: "Memory",
 			},
 			{
 				imgUri: "/img/bg/original/bright-forest-stump.jpg",
