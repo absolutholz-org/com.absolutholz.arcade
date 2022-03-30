@@ -1,8 +1,8 @@
 import {
 	ICardBillboardHeadlineProps,
 	ICardBillboardProps,
-} from './ICardBillboard';
-import * as S from './CardBillboard.styled';
+} from "./ICardBillboard";
+import * as S from "./CardBillboard.styled";
 
 export function CardBillboard({
 	children,
@@ -10,14 +10,19 @@ export function CardBillboard({
 	...props
 }: ICardBillboardProps): JSX.Element {
 	const srcset = [
-		`${imgUri.replace('/original/', '/400/')} 400w`,
-		`${imgUri.replace('/original/', '/600/')} 600w`,
-		`${imgUri.replace('/original/', '/800/')} 800w`,
-	].join(',');
+		`${imgUri.replace("/original/", "/400/")} 400w`,
+		`${imgUri.replace("/original/", "/600/")} 600w`,
+		`${imgUri.replace("/original/", "/800/")} 800w`,
+	].join(",");
 
 	return (
 		<S.CardBillboard {...props}>
-			<S.CardBillboardBackground srcSet={srcset} sizes='100vw' />
+			<S.CardBillboardBackground
+				decoding="async"
+				loading="lazy"
+				srcSet={srcset}
+				sizes="(max-width: 1600px) 369px, (max-width: 1324px) 25vw, (max-width: 1004px) 33vw, (max-width: 664px) 50vw, 100vw"
+			/>
 			<S.CardBillboardChildren>{children}</S.CardBillboardChildren>
 		</S.CardBillboard>
 	);
@@ -25,7 +30,7 @@ export function CardBillboard({
 
 export function CardBillboardHeadline({
 	children,
-	tag = 'h3',
+	tag = "h3",
 	...props
 }: ICardBillboardHeadlineProps): JSX.Element {
 	return (

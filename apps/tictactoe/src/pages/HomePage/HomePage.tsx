@@ -7,17 +7,17 @@ import {
 	Button,
 	ButtonIcon,
 	PageLayoutContainer,
-	HeadlinePage,
-	HeadlineSectionLevel1,
-	SiteHeader,
-	SiteFooter,
+	// HeadlinePage,
+	// HeadlineSectionLevel1,
+	// SiteHeader,
+	// SiteFooter,
 	Icon,
 	IconSize,
 	ButtonVariant,
 } from "@arcade/library-components";
 import { PlayersContext } from "../../context/Players";
-import { GameConfigurationAction, GameTheme } from "../../enums";
-import { useGameConfiguration } from "../../context/GameConfiguration";
+// import { GameConfigurationAction, GameTheme } from "../../enums";
+// import { useGameConfiguration } from "../../context/GameConfiguration";
 import { GameThemeSelector } from "../../components/GameThemeSelector";
 
 import SvgSwap from "mdi-react/SwapHorizontalIcon";

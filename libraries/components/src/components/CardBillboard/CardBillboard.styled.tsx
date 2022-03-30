@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
 import { Card } from "../Card";
 import { Elevation } from "../Elevation";
 import { SpacingSize, TypoSize, TypoWeight } from "../..";
