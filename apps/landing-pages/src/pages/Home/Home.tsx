@@ -50,12 +50,17 @@ const GAME_GROUPS = [
 		name: "Multiple Players",
 		games: [
 			{
-				imgUri: "/img/bg/original/bright-forest-stump.jpg",
+				imgUri: "/img/bg/original/autumn-trees.jpg",
 				url: "https://memory.absolutholz.de/",
-				name: "Memory",
+				name: "Dots & Boxes",
 			},
 			{
-				imgUri: "/img/bg/original/autumn-trees.jpg",
+				imgUri: "/img/bg/original/bright-forest-stump.jpg",
+				url: "https://uno.absolutholz.de/",
+				name: "Uno",
+			},
+			{
+				imgUri: "/img/bg/original/autumn-river.jpg",
 				url: "/dotsandboxes/",
 				name: "Dots & Boxes",
 			},
