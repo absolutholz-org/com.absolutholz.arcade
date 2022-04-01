@@ -132,5 +132,15 @@ export const GlobalStyle = createGlobalStyle`
     img {
         height: auto;
         max-width: 100%;
+
+        [data-color-scheme="dark"] & {
+            filter: brightness(.8) contrast(1.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            &:not([data-color-scheme="light"]) {
+                filter: brightness(.8) contrast(1.2);
+            }
+        }
     }
 `;
