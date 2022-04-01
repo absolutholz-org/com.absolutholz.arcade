@@ -28,6 +28,8 @@ export const GlobalStyle = createGlobalStyle`
         --on-surface-hsl: 240, 21%, 8%;
 		--on-surface: hsl(var(--on-surface-hsl));
 
+        color-scheme: light dark;
+
         &[data-color-scheme="dark"] {
             ${DarkColorSchemeCSS}
         }
