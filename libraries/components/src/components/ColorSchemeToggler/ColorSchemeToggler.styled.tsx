@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
-
-export const Toggler = styled.button``;
+export const Toggler = styled.button`
+	display: inline-block;
+`;

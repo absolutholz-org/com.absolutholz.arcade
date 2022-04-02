@@ -5,6 +5,7 @@ import {
 	CardBillboardCoverLink,
 	CardBillboardHeadline,
 	PageLayoutContainer,
+	SiteFooter,
 	VisuallyHidden,
 } from '@arcade/library-components';
 
@@ -66,43 +67,45 @@ const GAME_GROUPS = [
 			},
 		],
 	},
-	{},
 ];
 
 export function Home() {
 	const [gameGroups] = useState(GAME_GROUPS);
 
 	return (
-		<PageLayoutContainer>
+		<>
 			<main>
-				<nav>
-					<VisuallyHidden as='h2'>Games</VisuallyHidden>
+				<PageLayoutContainer>
+					<nav>
+						<VisuallyHidden as='h2'>Games</VisuallyHidden>
 
-					{gameGroups.map(({ name, games }) => (
-						<S.Section key={`game-group_${name}`}>
-							<S.SectionHeadline as='h3'>
-								{name}
-							</S.SectionHeadline>
+						{gameGroups.map(({ name, games }) => (
+							<S.Section key={`game-group_${name}`}>
+								<S.SectionHeadline as='h3'>
+									{name}
+								</S.SectionHeadline>
 
-							<S.CardGrid>
-								{games &&
-									games.map(({ name, url, imgUri }) => (
-										<CardBillboard
-											imgUri={imgUri}
-											key={`game_${name}`}>
-											<CardBillboardHeadline tag='h4'>
-												<CardBillboardCoverLink
-													href={url}>
-													{name}
-												</CardBillboardCoverLink>
-											</CardBillboardHeadline>
-										</CardBillboard>
-									))}
-							</S.CardGrid>
-						</S.Section>
-					))}
-				</nav>
+								<S.CardGrid>
+									{games &&
+										games.map(({ name, url, imgUri }) => (
+											<CardBillboard
+												imgUri={imgUri}
+												key={`game_${name}`}>
+												<CardBillboardHeadline tag='h4'>
+													<CardBillboardCoverLink
+														href={url}>
+														{name}
+													</CardBillboardCoverLink>
+												</CardBillboardHeadline>
+											</CardBillboard>
+										))}
+								</S.CardGrid>
+							</S.Section>
+						))}
+					</nav>
+				</PageLayoutContainer>
 			</main>
-		</PageLayoutContainer>
+			<SiteFooter />
+		</>
 	);
 }
