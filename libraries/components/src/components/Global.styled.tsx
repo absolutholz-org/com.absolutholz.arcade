@@ -1,12 +1,14 @@
-import { createGlobalStyle, css } from "styled-components";
-import { SpacingSize } from "../enums";
+import { createGlobalStyle, css } from 'styled-components';
+import { ColorDarkHsl, ColorLightHsl, SpacingSize } from '../enums';
 
 // https://github.com/absolutholz/semantic-reboot
 
 const DarkColorSchemeCSS = css`
-	--accent: #007eff;
-	--surface-hsl: 0, 0%, 10%;
-	--on-surface-hsl: 0, 0%, 100%;
+	--accent-hsl: ${ColorDarkHsl.Purple};
+	--on-accent-hsl: ${ColorLightHsl.Grey900};
+
+	--surface-hsl: ${ColorDarkHsl.Grey900};
+	--on-surface-hsl: ${ColorDarkHsl.Grey100};
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -21,13 +23,17 @@ export const GlobalStyle = createGlobalStyle`
 	} */
 
     :root {
-        --accent: #006ecd;
-        --on-accent: #fff;
-        --surface-hsl: 60, 100%, 99%;
+        --accent-hsl: ${ColorLightHsl.PurpleDark1};
+        --accent: hsl(var(--accent-hsl));
+        --on-accent-hsl: ${ColorLightHsl.Grey100};
+        --on-accent: hsl(var(--on-accent-hsl));
+
+        --surface-hsl: ${ColorLightHsl.Grey100};
         --surface: hsl(var(--surface-hsl));
-        --on-surface-hsl: 240, 21%, 8%;
+        --on-surface-hsl: ${ColorLightHsl.Grey800};
 		--on-surface: hsl(var(--on-surface-hsl));
 
+        /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles */
         color-scheme: light dark;
 
         &[data-color-scheme="dark"] {
@@ -133,13 +139,14 @@ export const GlobalStyle = createGlobalStyle`
         height: auto;
         max-width: 100%;
 
+        /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
         [data-color-scheme="dark"] & {
-            filter: brightness(.8) contrast(1.2);
+            filter: brightness(0.8) contrast(1.2);
         }
 
         @media (prefers-color-scheme: dark) {
             &:not([data-color-scheme="light"]) {
-                filter: brightness(.8) contrast(1.2);
+                filter: brightness(0.8) contrast(1.2);
             }
         }
     }
