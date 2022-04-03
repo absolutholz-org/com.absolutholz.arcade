@@ -6,4 +6,5 @@ export const LogoInlineText = styled.span`
 
 export const LogoInlineTextArcade = styled.span`
 	display: inline-block;
+	font: normal 1.15em / 1 monospace, monospace;
 `;
