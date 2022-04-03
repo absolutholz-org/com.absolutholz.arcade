@@ -103,7 +103,13 @@ export function HomePage(): JSX.Element {
 					</S.Section>
 				</PageLayoutContainer>
 			</main>
-			<SiteFooter />
+			<SiteFooter
+				slotHomeLinkPrefix={
+					<span>
+						<span>Tic Tac Toe</span> is a part of the{' '}
+					</span>
+				}
+			/>
 		</>
 	);
 }

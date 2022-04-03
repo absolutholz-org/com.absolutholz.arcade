@@ -8,6 +8,16 @@ export const SiteFooter = styled.footer`
 	margin-top: ${SpacingSize.x300};
 	padding-bottom: ${SpacingSize.x150};
 	padding-top: ${SpacingSize.x150};
+
+	a {
+		text-decoration: none;
+	}
+`;
+
+export const SiteFooterSection = styled.div`
+	& + & {
+		margin-top: ${SpacingSize.x100};
+	}
 `;
 
 export const ColorScheme = styled.div`
