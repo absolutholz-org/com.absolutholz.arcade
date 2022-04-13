@@ -42,3 +42,4 @@ jobs:
           local-dir: ${{ matrix.working-directory }}/
           server-dir: /home/www/de.absolutholz.arcade${{ matrix.target-directory }}
           log-level: ${{ github.event.inputs.logLevel }}
+          dangerous-clean-slate: false
