@@ -1,12 +1,12 @@
-name: Deploy and Release via FTP
+name: Deploy and Release Apps via FTP
 
 on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: "minimal | standard | verbose"
+        description: 'minimal | standard | verbose'
         required: true
-        default: "verbose"
+        default: 'verbose'
 
   push:
     branches:
@@ -19,13 +19,13 @@ jobs:
     strategy:
       matrix:
         include:
-          - working-directory: "./apps/landing-pages"
-            target-directory: "/"
-            package-name: "@arcade/landing-pages"
+          - working-directory: './apps/landing-pages'
+            target-directory: '/'
+            package-name: '@arcade/landing-pages'
 
-          - working-directory: "./apps/tictactoe"
-            target-directory: "/tictactoe/"
-            package-name: "@arcade/tictactoe"
+          - working-directory: './apps/tictactoe'
+            target-directory: '/tictactoe/'
+            package-name: '@arcade/tictactoe'
 
     runs-on: ubuntu-latest
     env:
