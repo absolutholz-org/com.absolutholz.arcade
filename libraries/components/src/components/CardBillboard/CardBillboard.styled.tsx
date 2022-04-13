@@ -1,10 +1,12 @@
-import styled from "styled-components";
-import { Card } from "../Card";
-import { Elevation } from "../Elevation";
-import { SpacingSize, TypoSize, TypoWeight } from "../..";
+import styled from 'styled-components';
+
+import { Card } from '../Card';
+import { Elevation } from '../Elevation';
+import { SpacingSize, SurfaceTheme, TypoSize, TypoWeight } from '../..';
+import { themeSurface } from '../../styles/themeSurface';
 
 export const CardBillboard = styled(Card).attrs({
-	tag: "article",
+	tag: 'article',
 })`
 	aspect-ratio: 16 / 9;
 	display: flex;
@@ -27,7 +29,12 @@ export const CardBillboardBackground = styled.img`
 
 export const CardBillboardChildren = styled.div`
 	${Elevation(2)}
-	background: hsla(var(--surface-hsl), 0.85);
+	${themeSurface({
+		theme: SurfaceTheme.Background1,
+		surfaceOpacity: 0.85,
+	})}
+	background-color: var(--surface);
+	/* background: hsla(var(--surface-hsl), 0.85); */
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
 	padding: ${SpacingSize.x050} ${SpacingSize.x100};
@@ -44,7 +51,7 @@ export const CardBillboardCoverLink = styled.a`
 	text-decoration: none;
 
 	&::before {
-		content: "";
+		content: '';
 		display: block;
 		height: 100%;
 		left: 0;

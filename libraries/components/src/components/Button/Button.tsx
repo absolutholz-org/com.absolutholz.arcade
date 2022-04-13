@@ -38,19 +38,13 @@ export function Button<T extends ElementType = 'button'>({
 	renderAs,
 	children,
 	inline,
-	type = 'button',
 	variant,
 	...props
 }: IButtonProps<T>): JSX.Element {
 	return (
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-ignore
-		<S.Button
-			as={renderAs}
-			$inline={inline}
-			$variant={variant}
-			type={type}
-			{...props}>
+		<S.Button as={renderAs} $inline={inline} $variant={variant} {...props}>
 			{children}
 		</S.Button>
 	);

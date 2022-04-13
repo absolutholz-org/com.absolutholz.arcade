@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
-import { SpacingSize } from '../../enums';
+import { SpacingSize, SurfaceTheme } from '../../enums';
+import { themeSurface } from '../../styles/themeSurface';
+import { Elevation } from '../Elevation';
 import { ButtonVariant } from './IButton';
 
 // export const BTN = styled.button``;
@@ -10,18 +12,25 @@ export const Button = styled.button<{
 	$inline?: boolean;
 	$variant?: ButtonVariant;
 }>`
+	${themeSurface({
+		theme: SurfaceTheme.Accent,
+		includeBackground: false,
+	})}
 	align-items: center;
-	border-radius: 3px;
+	border: 1px solid transparent;
+	border-radius: 9vmax;
+	color: hsl(var(--accent));
 	display: ${({ $inline = false }) => ($inline ? 'inline-flex' : 'flex')};
 	font-weight: 500;
-	letter-spacing: 0.05ch;
+	gap: ${SpacingSize.x050};
+	/* letter-spacing: 0.05ch; */
 	justify-content: center;
-	line-height: 1;
-	min-height: 2.5em;
+	line-height: 1.428;
+	min-height: 2.5rem;
 	padding: 0 ${SpacingSize.x150};
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 
 	${({ $inline = false }) =>
 		!$inline &&
@@ -30,23 +39,32 @@ export const Button = styled.button<{
 		`}
 
 	${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
+		$variant === ButtonVariant.Elevated &&
+		css`
+			${Elevation(2)}
+			background-color: var(--surface);
+		`} 
+		
+		${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
 		$variant === ButtonVariant.Filled &&
 		css`
-			background: var(--accent);
-			color: var(--on-accent);
+			${themeSurface({
+				theme: SurfaceTheme.Accent,
+			})}
 		`}
-
-    ${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
+		
+		${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
 		$variant === ButtonVariant.Outlined &&
 		css`
-			border: 3px solid;
-			color: var(--accent);
-		`}
+			background-color: var(--surface);
+			border-color: currentColor;
+		`} 
 
     ${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
-		$variant === ButtonVariant.Ghost &&
+		$variant === ButtonVariant.Tonal &&
 		css`
-			color: var(--accent);
+			background-color: hsl(var(--accent), 0.25);
+			color: var(--on-surface);
 		`}
 
     &:focus,

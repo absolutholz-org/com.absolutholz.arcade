@@ -80,7 +80,7 @@ export function HomePage(): JSX.Element {
 								inline={true}
 								onClick={handleSwapPlayerPieces}
 								type='button'
-								variant={ButtonVariant.Ghost}>
+								variant={ButtonVariant.Text}>
 								<Icon icon={SvgSwap} size={IconSize.x400} />
 							</ButtonIcon>
 

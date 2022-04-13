@@ -1,14 +1,46 @@
 import { createGlobalStyle, css } from 'styled-components';
-import { ColorDarkHsl, ColorLightHsl, SpacingSize } from '../enums';
+import {
+	ColorDarkHsl,
+	ColorLightHsl,
+	SpacingSize,
+	SurfaceTheme,
+} from '../enums';
+import { themeSurface } from '../styles/themeSurface';
 
 // https://github.com/absolutholz/semantic-reboot
 
 const DarkColorSchemeCSS = css`
-	--accent-hsl: ${ColorDarkHsl.Purple};
-	--on-accent-hsl: ${ColorLightHsl.Grey900};
+	--bg1: ${ColorDarkHsl.Grey900};
+	--bg2: ${ColorDarkHsl.Grey700};
 
-	--surface-hsl: ${ColorDarkHsl.Grey900};
-	--on-surface-hsl: ${ColorDarkHsl.Grey100};
+	--primary: ${ColorDarkHsl.Grey100};
+	--on-primary: ${ColorDarkHsl.Grey900};
+
+	--secondary: ${ColorDarkHsl.Grey200};
+	--on-secondary: ${ColorDarkHsl.Grey900};
+
+	--accent: ${ColorDarkHsl.Blue};
+	--on-accent: ${ColorDarkHsl.Grey900};
+
+	--error: ${ColorDarkHsl.Red};
+	--on-error: ${ColorDarkHsl.Grey900};
+`;
+
+const LightColorSchemeCSS = css`
+	--bg1: ${ColorLightHsl.Grey100};
+	--bg2: ${ColorLightHsl.Grey300};
+
+	--primary: ${ColorLightHsl.Grey900};
+	--on-primary: ${ColorLightHsl.Grey100};
+
+	--secondary: ${ColorLightHsl.Grey700};
+	--on-secondary: ${ColorLightHsl.Grey100};
+
+	--accent: ${ColorLightHsl.BlueDark2};
+	--on-accent: ${ColorLightHsl.Grey100};
+
+	--error: ${ColorLightHsl.RedDark2};
+	--on-error: ${ColorLightHsl.Grey100};
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -23,15 +55,7 @@ export const GlobalStyle = createGlobalStyle`
 	} */
 
     :root {
-        --accent-hsl: ${ColorLightHsl.PurpleDark1};
-        --accent: hsl(var(--accent-hsl));
-        --on-accent-hsl: ${ColorLightHsl.Grey100};
-        --on-accent: hsl(var(--on-accent-hsl));
-
-        --surface-hsl: ${ColorLightHsl.Grey100};
-        --surface: hsl(var(--surface-hsl));
-        --on-surface-hsl: ${ColorLightHsl.Grey800};
-		--on-surface: hsl(var(--on-surface-hsl));
+        ${LightColorSchemeCSS}
 
         /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles */
         color-scheme: light dark;
@@ -45,6 +69,8 @@ export const GlobalStyle = createGlobalStyle`
                 ${DarkColorSchemeCSS}
             }
         }
+
+        ${themeSurface({ theme: SurfaceTheme.Background1 })}
 
         --gutter: ${SpacingSize.x050};
         --offset: ${SpacingSize.x100};
@@ -132,7 +158,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     a {
-        color: var(--accent);
+        ${themeSurface({
+			theme: SurfaceTheme.Accent,
+			includeBackground: false,
+		})}
+        color: var(--on-surface);
     }
 
     img {

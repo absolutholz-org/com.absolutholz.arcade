@@ -1,9 +1,11 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
 
 export const enum ButtonVariant {
+	Elevated = 'Elevated',
 	Filled = 'Filled',
-	Ghost = 'Ghost',
 	Outlined = 'Outlined',
+	Text = 'Text',
+	Tonal = 'Tonal',
 }
 
 export type IButtonProps<T extends ElementType> = {

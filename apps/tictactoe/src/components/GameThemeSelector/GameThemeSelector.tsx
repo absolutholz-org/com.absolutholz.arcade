@@ -1,6 +1,6 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from 'react';
 
-import SvgChange from "mdi-react/PencilIcon";
+import SvgChange from 'mdi-react/PencilIcon';
 
 import {
 	ButtonIcon,
@@ -8,16 +8,16 @@ import {
 	DialogConfirm,
 	Icon,
 	IconSize,
-} from "@arcade/library-components";
+} from '@arcade/library-components';
 
-import * as S from "./GameThemeSelector.styled";
-import { useGameConfiguration } from "../../context/GameConfiguration";
+import * as S from './GameThemeSelector.styled';
+import { useGameConfiguration } from '../../context/GameConfiguration';
 import {
 	GameConfigurationAction,
 	GameTheme,
 	TicTacToePiece,
-} from "../../enums";
-import { GamePieceIcon } from "../GamePieceIcon";
+} from '../../enums';
+import { GamePieceIcon } from '../GamePieceIcon';
 
 export function GameThemeSelector(): JSX.Element {
 	const { gameTheme, dispatch } = useGameConfiguration();
@@ -39,8 +39,7 @@ export function GameThemeSelector(): JSX.Element {
 				<ButtonIcon
 					inline={true}
 					onClick={() => setIsDialogOpen(true)}
-					variant={ButtonVariant.Ghost}
-				>
+					variant={ButtonVariant.Text}>
 					<Icon icon={SvgChange} />
 				</ButtonIcon>
 			</S.ThemeName>
@@ -48,25 +47,23 @@ export function GameThemeSelector(): JSX.Element {
 			<DialogConfirm
 				isOpen={isDialogOpen}
 				onCancel={() => setIsDialogOpen(false)}
-				onConfirm={handleDialogConfirm}
-			>
+				onConfirm={handleDialogConfirm}>
 				<S.ThemeGrid>
 					{Object.keys(GameTheme).map((gameThemeID) => (
 						<S.GameTheme
-							as="label"
+							as='label'
 							htmlFor={`gameTheme-${gameThemeID}`}
-							key={`gameTheme-${gameThemeID}`}
-						>
+							key={`gameTheme-${gameThemeID}`}>
 							{/* {gameTheme === gameThemeID && <S.Flag>selected</S.Flag>} */}
 
 							<input
 								checked={theme === gameThemeID}
 								id={`gameTheme-${gameThemeID}`}
-								name="gameTheme"
+								name='gameTheme'
 								onChange={() =>
 									setTheme(gameThemeID as GameTheme)
 								}
-								type="radio"
+								type='radio'
 								value={gameThemeID}
 							/>
 
