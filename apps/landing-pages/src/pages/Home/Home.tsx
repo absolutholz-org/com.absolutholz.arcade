@@ -16,12 +16,12 @@ const GAME_GROUPS = [
 		name: 'Single Player',
 		games: [
 			{
-				imgUri: '/img/bg/original/purple-mountain-lake.jpg',
+				imgUri: '/img/bg/original/purple-mountain-lake.webp',
 				url: 'https://sudoku.absolutholz.de/',
 				name: 'Sudoku',
 			},
 			{
-				imgUri: '/img/bg/original/purple-flowers-sunset.jpg',
+				imgUri: '/img/bg/original/purple-flowers-sunset.webp',
 				url: 'https://minesweeper.absolutholz.de/',
 				name: 'Minesweeper',
 			},
@@ -31,17 +31,17 @@ const GAME_GROUPS = [
 		name: 'Two Players',
 		games: [
 			{
-				imgUri: '/img/bg/original/green-hills.jpg',
+				imgUri: '/img/bg/original/green-hills.webp',
 				url: '/tictactoe/',
 				name: 'Tic Tac Toe',
 			},
 			{
-				imgUri: '/img/bg/original/desert-river.jpg',
+				imgUri: '/img/bg/original/desert-river.webp',
 				url: '/connect4/',
 				name: 'Connect 4',
 			},
 			{
-				imgUri: '/img/bg/original/dead-tree-prairie.jpg',
+				imgUri: '/img/bg/original/dead-tree-prairie.webp',
 				url: '/checkers/',
 				name: 'Checkers',
 			},
@@ -51,17 +51,17 @@ const GAME_GROUPS = [
 		name: 'Multiple Players',
 		games: [
 			{
-				imgUri: '/img/bg/original/autumn-trees.jpg',
+				imgUri: '/img/bg/original/autumn-trees.webp',
 				url: 'https://memory.absolutholz.de/',
 				name: 'Memory',
 			},
 			{
-				imgUri: '/img/bg/original/bright-forest-stump.jpg',
+				imgUri: '/img/bg/original/bright-forest-stump.webp',
 				url: 'https://uno.absolutholz.de/',
 				name: 'Uno',
 			},
 			{
-				imgUri: '/img/bg/original/autumn-river.jpg',
+				imgUri: '/img/bg/original/autumn-river.webp',
 				url: '/dotsandboxes/',
 				name: 'Dots & Boxes',
 			},
