@@ -23,6 +23,10 @@ jobs:
             target-directory: '/arcade-assets/'
             package-name: '@arcade/static-assets'
 
+    runs-on: ubuntu-latest
+    env:
+      working-directory: .
+
     steps:
       - name: Checkout source code
         uses: actions/checkout@v1
