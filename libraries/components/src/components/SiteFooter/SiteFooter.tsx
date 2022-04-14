@@ -6,7 +6,7 @@ import { IconSize } from '../Icon';
 import MdiReactIconComponentType from 'mdi-react';
 
 import { Icon } from '../Icon';
-import { LogoInlineText } from '../LogoInlineText';
+import { LogoTextInline } from '../Logos/LogoTextInline';
 import { PageLayoutContainer } from '../PageLayoutContainer';
 
 import type { ISiteFooter } from './ISiteFooter';
@@ -40,7 +40,7 @@ export function SiteFooter({ slotHomeLinkPrefix }: ISiteFooter): JSX.Element {
 				<S.SiteFooterSection>
 					{slotHomeLinkPrefix && slotHomeLinkPrefix}
 					<a href='http://arcade.absolutholz.de'>
-						<LogoInlineText />
+						<LogoTextInline />
 					</a>
 				</S.SiteFooterSection>
 				<S.SiteFooterSection>
