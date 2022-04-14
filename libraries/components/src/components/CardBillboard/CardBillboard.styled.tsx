@@ -41,6 +41,7 @@ export const CardBillboardChildren = styled.div`
 `;
 
 export const CardBillboardHeadline = styled.h3`
+	font-family: 'GamePlayed';
 	font-size: ${TypoSize.x150};
 	font-weight: ${TypoWeight.Normal};
 	margin: 0;

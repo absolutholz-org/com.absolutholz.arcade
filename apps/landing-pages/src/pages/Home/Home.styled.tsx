@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { SpacingSize, TypoSize, TypoWeight } from "@arcade/library-components";
+import { SpacingSize, TypoSize, TypoWeight } from '@arcade/library-components';
 
 export const Section = styled.section`
 	padding-bottom: ${SpacingSize.x150};
@@ -8,6 +8,7 @@ export const Section = styled.section`
 `;
 
 export const SectionHeadline = styled.div`
+	font-family: 'GamePlayed';
 	font-size: ${TypoSize.x125};
 	font-weight: ${TypoWeight.Normal};
 	margin: 0 0 ${SpacingSize.x100} 0;

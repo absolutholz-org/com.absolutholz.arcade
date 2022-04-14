@@ -44,6 +44,13 @@ const LightColorSchemeCSS = css`
 `;
 
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'GamePlayed';
+        src: url('https://arcade.absolutholz.de/arcade-assets/fonts/game-played/GamePlayed.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     *, ::after, ::before {
         box-sizing: border-box;
     }
