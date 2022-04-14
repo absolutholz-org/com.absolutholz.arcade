@@ -20,7 +20,7 @@ jobs:
       matrix:
         include:
           - working-directory: './libraries/static-assets'
-            target-directory: '/arcade-assets'
+            target-directory: '/arcade-assets/'
             package-name: '@arcade/static-assets'
 
     steps:
@@ -38,3 +38,5 @@ jobs:
           local-dir: ${{ matrix.working-directory }}/
           server-dir: /home/www/de.absolutholz.arcade${{ matrix.target-directory }}
           log-level: ${{ github.event.inputs.logLevel }}
+          exclude: |
+            **/package.json
