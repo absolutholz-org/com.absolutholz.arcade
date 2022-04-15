@@ -16,4 +16,5 @@ const Template: ComponentStory<typeof LogoText> = (args) => (
 	<LogoText {...args} />
 );
 
-export const Primary = Template.bind({});
+export const _Template_ = Template.bind({});
+_Template_.storyName = 'LogoText';

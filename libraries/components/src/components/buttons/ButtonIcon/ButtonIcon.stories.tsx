@@ -16,6 +16,6 @@ const Template: ComponentStory<typeof ButtonIcon> = (args) => (
 	<ButtonIcon {...args} />
 );
 
-export const Primary = Template.bind({});
+export const _Template_ = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {};
+_Template_.storyName = 'ButtonIcon';

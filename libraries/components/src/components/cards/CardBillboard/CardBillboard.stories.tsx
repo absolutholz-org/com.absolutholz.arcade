@@ -17,9 +17,10 @@ const Template: ComponentStory<typeof CardBillboard> = (args) => (
 	<CardBillboard {...args} />
 );
 
-export const Primary = Template.bind({});
+export const _Template_ = Template.bind({});
+_Template_.storyName = 'CardBillboard';
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+_Template_.args = {
 	children: <StoryExampleContent />,
 	imgUri: 'https://plchldr.co/i/500x250',
 };
