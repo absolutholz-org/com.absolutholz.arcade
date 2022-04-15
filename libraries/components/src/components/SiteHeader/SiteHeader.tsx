@@ -14,7 +14,7 @@ function SvgJoystick(): JSX.Element {
 }
 
 import { Dialog } from '../Dialog';
-import { Button } from '../Button';
+import { Button } from '../buttons/Button';
 import { PlayerForm } from '../PlayerForm';
 // import { ColorSchemeToggler } from "../ColorSchemeToggler";
 

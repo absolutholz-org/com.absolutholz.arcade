@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { Card } from '../Card';
-import { Elevation } from '../Elevation';
-import { SpacingSize, SurfaceTheme, TypoSize, TypoWeight } from '../..';
-import { themeSurface } from '../../styles/themeSurface';
+import { Elevation } from '../../Elevation';
+import { SpacingSize, SurfaceTheme, TypoSize, TypoWeight } from '../../..';
+import { themeSurface } from '../../../styles/themeSurface';
 
 export const CardBillboard = styled(Card).attrs({
 	tag: 'article',

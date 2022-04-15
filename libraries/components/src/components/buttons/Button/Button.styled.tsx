@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { SpacingSize, SurfaceTheme } from '../../enums';
-import { themeSurface } from '../../styles/themeSurface';
-import { Elevation } from '../Elevation';
+import { SpacingSize, SurfaceTheme } from '../../../enums';
+import { themeSurface } from '../../../styles/themeSurface';
+import { Elevation } from '../../Elevation';
 import { ButtonVariant } from './IButton';
 
 // export const BTN = styled.button``;

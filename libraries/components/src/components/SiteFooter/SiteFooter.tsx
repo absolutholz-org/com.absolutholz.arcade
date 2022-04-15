@@ -6,7 +6,7 @@ import { IconSize } from '../Icon';
 import MdiReactIconComponentType from 'mdi-react';
 
 import { Icon } from '../Icon';
-import { LogoTextInline } from '../Logos/LogoTextInline';
+import { LogoTextInline } from '../logos/LogoTextInline';
 import { PageLayoutContainer } from '../PageLayoutContainer';
 
 import type { ISiteFooter } from './ISiteFooter';
