@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 import { Card } from '../Card';
 import { Elevation } from '../../Elevation';
-import { SpacingSize, SurfaceTheme, TypoSize, TypoWeight } from '../../..';
+import { Headline200 } from '../../headlines';
+import { SpacingSize, SurfaceTheme } from '../../..';
 import { themeSurface } from '../../../styles/themeSurface';
 
 export const CardBillboard = styled(Card).attrs({
@@ -40,11 +41,8 @@ export const CardBillboardChildren = styled.div`
 	padding: ${SpacingSize.x050} ${SpacingSize.x100};
 `;
 
-export const CardBillboardHeadline = styled.h3`
-	font-family: 'GamePlayed';
-	font-size: ${TypoSize.x150};
-	font-weight: ${TypoWeight.Normal};
-	margin: 0;
+export const CardBillboardHeadline = styled(Headline200)`
+	margin-bottom: 0;
 `;
 
 export const CardBillboardCoverLink = styled.a`

@@ -1,6 +1,8 @@
 import { FormEvent, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { Headline100 } from '@arcade/library-components/src/components/headlines';
+
 import { TicTacToePiece } from '../../enums/TicTacToePiece';
 import { PlayerConfig } from '../../components/PlayerConfig';
 import {
@@ -64,10 +66,10 @@ export function HomePage(): JSX.Element {
 			{/* <SiteHeader /> */}
 			<main>
 				<PageLayoutContainer>
-					{/* <HeadlinePage as='h1'>Tic Tac Toe</HeadlinePage> */}
+					{/* <Headline400 as='h1'>Tic Tac Toe</Headline400> */}
 
 					<S.Section>
-						<S.SectionHeadline as='h2'>Players</S.SectionHeadline>
+						<Headline100 as='h2'>Players</Headline100>
 
 						<S.PlayersContainer>
 							<PlayerConfig
@@ -93,7 +95,7 @@ export function HomePage(): JSX.Element {
 					</S.Section>
 
 					<S.Section>
-						<S.SectionHeadline as='h2'>Theme</S.SectionHeadline>
+						<Headline100 as='h2'>Theme</Headline100>
 
 						<GameThemeSelector />
 					</S.Section>

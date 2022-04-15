@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TypoFamily } from '../../../enums';
 
 export const Wrapper = styled.span`
 	display: inline-block;
@@ -12,9 +13,5 @@ export const Absolutholz = styled.span`
 
 export const Arcade = styled.span`
 	display: block;
-	/* 
-	doubled monospace is a fix for some browsers that mess with the size of this font
-	https://stackoverflow.com/questions/38781089/font-family-monospace-monospace 
-	*/
-	font-family: 'GamePlayed', monospace, monospace;
+	font-family: ${TypoFamily.Headline};
 `;

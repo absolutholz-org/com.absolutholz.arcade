@@ -4,6 +4,7 @@ import {
 	ColorLightHsl,
 	SpacingSize,
 	SurfaceTheme,
+	TypoFamily,
 } from '../enums';
 import { themeSurface } from '../styles/themeSurface';
 
@@ -94,7 +95,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font: normal 1em / 1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        font: normal 1em / 1.5 ${TypoFamily.Body};
         height: 100%;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;

@@ -10,6 +10,7 @@ import {
 } from '@arcade/library-components';
 
 import * as S from './Home.styled';
+import { Headline100 } from '@arcade/library-components/src/components/headlines';
 
 const GAME_GROUPS = [
 	{
@@ -81,9 +82,7 @@ export function Home() {
 
 						{gameGroups.map(({ name, games }) => (
 							<S.Section key={`game-group_${name}`}>
-								<S.SectionHeadline as='h3'>
-									{name}
-								</S.SectionHeadline>
+								<Headline100 as='h3'>{name}</Headline100>
 
 								<S.CardGrid>
 									{games &&
