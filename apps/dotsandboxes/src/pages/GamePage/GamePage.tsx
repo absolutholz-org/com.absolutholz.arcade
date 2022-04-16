@@ -1,9 +1,10 @@
-import { useContext, useEffect } from "react";
+import { PageLayoutContainer } from '@arcade/library-components';
+import { useContext, useEffect } from 'react';
 
-import { Gameboard, Scoreboard } from "../../components";
+import { Gameboard, Scoreboard } from '../../components';
 
-import { GameContext } from "../../context/GameContext";
-import GameAction from "../../enums/GameAction";
+import { GameContext } from '../../context/GameContext';
+import GameAction from '../../enums/GameAction';
 
 export function GamePage(): JSX.Element {
 	const { dispatch } = useContext(GameContext);
@@ -13,14 +14,14 @@ export function GamePage(): JSX.Element {
 			type: GameAction.SetPlayers,
 			players: [
 				{
-					uid: "sdfasd9f78a9s8dfadsf",
-					displayName: "Player 1",
-					color: "red",
+					uid: 'sdfasd9f78a9s8dfadsf',
+					displayName: 'Player 1',
+					color: 'red',
 				},
 				{
-					uid: "98vf89vnewnwekdsjdls",
-					displayName: "Player 2",
-					color: "blue",
+					uid: '98vf89vnewnwekdsjdls',
+					displayName: 'Player 2',
+					color: 'blue',
 				},
 			],
 		});
@@ -33,13 +34,13 @@ export function GamePage(): JSX.Element {
 	}, [dispatch]);
 
 	return (
-		<div>
+		<PageLayoutContainer>
 			<div>
 				<Gameboard columnCount={4} rowCount={4} />
 			</div>
 			<div>
 				<Scoreboard />
 			</div>
-		</div>
+		</PageLayoutContainer>
 	);
 }

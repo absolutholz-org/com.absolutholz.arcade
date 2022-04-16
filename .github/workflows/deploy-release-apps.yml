@@ -27,9 +27,9 @@ jobs:
             target-directory: '/tictactoe/'
             package-name: '@arcade/tictactoe'
 
-          - working-directory: "./apps/dotsandboxes"
-            target-directory: "/dotsandboxes/"
-            package-name: "@arcade/dotsandboxes"
+          - working-directory: './apps/dotsandboxes'
+            target-directory: '/dotsandboxes/'
+            package-name: '@arcade/dotsandboxes'
 
     runs-on: ubuntu-latest
     env:

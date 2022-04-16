@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { GlobalStyle } from "@arcade/library-components";
+import { GlobalStyle } from '@arcade/library-components';
 
-import { Home } from "./pages";
+import { Home } from './pages';
 
 function App() {
 	return (
@@ -10,7 +10,7 @@ function App() {
 			<GlobalStyle />
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path='/' element={<Home />} />
 				</Routes>
 			</BrowserRouter>
 		</>
