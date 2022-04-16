@@ -1,13 +1,20 @@
-import { FormEvent } from 'react';
+import { FormEvent, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
 	Button,
+	Headline100,
 	PageLayoutContainer,
 	SiteFooter,
 } from '@arcade/library-components';
 
+import { PlayerConfig } from '../../components/PlayerConfig';
+import { PlayersContext } from '../../context/Players';
+import * as S from './HomePage.styled';
+
 export function HomePage(): JSX.Element {
+	const { player1, setPlayer1, player2, setPlayer2 } =
+		useContext(PlayersContext);
 	const navigate = useNavigate();
 
 	const handleStartGame = (event: FormEvent) => {
@@ -19,7 +26,22 @@ export function HomePage(): JSX.Element {
 		<>
 			<main>
 				<PageLayoutContainer>
-					<form onSubmit={handleStartGame}>
+					<S.Section>
+						<Headline100 as='h2'>Players</Headline100>
+
+						<S.PlayersContainer>
+							<PlayerConfig
+								id='1'
+								player={player1}
+								setPlayer={setPlayer1}
+							/>
+							<PlayerConfig
+								id='2'
+								player={player2}
+								setPlayer={setPlayer2}
+							/>
+
+							{/* <form onSubmit={handleStartGame}>
 						<fieldset>
 							<legend>Player 1</legend>
 							<label htmlFor='player1-name'>
@@ -65,7 +87,13 @@ export function HomePage(): JSX.Element {
 						</fieldset>
 
 						<Button type='submit'>Start Game</Button>
-					</form>
+					</form> */}
+						</S.PlayersContainer>
+					</S.Section>
+
+					<S.Section>
+						<Button onClick={handleStartGame}>Start Game</Button>
+					</S.Section>
 				</PageLayoutContainer>
 			</main>
 			<SiteFooter
