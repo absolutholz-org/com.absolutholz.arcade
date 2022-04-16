@@ -56,7 +56,7 @@ export const Button = styled.button<{
 		${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
 		$variant === ButtonVariant.Outlined &&
 		css`
-			background-color: var(--surface);
+			/* background-color: var(--surface); */
 			border-color: currentColor;
 		`} 
 
