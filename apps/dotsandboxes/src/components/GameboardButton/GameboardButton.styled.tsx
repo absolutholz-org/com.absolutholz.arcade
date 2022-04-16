@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const GameboardButton = styled.button<{ color: string }>`
 	height: 100%;
@@ -7,9 +7,10 @@ export const GameboardButton = styled.button<{ color: string }>`
 	width: 100%;
 
 	&::before {
-		content: "";
+		content: '';
 		display: block;
-		background: ${({ color }) => color !== '' ? color : 'black'};
+		background: ${({ color }) =>
+			color !== '' ? color : 'var(--on-surface)'};
 		height: 4px;
 		transform: rotate(45deg);
 		width: 100%;

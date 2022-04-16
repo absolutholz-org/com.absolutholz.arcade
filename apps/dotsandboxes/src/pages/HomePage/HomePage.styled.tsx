@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { HeadlineSectionLevel1, SpacingSize } from '@arcade/library-components';
 
 export const PlayersContainer = styled.div`
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
 	gap: var(--gutter);
-	grid-template-columns: 1fr auto 1fr;
 `;
 
 export const Section = styled.div`
