@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { IconText } from '../IconText';
 import { PageLayoutContainer } from '../PageLayoutContainer';
 import { SpacingSize, TypoSize } from '../..';
-import { ArcadeLogo } from '../ArcadeLogo';
+import { LogoText } from '../logos/LogoText';
 
 export const SiteHeader = styled.header`
 	padding-bottom: ${SpacingSize.x050};
@@ -27,7 +27,7 @@ export const LogoIconText = styled(IconText)`
 	gap: ${SpacingSize.x050};
 `;
 
-export const Logo = styled(ArcadeLogo)`
+export const Logo = styled(LogoText)`
 	font-size: ${TypoSize.x200};
 `;
 

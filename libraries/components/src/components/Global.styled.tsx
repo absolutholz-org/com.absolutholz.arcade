@@ -1,15 +1,57 @@
-import { createGlobalStyle, css } from "styled-components";
-import { SpacingSize } from "../enums";
+import { createGlobalStyle, css } from 'styled-components';
+import {
+	ColorDarkHsl,
+	ColorLightHsl,
+	SpacingSize,
+	SurfaceTheme,
+	TypoFamily,
+} from '../enums';
+import { themeSurface } from '../styles/themeSurface';
 
 // https://github.com/absolutholz/semantic-reboot
 
 const DarkColorSchemeCSS = css`
-	--accent: #007eff;
-	--surface-hsl: 0, 0%, 10%;
-	--on-surface-hsl: 0, 0%, 100%;
+	--bg1: ${ColorDarkHsl.Grey900};
+	--bg2: ${ColorDarkHsl.Grey700};
+
+	--primary: ${ColorDarkHsl.Grey100};
+	--on-primary: ${ColorDarkHsl.Grey900};
+
+	--secondary: ${ColorDarkHsl.Grey200};
+	--on-secondary: ${ColorDarkHsl.Grey900};
+
+	--accent: ${ColorDarkHsl.Blue};
+	--on-accent: ${ColorDarkHsl.Grey900};
+
+	--error: ${ColorDarkHsl.Red};
+	--on-error: ${ColorDarkHsl.Grey900};
+`;
+
+const LightColorSchemeCSS = css`
+	--bg1: ${ColorLightHsl.Grey100};
+	--bg2: ${ColorLightHsl.Grey300};
+
+	--primary: ${ColorLightHsl.Grey900};
+	--on-primary: ${ColorLightHsl.Grey100};
+
+	--secondary: ${ColorLightHsl.Grey700};
+	--on-secondary: ${ColorLightHsl.Grey100};
+
+	--accent: ${ColorLightHsl.BlueDark2};
+	--on-accent: ${ColorLightHsl.Grey100};
+
+	--error: ${ColorLightHsl.RedDark2};
+	--on-error: ${ColorLightHsl.Grey100};
 `;
 
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'GamePlayed';
+        src: url('https://arcade.absolutholz.de/arcade-assets/fonts/game-played/GamePlayed.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     *, ::after, ::before {
         box-sizing: border-box;
     }
@@ -21,12 +63,10 @@ export const GlobalStyle = createGlobalStyle`
 	} */
 
     :root {
-        --accent: #006ecd;
-        --on-accent: #fff;
-        --surface-hsl: 60, 100%, 99%;
-        --surface: hsl(var(--surface-hsl));
-        --on-surface-hsl: 240, 21%, 8%;
-		--on-surface: hsl(var(--on-surface-hsl));
+        ${LightColorSchemeCSS}
+
+        /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles */
+        color-scheme: light dark;
 
         &[data-color-scheme="dark"] {
             ${DarkColorSchemeCSS}
@@ -37,6 +77,8 @@ export const GlobalStyle = createGlobalStyle`
                 ${DarkColorSchemeCSS}
             }
         }
+
+        ${themeSurface({ theme: SurfaceTheme.Background1 })}
 
         --gutter: ${SpacingSize.x050};
         --offset: ${SpacingSize.x100};
@@ -53,7 +95,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font: normal 1em / 1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        font: normal 1em / 1.5 ${TypoFamily.Body};
         height: 100%;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
@@ -124,11 +166,26 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     a {
-        color: var(--accent);
+        ${themeSurface({
+			theme: SurfaceTheme.Accent,
+			includeBackground: false,
+		})}
+        color: var(--on-surface);
     }
 
     img {
         height: auto;
         max-width: 100%;
+
+        /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
+        [data-color-scheme="dark"] & {
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            &:not([data-color-scheme="light"]) {
+                filter: brightness(0.8) contrast(1.2);
+            }
+        }
     }
 `;

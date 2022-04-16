@@ -1,17 +1,17 @@
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
-import SvgChange from "mdi-react/PencilIcon";
+import SvgChange from 'mdi-react/PencilIcon';
 
 import {
 	ButtonIcon,
 	ButtonVariant,
 	DialogConfirm,
 	Icon,
-} from "@arcade/library-components";
+} from '@arcade/library-components';
 
-import { IPlayerConfigProps } from "./IPlayerConfig";
-import * as S from "./PlayerConfig.styled";
-import { GamePieceIcon } from "../GamePieceIcon";
+import { IPlayerConfigProps } from './IPlayerConfig';
+import * as S from './PlayerConfig.styled';
+import { GamePieceIcon } from '../GamePieceIcon';
 
 export function PlayerConfig({
 	id,
@@ -40,8 +40,7 @@ export function PlayerConfig({
 				<ButtonIcon
 					inline={true}
 					onClick={() => setIsDialogOpen(true)}
-					variant={ButtonVariant.Ghost}
-				>
+					variant={ButtonVariant.Text}>
 					<Icon icon={SvgChange} />
 				</ButtonIcon>
 			</S.PlayerName>
@@ -53,8 +52,7 @@ export function PlayerConfig({
 			<DialogConfirm
 				isOpen={isDialogOpen}
 				onCancel={() => setIsDialogOpen(false)}
-				onConfirm={handleDialogConfirm}
-			>
+				onConfirm={handleDialogConfirm}>
 				<label htmlFor={`player-${id}_name `}>
 					<div>Name</div>
 					<input
@@ -64,7 +62,7 @@ export function PlayerConfig({
 						name={`player-${id}_name `}
 						ref={nameRef}
 						required
-						type="text"
+						type='text'
 						defaultValue={player.displayName}
 					/>
 				</label>

@@ -2,10 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { SectionPadded } from '.';
+import { StoryExampleContent } from '../../StoryExampleContent';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'SectionPadded',
+	title: 'Layout/SectionPadded',
 	component: SectionPadded,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
@@ -17,3 +18,6 @@ const Template: ComponentStory<typeof SectionPadded> = (args) => (
 );
 
 export const Primary = Template.bind({});
+Primary.args = {
+	children: <StoryExampleContent />,
+};

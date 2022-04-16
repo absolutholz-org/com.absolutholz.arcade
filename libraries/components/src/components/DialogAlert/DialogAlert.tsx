@@ -1,5 +1,5 @@
 import { Dialog } from '../Dialog';
-import { Button } from '../Button';
+import { Button } from '../buttons/Button';
 
 import { IDialogAlertProps } from './IDialogAlert';
 

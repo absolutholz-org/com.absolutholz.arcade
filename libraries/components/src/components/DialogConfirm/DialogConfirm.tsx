@@ -1,7 +1,7 @@
-import { Button } from '../Button';
+import { Button } from '../buttons/Button';
 
 import { IDialogConfirmProps } from './IDialogConfirm';
-import { ButtonVariant } from '../Button/IButton';
+import { ButtonVariant } from '../buttons/Button/IButton';
 import { DialogAlert } from '../DialogAlert';
 
 export function DialogConfirm({

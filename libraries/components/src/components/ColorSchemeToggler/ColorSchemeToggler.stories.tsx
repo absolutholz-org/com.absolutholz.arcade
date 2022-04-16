@@ -5,7 +5,7 @@ import { ColorSchemeToggler } from '.';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'ColorSchemeToggler',
+	title: 'Components/ColorSchemeToggler',
 	component: ColorSchemeToggler,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
@@ -17,3 +17,6 @@ const Template: ComponentStory<typeof ColorSchemeToggler> = (args) => (
 );
 
 export const Primary = Template.bind({});
+Primary.args = {
+	children: 'toggle',
+};

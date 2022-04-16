@@ -1,8 +1,10 @@
-import { FormEvent, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { FormEvent, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { TicTacToePiece } from "../../enums/TicTacToePiece";
-import { PlayerConfig } from "../../components/PlayerConfig";
+import { Headline100 } from '@arcade/library-components/src/components/headlines';
+
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
+import { PlayerConfig } from '../../components/PlayerConfig';
 import {
 	Button,
 	ButtonIcon,
@@ -14,15 +16,16 @@ import {
 	Icon,
 	IconSize,
 	ButtonVariant,
-} from "@arcade/library-components";
-import { PlayersContext } from "../../context/Players";
+	SiteFooter,
+} from '@arcade/library-components';
+import { PlayersContext } from '../../context/Players';
 // import { GameConfigurationAction, GameTheme } from "../../enums";
 // import { useGameConfiguration } from "../../context/GameConfiguration";
-import { GameThemeSelector } from "../../components/GameThemeSelector";
+import { GameThemeSelector } from '../../components/GameThemeSelector';
 
-import SvgSwap from "mdi-react/SwapHorizontalIcon";
+import SvgSwap from 'mdi-react/SwapHorizontalIcon';
 
-import * as S from "./HomePage.styled";
+import * as S from './HomePage.styled';
 
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
@@ -55,53 +58,60 @@ export function HomePage(): JSX.Element {
 
 	const handleStartGame = (event: FormEvent) => {
 		event.preventDefault();
-		navigate("game");
+		navigate('game');
 	};
 
 	return (
 		<>
 			{/* <SiteHeader /> */}
-			<PageLayoutContainer>
-				{/* <HeadlinePage as='h1'>Tic Tac Toe</HeadlinePage> */}
+			<main>
+				<PageLayoutContainer>
+					{/* <Headline400 as='h1'>Tic Tac Toe</Headline400> */}
 
-				<S.Section>
-					<S.SectionHeadline as="h2">Players</S.SectionHeadline>
+					<S.Section>
+						<Headline100 as='h2'>Players</Headline100>
 
-					<S.PlayersContainer>
-						<PlayerConfig
-							id="1"
-							player={player1}
-							setPlayer={setPlayer1}
-						/>
+						<S.PlayersContainer>
+							<PlayerConfig
+								id='1'
+								player={player1}
+								setPlayer={setPlayer1}
+							/>
 
-						<ButtonIcon
-							inline={true}
-							onClick={handleSwapPlayerPieces}
-							type="button"
-							variant={ButtonVariant.Ghost}
-						>
-							<Icon icon={SvgSwap} size={IconSize.x400} />
-						</ButtonIcon>
+							<ButtonIcon
+								inline={true}
+								onClick={handleSwapPlayerPieces}
+								type='button'
+								variant={ButtonVariant.Text}>
+								<Icon icon={SvgSwap} size={IconSize.x400} />
+							</ButtonIcon>
 
-						<PlayerConfig
-							id="2"
-							player={player2}
-							setPlayer={setPlayer2}
-						/>
-					</S.PlayersContainer>
-				</S.Section>
+							<PlayerConfig
+								id='2'
+								player={player2}
+								setPlayer={setPlayer2}
+							/>
+						</S.PlayersContainer>
+					</S.Section>
 
-				<S.Section>
-					<S.SectionHeadline as="h2">Theme</S.SectionHeadline>
+					<S.Section>
+						<Headline100 as='h2'>Theme</Headline100>
 
-					<GameThemeSelector />
-				</S.Section>
+						<GameThemeSelector />
+					</S.Section>
 
-				<S.Section>
-					<Button onClick={handleStartGame}>Start Game</Button>
-				</S.Section>
-			</PageLayoutContainer>
-			{/* <SiteFooter /> */}
+					<S.Section>
+						<Button onClick={handleStartGame}>Start Game</Button>
+					</S.Section>
+				</PageLayoutContainer>
+			</main>
+			<SiteFooter
+				slotHomeLinkPrefix={
+					<span>
+						<span>Tic Tac Toe</span> is a part of the{' '}
+					</span>
+				}
+			/>
 		</>
 	);
 }
