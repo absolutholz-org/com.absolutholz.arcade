@@ -1,4 +1,4 @@
-import { ISquare } from "../../context/GameContext";
+import { ISquare } from '../../context/Game';
 
 export interface IGameboardSquareProps {
 	square: ISquare;

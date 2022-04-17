@@ -1,10 +1,10 @@
-import { useMediaQuery } from "@arcade/library-common";
+import { useMediaQuery } from '@arcade/library-common';
 
-import { GameProvider } from "../../context/Game";
-import { Gameboard } from "../../components/Gameboard";
-import { Scoreboard } from "../../components/Scoreboard";
+import { GameProvider } from '../../context/Game';
+import { Gameboard } from '../../components/Gameboard';
+import { Scoreboard } from '../../components/Scoreboard';
 
-import * as S from "./GamePage.styled";
+import * as S from './GamePage.styled';
 
 export function GamePage(): JSX.Element {
 	const isLandscape = useMediaQuery(S.MEDIA_QUERY);
@@ -40,7 +40,6 @@ export function GamePage(): JSX.Element {
 					</S.GameWrapper>
 				</>
 			)}
-			<S.TurnDisplay />
 		</GameProvider>
 	);
 }

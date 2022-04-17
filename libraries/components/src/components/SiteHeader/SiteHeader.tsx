@@ -31,7 +31,6 @@ export function SiteHeader({ ...props }): JSX.Element {
 	};
 
 	const handlePlayerFormSubmit = (name: string) => {
-		console.log({ name });
 		closePlayerDialog();
 		saveUser({
 			displayName: name,

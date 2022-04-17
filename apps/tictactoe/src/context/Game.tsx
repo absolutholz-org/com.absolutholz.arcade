@@ -16,12 +16,12 @@ const DEFAULT_CELL_SETUP = Array.from(Array(3))
 	})
 	.flat();
 
-interface Action {
+type Action = {
 	type: GameAction;
 	payload?: {
 		cell?: IGameCell;
 	};
-}
+};
 type Dispatch = (action: Action) => void;
 type State = {
 	gameState: GameState;
@@ -34,9 +34,8 @@ type State = {
 };
 type GameProviderProps = { children: React.ReactNode };
 
-const GameStateContext = createContext<
-	{ state: State; dispatch: Dispatch } | undefined
->(undefined);
+const GameStateContext =
+	createContext<{ state: State; dispatch: Dispatch } | undefined>(undefined);
 
 const isNeighborSamePiece = (
 	cells: IGameCell[],
@@ -81,7 +80,6 @@ const isNeighborSamePiece = (
 
 function gameReducer(state: State, action: Action) {
 	const { type, payload } = action;
-	console.log({ state, type, payload });
 
 	switch (type) {
 		case GameAction.Move: {
@@ -168,13 +166,6 @@ function gameReducer(state: State, action: Action) {
 					-1
 				),
 			];
-
-			console.log({
-				rowMatch,
-				colMatch,
-				diagonalMatchNWSE,
-				diagonalMatchNESW,
-			});
 
 			let gameState = state.gameState;
 

@@ -1,15 +1,14 @@
-import { TicTacToePiece } from "../../enums/TicTacToePiece";
-import * as S from "./Cell.styled";
-import { ICellProps } from "./ICell";
+import { TicTacToePiece } from '../../enums/TicTacToePiece';
+import * as S from './Cell.styled';
+import { ICellProps } from './ICell';
 
-import { IconSize } from "@arcade/library-components";
-import { GamePieceIcon } from "../GamePieceIcon";
+import { IconSize } from '@arcade/library-components';
+import { GamePieceIcon } from '../GamePieceIcon';
 
 export function Cell({ row, column, mark, onClick }: ICellProps): JSX.Element {
 	const handleButtonClick = (): void => {
 		onClick(row, column);
 	};
-	console.log("RENDER: Cell");
 
 	return (
 		<S.Cell id={`${row}x${column}`}>

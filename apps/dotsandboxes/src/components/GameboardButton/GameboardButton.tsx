@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from 'react';
 
-import GameContext from "../../context/GameContext";
+import GameContext from '../../context/Game';
 
-import { IGameboardButtonProps } from "./IGameboardButton";
-import * as S from "./GameboardButton.styled";
-import GameAction from "../../enums/GameAction";
+import { IGameboardButtonProps } from './IGameboardButton';
+import * as S from './GameboardButton.styled';
+import GameAction from '../../enums/GameAction';
 
 export function GameboardButton({
 	startRowID,
@@ -14,7 +14,7 @@ export function GameboardButton({
 	...props
 }: IGameboardButtonProps): JSX.Element {
 	const [isDisabled, setIsDisabled] = useState(false);
-	const [color, setColor] = useState("");
+	const [color, setColor] = useState('');
 	const { currentPlayer, dispatch } = useContext(GameContext);
 
 	const handleButtonClick = (): void => {
@@ -34,14 +34,13 @@ export function GameboardButton({
 	useEffect(() => {
 		setIsDisabled(false);
 	}, []);
-	console.log("render button");
 
 	return (
 		<S.GameboardButton
 			disabled={isDisabled}
 			id={`${startRowID}x${startColumnID}|${endRowID}x${endColumnID}`}
 			onClick={handleButtonClick}
-			type="button"
+			type='button'
 			color={color}
 			{...props}
 		/>

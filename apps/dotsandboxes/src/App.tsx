@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { GlobalStyle } from '@arcade/library-components';
 
-import { GameProvider } from './context/GameContext';
+import { GameProvider } from './context/Game';
 import { PlayersProvider } from './context/Players';
 import { GamePage, HomePage } from './pages';
 

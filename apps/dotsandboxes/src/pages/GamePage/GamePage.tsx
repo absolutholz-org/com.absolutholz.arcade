@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 
 import { Gameboard, Scoreboard } from '../../components';
 
-import { GameContext } from '../../context/GameContext';
+import { GameContext } from '../../context/Game';
 import GameAction from '../../enums/GameAction';
 
 export function GamePage(): JSX.Element {

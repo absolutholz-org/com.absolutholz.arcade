@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { IGameboardProps } from "./IGameboard";
-import * as S from "./Gameboard.styled";
-import { GameboardSquare } from "../GameboardSquare";
-import GameContext from "../../context/GameContext";
+import { IGameboardProps } from './IGameboard';
+import * as S from './Gameboard.styled';
+import { GameboardSquare } from '../GameboardSquare';
+import GameContext from '../../context/Game';
 
 export function Gameboard({
 	columnCount,
@@ -16,28 +16,30 @@ export function Gameboard({
 	const { squares } = useContext(GameContext);
 
 	return (
-		<S.Gameboard columnCount={columnCount} {...props}>
-			{
-				/* { rowArray.map((row, rowIndex) => (
-				columnArray.map((col, columnIndex) => ( */
-				squares &&
-					squares.map((square) => {
-						const { rowIndex, columnIndex } = square;
+		<>
+			<S.Gameboard columnCount={columnCount} {...props}>
+				{
+					/* { rowArray.map((row, rowIndex) => (
+					columnArray.map((col, columnIndex) => ( */
+					squares &&
+						squares.map((square) => {
+							const { rowIndex, columnIndex } = square;
 
-						return (
-							<GameboardSquare
-								square={square}
-								isLastRowInColumn={rowIndex + 1 === rowCount}
-								isLastColumnInRow={
-									columnIndex + 1 === columnCount
-								}
-								key={`${rowIndex}x${columnIndex}`}
-							/>
-						);
-					})
-			}
-			{/* ))
-			))} */}
-		</S.Gameboard>
+							return (
+								<GameboardSquare
+									square={square}
+									isLastRowInColumn={
+										rowIndex + 1 === rowCount
+									}
+									isLastColumnInRow={
+										columnIndex + 1 === columnCount
+									}
+									key={`${rowIndex}x${columnIndex}`}
+								/>
+							);
+						})
+				}
+			</S.Gameboard>
+		</>
 	);
 }

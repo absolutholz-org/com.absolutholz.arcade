@@ -1,12 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { TurnDisplay as TurnDisplayComponent } from "../../components/TurnDisplay";
-
-export const MEDIA_QUERY = "(min-width: 32rem)";
-
-export const TurnDisplay = styled(TurnDisplayComponent)`
-	text-align: center;
-`;
+export const MEDIA_QUERY = '(min-width: 32rem)';
 
 export const GameWrapper = styled.div`
 	display: grid;

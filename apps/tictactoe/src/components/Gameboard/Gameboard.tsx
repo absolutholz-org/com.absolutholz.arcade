@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
 	Button,
 	ButtonVariant,
 	DialogAlert,
 	DialogConfirm,
-} from "@arcade/library-components";
+	NotificationTurn,
+} from '@arcade/library-components';
 
-import { useGameState } from "../../context/Game";
-import { GameAction } from "../../enums/GameAction";
-import { GameState } from "../../enums/GameState";
+import { useGameState } from '../../context/Game';
+import { GameAction } from '../../enums/GameAction';
+import { GameState } from '../../enums/GameState';
 
-import { Cell } from "../Cell";
+import { Cell } from '../Cell';
 
-import * as S from "./Gameboard.styled";
+import * as S from './Gameboard.styled';
 
 export function Gameboard({ ...props }): JSX.Element {
 	const { gameState, cells, currentPlayer, dispatch } = useGameState();
@@ -39,20 +40,16 @@ export function Gameboard({ ...props }): JSX.Element {
 	};
 
 	// useEffect(() => {
-	// 	console.log({ currentPlayer });
 	// 	setIsTurnDialogOpen(true);
 	// }, [currentPlayer]);
 
 	useEffect(() => {
-		console.log({ gameState });
 		if (gameState === GameState.Draw || gameState === GameState.Win) {
 			setIsEndGameDialogOpen(true);
 		} else {
 			setIsEndGameDialogOpen(false);
 		}
 	}, [gameState]);
-
-	console.log("RENDER: Gameboard");
 
 	return (
 		<>
@@ -93,10 +90,9 @@ export function Gameboard({ ...props }): JSX.Element {
 			<DialogConfirm
 				isOpen={isEndGameDialogOpen}
 				onConfirm={handleNewGameButtonClick}
-				slotConfirmButton="New game"
+				slotConfirmButton='New game'
 				onCancel={handleNewGameButtonClick}
-				slotCancelButton="No thanks"
-			>
+				slotCancelButton='No thanks'>
 				{gameState === GameState.Draw ? (
 					<div>It's a draw!</div>
 				) : (
@@ -104,6 +100,8 @@ export function Gameboard({ ...props }): JSX.Element {
 				)}
 				<div>Play again?</div>
 			</DialogConfirm>
+
+			<NotificationTurn playerName={currentPlayer.displayName} />
 		</>
 	);
 }
