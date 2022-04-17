@@ -23,7 +23,6 @@ export * from './components/PageLayoutContainer';
 export * from './components/PlayerForm';
 export * from './components/SectionPadded';
 export * from './components/SiteFooter';
-export * from './components/SiteHeader';
 export * from './components/VisuallyHidden';
 
 export * from './enums';
