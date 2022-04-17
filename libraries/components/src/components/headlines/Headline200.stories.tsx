@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Headline200 as Headline200Component } from '.';
-import { LOREM_IPSUM } from '../../loremIpsum';
+import { LOREM_IPSUM_SENTENCE } from '../../loremIpsum';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -20,5 +20,5 @@ const Template: ComponentStory<typeof Headline200Component> = (args) => (
 export const Headline200 = Template.bind({});
 Headline200.storyName = 'Headline200';
 Headline200.args = {
-	children: LOREM_IPSUM,
+	children: LOREM_IPSUM_SENTENCE,
 };
