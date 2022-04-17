@@ -1,4 +1,6 @@
 import { FormEvent, useRef } from 'react';
+import { Input } from '../formElements/Input';
+import { InputGroup } from '../formElements/InputGroup';
 
 import { IPlayerFormProps } from './IPlayerForm';
 
@@ -7,6 +9,7 @@ export function PlayerForm({
 	onSubmit,
 }: IPlayerFormProps): JSX.Element {
 	const nameRef = useRef<HTMLInputElement>(null);
+	const inputID = `${formID}_name`;
 
 	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault();
@@ -18,15 +21,13 @@ export function PlayerForm({
 
 	return (
 		<form id={formID} onSubmit={handleSubmit}>
-			<label htmlFor={`${formID}_name`}>
-				<div>Name</div>
-				<input
-					id={`${formID}_name`}
-					ref={nameRef}
-					required
-					type='text'
-				/>
-			</label>
+			<InputGroup
+				slotLabel='Name'
+				slotInput={
+					<Input id={inputID} ref={nameRef} required type='text' />
+				}
+				inputId={inputID}
+			/>
 		</form>
 	);
 }

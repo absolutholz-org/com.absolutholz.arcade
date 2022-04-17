@@ -7,6 +7,8 @@ import {
 	ButtonVariant,
 	DialogConfirm,
 	Icon,
+	Input,
+	InputGroup,
 } from '@arcade/library-components';
 
 import { IPlayerConfigProps } from './IPlayerConfig';
@@ -52,20 +54,24 @@ export function PlayerConfig({
 			<DialogConfirm
 				isOpen={isDialogOpen}
 				onCancel={() => setIsDialogOpen(false)}
-				onConfirm={handleDialogConfirm}>
-				<label htmlFor={`player-${id}_name `}>
-					<div>Name</div>
-					<input
-						id={`player-${id}_name `}
-						maxLength={12}
-						minLength={2}
-						name={`player-${id}_name `}
-						ref={nameRef}
-						required
-						type='text'
-						defaultValue={player.displayName}
-					/>
-				</label>
+				onConfirm={handleDialogConfirm}
+				slotHeader='Player Config'>
+				<InputGroup
+					slotLabel='Name'
+					slotInput={
+						<Input
+							id={`player-${id}_name `}
+							maxLength={12}
+							minLength={2}
+							name={`player-${id}_name `}
+							ref={nameRef}
+							required
+							type='text'
+							defaultValue={player.displayName}
+						/>
+					}
+					inputId={`player-${id}_name `}
+				/>
 			</DialogConfirm>
 		</S.PlayerConfig>
 	);

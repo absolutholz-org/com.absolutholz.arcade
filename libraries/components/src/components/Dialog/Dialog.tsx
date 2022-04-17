@@ -7,6 +7,7 @@ export function Dialog({
 	children,
 	isOpen = false,
 	isModal = true,
+	slotHeader,
 	slotFooter,
 	slotButtonBar,
 }: IDialogProps): JSX.Element {
@@ -36,6 +37,8 @@ export function Dialog({
 
 	return (
 		<S.Dialog ref={ref}>
+			{slotHeader && <S.Header>{slotHeader}</S.Header>}
+
 			{children}
 			{slotFooter && <S.Footer>{slotFooter}</S.Footer>}
 			{slotButtonBar && <S.ButtonBar>{slotButtonBar}</S.ButtonBar>}

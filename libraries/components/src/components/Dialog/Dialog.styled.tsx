@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { SpacingSize } from '../../enums';
 
 import { Elevation } from '../Elevation';
+import { Headline100 } from '../headlines';
 
 const appear = keyframes`
 	from {
@@ -39,8 +40,14 @@ export const Dialog = styled.dialog`
 	}
 `;
 
+export const Header = styled(Headline100)`
+	border-bottom: 1px solid;
+	margin-bottom: ${SpacingSize.x100};
+	padding-bottom: ${SpacingSize.x050};
+`;
+
 export const Footer = styled.div`
-	margin-top: ${SpacingSize.x100};
+	margin-top: ${SpacingSize.x150};
 `;
 
 export const ButtonBar = styled(Footer)`

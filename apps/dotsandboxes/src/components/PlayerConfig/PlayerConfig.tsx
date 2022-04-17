@@ -7,6 +7,8 @@ import {
 	ButtonVariant,
 	DialogConfirm,
 	Icon,
+	Input,
+	InputGroup,
 } from '@arcade/library-components';
 
 import { IPlayerConfigProps } from './IPlayerConfig';
@@ -49,33 +51,39 @@ export function PlayerConfig({
 			<DialogConfirm
 				isOpen={isDialogOpen}
 				onCancel={() => setIsDialogOpen(false)}
-				onConfirm={handleDialogConfirm}>
-				<label htmlFor={`player-${id}_name `}>
-					<div>Name</div>
-					<input
-						id={`player-${id}_name `}
-						maxLength={12}
-						minLength={2}
-						name={`player-${id}_name `}
-						ref={nameRef}
-						required
-						type='text'
-						defaultValue={player.displayName}
-					/>
-				</label>
-				<label htmlFor={`player-${id}_color `}>
-					<div>Color</div>
-					<input
-						id={`player-${id}_color `}
-						maxLength={12}
-						minLength={2}
-						name={`player-${id}_color `}
-						ref={colorRef}
-						required
-						type='text'
-						defaultValue={player.color}
-					/>
-				</label>
+				onConfirm={handleDialogConfirm}
+				slotHeader='Player Config'>
+				<InputGroup
+					slotLabel='Name'
+					slotInput={
+						<Input
+							id={`player-${id}_name `}
+							maxLength={12}
+							minLength={2}
+							name={`player-${id}_name `}
+							ref={nameRef}
+							required
+							type='text'
+							defaultValue={player.displayName}
+						/>
+					}
+					inputId={`player-${id}_name `}
+				/>
+
+				<InputGroup
+					slotLabel='Color'
+					slotInput={
+						<Input
+							id={`player-${id}_color `}
+							name={`player-${id}_color `}
+							ref={colorRef}
+							required
+							type='color'
+							defaultValue={player.color}
+						/>
+					}
+					inputId={`player-${id}_color `}
+				/>
 			</DialogConfirm>
 		</S.PlayerConfig>
 	);
