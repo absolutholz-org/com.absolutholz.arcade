@@ -9,6 +9,8 @@ export * from './components/Dialog';
 export * from './components/DialogAlert';
 export * from './components/DialogConfirm';
 export * from './components/Elevation';
+export * from './components/formElements/Input';
+export * from './components/formElements/InputGroup';
 export * from './components/headlines';
 export * from './components/HeadlinePage';
 export * from './components/HeadlineSectionLevel1';
