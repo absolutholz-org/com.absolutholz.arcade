@@ -1,0 +1,27 @@
+import { useReducer } from 'react';
+import { GameTheme } from '../../enums';
+import { GameConfigurationContext } from './GameConfigurationContext';
+
+import { reducer, STORAGE_KEY_THEME } from './reducer';
+
+type GameConfigurationProps = { children: React.ReactNode };
+
+export function GameConfigurationProvider({
+	children,
+}: GameConfigurationProps) {
+	const [state, dispatch] = useReducer(reducer, {
+		gameTheme:
+			(localStorage.getItem(STORAGE_KEY_THEME) as GameTheme) ||
+			GameTheme.HugsKisses,
+	});
+
+	// NOTE: you *might* need to memoize this value
+	// Learn more in http://kcd.im/optimize-context
+	const value = { state, dispatch };
+
+	return (
+		<GameConfigurationContext.Provider value={value}>
+			{children}
+		</GameConfigurationContext.Provider>
+	);
+}

@@ -1,4 +1,4 @@
-import { useGameState } from '../../context/Game';
+import { useGameState } from '../../context/GameState';
 import { PlayerScoreboard } from '../PlayerScoreboard';
 import * as S from './Scoreboard.styled';
 

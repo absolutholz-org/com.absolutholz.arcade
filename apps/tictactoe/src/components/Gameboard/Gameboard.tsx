@@ -9,7 +9,7 @@ import {
 	NotificationTurn,
 } from '@arcade/library-components';
 
-import { useGameState } from '../../context/Game';
+import { useGameState } from '../../context/GameState';
 import { GameAction } from '../../enums/GameAction';
 import { GameState } from '../../enums/GameState';
 

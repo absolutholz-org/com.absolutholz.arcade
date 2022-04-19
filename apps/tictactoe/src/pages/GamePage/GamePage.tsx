@@ -1,6 +1,6 @@
 import { useMediaQuery } from '@arcade/library-common';
 
-import { GameProvider } from '../../context/Game';
+import { GameStateProvider } from '../../context/GameState';
 import { Gameboard } from '../../components/Gameboard';
 import { Scoreboard } from '../../components/Scoreboard';
 
@@ -10,7 +10,7 @@ export function GamePage(): JSX.Element {
 	const isLandscape = useMediaQuery(S.MEDIA_QUERY);
 
 	return (
-		<GameProvider>
+		<GameStateProvider>
 			{isLandscape ? (
 				<S.GameWrapper>
 					<S.GameboardColumn>
@@ -40,6 +40,6 @@ export function GamePage(): JSX.Element {
 					</S.GameWrapper>
 				</>
 			)}
-		</GameProvider>
+		</GameStateProvider>
 	);
 }
