@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import {
-	Button,
-	ButtonVariant,
-	DialogAlert,
-	DialogConfirm,
-	NotificationTurn,
-} from '@arcade/library-components';
+import { DialogConfirm, NotificationTurn } from '@arcade/library-components';
 
 import { useGameState } from '../../context/GameState';
 import { GameAction } from '../../enums/GameAction';
@@ -22,6 +16,7 @@ export function Gameboard({ ...props }): JSX.Element {
 
 	const [isEndGameDialogOpen, setIsEndGameDialogOpen] = useState(false);
 	// const [isTurnDialogOpen, setIsTurnDialogOpen] = useState(false);
+	const navigate = useNavigate();
 
 	const handleCellClick = (row: number, column: number) => {
 		dispatch({ type: GameAction.Move, payload: { cell: { row, column } } });
@@ -37,6 +32,10 @@ export function Gameboard({ ...props }): JSX.Element {
 
 	const handleRestartGameButtonClick = () => {
 		dispatch({ type: GameAction.Restart });
+	};
+
+	const handleLeaveGameButtonClick = () => {
+		navigate('/');
 	};
 
 	// useEffect(() => {
@@ -91,7 +90,7 @@ export function Gameboard({ ...props }): JSX.Element {
 				isOpen={isEndGameDialogOpen}
 				onConfirm={handleNewGameButtonClick}
 				slotConfirmButton='New game'
-				onCancel={handleNewGameButtonClick}
+				onCancel={handleLeaveGameButtonClick}
 				slotCancelButton='No thanks'>
 				{gameState === GameState.Draw ? (
 					<div>It's a draw!</div>
