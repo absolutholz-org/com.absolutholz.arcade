@@ -27,7 +27,7 @@ export function GameThemeSelector(): JSX.Element {
 	const handleDialogConfirm = () => {
 		dispatch({
 			type: GameConfigurationAction.SetTheme,
-			payload: { theme },
+			theme,
 		});
 		setIsDialogOpen(false);
 	};
@@ -55,7 +55,7 @@ export function GameThemeSelector(): JSX.Element {
 							htmlFor={`gameTheme-${gameThemeID}`}
 							key={`gameTheme-${gameThemeID}`}>
 							{/* {gameTheme === gameThemeID && <S.Flag>selected</S.Flag>} */}
-
+							{theme}-{gameThemeID}
 							<input
 								checked={theme === gameThemeID}
 								id={`gameTheme-${gameThemeID}`}
@@ -66,9 +66,7 @@ export function GameThemeSelector(): JSX.Element {
 								type='radio'
 								value={gameThemeID}
 							/>
-
 							<S.Title>{gameThemeID}</S.Title>
-
 							<S.IconWrapper>
 								<GamePieceIcon
 									iconSize={IconSize.x400}

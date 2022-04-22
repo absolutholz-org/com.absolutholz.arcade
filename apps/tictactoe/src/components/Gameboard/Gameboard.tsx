@@ -52,7 +52,7 @@ export function Gameboard({ ...props }): JSX.Element {
 
 	return (
 		<>
-			<S.Gameboard {...props}>
+			<S.Gameboard $columnCount={Math.sqrt(cells.length)} {...props}>
 				{cells.map(({ row, column, piece }) => (
 					<Cell
 						column={column}

@@ -1,8 +1,8 @@
 import { useReducer } from 'react';
-import { GameTheme } from '../../enums';
+import { GameSize, GameTheme } from '../../enums';
 import { GameConfigurationContext } from './GameConfigurationContext';
 
-import { reducer, STORAGE_KEY_THEME } from './reducer';
+import { reducer, STORAGE_KEY_SIZE, STORAGE_KEY_THEME } from './reducer';
 
 type GameConfigurationProps = { children: React.ReactNode };
 
@@ -13,6 +13,9 @@ export function GameConfigurationProvider({
 		gameTheme:
 			(localStorage.getItem(STORAGE_KEY_THEME) as GameTheme) ||
 			GameTheme.HugsKisses,
+		gameSize:
+			(Number(localStorage.getItem(STORAGE_KEY_SIZE)) as GameSize) ||
+			GameSize.x3,
 	});
 
 	// NOTE: you *might* need to memoize this value

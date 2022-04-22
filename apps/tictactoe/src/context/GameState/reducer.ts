@@ -1,7 +1,7 @@
 import { IGameCell } from '../../dataModels/IGameCell';
 import { GameAction, GameState } from '../../enums';
 import { Action, State } from './GameStateContext';
-import { DEFAULT_CELL_SETUP } from './GameStateProvider';
+import { cellConstructor } from './GameStateProvider';
 import { isNeighborSamePiece } from './isNeighborSamePiece';
 
 export function reducer(state: State, action: Action) {
@@ -103,11 +103,12 @@ export function reducer(state: State, action: Action) {
 				return { ...state, cells, gameState };
 			}
 
+			const cellCount = Math.sqrt(cells.length) - 1;
 			if (
-				rowMatch.length === 2 ||
-				colMatch.length === 2 ||
-				diagonalMatchNWSE.length === 2 ||
-				diagonalMatchNESW.length === 2
+				rowMatch.length === cellCount ||
+				colMatch.length === cellCount ||
+				diagonalMatchNWSE.length === cellCount ||
+				diagonalMatchNESW.length === cellCount
 			) {
 				gameState = GameState.Win;
 				return { ...state, cells, gameState };
@@ -122,20 +123,18 @@ export function reducer(state: State, action: Action) {
 		}
 
 		case GameAction.NewGame: {
-			const cells = DEFAULT_CELL_SETUP;
+			const cells = cellConstructor(Math.sqrt(state.cells.length));
 			const gameState = GameState.Playing;
 			const currentPlayer =
 				state.currentPlayer === state.players.player1
 					? state.players.player2
 					: state.players.player1;
-
 			return { ...state, cells, currentPlayer, gameState };
 		}
 
 		case GameAction.Restart: {
-			const cells = DEFAULT_CELL_SETUP;
+			const cells = cellConstructor(Math.sqrt(state.cells.length));
 			const gameState = GameState.Playing;
-
 			return { ...state, cells, gameState };
 		}
 

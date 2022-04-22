@@ -9,23 +9,18 @@ import {
 	Button,
 	ButtonIcon,
 	PageLayoutContainer,
-	// HeadlinePage,
-	// HeadlineSectionLevel1,
-	// SiteHeader,
-	// SiteFooter,
 	Icon,
 	IconSize,
 	ButtonVariant,
 	SiteFooter,
 } from '@arcade/library-components';
 import { PlayersContext } from '../../context/Players';
-// import { GameConfigurationAction, GameTheme } from "../../enums";
-// import { useGameConfiguration } from "../../context/GameConfiguration";
 import { GameThemeSelector } from '../../components/GameThemeSelector';
 
 import SvgSwap from 'mdi-react/SwapHorizontalIcon';
 
 import * as S from './HomePage.styled';
+import { GameSizeSelector } from '../../components/GameSizeSelector';
 
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
@@ -66,8 +61,6 @@ export function HomePage(): JSX.Element {
 			{/* <SiteHeader /> */}
 			<main>
 				<PageLayoutContainer>
-					{/* <Headline400 as='h1'>Tic Tac Toe</Headline400> */}
-
 					<S.Section>
 						<Headline100 as='h2'>Players</Headline100>
 
@@ -98,6 +91,12 @@ export function HomePage(): JSX.Element {
 						<Headline100 as='h2'>Theme</Headline100>
 
 						<GameThemeSelector />
+					</S.Section>
+
+					<S.Section>
+						<Headline100 as='h2'>Size</Headline100>
+
+						<GameSizeSelector />
 					</S.Section>
 
 					<S.Section>

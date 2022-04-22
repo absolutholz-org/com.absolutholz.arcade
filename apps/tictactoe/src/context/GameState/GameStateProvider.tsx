@@ -4,25 +4,30 @@ import { reducer } from './reducer';
 import { PlayersContext } from '../../context/Players';
 import { GameState, TicTacToePiece } from '../../enums';
 import { GameStateContext } from './GameStateContext';
+import { GameConfigurationContext } from '../GameConfiguration';
 
-export const DEFAULT_CELL_SETUP = Array.from(Array(3))
-	.map((n, row, array) => {
-		return Array.from(Array(array.length)).map((n, col) => {
-			return {
-				row: row % array.length,
-				column: col % array.length,
-			};
-		});
-	})
-	.flat();
+export function cellConstructor(cellCount: number) {
+	return Array.from(Array(cellCount))
+		.map((n, row, array) => {
+			return Array.from(Array(array.length)).map((n, col) => {
+				return {
+					row: row % array.length,
+					column: col % array.length,
+				};
+			});
+		})
+		.flat();
+}
 
 type GameStateProviderProps = { children: React.ReactNode };
 
 export function GameStateProvider({ children }: GameStateProviderProps) {
+	const { state: config } = useContext(GameConfigurationContext);
 	const { player1, player2 } = useContext(PlayersContext);
+
 	const [state, dispatch] = useReducer(reducer, {
 		gameState: GameState.Playing,
-		cells: DEFAULT_CELL_SETUP,
+		cells: cellConstructor(config.gameSize),
 		currentPlayer: player1.piece === TicTacToePiece.X ? player1 : player2,
 		players: {
 			player1,
