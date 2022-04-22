@@ -11,6 +11,7 @@ import {
 import { PlayerConfig } from '../../components/PlayerConfig';
 import { PlayersContext } from '../../context/Players';
 import * as S from './HomePage.styled';
+import { GameSizeSelector } from '../../components/GameSizeSelector';
 
 export function HomePage(): JSX.Element {
 	const { player1, setPlayer1, player2, setPlayer2 } =
@@ -44,7 +45,9 @@ export function HomePage(): JSX.Element {
 					</S.Section>
 
 					<S.Section>
-						<Headline100 as='h2'>Game Settings</Headline100>
+						<Headline100 as='h2'>Size</Headline100>
+
+						<GameSizeSelector />
 					</S.Section>
 
 					<S.Section>
