@@ -1,4 +1,4 @@
-import { FormEvent, useContext } from 'react';
+import { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -9,13 +9,10 @@ import {
 } from '@arcade/library-components';
 
 import { PlayerConfig } from '../../components/PlayerConfig';
-import { PlayersContext } from '../../context/Players';
 import * as S from './HomePage.styled';
 import { GameSizeSelector } from '../../components/GameSizeSelector';
 
 export function HomePage(): JSX.Element {
-	const { player1, setPlayer1, player2, setPlayer2 } =
-		useContext(PlayersContext);
 	const navigate = useNavigate();
 
 	const handleStartGame = (event: FormEvent) => {
@@ -30,18 +27,7 @@ export function HomePage(): JSX.Element {
 					<S.Section>
 						<Headline100 as='h2'>Players</Headline100>
 
-						<S.PlayersContainer>
-							<PlayerConfig
-								id='1'
-								player={player1}
-								setPlayer={setPlayer1}
-							/>
-							<PlayerConfig
-								id='2'
-								player={player2}
-								setPlayer={setPlayer2}
-							/>
-						</S.PlayersContainer>
+						<PlayerConfig />
 					</S.Section>
 
 					<S.Section>

@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 import { TypoSize } from '@arcade/library-components';
 
+export const PlayersContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gutter);
+`;
+
 export const PlayerConfig = styled.div`
 	text-align: center;
 `;

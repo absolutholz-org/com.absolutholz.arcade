@@ -8,13 +8,32 @@ type IGameSize = {
 	rowCount: number;
 };
 
-export type IGameConfigurationAction = {
-	type: GameConfigurationAction.SetSize;
-	size: IGameSize;
+export type IPlayer = {
+	uuid: string;
+	displayName: string;
+	color: string;
 };
+
+export type IGameConfigurationAction =
+	| {
+			type: GameConfigurationAction.SetSize;
+			size: IGameSize;
+	  }
+	| {
+			type: GameConfigurationAction.CreatePlayer;
+	  }
+	| {
+			type: GameConfigurationAction.UpdatePlayer;
+			player: IPlayer;
+	  }
+	| {
+			type: GameConfigurationAction.DeletePlayer;
+			player: IPlayer;
+	  };
 
 export type IGameConfigurationState = {
 	gameSize: IGameSize;
+	players: IPlayer[];
 };
 
 type IGameConfigurationDispatch = (action: IGameConfigurationAction) => void;

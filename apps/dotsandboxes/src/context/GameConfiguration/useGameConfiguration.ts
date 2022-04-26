@@ -12,9 +12,9 @@ export function useGameConfiguration() {
 	}
 
 	const {
-		state: { gameSize },
+		state: { gameSize, players },
 		dispatch,
 	} = context;
 
-	return { gameSize, dispatch };
+	return { gameSize, players, dispatch };
 }
