@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { GameboardButton } from "../GameboardButton";
+import { GameboardButton } from '../GameboardButton';
 
 export const GameboardSquare = styled.div<{
 	color?: string;
@@ -9,7 +9,7 @@ export const GameboardSquare = styled.div<{
 	aspect-ratio: 1 / 1;
 	${({ color }) =>
 		css`
-			background: ${color};
+			background-color: ${color};
 		`}
 	display: flex;
 	justify-content: center;

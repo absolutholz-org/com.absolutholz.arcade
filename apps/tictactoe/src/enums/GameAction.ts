@@ -1,5 +1,5 @@
 export const enum GameAction {
-	Move,
-	NewGame,
-	Restart,
+	Move = 'move',
+	NewGame = 'new-game',
+	Restart = 'restart',
 }

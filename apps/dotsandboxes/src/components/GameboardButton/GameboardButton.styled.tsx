@@ -1,17 +1,24 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const GameboardButton = styled.button<{ color: string }>`
+	--line-width: 0.625em;
+	--line-outline-width: calc(var(--line-width) / 4);
+	--line-color: ${({ color }) =>
+		color !== '' ? color : 'var(--on-surface)'};
+
 	height: 100%;
 	position: absolute;
-	transform: rotate(var(--rotation)) scale(0.7);
+	transform: rotate(var(--rotation));
 	width: 100%;
 
 	&::before {
+		background-image: linear-gradient(var(--line-color), var(--line-color));
+		background-size: calc(100% - (var(--line-width) / 2))
+			calc(100% - (var(--line-width) / 2));
+		border: var(--line-outline-width) solid var(--surface);
 		content: '';
 		display: block;
-		background: ${({ color }) =>
-			color !== '' ? color : 'var(--on-surface)'};
-		height: 4px;
+		height: var(--line-width);
 		transform: rotate(45deg);
 		width: 100%;
 	}

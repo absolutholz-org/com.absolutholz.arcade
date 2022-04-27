@@ -1,4 +1,5 @@
 import { createContext } from 'react';
+import { IDotsAndBoxesPlayer } from '../../dataModels';
 
 import { DEFAULT_STATE } from './defaultState';
 import { GameConfigurationAction } from './GameConfigurationAction';
@@ -6,12 +7,6 @@ import { GameConfigurationAction } from './GameConfigurationAction';
 type IGameSize = {
 	columnCount: number;
 	rowCount: number;
-};
-
-export type IPlayer = {
-	uuid: string;
-	displayName: string;
-	color: string;
 };
 
 export type IGameConfigurationAction =
@@ -24,16 +19,16 @@ export type IGameConfigurationAction =
 	  }
 	| {
 			type: GameConfigurationAction.UpdatePlayer;
-			player: IPlayer;
+			player: IDotsAndBoxesPlayer;
 	  }
 	| {
 			type: GameConfigurationAction.DeletePlayer;
-			player: IPlayer;
+			player: IDotsAndBoxesPlayer;
 	  };
 
 export type IGameConfigurationState = {
 	gameSize: IGameSize;
-	players: IPlayer[];
+	players: IDotsAndBoxesPlayer[];
 };
 
 type IGameConfigurationDispatch = (action: IGameConfigurationAction) => void;

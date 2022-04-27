@@ -1,27 +1,35 @@
 import { createContext } from 'react';
 
-import { ITicTacToePlayer } from '../../dataModels/ITicTacToePlayer';
-import { IGameCell } from '../../dataModels/IGameCell';
-import { GameAction, GameState } from '../../enums';
+import { IDotsAndBoxesPlayer, ISquare } from '../../dataModels';
+import { GameState } from '../../enums';
+import { GameStateAction } from './GameStateAction';
 
-export type Action = {
-	type: GameAction;
-	payload?: {
-		cell?: IGameCell;
-	};
-};
+export type IGameStateAction =
+	| {
+			type: GameStateAction.ConnectDots;
+			dot1: {
+				x: number;
+				y: number;
+			};
+			dot2: {
+				x: number;
+				y: number;
+			};
+	  }
+	| {
+			type: GameStateAction.NewGame;
+	  };
 
-type Dispatch = (action: Action) => void;
+type IGameStateDispatch = (action: IGameStateAction) => void;
 
-export type State = {
+export type IGameStateState = {
 	gameState: GameState;
-	cells: IGameCell[];
-	currentPlayer: ITicTacToePlayer;
-	players: {
-		player1: ITicTacToePlayer;
-		player2: ITicTacToePlayer;
-	};
+	squares: ISquare[];
+	currentPlayer: IDotsAndBoxesPlayer;
+	players: IDotsAndBoxesPlayer[];
 };
 
 export const GameStateContext =
-	createContext<{ state: State; dispatch: Dispatch } | undefined>(undefined);
+	createContext<
+		{ state: IGameStateState; dispatch: IGameStateDispatch } | undefined
+	>(undefined);

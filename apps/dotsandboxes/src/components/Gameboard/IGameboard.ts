@@ -1,4 +1,1 @@
-export interface IGameboardProps {
-	columnCount: number;
-	rowCount: number;
-}
+export interface IGameboardProps {}
