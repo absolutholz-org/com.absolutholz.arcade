@@ -24,14 +24,10 @@ export const Gameboard = styled.div<{
 			var(--surface) var(--half-dot-size),
 			transparent var(--half-dot-size)
 		);
-		background-size: calc(
-				(100% / ${({ $columnCount }) => $columnCount}) -
-					(var(--dot-size) / ${({ $rowCount }) => $rowCount})
-			)
-			calc(
-				(100% / ${({ $rowCount }) => $rowCount}) -
-					(var(--dot-size) / ${({ $rowCount }) => $rowCount})
-			);
+		background-size: ${({ $columnCount, $rowCount }) => `
+			calc((100% /  ${$columnCount}) - (var(--dot-size) / ${$columnCount})) 
+			calc((100% / ${$rowCount}) - (var(--dot-size) / ${$rowCount}))
+		`};
 		content: '';
 		display: block;
 		height: 100%;

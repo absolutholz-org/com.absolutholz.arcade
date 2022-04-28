@@ -1,3 +1,4 @@
+import { PlayerColor } from '../../enums';
 import { GameConfigurationAction } from './GameConfigurationAction';
 import {
 	IGameConfigurationAction,
@@ -23,10 +24,17 @@ export function reducer(
 				throw new Error(`Player limit reached`);
 			}
 
+			const nextAvailableColor = Object.values(PlayerColor).find(
+				(color) =>
+					state.players.findIndex(
+						(player) => player.color === color
+					) < 0
+			);
+
 			const player = {
-				uuid: `player-${state.players.length + 1}`,
+				uuid: `${Math.ceil(Math.random() * 10000000)}`,
 				displayName: `Player ${state.players.length + 1}`,
-				color: '#000',
+				color: nextAvailableColor as PlayerColor,
 			};
 			const players = [...state.players];
 			players.push(player);

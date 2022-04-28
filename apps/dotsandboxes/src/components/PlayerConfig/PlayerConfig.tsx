@@ -16,9 +16,11 @@ import {
 import * as S from './PlayerConfig.styled';
 import {
 	GameConfigurationAction,
-	IPlayer,
 	useGameConfiguration,
 } from '../../context/GameConfiguration';
+import { IDotsAndBoxesPlayer } from '../../dataModels';
+import { ColorSelector } from '../ColorSelector';
+import { PlayerColor } from '../../enums';
 
 export function PlayerConfig(): JSX.Element {
 	const { players, dispatch } = useGameConfiguration();
@@ -28,8 +30,11 @@ export function PlayerConfig(): JSX.Element {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [editPlayer, setEditPlayer] = useState(players[0]);
 	const nameRef = useRef<HTMLInputElement>(null);
-	const colorRef = useRef<HTMLInputElement>(null);
 	const refForm = useRef<HTMLFormElement>(null);
+
+	const handleColorSelected = (color: PlayerColor) => {
+		setEditPlayer((player) => ({ ...player, color }));
+	};
 
 	const handleDialogConfirm = (): void => {
 		if (nameRef.current?.value) {
@@ -38,7 +43,6 @@ export function PlayerConfig(): JSX.Element {
 				player: {
 					...editPlayer,
 					displayName: nameRef.current!.value,
-					color: colorRef.current!.value,
 				},
 			});
 
@@ -57,14 +61,14 @@ export function PlayerConfig(): JSX.Element {
 		});
 	};
 
-	const deletePlayer = (player: IPlayer) => {
+	const deletePlayer = (player: IDotsAndBoxesPlayer) => {
 		dispatch({
 			type: GameConfigurationAction.DeletePlayer,
 			player,
 		});
 	};
 
-	const updatePlayer = (player: IPlayer) => {
+	const updatePlayer = (player: IDotsAndBoxesPlayer) => {
 		if (refForm.current) {
 			refForm.current.reset();
 			setEditPlayer(player);
@@ -80,8 +84,9 @@ export function PlayerConfig(): JSX.Element {
 		<S.PlayersContainer>
 			{players.map((player) => (
 				<S.PlayerConfig key={`player-config-${player.uuid}`}>
-					<S.PlayerName>
-						<span>{player.displayName}</span>
+					<S.Name>{player.displayName}</S.Name>
+					<S.Color $color={player.color}>{player.color}</S.Color>
+					<S.Actions>
 						<ButtonIcon
 							inline={true}
 							onClick={() => updatePlayer(player)}
@@ -94,7 +99,7 @@ export function PlayerConfig(): JSX.Element {
 							variant={ButtonVariant.Text}>
 							<Icon icon={SvgDelete} />
 						</ButtonIcon>
-					</S.PlayerName>
+					</S.Actions>
 				</S.PlayerConfig>
 			))}
 			{Array.from(Array(placeholderCount)).map((n, row, array) => (
@@ -134,19 +139,10 @@ export function PlayerConfig(): JSX.Element {
 						inputId={`player-${editPlayer.uuid}_name `}
 					/>
 
-					<InputGroup
-						slotLabel='Color'
-						slotInput={
-							<Input
-								id={`player-${editPlayer.uuid}_color `}
-								name={`player-${editPlayer.uuid}_color `}
-								ref={colorRef}
-								required
-								type='color'
-								defaultValue={editPlayer.color}
-							/>
-						}
-						inputId={`player-${editPlayer.uuid}_color `}
+					<ColorSelector
+						selectedColor={editPlayer.color}
+						slotLegend='Color'
+						onSelect={handleColorSelected}
 					/>
 				</form>
 			</DialogConfirm>

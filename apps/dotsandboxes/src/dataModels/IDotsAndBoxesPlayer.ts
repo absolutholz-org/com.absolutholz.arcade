@@ -1,5 +1,7 @@
+import { PlayerColor } from '../enums';
+
 export type IDotsAndBoxesPlayer = {
-	color: string;
+	color: PlayerColor;
 	displayName: string;
 	uuid: string;
 };

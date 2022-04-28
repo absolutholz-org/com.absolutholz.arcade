@@ -2,6 +2,10 @@ import { ReactNode } from 'react';
 
 export interface ICardBillboardProps {
 	children: ReactNode;
+	slotBackground: ReactNode;
+}
+
+export interface ICardBillboardBackgroundImageProps {
 	imgUri: string;
 }
 
