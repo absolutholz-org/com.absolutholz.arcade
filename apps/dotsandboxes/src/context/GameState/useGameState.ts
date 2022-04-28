@@ -10,9 +10,9 @@ export function useGameState() {
 	}
 
 	const {
-		state: { gameState, squares, currentPlayer, players },
+		state: { gameState, boxes, currentPlayer, players },
 		dispatch,
 	} = context;
 
-	return { gameState, currentPlayer, dispatch, players, squares };
+	return { gameState, currentPlayer, dispatch, players, boxes };
 }

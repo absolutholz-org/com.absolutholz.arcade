@@ -1,2 +1,2 @@
 export * from './IDotsAndBoxesPlayer';
-export * from './ISquare';
+export * from './IBox';

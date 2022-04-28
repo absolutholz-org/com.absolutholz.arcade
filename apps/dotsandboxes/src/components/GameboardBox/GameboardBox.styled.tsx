@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { GameboardButton } from '../GameboardButton';
 
-export const GameboardSquare = styled.div<{
+export const GameboardBox = styled.div<{
 	color?: string;
 }>`
 	align-items: center;

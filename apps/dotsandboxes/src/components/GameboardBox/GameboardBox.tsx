@@ -1,20 +1,19 @@
-import * as S from "./GameboardSquare.styled";
-import { IGameboardSquareProps } from "./IGameboardSquare";
+import * as S from './GameboardBox.styled';
+import { IGameboardBoxProps } from './IGameboardBox';
 
-export function GameboardSquare({
-	square,
+export function GameboardBox({
+	box,
 	isLastColumnInRow,
 	isLastRowInColumn,
 	...props
-}: IGameboardSquareProps): JSX.Element {
-	const { rowIndex, columnIndex } = square;
+}: IGameboardBoxProps): JSX.Element {
+	const { rowIndex, columnIndex } = box;
 
 	return (
-		<S.GameboardSquare
-			color={square.player?.color}
-			id={`square-${rowIndex}x${columnIndex}`}
-			{...props}
-		>
+		<S.GameboardBox
+			color={box.player?.color}
+			id={`box-${rowIndex}x${columnIndex}`}
+			{...props}>
 			<S.ButtonLeft
 				startRowID={rowIndex}
 				startColumnID={columnIndex}
@@ -43,7 +42,7 @@ export function GameboardSquare({
 					endColumnID={columnIndex + 1}
 				/>
 			)}
-			{square.player && <span>{(square.player.displayName = "")}</span>}
-		</S.GameboardSquare>
+			{box.player && <span>{(box.player.displayName = '')}</span>}
+		</S.GameboardBox>
 	);
 }

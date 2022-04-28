@@ -1,20 +1,16 @@
 import { createContext } from 'react';
 
-import { IDotsAndBoxesPlayer, ISquare } from '../../dataModels';
+import { IDotsAndBoxesPlayer, IBox } from '../../dataModels';
 import { GameState } from '../../enums';
 import { GameStateAction } from './GameStateAction';
 
 export type IGameStateAction =
 	| {
 			type: GameStateAction.ConnectDots;
-			dot1: {
-				x: number;
-				y: number;
-			};
-			dot2: {
-				x: number;
-				y: number;
-			};
+			startRowID: number;
+			startColumnID: number;
+			endRowID: number;
+			endColumnID: number;
 	  }
 	| {
 			type: GameStateAction.NewGame;
@@ -24,7 +20,7 @@ type IGameStateDispatch = (action: IGameStateAction) => void;
 
 export type IGameStateState = {
 	gameState: GameState;
-	squares: ISquare[];
+	boxes: IBox[];
 	currentPlayer: IDotsAndBoxesPlayer;
 	players: IDotsAndBoxesPlayer[];
 };

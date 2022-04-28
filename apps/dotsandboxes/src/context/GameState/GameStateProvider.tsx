@@ -5,16 +5,13 @@ import { PlayersContext } from '../../context/Players';
 import { GameStateContext } from './GameStateContext';
 import { GameConfigurationContext } from '../GameConfiguration';
 import { GameState } from '../../enums';
-import { ISquare } from '../../dataModels';
+import { IBox } from '../../dataModels';
 
-export function squareConstructor(
-	columnCount: number,
-	rowCount: number
-): ISquare[] {
-	const squares = [];
+export function boxConstructor(columnCount: number, rowCount: number): IBox[] {
+	const boxes = [];
 	for (let iRow = 0, lRow = rowCount; iRow < lRow; iRow++) {
 		for (let iCol = 0, lCol = columnCount; iCol < lCol; iCol++) {
-			squares.push({
+			boxes.push({
 				id: `${iRow}x${iCol}`,
 				columnIndex: iCol,
 				rowIndex: iRow,
@@ -27,7 +24,7 @@ export function squareConstructor(
 			});
 		}
 	}
-	return squares;
+	return boxes;
 }
 
 type GameStateProviderProps = { children: React.ReactNode };
@@ -38,7 +35,7 @@ export function GameStateProvider({ children }: GameStateProviderProps) {
 
 	const [state, dispatch] = useReducer(reducer, {
 		gameState: GameState.Playing,
-		squares: squareConstructor(
+		boxes: boxConstructor(
 			config.gameSize.columnCount,
 			config.gameSize.rowCount
 		),

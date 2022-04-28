@@ -1,11 +1,11 @@
 import { IGameboardProps } from './IGameboard';
 import * as S from './Gameboard.styled';
-import { GameboardSquare } from '../GameboardSquare';
+import { GameboardBox } from '../GameboardBox';
 import { useGameState } from '../../context/GameState';
 import { useGameConfiguration } from '../../context/GameConfiguration';
 
 export function Gameboard({ ...props }: IGameboardProps): JSX.Element {
-	const { squares } = useGameState();
+	const { boxes } = useGameState();
 	const {
 		gameSize: { columnCount, rowCount },
 	} = useGameConfiguration();
@@ -16,13 +16,13 @@ export function Gameboard({ ...props }: IGameboardProps): JSX.Element {
 				$columnCount={columnCount}
 				$rowCount={rowCount}
 				{...props}>
-				{squares &&
-					squares.map((square) => {
-						const { rowIndex, columnIndex } = square;
+				{boxes &&
+					boxes.map((box) => {
+						const { rowIndex, columnIndex } = box;
 
 						return (
-							<GameboardSquare
-								square={square}
+							<GameboardBox
+								box={box}
 								isLastRowInColumn={rowIndex + 1 === rowCount}
 								isLastColumnInRow={
 									columnIndex + 1 === columnCount

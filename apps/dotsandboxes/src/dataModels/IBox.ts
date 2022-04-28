@@ -1,6 +1,6 @@
 import { IDotsAndBoxesPlayer } from './IDotsAndBoxesPlayer';
 
-export type ISquare = {
+export type IBox = {
 	id: string;
 	columnIndex: number;
 	rowIndex: number;
