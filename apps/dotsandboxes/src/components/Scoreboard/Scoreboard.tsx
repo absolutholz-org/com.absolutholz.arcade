@@ -1,22 +1,20 @@
 import { NotificationTurn } from '@arcade/library-components';
-import { useContext } from 'react';
 
-import GameContext from '../../context/Game';
+import { useGameState } from '../../context/GameState';
 import { IScoreboardProps } from './IScoreboard';
 import * as S from './Scoreboard.styled';
 
 export function Scoreboard({ ...props }: IScoreboardProps): JSX.Element {
-	const { players, currentPlayer, nextPlayer } = useContext(GameContext);
+	const { players, currentPlayer } = useGameState();
 
 	return (
 		<>
 			<S.Scoreboard {...props}>
 				{players &&
 					players.map((player) => (
-						<div key={`scoreboard-player-${player.uid}`}>
+						<div key={`scoreboard-player_${player.uuid}`}>
 							{player.displayName}
 							{player === currentPlayer && <span> current</span>}
-							{player === nextPlayer && <span> next</span>}
 						</div>
 					))}
 			</S.Scoreboard>

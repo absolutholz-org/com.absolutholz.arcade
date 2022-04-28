@@ -1,7 +1,6 @@
 import { useContext, useReducer } from 'react';
 
 import { reducer } from './reducer';
-import { PlayersContext } from '../../context/Players';
 import { GameStateContext } from './GameStateContext';
 import { GameConfigurationContext } from '../GameConfiguration';
 import { GameState } from '../../enums';
@@ -16,10 +15,10 @@ export function boxConstructor(columnCount: number, rowCount: number): IBox[] {
 				columnIndex: iCol,
 				rowIndex: iRow,
 				borders: {
-					[`${iRow}x${iCol}|${iRow}x${iCol + 1}`]: false, // top
-					[`${iRow}x${iCol}|${iRow + 1}x${iCol}`]: false, // left
-					[`${iRow}x${iCol + 1}|${iRow + 1}x${iCol + 1}`]: false, // right
-					[`${iRow + 1}x${iCol}|${iRow + 1}x${iCol + 1}`]: false, // bottom
+					[`${iRow}x${iCol}|${iRow}x${iCol + 1}`]: null, // top
+					[`${iRow}x${iCol}|${iRow + 1}x${iCol}`]: null, // left
+					[`${iRow}x${iCol + 1}|${iRow + 1}x${iCol + 1}`]: null, // right
+					[`${iRow + 1}x${iCol}|${iRow + 1}x${iCol + 1}`]: null, // bottom
 				},
 			});
 		}
@@ -31,7 +30,7 @@ type GameStateProviderProps = { children: React.ReactNode };
 
 export function GameStateProvider({ children }: GameStateProviderProps) {
 	const { state: config } = useContext(GameConfigurationContext);
-	const { player1, player2 } = useContext(PlayersContext);
+	const players = [...config.players];
 
 	const [state, dispatch] = useReducer(reducer, {
 		gameState: GameState.Playing,
@@ -39,8 +38,8 @@ export function GameStateProvider({ children }: GameStateProviderProps) {
 			config.gameSize.columnCount,
 			config.gameSize.rowCount
 		),
-		currentPlayer: player1,
-		players: [],
+		currentPlayer: players[0],
+		players,
 	});
 
 	// NOTE: you *might* need to memoize this value

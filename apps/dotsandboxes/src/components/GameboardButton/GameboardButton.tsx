@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { IGameboardButtonProps } from './IGameboardButton';
 import * as S from './GameboardButton.styled';
@@ -9,34 +9,25 @@ export function GameboardButton({
 	startColumnID,
 	endRowID,
 	endColumnID,
+	color,
 	...props
 }: IGameboardButtonProps): JSX.Element {
-	const [isDisabled, setIsDisabled] = useState(false);
-	const [color, setColor] = useState('');
-	const { currentPlayer, dispatch } = useGameState();
+	const { dispatch } = useGameState();
 
 	const handleButtonClick = (): void => {
-		if (currentPlayer) {
-			setColor(currentPlayer.color);
-			setIsDisabled(true);
-			dispatch({
-				type: GameStateAction.ConnectDots,
-				startRowID,
-				startColumnID,
-				endRowID,
-				endColumnID,
-			});
-		}
+		dispatch({
+			type: GameStateAction.ConnectDots,
+			startRowID,
+			startColumnID,
+			endRowID,
+			endColumnID,
+		});
 	};
-
-	useEffect(() => {
-		setIsDisabled(false);
-	}, []);
 
 	return (
 		<S.GameboardButton
 			$color={color}
-			disabled={isDisabled}
+			disabled={!!color}
 			id={`${startRowID}x${startColumnID}|${endRowID}x${endColumnID}`}
 			onClick={handleButtonClick}
 			type='button'

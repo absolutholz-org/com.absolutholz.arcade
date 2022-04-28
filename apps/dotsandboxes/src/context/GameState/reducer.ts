@@ -13,6 +13,7 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 			// 		? state.players.player2
 			// 		: state.players.player1;
 			// return { ...state, squares, currentPlayer, gameState };
+
 			return { ...state };
 		}
 
@@ -25,10 +26,10 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 			for (const box of state.boxes) {
 				const borderID = `${startRowID}x${startColumnID}|${endRowID}x${endColumnID}`;
 				if (box.borders[borderID] !== undefined) {
-					box.borders[borderID] = true;
+					box.borders[borderID] = state.currentPlayer.color;
 
 					isBoxComplete = Object.values(box.borders).every(
-						(value) => value === true
+						(value) => value === state.currentPlayer.color
 					);
 					if (isBoxComplete) {
 						box.player = state.currentPlayer;
@@ -56,7 +57,18 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 			// const squares = cellConstructor(Math.sqrt(state.squares.length));
 			// const gameState = GameState.Playing;
 			// return { ...state, squares, gameState };
-			return { ...state };
+
+			const currentPlayerIndex = state.players.findIndex(
+				(player) => player.uuid === state.currentPlayer.uuid
+			);
+			const nextPlayer =
+				state.players[
+					currentPlayerIndex + 1 >= state.players.length
+						? 0
+						: currentPlayerIndex + 1
+				];
+
+			return { ...state, currentPlayer: nextPlayer };
 		}
 
 		default: {

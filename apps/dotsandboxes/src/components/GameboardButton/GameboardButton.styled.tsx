@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
+import { PlayerColor } from '../../enums';
 
-export const GameboardButton = styled.button<{ $color: string }>`
+export const GameboardButton = styled.button<{ $color: PlayerColor | null }>`
 	--line-width: 0.625em;
 	--line-outline-width: calc(var(--line-width) / 4);
 	--line-color: ${({ $color }) =>
-		$color !== '' ? $color : 'var(--on-surface)'};
+		$color !== null ? $color : 'var(--on-surface)'};
 
 	height: 100%;
 	position: absolute;
@@ -33,8 +34,8 @@ export const GameboardButton = styled.button<{ $color: string }>`
 	}
 
 	&:disabled {
-		&::before {
+		/* &::before {
 			height: 8px;
-		}
+		} */
 	}
 `;

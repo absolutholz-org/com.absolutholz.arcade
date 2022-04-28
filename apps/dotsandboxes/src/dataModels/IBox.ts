@@ -1,3 +1,4 @@
+import { PlayerColor } from '../enums';
 import { IDotsAndBoxesPlayer } from './IDotsAndBoxesPlayer';
 
 export type IBox = {
@@ -5,7 +6,7 @@ export type IBox = {
 	columnIndex: number;
 	rowIndex: number;
 	borders: {
-		[key: string]: boolean;
+		[key: string]: PlayerColor | null;
 	};
 	player?: IDotsAndBoxesPlayer;
 };
