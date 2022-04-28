@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const GameboardButton = styled.button<{ color: string }>`
+export const GameboardButton = styled.button<{ $color: string }>`
 	--line-width: 0.625em;
 	--line-outline-width: calc(var(--line-width) / 4);
-	--line-color: ${({ color }) =>
-		color !== '' ? color : 'var(--on-surface)'};
+	--line-color: ${({ $color }) =>
+		$color !== '' ? $color : 'var(--on-surface)'};
 
 	height: 100%;
 	position: absolute;
