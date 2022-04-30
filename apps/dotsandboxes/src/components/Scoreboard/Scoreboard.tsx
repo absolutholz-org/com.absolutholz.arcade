@@ -9,15 +9,23 @@ export function Scoreboard({ ...props }: IScoreboardProps): JSX.Element {
 
 	return (
 		<>
-			<S.Scoreboard {...props}>
-				{players &&
-					players.map((player) => (
-						<div key={`scoreboard-player_${player.uuid}`}>
-							{player.displayName}
-							{player === currentPlayer && <span> current</span>}
-						</div>
-					))}
-			</S.Scoreboard>
+			<S.ScoreboardGrid>
+				<S.Scoreboard {...props}>
+					{players &&
+						players.map((player) => (
+							<section key={`scoreboard-player_${player.uuid}`}>
+								<S.ScoreboardPlayerName>
+									{player.displayName}
+								</S.ScoreboardPlayerName>
+								<div>Lines: {player.gameLineCount}</div>
+								<div>Boxes: {player.gameBoxCount}</div>
+								{player === currentPlayer && (
+									<span> current</span>
+								)}
+							</section>
+						))}
+				</S.Scoreboard>
+			</S.ScoreboardGrid>
 			{currentPlayer && (
 				<NotificationTurn playerName={currentPlayer.displayName} />
 			)}

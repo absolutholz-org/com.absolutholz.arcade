@@ -35,6 +35,8 @@ export function reducer(
 				uuid: `${Math.ceil(Math.random() * 10000000)}`,
 				displayName: `Player ${state.players.length + 1}`,
 				color: nextAvailableColor as PlayerColor,
+				gameLineCount: 0,
+				gameBoxCount: 0,
 			};
 			const players = [...state.players];
 			players.push(player);

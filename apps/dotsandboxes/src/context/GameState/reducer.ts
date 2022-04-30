@@ -21,6 +21,9 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 			const { startRowID, startColumnID, endRowID, endColumnID } = action;
 			const boxes = [...state.boxes];
 			let atLeastOneCompletion = false;
+			const players = [...state.players];
+			const currentPlayer = { ...state.currentPlayer };
+			currentPlayer.gameLineCount += 1;
 
 			for (const box of boxes) {
 				const borderID = `${startRowID}x${startColumnID}|${endRowID}x${endColumnID}`;
@@ -34,23 +37,32 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 					if (isBoxComplete) {
 						box.player = { ...state.currentPlayer };
 						atLeastOneCompletion = true;
+						currentPlayer.gameBoxCount += 1;
 					}
 				}
 			}
 
+			players.splice(
+				players.findIndex(
+					(player) => player.uuid === currentPlayer.uuid
+				),
+				1,
+				currentPlayer
+			);
+
 			if (!atLeastOneCompletion) {
-				const currentPlayerIndex = state.players.findIndex(
+				const currentPlayerIndex = players.findIndex(
 					(player) => player.uuid === state.currentPlayer.uuid
 				);
 				const nextPlayer =
-					state.players[
+					players[
 						currentPlayerIndex + 1 >= state.players.length
 							? 0
 							: currentPlayerIndex + 1
 					];
-				return { ...state, currentPlayer: nextPlayer, boxes };
+				return { ...state, players, boxes, currentPlayer: nextPlayer };
 			} else {
-				return { ...state, boxes };
+				return { ...state, players, boxes, currentPlayer };
 			}
 		}
 
