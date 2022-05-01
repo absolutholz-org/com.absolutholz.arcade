@@ -1,6 +1,6 @@
 export const enum GameState {
-	Draw,
-	Paused,
-	Playing,
-	Win,
+	Paused = 'paused',
+	Playing = 'playing',
+	StoppedDraw = 'draw',
+	StoppedWin = 'win',
 }

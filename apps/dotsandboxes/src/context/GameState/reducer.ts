@@ -50,6 +50,37 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 				currentPlayer
 			);
 
+			const completedBoxes = players.reduce(
+				(accumulator, player) => accumulator + player.gameBoxCount,
+				0
+			);
+
+			if (completedBoxes === state.boxes.length) {
+				// const sortedPlayers = [...players].sort((player1, player2) => {
+				// 	if (player1.gameBoxCount > player2.gameBoxCount) {
+				// 		return -1;
+				// 	}
+				// 	return 1;
+				// });
+
+				let winningPlayers = [players[0]];
+				players.slice(1).forEach((player) => {
+					if (player.gameBoxCount > winningPlayers[0].gameBoxCount) {
+						winningPlayers = [player];
+					} else if (
+						player.gameBoxCount === winningPlayers[0].gameBoxCount
+					) {
+						winningPlayers.push(player);
+					}
+				});
+				debugger;
+				alert(
+					`Winners: ${winningPlayers
+						.map((player) => player.displayName)
+						.join(', ')}`
+				);
+			}
+
 			if (!atLeastOneCompletion) {
 				const currentPlayerIndex = players.findIndex(
 					(player) => player.uuid === state.currentPlayer.uuid
