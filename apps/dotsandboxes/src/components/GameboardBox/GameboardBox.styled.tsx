@@ -17,25 +17,25 @@ export const GameboardBox = styled.div<{
 `;
 
 export const ButtonTop = styled(GameboardButton)`
-	left: 0;
-	--rotation: -45deg;
-	top: -50%;
+	left: calc(var(--line-button-width) / 2);
+	top: calc((var(--line-button-width) / 2) * -1);
 `;
 
 export const ButtonLeft = styled(GameboardButton)`
-	left: -50%;
-	--rotation: 45deg;
-	top: 0;
+	left: calc(var(--line-button-width) / 2);
+	top: calc(var(--line-button-width) / 2);
+	transform: rotate(90deg);
+	transform-origin: top left;
 `;
 
 export const ButtonBottom = styled(GameboardButton)`
-	bottom: -50%;
-	left: 0;
-	--rotation: -45deg;
+	bottom: calc((var(--line-button-width) / 2) * -1);
+	left: calc(var(--line-button-width) / 2);
 `;
 
 export const ButtonRight = styled(GameboardButton)`
-	right: -50%;
-	--rotation: 45deg;
-	top: 0;
+	right: calc(var(--line-button-width) / 2);
+	top: calc(var(--line-button-width) / 2);
+	transform: rotate(-90deg);
+	transform-origin: top right;
 `;

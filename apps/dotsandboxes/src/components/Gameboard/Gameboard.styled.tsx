@@ -6,11 +6,10 @@ export const Gameboard = styled.div<{
 }>`
 	--dot-size: 2em;
 	--half-dot-size: calc(var(--dot-size) / 2);
-	--dot-size-outline: 0.5em;
+	--dot-size-outline: 0.25em;
 
 	display: grid;
 	grid: auto-flow / repeat(${({ $columnCount }) => $columnCount}, 1fr);
-	overflow: hidden;
 	padding: var(--half-dot-size);
 	position: relative;
 	z-index: 0;

@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+
 import { PlayerColor } from '../../enums';
 
 export const GameboardButton = styled.button<{ $color: PlayerColor | null }>`
@@ -6,36 +7,30 @@ export const GameboardButton = styled.button<{ $color: PlayerColor | null }>`
 	--line-outline-width: calc(var(--line-width) / 4);
 	--line-color: ${({ $color }) =>
 		$color !== null ? $color : 'var(--on-surface)'};
+	--line-button-width: 3rem;
+	--line-button-length: calc(100% - var(--line-button-width));
 
-	height: 100%;
 	position: absolute;
-	transform: rotate(var(--rotation));
-	width: 100%;
+	height: var(--line-button-width);
+	width: calc(100% - var(--line-button-width));
 
 	&::before {
-		background-image: linear-gradient(var(--line-color), var(--line-color));
-		background-size: calc(100% - (var(--line-width) / 2))
-			calc(100% - (var(--line-width) / 2));
+		background-color: var(--line-color);
 		border: var(--line-outline-width) solid var(--surface);
+		border-radius: 6px;
 		content: '';
 		display: block;
 		height: var(--line-width);
-		transform: rotate(45deg);
 		width: 100%;
 	}
 
 	&:active {
-		/* background: hsl(0, 100%, 50%, 0.1); */
 	}
 
 	&:hover,
 	&:focus-visible {
-		/* background: hsl(240, 100%, 50%, 0.1); */
 	}
 
 	&:disabled {
-		/* &::before {
-			height: 8px;
-		} */
 	}
 `;
