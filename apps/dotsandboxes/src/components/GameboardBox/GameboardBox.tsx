@@ -70,7 +70,9 @@ export function GameboardBox({
 					}
 				/>
 			)}
-			{box.player && <span>{box.player.displayName}</span>}
+			<S.PlayerName>
+				{box.player && <span>{box.player.displayName}</span>}
+			</S.PlayerName>
 		</S.GameboardBox>
 	);
 }

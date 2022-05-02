@@ -10,6 +10,8 @@ export const Gameboard = styled.div<{
 
 	display: grid;
 	grid: auto-flow / repeat(${({ $columnCount }) => $columnCount}, 1fr);
+	margin: auto;
+	max-width: ${({ $columnCount }) => $columnCount * 10}rem;
 	padding: var(--half-dot-size);
 	position: relative;
 	z-index: 0;
