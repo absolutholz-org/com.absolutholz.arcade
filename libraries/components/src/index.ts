@@ -25,4 +25,5 @@ export * from './components/SectionPadded';
 export * from './components/SiteFooter';
 export * from './components/VisuallyHidden';
 
+export * from './context';
 export * from './enums';

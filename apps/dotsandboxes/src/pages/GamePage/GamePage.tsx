@@ -1,46 +1,20 @@
 import { PageLayoutContainer } from '@arcade/library-components';
-import { useContext, useEffect } from 'react';
 
 import { Gameboard, Scoreboard } from '../../components';
 
-import { GameContext } from '../../context/Game';
-import GameAction from '../../enums/GameAction';
+import { GameStateProvider } from '../../context/GameState';
 
 export function GamePage(): JSX.Element {
-	const { dispatch } = useContext(GameContext);
-
-	useEffect(() => {
-		dispatch({
-			type: GameAction.SetPlayers,
-			players: [
-				{
-					uid: 'sdfasd9f78a9s8dfadsf',
-					displayName: 'Player 1',
-					color: 'red',
-				},
-				{
-					uid: '98vf89vnewnwekdsjdls',
-					displayName: 'Player 2',
-					color: 'blue',
-				},
-			],
-		});
-
-		dispatch({
-			type: GameAction.CreateGameboard,
-			rowCount: 4,
-			columnCount: 4,
-		});
-	}, [dispatch]);
-
 	return (
-		<PageLayoutContainer>
-			<div>
-				<Gameboard columnCount={4} rowCount={4} />
-			</div>
-			<div>
-				<Scoreboard />
-			</div>
-		</PageLayoutContainer>
+		<GameStateProvider>
+			<PageLayoutContainer>
+				<div>
+					<Gameboard />
+				</div>
+				<div>
+					<Scoreboard />
+				</div>
+			</PageLayoutContainer>
+		</GameStateProvider>
 	);
 }

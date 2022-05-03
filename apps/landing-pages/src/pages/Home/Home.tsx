@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import {
 	CardBillboard,
+	CardBillboardBackgroundImage,
 	CardBillboardCoverLink,
 	CardBillboardHeadline,
 	PageLayoutContainer,
@@ -88,8 +89,12 @@ export function Home() {
 									{games &&
 										games.map(({ name, url, imgUri }) => (
 											<CardBillboard
-												imgUri={imgUri}
-												key={`game_${name}`}>
+												key={`game_${name}`}
+												slotBackground={
+													<CardBillboardBackgroundImage
+														imgUri={imgUri}
+													/>
+												}>
 												<CardBillboardHeadline tag='h4'>
 													<CardBillboardCoverLink
 														href={url}>

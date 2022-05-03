@@ -1,33 +1,36 @@
 import styled from 'styled-components';
 
-export const GameboardButton = styled.button<{ color: string }>`
-	height: 100%;
+import { PlayerColor } from '@arcade/library-common';
+
+export const GameboardButton = styled.button<{ $color: PlayerColor | null }>`
+	--line-width: 0.625em;
+	--line-outline-width: calc(var(--line-width) / 4);
+	--line-color: ${({ $color }) =>
+		$color !== null ? $color : 'var(--on-surface)'};
+	--line-button-width: 3rem;
+	--line-button-length: calc(100% - var(--line-button-width));
+
 	position: absolute;
-	transform: rotate(var(--rotation)) scale(0.7);
-	width: 100%;
+	height: var(--line-button-width);
+	width: calc(100% - var(--line-button-width));
 
 	&::before {
+		background-color: var(--line-color);
+		border: var(--line-outline-width) solid var(--surface);
+		border-radius: 6px;
 		content: '';
 		display: block;
-		background: ${({ color }) =>
-			color !== '' ? color : 'var(--on-surface)'};
-		height: 4px;
-		transform: rotate(45deg);
+		height: var(--line-width);
 		width: 100%;
 	}
 
 	&:active {
-		/* background: hsl(0, 100%, 50%, 0.1); */
 	}
 
 	&:hover,
 	&:focus-visible {
-		/* background: hsl(240, 100%, 50%, 0.1); */
 	}
 
 	&:disabled {
-		&::before {
-			height: 8px;
-		}
 	}
 `;
