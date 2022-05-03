@@ -13,7 +13,7 @@ export function Scoreboard({ ...props }: IScoreboardProps): JSX.Element {
 				{players &&
 					players.map((player) => (
 						<section key={`scoreboard-player_${player.uuid}`}>
-							<S.ScoreboardPlayerName>
+							<S.ScoreboardPlayerName $color={player.color}>
 								{player.displayName}
 							</S.ScoreboardPlayerName>
 							<div>Lines: {player.gameLineCount}</div>
