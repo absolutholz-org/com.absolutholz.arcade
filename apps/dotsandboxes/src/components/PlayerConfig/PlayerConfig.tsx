@@ -12,6 +12,7 @@ import {
 	Input,
 	InputGroup,
 } from '@arcade/library-components';
+import { PlayerColor } from '@arcade/library-common';
 
 import * as S from './PlayerConfig.styled';
 import {
@@ -20,7 +21,6 @@ import {
 } from '../../context/GameConfiguration';
 import { IDotsAndBoxesPlayer } from '../../dataModels';
 import { ColorSelector } from '../ColorSelector';
-import { PlayerColor } from '../../enums';
 
 export function PlayerConfig(): JSX.Element {
 	const { players, dispatch } = useGameConfiguration();
@@ -116,36 +116,38 @@ export function PlayerConfig(): JSX.Element {
 					</ButtonIcon>
 				</div>
 			))}
-			<DialogConfirm
-				isOpen={isDialogOpen}
-				onCancel={() => setIsDialogOpen(false)}
-				onConfirm={handleDialogConfirm}
-				slotHeader='Player Config'>
-				<form onSubmit={handleFormSubmit} ref={refForm}>
-					<InputGroup
-						slotLabel='Name'
-						slotInput={
-							<Input
-								id={`player-${editPlayer.uuid}_name `}
-								maxLength={12}
-								minLength={2}
-								name={`player-${editPlayer.uuid}_name `}
-								ref={nameRef}
-								required
-								type='text'
-								defaultValue={editPlayer.displayName}
-							/>
-						}
-						inputId={`player-${editPlayer.uuid}_name `}
-					/>
+			{editPlayer && (
+				<DialogConfirm
+					isOpen={isDialogOpen}
+					onCancel={() => setIsDialogOpen(false)}
+					onConfirm={handleDialogConfirm}
+					slotHeader='Player Config'>
+					<form onSubmit={handleFormSubmit} ref={refForm}>
+						<InputGroup
+							slotLabel='Name'
+							slotInput={
+								<Input
+									id={`player-${editPlayer.uuid}_name `}
+									maxLength={12}
+									minLength={2}
+									name={`player-${editPlayer.uuid}_name `}
+									ref={nameRef}
+									required
+									type='text'
+									defaultValue={editPlayer.displayName}
+								/>
+							}
+							inputId={`player-${editPlayer.uuid}_name `}
+						/>
 
-					<ColorSelector
-						selectedColor={editPlayer.color}
-						slotLegend='Color'
-						onSelect={handleColorSelected}
-					/>
-				</form>
-			</DialogConfirm>
+						<ColorSelector
+							selectedColor={editPlayer.color}
+							slotLegend='Color'
+							onSelect={handleColorSelected}
+						/>
+					</form>
+				</DialogConfirm>
+			)}
 		</S.PlayersContainer>
 	);
 }

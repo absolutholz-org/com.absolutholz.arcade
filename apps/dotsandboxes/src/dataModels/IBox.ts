@@ -1,4 +1,5 @@
-import { PlayerColor } from '../enums';
+import { PlayerColor } from '@arcade/library-common';
+
 import { IDotsAndBoxesPlayer } from './IDotsAndBoxesPlayer';
 
 export type IBox = {

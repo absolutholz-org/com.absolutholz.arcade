@@ -1,4 +1,4 @@
-import { PlayerColor } from '../../enums';
+import { PlayerColor } from '@arcade/library-common';
 
 export interface IGameboardButtonProps {
 	startRowID: number;

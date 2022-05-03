@@ -1,4 +1,5 @@
-import { PlayerColor } from '../../enums';
+import { PlayerColor } from '@arcade/library-common';
+
 import { IGameConfigurationState } from './GameConfigurationContext';
 
 export const DEFAULT_STATE: IGameConfigurationState = {

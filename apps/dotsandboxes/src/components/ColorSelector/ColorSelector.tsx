@@ -1,6 +1,7 @@
 import { VisuallyHidden } from '@arcade/library-components';
+import { PlayerColor } from '@arcade/library-common';
+
 import { useGameConfiguration } from '../../context/GameConfiguration';
-import { PlayerColor } from '../../enums';
 import * as S from './ColorSelector.styled';
 import { IColorOptionProps, IColorSelectorProps } from './IColorSelector';
 

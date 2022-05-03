@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { PlayerColor } from '../../enums';
+
+import { PlayerColor } from '@arcade/library-common';
 
 export interface IColorSelectorProps {
 	onSelect: (color: PlayerColor) => void;

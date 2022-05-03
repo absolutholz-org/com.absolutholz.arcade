@@ -10,7 +10,7 @@ import {
 	SpacingSize,
 	TypoSize,
 } from '@arcade/library-components';
-import { PlayerColor } from '../../enums';
+import { PlayerColor } from '@arcade/library-common';
 
 export const ColorSelector = styled.fieldset``;
 

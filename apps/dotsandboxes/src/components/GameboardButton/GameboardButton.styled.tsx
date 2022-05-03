@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { PlayerColor } from '../../enums';
+import { PlayerColor } from '@arcade/library-common';
 
 export const GameboardButton = styled.button<{ $color: PlayerColor | null }>`
 	--line-width: 0.625em;
