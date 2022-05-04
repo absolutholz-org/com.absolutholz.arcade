@@ -13,6 +13,6 @@ export const ScoreboardGrid = styled.div`
 export const ScoreboardPlayerName = styled(Headline200).attrs({ as: 'h3' })<{
 	$color?: string;
 }>`
-	color: ${({ $color }) => $color};
+	color: var(--player-color-${({ $color }) => $color});
 	margin-bottom: ${SpacingSize.x050};
 `;

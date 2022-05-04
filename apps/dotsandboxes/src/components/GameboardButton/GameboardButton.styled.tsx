@@ -6,7 +6,9 @@ export const GameboardButton = styled.button<{ $color: PlayerColor | null }>`
 	--line-width: 0.625em;
 	--line-outline-width: calc(var(--line-width) / 4);
 	--line-color: ${({ $color }) =>
-		$color !== null ? $color : 'var(--on-surface)'};
+		$color !== null
+			? `var(--player-color-${$color})`
+			: 'var(--on-surface)'};
 	--line-button-width: 3rem;
 	--line-button-length: calc(100% - var(--line-button-width));
 

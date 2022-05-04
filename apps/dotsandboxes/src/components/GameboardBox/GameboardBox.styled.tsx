@@ -11,7 +11,7 @@ export const GameboardBox = styled.div<{
 	aspect-ratio: 1 / 1;
 	${({ color }) =>
 		css`
-			background-color: ${color};
+			background-color: var(--player-color-${color});
 		`}
 	display: flex;
 	justify-content: center;

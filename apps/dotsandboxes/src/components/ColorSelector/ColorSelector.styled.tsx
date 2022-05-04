@@ -22,7 +22,7 @@ export const CardGrid = styled.div`
 `;
 
 export const CardBackground = styled.div<{ $color: PlayerColor }>`
-	background-color: ${({ $color }) => $color};
+	background-color: var(--player-color-${({ $color }) => $color});
 	height: 100%;
 	left: 0;
 	object-fit: cover;

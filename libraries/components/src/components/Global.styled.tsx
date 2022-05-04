@@ -25,6 +25,24 @@ const DarkColorSchemeCSS = css`
 
 	--error: ${ColorDarkHsl.Red};
 	--on-error: ${ColorDarkHsl.Grey900};
+
+	--player-color-red: hsl(1deg, 83%, 63%); // Red 400
+	--player-color-red-contrast: hsl(0deg, 0%, 0%);
+
+	--player-color-blue: hsl(207deg, 90%, 61%); // Blue 400
+	--player-color-blue-contrast: hsl(0deg, 0%, 0%);
+
+	--player-color-purple: hsl(262deg, 52%, 47%); // Deep Purple 500
+	--player-color-purple-contrast: hsl(0deg, 0%, 100%);
+
+	--player-color-green: hsl(122deg, 39%, 49%); // Green 500
+	--player-color-green-contrast: hsl(0deg, 0%, 100%);
+
+	--player-color-yellow: hsl(54deg, 100%, 67%); // Yellow 400
+	--player-color-yellow-contrast: hsl(0deg, 0%, 0%);
+
+	--player-color-orange: hsl(36deg, 100%, 50%); // Orange 500
+	--player-color-orange-contrast: hsl(0deg, 0%, 0%);
 `;
 
 const LightColorSchemeCSS = css`
@@ -42,6 +60,24 @@ const LightColorSchemeCSS = css`
 
 	--error: ${ColorLightHsl.RedDark2};
 	--on-error: ${ColorLightHsl.Grey100};
+
+	--player-color-red: hsl(0deg, 65%, 51%); // Red 700
+	--player-color-red-contrast: hsl(0deg, 0%, 100%);
+
+	--player-color-blue: hsl(212deg, 80%, 42%); // Blue 800
+	--player-color-blue-contrast: hsl(0deg, 0%, 100%);
+
+	--player-color-purple: hsl(255deg, 61%, 39%); // Deep Purple 800
+	--player-color-purple-contrast: hsl(0deg, 0%, 100%);
+
+	--player-color-green: hsl(123deg, 46%, 34%); // Green 800
+	--player-color-green-contrast: hsl(0deg, 0%, 100%);
+
+	--player-color-yellow: hsl(43deg, 96%, 58%); // Yellow 700
+	--player-color-yellow-contrast: hsl(0deg, 0%, 0%);
+
+	--player-color-orange: hsl(27deg, 100%, 47%); // Orange 800
+	--player-color-orange-contrast: hsl(0deg, 0%, 0%);
 `;
 
 export const GlobalStyle = createGlobalStyle`
