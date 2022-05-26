@@ -1,11 +1,42 @@
-import { NotificationTurn } from '@arcade/library-components';
+import { useEffect, useState } from 'react';
 
-import { useGameState } from '../../context/GameState';
+import {
+	NotificationGameOver,
+	NotificationTurn,
+} from '@arcade/library-components';
+
+import { GameStateAction, useGameState } from '../../context/GameState';
+import { IDotsAndBoxesPlayer } from '../../dataModels';
+import { GameState } from '../../enums';
 import { IScoreboardProps } from './IScoreboard';
 import * as S from './Scoreboard.styled';
 
 export function Scoreboard({ ...props }: IScoreboardProps): JSX.Element {
-	const { players, currentPlayer } = useGameState();
+	const { gameState, players, currentPlayer, dispatch } = useGameState();
+	const [winners, setWinners] = useState<IDotsAndBoxesPlayer[]>([]);
+
+	const handleNewGame = () => {
+		dispatch({
+			type: GameStateAction.NewGame,
+		});
+	};
+
+	useEffect(() => {
+		if (gameState === GameState.GameOver) {
+			let winningPlayers = [players[0]];
+			players.slice(1).forEach((player) => {
+				if (player.gameBoxCount > winningPlayers[0].gameBoxCount) {
+					winningPlayers = [player];
+				} else if (
+					player.gameBoxCount === winningPlayers[0].gameBoxCount
+				) {
+					winningPlayers.push(player);
+				}
+			});
+
+			setWinners(winningPlayers);
+		}
+	}, [gameState]);
 
 	return (
 		<>
@@ -22,9 +53,15 @@ export function Scoreboard({ ...props }: IScoreboardProps): JSX.Element {
 						</section>
 					))}
 			</S.ScoreboardGrid>
+			<button onClick={handleNewGame}>new game</button>
 			{currentPlayer && (
 				<NotificationTurn playerName={currentPlayer.displayName} />
 			)}
+			<NotificationGameOver
+				winnerPlayers={winners}
+				isOpen={gameState === GameState.GameOver}
+				onNewGameClick={handleNewGame}
+			/>
 		</>
 	);
 }

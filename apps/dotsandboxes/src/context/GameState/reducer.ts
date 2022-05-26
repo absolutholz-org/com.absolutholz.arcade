@@ -1,3 +1,4 @@
+import { GameState } from '../../enums';
 import { GameStateAction } from './GameStateAction';
 import { IGameStateAction, IGameStateState } from './GameStateContext';
 
@@ -6,23 +7,27 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 
 	switch (type) {
 		case GameStateAction.NewGame: {
-			// const squares = cellConstructor(Math.sqrt(state.squares.length));
-			// const gameState = GameState.Playing;
-			// const currentPlayer =
-			// 	state.currentPlayer === state.players.player1
-			// 		? state.players.player2
-			// 		: state.players.player1;
-			// return { ...state, squares, currentPlayer, gameState };
+			const { boxes, players } = { ...state };
 
-			return { ...state };
+			for (const box of boxes) {
+				for (const border in box.borders) {
+					box.borders[border] = null;
+				}
+				delete box.player;
+			}
+
+			for (const player of players) {
+				player.gameBoxCount = 0;
+				player.gameLineCount = 0;
+			}
+
+			return { ...state, boxes, players };
 		}
 
 		case GameStateAction.ConnectDots: {
 			const { startRowID, startColumnID, endRowID, endColumnID } = action;
-			const boxes = [...state.boxes];
+			const { boxes, players, currentPlayer } = { ...state };
 			let atLeastOneCompletion = false;
-			const players = [...state.players];
-			const currentPlayer = { ...state.currentPlayer };
 			currentPlayer.gameLineCount += 1;
 
 			for (const box of boxes) {
@@ -56,22 +61,19 @@ export function reducer(state: IGameStateState, action: IGameStateAction) {
 			);
 
 			if (completedBoxes === state.boxes.length) {
-				let winningPlayers = [players[0]];
-				players.slice(1).forEach((player) => {
-					if (player.gameBoxCount > winningPlayers[0].gameBoxCount) {
-						winningPlayers = [player];
-					} else if (
-						player.gameBoxCount === winningPlayers[0].gameBoxCount
-					) {
-						winningPlayers.push(player);
-					}
-				});
+				return {
+					...state,
+					gameState: GameState.GameOver,
+					players,
+					boxes,
+					currentPlayer,
+				};
 
-				alert(
-					`Winners: ${winningPlayers
-						.map((player) => player.displayName)
-						.join(', ')}`
-				);
+				// alert(
+				// 	`Winners: ${winningPlayers
+				// 		.map((player) => player.displayName)
+				// 		.join(', ')}`
+				// );
 			}
 
 			if (!atLeastOneCompletion) {

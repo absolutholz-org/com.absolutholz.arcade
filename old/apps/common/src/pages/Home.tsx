@@ -87,7 +87,6 @@ export function Home(): JSX.Element {
 	};
 
 	const handlePlayerFormSubmit = (name: string) => {
-		console.log({ name });
 		closePlayerDialog();
 		saveUser({
 			displayName: name,

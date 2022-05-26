@@ -18,6 +18,7 @@ export * from './components/Icon';
 export * from './components/IconText';
 export * from './components/logos/LogoText';
 export * from './components/logos/LogoTextInline';
+export * from './components/NotificationGameOver';
 export * from './components/NotificationTurn';
 export * from './components/PageLayoutContainer';
 export * from './components/PlayerForm';

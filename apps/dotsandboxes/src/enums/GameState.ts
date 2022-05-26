@@ -3,4 +3,5 @@ export const enum GameState {
 	Playing = 'playing',
 	StoppedDraw = 'draw',
 	StoppedWin = 'win',
+	GameOver = 'game-over',
 }
