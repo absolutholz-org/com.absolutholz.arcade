@@ -18,7 +18,7 @@ export const Button = styled.button<{
 	})}
 	align-items: center;
 	border: 1px solid transparent;
-	border-radius: 9vmax;
+	border-radius: 10px / 50%;
 	color: hsl(var(--accent));
 	display: ${({ $inline = false }) => ($inline ? 'inline-flex' : 'flex')};
 	font-weight: 500;

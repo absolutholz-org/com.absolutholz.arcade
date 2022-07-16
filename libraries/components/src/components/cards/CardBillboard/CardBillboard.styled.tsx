@@ -36,8 +36,9 @@ export const CardBillboardChildren = styled.div`
 	})}
 	background-color: var(--surface);
 	/* background: hsla(var(--surface-hsl), 0.85); */
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
+	border-radius: 10px / 50%;
+	border-end-end-radius: 0;
+	border-start-end-radius: 0;
 	padding: ${SpacingSize.x050} ${SpacingSize.x100};
 `;
 
