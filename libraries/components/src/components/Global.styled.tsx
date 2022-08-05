@@ -143,8 +143,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        accent-color: var(--accent);
+        accent-color: hsl(var(--accent));
         background: var(--surface);
+        caret-color: hsl(var(--accent));
         color: var(--on-surface);
         font-size: 1.125em;
         margin: 0;
@@ -222,6 +223,19 @@ export const GlobalStyle = createGlobalStyle`
             &:not([data-color-scheme="light"]) {
                 filter: brightness(0.8) contrast(1.2);
             }
+        }
+    }
+
+    dialog {
+        background: none;
+        border: 0;
+        margin: 0;
+        max-height: none;
+        max-width: none;
+
+        &::backdrop {
+            background: hsl(0, 0%, 0%, 0.7);
+            backdrop-filter: blur(5px);
         }
     }
 `;
