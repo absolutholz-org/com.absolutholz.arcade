@@ -1,4 +1,5 @@
 export const enum SpacingSize {
+	x025 = '0.25rem',
 	x050 = '0.5rem',
 	x100 = '1rem',
 	x125 = '1.25rem',
