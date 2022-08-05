@@ -1,11 +1,13 @@
 import styled from 'styled-components';
-import { SurfaceTheme, TypoSize } from '../../../enums';
-import { themeSurface } from '../../../styles/themeSurface';
+
+import { BorderRadius, SpacingSize, TypoSize } from '../../../enums';
 
 export const Input = styled.input`
-	${themeSurface({ theme: SurfaceTheme.Background2 })}
 	border: 2px solid;
-	border-radius: 3px;
+	border-radius: ${BorderRadius.Base};
+	display: block;
 	font-size: ${TypoSize.x1125};
-	padding: 0.25rem 0.5rem;
+	min-height: 3rem;
+	padding: 0 ${SpacingSize.x100};
+	width: 100%;
 `;
