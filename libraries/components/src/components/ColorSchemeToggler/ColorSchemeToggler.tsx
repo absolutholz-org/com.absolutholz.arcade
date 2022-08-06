@@ -1,10 +1,7 @@
-import { ColorScheme } from '../../enums';
-
 import { useSiteColorScheme } from '../../context';
 
 import { IColorSchemeToggler } from './IColorSchemeToggler';
 import * as S from './ColorSchemeToggler.styled';
-import { useEffect } from 'react';
 
 // import SvgSchemeAuto from 'mdi-react/ThemeLightDarkIcon';
 // import SvgSchemeLight from 'mdi-react/WeatherSunnyIcon';
@@ -20,14 +17,14 @@ export function ColorSchemeToggler({
 
 	const toggleState = () => {
 		switch (siteColorScheme) {
-			case ColorScheme.Auto:
-				setSiteColorScheme(ColorScheme.Light);
+			case 'auto':
+				setSiteColorScheme('light');
 				break;
-			case ColorScheme.Light:
-				setSiteColorScheme(ColorScheme.Dark);
+			case 'light':
+				setSiteColorScheme('dark');
 				break;
 			default:
-				setSiteColorScheme(ColorScheme.Auto);
+				setSiteColorScheme('auto');
 		}
 	};
 

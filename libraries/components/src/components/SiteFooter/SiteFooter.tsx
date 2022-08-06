@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { ColorScheme } from '../../enums';
 import { IconSize } from '../Icon';
 
 import MdiReactIconComponentType from 'mdi-react';
@@ -24,10 +23,10 @@ export function SiteFooter({ slotHomeLinkPrefix }: ISiteFooter): JSX.Element {
 	const { siteColorScheme } = useSiteColorScheme();
 
 	useEffect(() => {
-		if (siteColorScheme === ColorScheme.Light) {
+		if (siteColorScheme === 'light') {
 			setSchemeIcon(SvgSchemeLight);
 			setSchemeText('Light');
-		} else if (siteColorScheme === ColorScheme.Dark) {
+		} else if (siteColorScheme === 'dark') {
 			setSchemeIcon(SvgSchemeDark);
 			setSchemeText('Dark');
 		} else {

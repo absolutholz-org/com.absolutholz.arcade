@@ -1,7 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react';
-import { ColorScheme } from '../../enums';
 
-import { SiteColorSchemeContext } from './SiteColorSchemeContext';
+import { ColorScheme, SiteColorSchemeContext } from './SiteColorSchemeContext';
 
 const STORAGE_KEY = 'absolutholz.arcade:color-scheme';
 const HTML_SCHEME_ATTRIBUTE = 'data-color-scheme';
@@ -16,18 +15,18 @@ export const SiteColorSchemeProvider = ({
 	children,
 }: SiteColorSchemeProviderProps) => {
 	const [siteColorScheme, setSiteColorScheme] = useState<ColorScheme>(
-		(localStorage.getItem(STORAGE_KEY) as ColorScheme) ?? ColorScheme.Auto
+		(localStorage.getItem(STORAGE_KEY) as ColorScheme) ?? 'auto'
 	);
 
 	useEffect(() => {
 		switch (siteColorScheme) {
-			case ColorScheme.Light:
+			case 'light':
 				elHtml!.setAttribute(HTML_SCHEME_ATTRIBUTE, 'light');
-				localStorage.setItem(STORAGE_KEY, ColorScheme.Light);
+				localStorage.setItem(STORAGE_KEY, 'light');
 				break;
-			case ColorScheme.Dark:
+			case 'dark':
 				elHtml!.setAttribute(HTML_SCHEME_ATTRIBUTE, 'dark');
-				localStorage.setItem(STORAGE_KEY, ColorScheme.Dark);
+				localStorage.setItem(STORAGE_KEY, 'dark');
 				break;
 			default:
 				elHtml!.removeAttribute(HTML_SCHEME_ATTRIBUTE);

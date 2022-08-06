@@ -1,11 +1,11 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 
-import { ColorScheme } from '../../enums';
+export type ColorScheme = 'auto' | 'light' | 'dark';
 
 export const SiteColorSchemeContext = createContext<{
 	siteColorScheme: ColorScheme;
 	setSiteColorScheme: Dispatch<SetStateAction<ColorScheme>>;
 }>({
-	siteColorScheme: ColorScheme.Light,
+	siteColorScheme: 'light',
 	setSiteColorScheme: () => {},
 });
