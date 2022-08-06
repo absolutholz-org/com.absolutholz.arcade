@@ -1,3 +1,4 @@
+export * from './BorderRadius';
 export * from './ColorDarkHex';
 export * from './ColorDarkHsl';
 export * from './ColorLightHex';

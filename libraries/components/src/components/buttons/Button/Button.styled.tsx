@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { SpacingSize, SurfaceTheme } from '../../../enums';
+import { BorderRadius, SpacingSize, SurfaceTheme } from '../../../enums';
 import { themeSurface } from '../../../styles/themeSurface';
 import { Elevation } from '../../Elevation';
 import { ButtonVariant } from './IButton';
@@ -18,9 +18,9 @@ export const Button = styled.button<{
 	})}
 	align-items: center;
 	border: 1px solid transparent;
-	border-radius: 10px / 50%;
+	border-radius: ${BorderRadius.Base};
 	color: hsl(var(--accent));
-	display: ${({ $inline = false }) => ($inline ? 'inline-flex' : 'flex')};
+	display: ${({ $inline = true }) => ($inline ? 'inline-flex' : 'flex')};
 	font-weight: 500;
 	gap: ${SpacingSize.x050};
 	/* letter-spacing: 0.05ch; */
@@ -32,7 +32,7 @@ export const Button = styled.button<{
 	text-decoration: none;
 	/* text-transform: uppercase; */
 
-	${({ $inline = false }) =>
+	${({ $inline = true }) =>
 		!$inline &&
 		css`
 			width: 100%;
