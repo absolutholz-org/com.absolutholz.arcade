@@ -29,8 +29,10 @@ export function CardBillboardBackgroundImage({
 
 	return (
 		<S.CardBillboardBackground
+			alt=' '
 			decoding='async'
 			loading='lazy'
+			role='presentation'
 			srcSet={srcset}
 			sizes='(max-width: 1600px) 369px, (max-width: 1324px) 25vw, (max-width: 1004px) 33vw, (max-width: 664px) 50vw, 100vw'
 		/>
