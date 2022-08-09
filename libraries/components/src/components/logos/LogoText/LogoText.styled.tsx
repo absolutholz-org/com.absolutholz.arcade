@@ -1,17 +1,19 @@
 import styled from 'styled-components';
-import { TypoFamily } from '../../../enums';
 
-export const Wrapper = styled.span`
+import { TypoFamily } from '../../../enums';
+import { LogoAbsolutholz as LogoAbsolutholzComponent } from '../LogoAbsolutholz';
+
+export const Logo = styled.span`
 	display: inline-block;
 	line-height: 1;
 	text-align: center;
 `;
 
-export const Absolutholz = styled.span`
-	font-size: 0.631em;
+export const LogoAbsolutholz = styled(LogoAbsolutholzComponent)`
+	font-size: 0.6em;
 `;
 
-export const Arcade = styled.span`
+export const LogoArcade = styled.span`
 	display: block;
 	font-family: ${TypoFamily.Headline};
 `;
