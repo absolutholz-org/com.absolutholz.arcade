@@ -6,7 +6,6 @@
     "libraries/*",
     "apps/*"
   ],
-  "scripts": {},
   "engines": {
     "node": ">=16.14.0",
     "yarn": "^1.22.17"
