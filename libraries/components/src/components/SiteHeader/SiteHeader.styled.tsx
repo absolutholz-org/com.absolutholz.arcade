@@ -1,37 +1,20 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-import { IconText } from '../IconText';
+import { SpacingSize } from '../../enums';
+import { Headline100 } from '../headlines';
 import { PageLayoutContainer } from '../PageLayoutContainer';
-import { SpacingSize, TypoSize } from '../..';
-import { LogoText } from '../logos/LogoText';
 
 export const SiteHeader = styled.header`
-	padding-bottom: ${SpacingSize.x050};
-	padding-top: ${SpacingSize.x050};
+	padding-block: ${SpacingSize.x050};
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 `;
 
-export const SiteHeaderContainer = styled(PageLayoutContainer)`
+export const SiteHeaderPageLayoutContainer = styled(PageLayoutContainer)`
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-`;
-
-export const LogoLink = styled(Link)`
-	color: inherit;
-	font-size: ${TypoSize.x150};
-	text-decoration: none;
-`;
-
-export const LogoIconText = styled(IconText)`
-	gap: ${SpacingSize.x050};
-`;
-
-export const Logo = styled(LogoText)`
-	font-size: ${TypoSize.x200};
-`;
-
-export const ActionBlock = styled.div`
-	display: flex;
-	gap: ${SpacingSize.x050};
 `;
