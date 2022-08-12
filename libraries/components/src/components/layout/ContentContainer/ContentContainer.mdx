@@ -1,0 +1,46 @@
+import { Canvas, Preview, Story, Props } from "@storybook/addon-docs";
+import { ContentContainer } from ".";
+
+# ContentContainer
+
+The `PageSection` component is used to add standard and consistent horizontal and vertical spacing as well as theming to sections the base layout of a page.
+
+This component takes one value which is used as a vertical spacing both above and below the content that it contains. When placing two sections with identical theming above/below each other, the vertical spacing between them would visually appear doubled. To prevent this, _either the **top** or **bottom**_ spacing of one of the sections can be omitted.
+
+A striped background and border has been added to the previews here only to better illustrate spacing and positioning of content elements. These display features are not present in the component itself.
+
+<Preview>
+	<Story id="base-ui-pagesection--page-section" />
+</Preview>
+
+## Header and Footer Slots
+
+Two additional, independently optional slots, one above and one below, can be filled with content that also gains a consistent gap between themselves and the main content of the section. Any content passed to these slots will also gain default responsive, horizontal alignment, which can be overridden at the child level.
+
+<Preview>
+	<Story id="base-ui-pagesection--page-section-with-header-and-footer" />
+</Preview>
+
+## Supporting Components
+
+There are some additional components available to be used with the `PageSection` to improve the consistency of all sections. The use of these is encouraged wherever appropriate.
+
+### PageSectionHeadline
+
+A semantic headline with default styling and a `tag` that can be overridden.
+
+<Preview>
+	<Story id="base-ui-pagesection-pagesectionheadline--page-section-headline" />
+</Preview>
+
+### PageSectionIcon
+
+An extension of the basic `Icon` component, but with spacing and sizing appropriate to the `PageSection`.
+
+<Preview>
+	<Story id="base-ui-pagesection-pagesectionicon--page-section-icon" />
+</Preview>
+
+## Component API
+
+<Props />

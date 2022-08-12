@@ -1,42 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from "react";
 
-import {
-	GlobalStyle,
-	SiteColorSchemeProvider,
-	SiteFooter,
-	Theme,
-} from '@arcade/library-components';
+import { ReactComponent as IconCheck } from "@mdi/svg/svg/account.svg";
 
-import { AccessibilityStatement, Home } from './pages';
-import { PrivacyPolicy } from './pages';
-import { TermsOfService } from './pages';
-import { Suspense } from 'react';
+import { GlobalStyle, LogoAbsolutholz } from "@arcade/library-components";
 
 function App() {
+	const [count, setCount] = useState(0);
+
 	return (
-		<SiteColorSchemeProvider>
+		<>
 			<GlobalStyle />
-			<BrowserRouter>
-				<Suspense fallback={<>Loading</>}>
-					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route
-							path='/accessibility-statement'
-							element={<AccessibilityStatement />}
-						/>
-						<Route
-							path='/privacy-policy'
-							element={<PrivacyPolicy />}
-						/>
-						<Route
-							path='/terms-of-service'
-							element={<TermsOfService />}
-						/>
-					</Routes>
-				</Suspense>
-				<SiteFooter />
-			</BrowserRouter>
-		</SiteColorSchemeProvider>
+			<div className="App">Landing Pages</div>
+			<IconCheck height={40} />
+			<LogoAbsolutholz />
+		</>
 	);
 }
 

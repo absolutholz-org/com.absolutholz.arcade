@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { TypoFamily } from '../../../enums';
-import { LogoAbsolutholz as LogoAbsolutholzComponent } from '../LogoAbsolutholz';
+// import { TypoFamily } from '../../../enums';
+import { LogoAbsolutholz as LogoAbsolutholzComponent } from "../LogoAbsolutholz";
 
 export const Logo = styled.span`
 	display: inline-block;
@@ -15,5 +15,4 @@ export const LogoAbsolutholz = styled(LogoAbsolutholzComponent)`
 
 export const LogoArcade = styled.span`
 	display: block;
-	font-family: ${TypoFamily.Headline};
 `;
