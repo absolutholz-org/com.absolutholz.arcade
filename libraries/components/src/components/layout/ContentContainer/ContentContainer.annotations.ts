@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface ContentContainerProps {
 	children: ReactNode;
-	$size?: "base" | "wide" | "full";
+	$size?: 'base' | 'wide' | 'full';
 }

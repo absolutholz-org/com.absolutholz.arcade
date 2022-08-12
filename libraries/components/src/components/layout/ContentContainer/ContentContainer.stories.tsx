@@ -1,23 +1,23 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ContentContainer } from ".";
-import { color } from "../../../foundations/colors/color";
+import { ContentContainer } from '.';
+import { color } from '../../../foundations/colors/color';
 // import { StoryExampleContent } from "../../StoryExampleContent";
 // import mdx from "./ContentContainer.mdx";
 
 const SPACING_STYLES = {
 	backgroundImage:
-		"repeating-linear-gradient(45deg, hsl(0 100% 50% / 0.05), hsl(0 100% 50% / 0.05) 20px, hsl(0 100% 50% / 0.25) 20px, hsl(0 100% 50% / 0.25) 40px)",
+		'repeating-linear-gradient(45deg, hsl(0 100% 50% / 0.05), hsl(0 100% 50% / 0.05) 20px, hsl(0 100% 50% / 0.25) 20px, hsl(0 100% 50% / 0.25) 40px)',
 };
 
 const CONTENT_STYLES = {
-	background: color("surface"),
+	background: color('surface'),
 };
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: "Layout/ContentContainer",
+	title: 'Layout/ContentContainer',
 	component: ContentContainer,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
@@ -35,19 +35,19 @@ const Template: ComponentStory<typeof ContentContainer> = (args) => (
 	</div>
 );
 
-export const _baseWidth_ = Template.bind({});
-_baseWidth_.args = {
+export const _BaseWidth_ = Template.bind({});
+_BaseWidth_.args = {
 	children: <div style={CONTENT_STYLES}>Content Area</div>,
 };
 
-export const _extraWide_ = Template.bind({});
-_extraWide_.args = {
+export const _ExtraWide_ = Template.bind({});
+_ExtraWide_.args = {
 	children: <div style={CONTENT_STYLES}>Content Area</div>,
-	$size: "wide",
+	$size: 'wide',
 };
 
-export const _fullWidth = Template.bind({});
-_fullWidth.args = {
+export const _FullWidth = Template.bind({});
+_FullWidth.args = {
 	children: <div style={CONTENT_STYLES}>Content Area</div>,
-	$size: "full",
+	$size: 'full',
 };
