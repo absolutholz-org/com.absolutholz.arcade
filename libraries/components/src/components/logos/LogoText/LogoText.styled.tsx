@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // import { TypoFamily } from '../../../enums';
-import { LogoAbsolutholz as LogoAbsolutholzComponent } from "../LogoAbsolutholz";
+import { LogoAbsolutholz as LogoAbsolutholzComponent } from '../LogoAbsolutholz';
 
 export const Logo = styled.span`
 	display: inline-block;

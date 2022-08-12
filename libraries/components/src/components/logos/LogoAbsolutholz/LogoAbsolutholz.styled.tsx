@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // import { color } from '../../../foundations/colors/color';
 
@@ -7,7 +7,7 @@ export const LogoAbsolutholz = styled.span`
 	line-height: 1;
 `;
 
-const BORDER_RADIUS = "3px";
+const BORDER_RADIUS = '3px';
 
 export const LogoAbsolutholzAbsolut = styled.span`
 	border: 2px solid;

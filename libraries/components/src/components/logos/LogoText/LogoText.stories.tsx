@@ -1,11 +1,10 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { LogoText } from "./LogoText";
+import { LogoText } from './LogoText';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: "Logos/LogoText",
+	title: 'Logos/LogoText',
 	component: LogoText,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
@@ -17,4 +16,4 @@ const Template: ComponentStory<typeof LogoText> = (args) => (
 );
 
 export const _Template_ = Template.bind({});
-_Template_.storyName = "LogoText";
+_Template_.storyName = 'LogoText';
