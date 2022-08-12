@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { VisuallyHidden } from '.';
-import { LOREM_IPSUM_SENTENCE } from '../../loremIpsum';
+import { LOREM_IPSUM_SENTENCE } from '../../../loremIpsum';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
