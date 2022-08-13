@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ReactComponent as IconExample } from '@mdi/svg/svg/account.svg';
+
+import { ReactComponent as IconExample } from '@mdi/svg/svg/cog-outline.svg';
 
 import { Icon } from '.';
 
