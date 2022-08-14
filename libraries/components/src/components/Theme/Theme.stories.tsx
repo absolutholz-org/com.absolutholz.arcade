@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Theme } from '.';
 import { LOREM_IPSUM } from '../../loremIpsum';
+import mdx from './Theme.mdx';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,6 +15,11 @@ export default {
 	// 		page: mdx,
 	// 	},
 	// },
+	parameters: {
+		docs: {
+			page: mdx,
+		},
+	},
 } as ComponentMeta<typeof Theme>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

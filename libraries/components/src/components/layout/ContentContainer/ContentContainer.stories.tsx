@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ContentContainer } from '.';
 import { color } from '../../../foundations/colors/color';
 // import { StoryExampleContent } from "../../StoryExampleContent";
-// import mdx from "./ContentContainer.mdx";
+import mdx from './ContentContainer.mdx';
 
 const SPACING_STYLES = {
 	backgroundImage:
@@ -20,11 +20,11 @@ export default {
 	component: ContentContainer,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
-	// parameters: {
-	// 	docs: {
-	// 		page: mdx,
-	// 	},
-	// },
+	parameters: {
+		docs: {
+			page: mdx,
+		},
+	},
 } as ComponentMeta<typeof ContentContainer>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
