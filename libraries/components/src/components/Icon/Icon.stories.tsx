@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ReactComponent as IconExample } from '@mdi/svg/svg/cog-outline.svg';
 
 import { Icon } from '.';
+import mdx from './Icon.mdx';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -10,11 +11,11 @@ export default {
 	component: Icon,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
-	// parameters: {
-	// 	docs: {
-	// 		page: mdx,
-	// 	},
-	// },
+	parameters: {
+		docs: {
+			page: mdx,
+		},
+	},
 } as ComponentMeta<typeof Icon>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
