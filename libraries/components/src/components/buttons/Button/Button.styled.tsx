@@ -65,8 +65,31 @@ export const Button = styled.button<{
 			color: ${color('primary')};
 		`}
 
-    &:focus,
-    &:hover {
+		/* https://reactgo.com/css-pulse-animation/ */
+		@keyframes pulse {
+		0% {
+			outline: 2px solid ${color('accent', 0)};
+			outline-offset: 0px;
+		}
+		40% {
+			outline: 2px solid ${color('accent', 0.75)};
+			outline-offset: 2px;
+		}
+		100% {
+			outline: 8px solid ${color('accent', 0)};
+		}
+	}
+
+	&:hover {
+	}
+
+	&:focus {
+		animation: pulse 2s infinite linear;
+
+		@media (prefers-reduced-motion) {
+			animation: none;
+			outline: 2px solid ${color('accent', 0.75)};
+		}
 	}
 
 	&[disabled] {
