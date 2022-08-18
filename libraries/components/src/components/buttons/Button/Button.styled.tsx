@@ -42,9 +42,13 @@ export const Button = styled.button<{
 		css`
 			${elevate(2)}
 			background-color: ${color('surface')};
+
+			&:hover {
+				${elevate(6)}
+			}
 		`} 
 			
-			${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
+		${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
 		$variant === 'filled' &&
 		css`
 			background-color: ${color('accent')};
@@ -58,7 +62,7 @@ export const Button = styled.button<{
 			border-color: currentColor;
 		`} 
 
-    ${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
+ 	   ${({ $variant = BUTTON_VARIANT_DEFAULT }) =>
 		$variant === 'tonal' &&
 		css`
 			background-color: ${color('accent', 0.25)};
@@ -81,6 +85,7 @@ export const Button = styled.button<{
 	}
 
 	&:hover {
+		${elevate(4)}
 	}
 
 	&:focus {
