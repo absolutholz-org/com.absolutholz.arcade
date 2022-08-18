@@ -1,9 +1,9 @@
-import { createGlobalStyle, css } from "styled-components";
-import { TypoFamily } from "../foundations/typography/TypoFamily";
-import { LightColorSchemeCSS } from "../foundations/colors/SchemeLight";
-import { DarkColorSchemeCSS } from "../foundations/colors/SchemeDark";
-import { color } from "../foundations/colors/color";
-import { space } from "../foundations/spacing/space";
+import { createGlobalStyle, css } from 'styled-components';
+import { TypoFamily } from '../foundations/typography/TypoFamily';
+import { LightColorSchemeCSS } from '../foundations/colors/SchemeLight';
+import { DarkColorSchemeCSS } from '../foundations/colors/SchemeDark';
+import { color } from '../foundations/colors/color';
+import { space } from '../foundations/spacing/space';
 
 // https://github.com/absolutholz/semantic-reboot
 
@@ -43,6 +43,8 @@ export const GlobalStyle = createGlobalStyle`
 
         --gutter: ${space(50)};
         --offset: ${space(100)};
+        --typo-body: ${TypoFamily.Body};
+        --typo-special: ${TypoFamily.Headline};
 
         @media (min-width: 600px) {
             --gutter: ${space(100)};
@@ -76,8 +78,8 @@ export const GlobalStyle = createGlobalStyle`
         --role-accent: var(--theme-base-accent);
         --role-error: var(--theme-base-error);
 
-        background: ${color("surface")};
-        color: ${color("primary")};
+        background: ${color('surface')};
+        color: ${color('primary')};
 
         accent-color: hsl(var(--theme-base-accent));
         caret-color: hsl(var(--theme-base-accent));
@@ -138,7 +140,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     a {
-        color: ${color("accent")};
+        color: ${color('accent')};
     }
 
     img {
