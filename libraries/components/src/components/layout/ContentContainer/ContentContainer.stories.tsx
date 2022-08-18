@@ -1,18 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ContentContainer } from '.';
-import { color } from '../../../foundations/colors/color';
-// import { StoryExampleContent } from "../../StoryExampleContent";
+import { CONTENT_STYLES, SPACING_STYLES } from '../../../story-helpers';
 import mdx from './ContentContainer.mdx';
-
-const SPACING_STYLES = {
-	backgroundImage:
-		'repeating-linear-gradient(45deg, hsl(0 100% 50% / 0.05), hsl(0 100% 50% / 0.05) 20px, hsl(0 100% 50% / 0.25) 20px, hsl(0 100% 50% / 0.25) 40px)',
-};
-
-const CONTENT_STYLES = {
-	background: color('surface'),
-};
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
