@@ -89,6 +89,7 @@ export const Button = styled.button<{
 		@media (prefers-reduced-motion) {
 			animation: none;
 			outline: 2px solid ${color('accent', 0.75)};
+			outline-offset: 2px;
 		}
 	}
 
