@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 
-import {
-	Card,
-	color,
-	elevate,
-	space,
-	typoFamilyCss,
-	typoSizeCss,
-} from '@arcade/library-components';
+import { Card, color, elevate, space, typoFamily, typoSize } from '@arcade/library-components';
 
 export const CardBillboard = styled(Card).attrs({
 	tag: 'article',
@@ -41,9 +34,10 @@ export const CardBillboardChildren = styled.div`
 	padding: ${space(50)} ${space(100)};
 `;
 
+const typoSizeValues = typoSize(200);
+
 export const CardBillboardHeadline = styled.h4`
-	${typoFamilyCss('headline')}
-	${typoSizeCss(150)}
+	font: 100 ${typoSizeValues.fontSize} / ${typoSizeValues.lineHeight} ${typoFamily('headline')};
 	margin-block: 0;
 `;
 
@@ -69,15 +63,5 @@ export const CardBillboardGrid = styled.div`
 	display: grid;
 	gap: ${space(200)} var(--gutter);
 	grid-auto-rows: 1fr;
-	grid-template-columns: repeat(
-		auto-fill,
-		minmax(
-			clamp(
-				100% / var(--tsr-list-max-columns) - var(--gutter),
-				var(--tsr-list-tsr-width),
-				100%
-			),
-			1fr
-		)
-	);
+	grid-template-columns: repeat(auto-fill, minmax(clamp(100% / var(--tsr-list-max-columns) - var(--gutter), var(--tsr-list-tsr-width), 100%), 1fr));
 `;
