@@ -44,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
         --gutter: ${space(50)};
         --offset: ${space(100)};
         --typo-body: ${TypoFamily.Body};
-        --typo-special: ${TypoFamily.Headline};
+        --typo-headline: ${TypoFamily.Headline};
 
         @media (min-width: 600px) {
             --gutter: ${space(100)};
