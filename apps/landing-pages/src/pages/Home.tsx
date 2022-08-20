@@ -1,18 +1,18 @@
+import { getGroupedGames, IGame } from '@arcade/library-common';
+import {
+	ContentContainer,
+	HeadlineSubsection,
+	VerticallyPaddedContainer,
+	VisuallyHidden,
+} from '@arcade/library-components';
+
 import {
 	CardBillboard,
 	CardBillboardBackgroundImage,
 	CardBillboardCoverLink,
 	CardBillboardGrid,
 	CardBillboardHeadline,
-	Headline100,
-	LogoTextInline,
-	PageLayoutContainer,
-	SectionPadded,
-	SpacingSize,
-	Theme,
-	VisuallyHidden,
-} from '@arcade/library-components';
-import { getGroupedGames, IGame } from '@arcade/library-common';
+} from '../components/CardBillboard';
 
 const gameGroups = getGroupedGames();
 const gamesSinglePlayer = gameGroups['single'];
@@ -46,34 +46,30 @@ export function Home() {
 
 			<VisuallyHidden as='h2'>Games</VisuallyHidden>
 
-			<PageLayoutContainer>
-				<SectionPadded as='section' $spacing={SpacingSize.x300}>
-					<Headline100 as='h3'>Single Player</Headline100>
+			<ContentContainer>
+				<VerticallyPaddedContainer as='section' $spacing={200}>
+					<HeadlineSubsection as='h3'>
+						Single Player
+					</HeadlineSubsection>
 					<GamesGrid games={gamesSinglePlayer} />
-				</SectionPadded>
-			</PageLayoutContainer>
+				</VerticallyPaddedContainer>
+			</ContentContainer>
 
-			<PageLayoutContainer>
-				<SectionPadded
-					as='section'
-					$spacing={SpacingSize.x300}
-					$omit='top'>
-					<Headline100 as='h3'>Two Players</Headline100>
-
+			<ContentContainer>
+				<VerticallyPaddedContainer as='section' $spacing={200}>
+					<HeadlineSubsection as='h3'>Two Players</HeadlineSubsection>
 					<GamesGrid games={gamesTwoPlayers} />
-				</SectionPadded>
-			</PageLayoutContainer>
+				</VerticallyPaddedContainer>
+			</ContentContainer>
 
-			<PageLayoutContainer>
-				<SectionPadded
-					as='section'
-					$spacing={SpacingSize.x300}
-					$omit='top'>
-					<Headline100 as='h3'>Multiple Players</Headline100>
-
+			<ContentContainer>
+				<VerticallyPaddedContainer as='section' $spacing={200}>
+					<HeadlineSubsection as='h3'>
+						Multiple Players
+					</HeadlineSubsection>
 					<GamesGrid games={gamesMultiPlayers} />
-				</SectionPadded>
-			</PageLayoutContainer>
+				</VerticallyPaddedContainer>
+			</ContentContainer>
 		</main>
 	);
 }

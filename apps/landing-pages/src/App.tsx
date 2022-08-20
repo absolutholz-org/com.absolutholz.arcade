@@ -1,19 +1,26 @@
-import { useState } from "react";
+import { Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { ReactComponent as IconCheck } from "@mdi/svg/svg/account.svg";
+import {
+	GlobalStyle,
+	SiteColorSchemeProvider,
+} from '@arcade/library-components';
 
-import { GlobalStyle, LogoAbsolutholz } from "@arcade/library-components";
+import { Home } from './pages/Home';
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		<>
+		<SiteColorSchemeProvider>
 			<GlobalStyle />
-			<div className="App">Landing Pages</div>
-			<IconCheck height={40} />
-			<LogoAbsolutholz />
-		</>
+
+			<BrowserRouter>
+				<Suspense fallback={<>Loading</>}>
+					<Routes>
+						<Route path='/' element={<Home />} />
+					</Routes>
+				</Suspense>
+			</BrowserRouter>
+		</SiteColorSchemeProvider>
 	);
 }
 
