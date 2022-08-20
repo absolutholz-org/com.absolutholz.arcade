@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arcade/library-common": "^1.0.0",
     "@arcade/library-components": "^1.0.0",
     "@mdi/svg": "^7.0.96",
     "react": "^18.0.0",
