@@ -17,3 +17,7 @@ export const VerticallyPaddedContainer = styled.div<{
 			padding-top: ${space($spacing)};
 		`}
 `;
+
+export const VerticallyPaddedContainerHeader = styled.div`
+	margin-bottom: ${space(150)};
+`;

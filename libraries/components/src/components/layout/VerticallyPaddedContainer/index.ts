@@ -1,1 +1,1 @@
-export * from './VerticallyPaddedContainer.styled';
+export * from './VerticallyPaddedContainer';
