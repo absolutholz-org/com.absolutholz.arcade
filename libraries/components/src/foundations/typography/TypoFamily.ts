@@ -2,19 +2,21 @@ import { css } from 'styled-components';
 
 export const TypoFamily = {
 	Body: `system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif`,
-	Headline: 'GamePlayed, monospace, monospace',
+	Brand: 'GamePlayed, monospace, monospace',
 } as const;
 
-export function typoFamily(family: 'body' | 'headline'): string {
+type TypoFamily = 'body' | 'brand';
+
+export function typoFamily(family: TypoFamily): string {
 	switch (family) {
-		case 'headline':
-			return 'var(--typo-headline)';
+		case 'brand':
+			return 'var(--typo-brand)';
 		default:
 			return 'var(--typo-body)';
 	}
 }
 
-export function typoFamilyCss(family: 'body' | 'headline') {
+export function typoFamilyCss(family: TypoFamily) {
 	return css`
 		font-family: ${typoFamily(family)};
 	`;

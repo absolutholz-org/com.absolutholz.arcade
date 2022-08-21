@@ -1,3 +1,3 @@
-export interface IColorSchemeToggler {
+export interface ColorSchemeTogglerProps {
 	displayMode?: 'icononly' | 'textonly';
 }

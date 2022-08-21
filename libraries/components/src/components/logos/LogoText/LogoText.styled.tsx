@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// import { TypoFamily } from '../../../enums';
+import { typoFamily } from '../../../foundations';
 import { LogoAbsolutholz as LogoAbsolutholzComponent } from '../LogoAbsolutholz';
 
 export const Logo = styled.span`
@@ -15,4 +15,5 @@ export const LogoAbsolutholz = styled(LogoAbsolutholzComponent)`
 
 export const LogoArcade = styled.span`
 	display: block;
+	font-family: ${typoFamily('brand')};
 `;

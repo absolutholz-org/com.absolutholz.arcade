@@ -18,6 +18,8 @@ export const VerticallyPaddedContainer = styled.div<{
 		`}
 `;
 
-export const VerticallyPaddedContainerHeader = styled.div`
-	margin-bottom: ${space(150)};
+export const VerticallyPaddedContainerHeader = styled.div<{
+	$spacing?: Space;
+}>`
+	margin-bottom: ${({ $spacing = 150 }) => space($spacing)};
 `;

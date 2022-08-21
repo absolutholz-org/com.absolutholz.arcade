@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IconSize } from './Icon.annotations';
+import type { IconSize } from './Icon.annotations';
 
 export const Icon = styled.span<{ $size?: IconSize }>`
 	display: inline-flex;

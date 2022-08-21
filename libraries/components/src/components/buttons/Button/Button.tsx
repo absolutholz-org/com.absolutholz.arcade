@@ -32,7 +32,7 @@
 
 import { ElementType } from 'react';
 
-import { ButtonProps } from './Button.annotations';
+import type { ButtonProps } from './Button.annotations';
 import * as S from './Button.styled';
 
 export function Button<T extends ElementType = 'button'>({

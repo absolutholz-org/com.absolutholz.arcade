@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { ContentContainerProps } from './ContentContainer.annotations';
+import type { ContentContainerProps } from './ContentContainer.annotations';
 
 export const ContentContainer = styled.div<ContentContainerProps>`
 	margin-inline: auto;

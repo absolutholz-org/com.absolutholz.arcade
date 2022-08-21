@@ -26,7 +26,7 @@ import styled, { css } from 'styled-components';
 // );
 
 import { color } from '../../foundations/colors/color';
-import { ThemeProps } from './Theme.annotations';
+import type { ThemeProps } from './Theme.annotations';
 
 export const Theme = styled.div<ThemeProps>`
 	${({ $theme = 'base' }) => css`

@@ -4,7 +4,7 @@ import { radiusCss } from '../../../foundations/borders/radius';
 import { color } from '../../../foundations/colors/color';
 import { elevate } from '../../../foundations/elevation/elevation';
 import { space } from '../../../foundations/spacing/space';
-import { ButtonVariant } from './Button.annotations';
+import type { ButtonVariant } from './Button.annotations';
 
 // export const BTN = styled.button``;
 

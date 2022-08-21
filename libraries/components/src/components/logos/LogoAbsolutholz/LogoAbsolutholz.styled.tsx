@@ -1,25 +1,31 @@
 import styled from 'styled-components';
 
-// import { color } from '../../../foundations/colors/color';
+import { color, radius } from '../../../foundations';
 
 export const LogoAbsolutholz = styled.span`
 	display: inline-flex;
 	line-height: 1;
 `;
 
-const BORDER_RADIUS = '3px';
+const radiusValue = radius('equal');
 
 export const LogoAbsolutholzAbsolut = styled.span`
 	border: 2px solid;
-	border-radius: ${BORDER_RADIUS};
+	border-radius: ${radiusValue};
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
-	font-weight: 500;
-	padding: 0.25em calc(0.25ch + ${BORDER_RADIUS}) 0.25em 0.5ch;
+	font-weight: 400;
+	padding: 0.25em calc(0.25ch + ${radiusValue}) 0.25em 0.5ch;
 `;
 
 export const LogoAbsolutholzHolz = styled.span`
-	border-radius: ${BORDER_RADIUS};
-	margin-left: -${BORDER_RADIUS};
+	align-items: center;
+	background-color: ${color('primary')};
+	border-radius: ${radiusValue};
+	color: ${color('surface')};
+	display: flex;
+	font-weight: 700;
+	margin-left: -${radiusValue};
 	padding: 0.25em 0.5ch 0.25em 0.25ch;
+	text-transform: uppercase;
 `;

@@ -1,7 +1,7 @@
 // import { cloneElement } from 'react';
 // import styled from 'styled-components';
 
-import { IconProps } from './Icon.annotations';
+import type { IconProps } from './Icon.annotations';
 import * as S from './Icon.styled';
 
 export function Icon({ icon, size = '1em', ...props }: IconProps): JSX.Element {
