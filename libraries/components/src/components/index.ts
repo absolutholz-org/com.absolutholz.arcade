@@ -13,5 +13,7 @@ export * from './layout/ContentContainer';
 export * from './layout/VisuallyHidden';
 export * from './layout/VerticallyPaddedContainer';
 export * from './logos/LogoAbsolutholz';
+export * from './logos/LogoText';
+export * from './logos/LogoTextInline';
 export * from './SiteFooter';
 export * from './Theme';

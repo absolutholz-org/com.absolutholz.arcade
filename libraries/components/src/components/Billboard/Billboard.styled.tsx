@@ -12,6 +12,11 @@ export const Billboard = styled.div`
 	flex-direction: column;
 	justify-content: end;
 	min-height: 20rem;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 `;
 
 export const BillboardHeadline = styled.h1`

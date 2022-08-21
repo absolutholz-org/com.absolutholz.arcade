@@ -1,5 +1,13 @@
 import { getGroupedGames, IGame } from '@arcade/library-common';
-import { ContentContainer, HeadlineSubsection, VerticallyPaddedContainer, VisuallyHidden } from '@arcade/library-components';
+import {
+	Billboard,
+	BillboardHeadline,
+	ContentContainer,
+	HeadlineSubsection,
+	LogoText,
+	VerticallyPaddedContainer,
+	VisuallyHidden,
+} from '@arcade/library-components';
 
 import {
 	CardBillboard,
@@ -32,8 +40,9 @@ function GameSection({ headline, games }: { headline: string; games: IGame[] }):
 	return (
 		<ContentContainer>
 			<VerticallyPaddedContainer
+				omit='bottom'
 				tag='section'
-				spacing={200}
+				spacing={300}
 				slotHeader={<HeadlineSubsection as='h3'>{headline}</HeadlineSubsection>}>
 				<GamesGrid games={games} />
 			</VerticallyPaddedContainer>
@@ -44,6 +53,12 @@ function GameSection({ headline, games }: { headline: string; games: IGame[] }):
 export function Home() {
 	return (
 		<main>
+			<Billboard>
+				<BillboardHeadline>
+					<LogoText />
+				</BillboardHeadline>
+			</Billboard>
+
 			<VisuallyHidden as='span'>homepage</VisuallyHidden>
 
 			<VisuallyHidden as='h2'>Games</VisuallyHidden>
