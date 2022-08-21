@@ -12,7 +12,7 @@ indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 tab_width = 4
-max_line_length = 150
+max_line_length = 130
 
 [*.md]
 indent_size = 2

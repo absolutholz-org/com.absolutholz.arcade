@@ -37,7 +37,7 @@ export const CardBillboardChildren = styled.div`
 const typoSizeValues = typoSize(200);
 
 export const CardBillboardHeadline = styled.h4`
-	font: 100 ${typoSizeValues.fontSize} / ${typoSizeValues.lineHeight} ${typoFamily('headline')};
+	font: 100 ${typoSizeValues.fontSize} / ${typoSizeValues.lineHeight} ${typoFamily('brand')};
 	margin-block: 0;
 `;
 
@@ -63,5 +63,8 @@ export const CardBillboardGrid = styled.div`
 	display: grid;
 	gap: ${space(200)} var(--gutter);
 	grid-auto-rows: 1fr;
-	grid-template-columns: repeat(auto-fill, minmax(clamp(100% / var(--tsr-list-max-columns) - var(--gutter), var(--tsr-list-tsr-width), 100%), 1fr));
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(clamp(100% / var(--tsr-list-max-columns) - var(--gutter), var(--tsr-list-tsr-width), 100%), 1fr)
+	);
 `;

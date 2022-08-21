@@ -1,15 +1,11 @@
-import {
+import type {
 	CardBillboardBackgroundImageProps,
 	CardBillboardHeadlineProps,
 	CardBillboardProps,
 } from './CardBillboard.annotations';
 import * as S from './CardBillboard.styled';
 
-export function CardBillboard({
-	children,
-	slotBackground,
-	...props
-}: CardBillboardProps): JSX.Element {
+export function CardBillboard({ children, slotBackground, ...props }: CardBillboardProps): JSX.Element {
 	return (
 		<S.CardBillboard {...props}>
 			{slotBackground}
@@ -18,22 +14,11 @@ export function CardBillboard({
 	);
 }
 
-export function CardBillboardBackgroundImage({
-	imgUri,
-}: CardBillboardBackgroundImageProps): JSX.Element {
+export function CardBillboardBackgroundImage({ imgUri }: CardBillboardBackgroundImageProps): JSX.Element {
 	const srcset = [
-		`${import.meta.env.VITE_IMAGE_DOMAIN}${imgUri.replace(
-			'/original/',
-			'/400/'
-		)} 400w`,
-		`${import.meta.env.VITE_IMAGE_DOMAIN}${imgUri.replace(
-			'/original/',
-			'/600/'
-		)} 600w`,
-		`${import.meta.env.VITE_IMAGE_DOMAIN}${imgUri.replace(
-			'/original/',
-			'/800/'
-		)} 800w`,
+		`${import.meta.env.VITE_IMAGE_DOMAIN}${imgUri.replace('/original/', '/400/')} 400w`,
+		`${import.meta.env.VITE_IMAGE_DOMAIN}${imgUri.replace('/original/', '/600/')} 600w`,
+		`${import.meta.env.VITE_IMAGE_DOMAIN}${imgUri.replace('/original/', '/800/')} 800w`,
 	].join(',');
 
 	return (
@@ -48,11 +33,7 @@ export function CardBillboardBackgroundImage({
 	);
 }
 
-export function CardBillboardHeadline({
-	children,
-	tag = 'h3',
-	...props
-}: CardBillboardHeadlineProps): JSX.Element {
+export function CardBillboardHeadline({ children, tag = 'h3', ...props }: CardBillboardHeadlineProps): JSX.Element {
 	return (
 		<S.CardBillboardHeadline as={tag} {...props}>
 			{children}

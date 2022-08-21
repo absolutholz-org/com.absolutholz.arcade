@@ -31,7 +31,10 @@ function GamesGrid({ games }: { games: IGame[] }): JSX.Element {
 function GameSection({ headline, games }: { headline: string; games: IGame[] }): JSX.Element {
 	return (
 		<ContentContainer>
-			<VerticallyPaddedContainer as='section' $spacing={200} slotHeader={<HeadlineSubsection as='h3'>{headline}</HeadlineSubsection>}>
+			<VerticallyPaddedContainer
+				tag='section'
+				spacing={200}
+				slotHeader={<HeadlineSubsection as='h3'>{headline}</HeadlineSubsection>}>
 				<GamesGrid games={games} />
 			</VerticallyPaddedContainer>
 		</ContentContainer>
