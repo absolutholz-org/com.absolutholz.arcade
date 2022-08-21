@@ -10,11 +10,6 @@ export default {
 	component: Theme,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
-	// parameters: {
-	// 	docs: {
-	// 		page: mdx,
-	// 	},
-	// },
 	parameters: {
 		docs: {
 			page: mdx,

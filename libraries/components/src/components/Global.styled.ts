@@ -171,4 +171,8 @@ export const GlobalStyle = createGlobalStyle`
             backdrop-filter: blur(5px);
         }
     }
+
+    p, h1, h2, h3, h4, h5 {
+        max-width: 70ch;
+    }
 `;

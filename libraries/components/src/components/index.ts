@@ -1,5 +1,6 @@
 export * from './Global.styled';
 
+export * from './Billboard';
 export * from './buttons/Button';
 export * from './buttons/ButtonGroup';
 export * from './buttons/ButtonIcon';
