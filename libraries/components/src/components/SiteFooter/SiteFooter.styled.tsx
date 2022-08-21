@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
-import { space, typoFamily, typoSize } from '../../foundations';
+import { color, space, typoFamily, typoSize } from '../../foundations';
 
-export const SiteFooter = styled.div`
+export const SiteFooter = styled.footer`
+	border-top: 1px solid ${color('secondary')};
+	padding-top: ${space(200)};
+
 	a {
 		color: inherit;
 		text-decoration: none;
