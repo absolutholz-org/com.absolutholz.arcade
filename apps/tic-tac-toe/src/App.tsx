@@ -1,15 +1,23 @@
-import { useState } from "react";
+import { Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { GlobalStyle } from "@arcade/library-components";
+import { GlobalStyle, SiteColorSchemeProvider } from '@arcade/library-components';
+
+import { Home } from './pages/Home';
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		<>
+		<SiteColorSchemeProvider>
 			<GlobalStyle />
-			<div className="App">Tic Tac Toe Homepage</div>;
-		</>
+
+			<BrowserRouter basename='/tictactoe'>
+				<Suspense fallback={<>Loading</>}>
+					<Routes>
+						<Route path='/' element={<Home />} />
+					</Routes>
+				</Suspense>
+			</BrowserRouter>
+		</SiteColorSchemeProvider>
 	);
 }
 

@@ -59,8 +59,6 @@ export function Home() {
 				</BillboardHeadline>
 			</Billboard>
 
-			<VisuallyHidden as='span'>homepage</VisuallyHidden>
-
 			<VisuallyHidden as='h2'>Games</VisuallyHidden>
 
 			<GameSection headline='Single Player' games={gamesSinglePlayer} />
