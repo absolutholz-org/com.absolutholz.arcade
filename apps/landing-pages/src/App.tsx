@@ -2,8 +2,7 @@ import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { AuthProvider } from '@arcade/library-authentication';
-import { ScrollToTop } from '@arcade/library-common';
-import { GlobalStyle, SiteColorSchemeProvider, SiteFooter } from '@arcade/library-components';
+import { GlobalStyle, ScrollToTop, SiteColorSchemeProvider, SiteFooter } from '@arcade/library-components';
 
 import { Home } from './pages/Home';
 import { AccessibilityStatement } from './pages/AccessibilityStatement';

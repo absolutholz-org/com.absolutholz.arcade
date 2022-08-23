@@ -21,3 +21,5 @@ export * from './logos/LogoText';
 export * from './logos/LogoTextInline';
 export * from './SiteFooter';
 export * from './Theme';
+
+export * from './ScrollToTop';
