@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
-import {
-	getAuth,
-	signInWithEmailAndPassword,
-	signOut as logOut,
-} from 'firebase/auth';
-import {
-	useAuthState,
-	useCreateUserWithEmailAndPassword,
-	useSignInWithEmailAndPassword,
-} from 'react-firebase-hooks/auth';
+import { getAuth, signInWithEmailAndPassword, signOut as logOut } from 'firebase/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 import { firebaseConfig } from './firebaseConfig';
 import { AuthContext } from './AuthContext';
 import type { User } from './User';
-import { AuthDialog } from './components/AuthDialog';
+import { AuthDialog } from '@arcade/library-components';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -26,7 +18,7 @@ const signOut = () => {
 	logOut(auth);
 };
 
-export const AuthProvider: React.FC = ({ children }) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
 	const [user, setUser] = useState<undefined | User>(undefined);
 	const [showAuthDialog, setShowAuthDialog] = useState(false);
 
@@ -68,6 +60,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 		} else {
 			setUser(undefined);
 		}
+		setShowAuthDialog(false);
 	}, [authUser]);
 
 	return (
@@ -88,10 +81,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 				loadingCreateWithEmailAndPassword,
 			}}>
 			{children}
-			<AuthDialog
-				show={showAuthDialog}
-				onClose={() => setShowAuthDialog(false)}
-			/>
+			<AuthDialog show={showAuthDialog} onClose={() => setShowAuthDialog(false)} />
 		</AuthContext.Provider>
 	);
 };
