@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { AuthProvider } from '@arcade/library-authentication';
+import { ScrollToTop } from '@arcade/library-common';
 import { GlobalStyle, SiteColorSchemeProvider, SiteFooter } from '@arcade/library-components';
 
 import { Home } from './pages/Home';
@@ -14,14 +15,16 @@ function App() {
 				<GlobalStyle />
 
 				<BrowserRouter>
-					<Suspense fallback={<>Loading</>}>
-						<Routes>
-							<Route path='/' element={<Home />} />
-							<Route path='/accessibility-statement' element={<AccessibilityStatement />} />
-						</Routes>
-					</Suspense>
+					<ScrollToTop>
+						<Suspense fallback={<>Loading</>}>
+							<Routes>
+								<Route path='/' element={<Home />} />
+								<Route path='/accessibility-statement' element={<AccessibilityStatement />} />
+							</Routes>
+						</Suspense>
 
-					<SiteFooter />
+						<SiteFooter />
+					</ScrollToTop>
 				</BrowserRouter>
 			</SiteColorSchemeProvider>
 		</AuthProvider>
