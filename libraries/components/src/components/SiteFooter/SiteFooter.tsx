@@ -10,6 +10,8 @@ import { VerticallyPaddedContainer } from '../layout/VerticallyPaddedContainer';
 import { ColorSchemeToggler } from '../ColorSchemeToggler';
 import { LogoTextInline } from '../logos/LogoTextInline';
 import { VisuallyHidden } from '../layout/VisuallyHidden';
+import { useAuth } from '@arcade/library-authentication';
+import { Button } from '../buttons/Button';
 
 const gameGroups = getGroupedGames();
 const gamesSinglePlayer = gameGroups['single'];
@@ -35,6 +37,9 @@ function GameSection({ headline, games }: { headline: string; games: IGame[] }):
 }
 
 export function SiteFooter({}: SiteFooterProps): JSX.Element {
+	const { user, showAuthDialog, signOut } = useAuth();
+	console.log({ user });
+
 	return (
 		<ContentContainer>
 			<VerticallyPaddedContainer spacing={200}>
@@ -60,10 +65,29 @@ export function SiteFooter({}: SiteFooterProps): JSX.Element {
 						omit='bottom'
 						slotHeaderSpacing={25}
 						slotHeader={<S.SiteFooterHeadline>Arcade Settings</S.SiteFooterHeadline>}>
-						<S.ColorScheme>
+						<VerticallyPaddedContainer omit='top' spacing={50}>
+							{user && (
+								<>
+									Logged in as: {user.email}
+									<Button onClick={signOut} type='button' variant='text'>
+										Log out
+									</Button>
+								</>
+							)}
+							{!user && (
+								<>
+									You are currently not logged in.
+									<Button onClick={showAuthDialog} type='button' variant='text'>
+										Sign in / up
+									</Button>
+								</>
+							)}
+						</VerticallyPaddedContainer>
+
+						<VerticallyPaddedContainer omit='top' spacing={50}>
 							Color Mode:
-							<ColorSchemeToggler />
-						</S.ColorScheme>
+							<ColorSchemeToggler variant='text' />
+						</VerticallyPaddedContainer>
 					</VerticallyPaddedContainer>
 				</S.SiteFooter>
 			</VerticallyPaddedContainer>

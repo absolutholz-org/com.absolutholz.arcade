@@ -18,12 +18,6 @@ export const SiteFooterNavigation = styled.nav`
 	gap: 4ch;
 `;
 
-export const ColorScheme = styled.div`
-	align-items: center;
-	display: inline-flex;
-	gap: 0.5rem 1ch;
-`;
-
 export const SiteFooterGames = styled.div``;
 
 const typoSizeValues = typoSize(80);
