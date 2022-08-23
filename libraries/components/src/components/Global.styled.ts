@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { TypoFamily } from '../foundations/typography/TypoFamily';
 import { LightColorSchemeCSS } from '../foundations/colors/SchemeLight';
 import { DarkColorSchemeCSS } from '../foundations/colors/SchemeDark';
@@ -122,6 +122,38 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
+    a {
+        color: ${color('accent')};
+    }
+
+    /* https://reactgo.com/css-pulse-animation/ */
+    @keyframes pulse {
+        0% {
+            outline: 2px solid ${color('accent', 0)};
+            outline-offset: 0px;
+        }
+        40% {
+            outline: 2px solid ${color('accent', 0.75)};
+            outline-offset: 2px;
+        }
+        100% {
+            outline: 8px solid ${color('accent', 0)};
+        }
+    }
+
+    a,
+    button {
+        &:focus-visible {
+            animation: pulse 2s infinite linear;
+
+            @media (prefers-reduced-motion) {
+                animation: none;
+                outline: 2px solid ${color('accent', 0.75)};
+                outline-offset: 2px;
+            }
+        }
+    }
+
     label {
         display: inline-block;
     }
@@ -137,10 +169,6 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         min-width: 0;
         padding: 0;
-    }
-
-    a {
-        color: ${color('accent')};
     }
 
     img {
@@ -162,9 +190,6 @@ export const GlobalStyle = createGlobalStyle`
     dialog {
         background: none;
         border: 0;
-        margin: 0;
-        max-height: none;
-        max-width: none;
 
         &::backdrop {
             background: hsl(0, 0%, 0%, 0.7);
