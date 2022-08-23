@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-import { color, radius } from '../../../foundations';
+import { color, radius, typoFamilyCss } from '../../../foundations';
 
 export const LogoAbsolutholz = styled.span`
 	display: inline-flex;
+	${typoFamilyCss('system')}
 	line-height: 1;
 `;
 

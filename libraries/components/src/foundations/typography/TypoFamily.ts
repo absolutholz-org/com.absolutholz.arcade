@@ -5,7 +5,7 @@ export const TypoFamily = {
 	Brand: 'GamePlayed, monospace, monospace',
 } as const;
 
-type TypoFamily = 'body' | 'brand';
+type TypoFamily = 'body' | 'brand' | 'system';
 
 export function typoFamily(family: TypoFamily): string {
 	switch (family) {

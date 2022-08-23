@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { typoSizeCss } from '../../foundations';
+import { typoFamilyCss, typoSizeCss } from '../../foundations';
 
 export const Billboard = styled.div`
 	/* https://blog.logrocket.com/advanced-effects-with-css-background-blend-modes-4b750198522a/ */
@@ -21,6 +21,7 @@ export const Billboard = styled.div`
 
 export const BillboardHeadline = styled.h1`
 	${typoSizeCss(300)}
+	${typoFamilyCss('brand')}
 	font-weight: 400;
 	margin-block: 0;
 `;
