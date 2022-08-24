@@ -64,7 +64,7 @@ const GAMES: IGame[] = [
 		players: 'multi',
 	},
 	{
-		id: 'travel-bingo',
+		id: 'travelbingo',
 		imgUri: '/img/bg/original/dusk-hills-river.webp',
 		url: '/travelbingo/',
 		name: 'Travel Bingo',

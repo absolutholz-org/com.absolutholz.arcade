@@ -1,17 +1,17 @@
 import { ContentContainer } from '../layout/ContentContainer';
 import { Theme } from '../Theme';
-import { VerticallyPaddedContainer } from '../layout/VerticallyPaddedContainer';
 
 import { BillboardProps } from './Billboard.annotations';
 import * as S from './Billboard.styled';
 
-export function Billboard({ children, ...props }: BillboardProps): JSX.Element {
+export function Billboard({ children, slotBackground, ...props }: BillboardProps): JSX.Element {
 	return (
 		<Theme $theme='image'>
-			<S.Billboard {...props}>
-				<VerticallyPaddedContainer spacing={300}>
+			<S.Billboard $withBackground={!slotBackground} {...props}>
+				{slotBackground && <S.BillboardBackground>{slotBackground}</S.BillboardBackground>}
+				<S.BillboardContent spacing={300}>
 					<ContentContainer>{children}</ContentContainer>
-				</VerticallyPaddedContainer>
+				</S.BillboardContent>
 			</S.Billboard>
 		</Theme>
 	);
