@@ -18,7 +18,7 @@ export function Home() {
 					<Link to='/'>
 						<LogoText />
 					</Link>
-					<BillboardHeadline>Travel Bingo</BillboardHeadline>
+					<BillboardHeadline>{game?.name}</BillboardHeadline>
 				</Billboard>
 			</main>
 

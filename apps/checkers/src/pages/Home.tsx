@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Billboard, BillboardHeadline, LogoText, SiteFooter } from '@arcade/library-components';
 import { getGame } from '@arcade/library-common';
 
-const game = getGame('tictactoe');
+const game = getGame('checkers');
 
 export function Home() {
 	const { imgUri } = game!;
