@@ -52,7 +52,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 	const [sendPasswordResetEmail, loadingSendPasswordResetEmail, errorSendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
 	useEffect(() => {
-		console.log({ userCreateWithEmailAndPassword });
 		if (userCreateWithEmailAndPassword?.user.email) {
 			const [displayName] = userCreateWithEmailAndPassword.user.email.split('@');
 			updateProfile({ displayName });
@@ -61,7 +60,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 	}, [userCreateWithEmailAndPassword]);
 
 	useEffect(() => {
-		console.log({ authUser });
 		if (authUser !== undefined && authUser !== null) {
 			const { email, uid, displayName } = authUser;
 			setUser({

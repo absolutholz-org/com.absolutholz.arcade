@@ -13,7 +13,6 @@ export function SignUpForm({ formId }: SignUpFormProps): JSX.Element {
 		const elForm = event.target as HTMLFormElement;
 		const elEmail = elForm.querySelector(`#${formId}_email`) as HTMLInputElement;
 		const elPassword = elForm.querySelector(`#${formId}_password`) as HTMLInputElement;
-		console.log({ event }, elForm, elEmail, elPassword);
 		createUserWithEmailAndPassword(elEmail.value, elPassword.value);
 	};
 

@@ -38,7 +38,6 @@ function GameSection({ headline, games }: { headline: string; games: IGame[] }):
 
 export function SiteFooter({}: SiteFooterProps): JSX.Element {
 	const { user, showAuthDialog, signOut } = useAuth();
-	console.log({ user });
 
 	return (
 		<ContentContainer>
