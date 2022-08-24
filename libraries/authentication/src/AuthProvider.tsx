@@ -1,7 +1,14 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword, signOut as logOut } from 'firebase/auth';
-import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { getAuth, signOut as logOut } from 'firebase/auth';
+import {
+	useAuthState,
+	useCreateUserWithEmailAndPassword,
+	useSendEmailVerification,
+	useSendPasswordResetEmail,
+	useSignInWithEmailAndPassword,
+	useUpdateProfile,
+} from 'react-firebase-hooks/auth';
 
 import { firebaseConfig } from './firebaseConfig';
 import { AuthContext } from './AuthContext';
@@ -24,6 +31,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 	const [authUser, authLoading, authError] = useAuthState(auth);
 
+	const [sendEmailVerification, loadingSendEmailVerification, errorSendEmailVerification] = useSendEmailVerification(auth);
+
 	const [
 		createUserWithEmailAndPassword,
 		userCreateWithEmailAndPassword,
@@ -38,22 +47,25 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 		errorSignInWithEmailAndPassword,
 	] = useSignInWithEmailAndPassword(auth);
 
-	// useEffect(() => {
-	// 	console.log('update user', {
-	// 		authUser,
-	// 		userCreateWithEmailAndPassword,
-	// 		userSignInWithEmailAndPassword,
-	// 	});
-	// }, [
-	// 	authUser,
-	// 	userCreateWithEmailAndPassword,
-	// 	userSignInWithEmailAndPassword,
-	// ]);
+	const [updateProfile, loadingUpdateProfile, errorUpdateProfile] = useUpdateProfile(auth);
+
+	const [sendPasswordResetEmail, loadingSendPasswordResetEmail, errorSendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
 	useEffect(() => {
+		console.log({ userCreateWithEmailAndPassword });
+		if (userCreateWithEmailAndPassword?.user.email) {
+			const [displayName] = userCreateWithEmailAndPassword.user.email.split('@');
+			updateProfile({ displayName });
+		}
+		sendEmailVerification();
+	}, [userCreateWithEmailAndPassword]);
+
+	useEffect(() => {
+		console.log({ authUser });
 		if (authUser !== undefined && authUser !== null) {
-			const { email, uid } = authUser;
+			const { email, uid, displayName } = authUser;
 			setUser({
+				displayName,
 				email,
 				uid,
 			});
@@ -79,6 +91,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 				createUserWithEmailAndPassword,
 				errorCreateWithEmailAndPassword,
 				loadingCreateWithEmailAndPassword,
+
+				sendPasswordResetEmail,
+				loadingSendPasswordResetEmail,
+				errorSendPasswordResetEmail,
 			}}>
 			{children}
 			<AuthDialog show={showAuthDialog} onClose={() => setShowAuthDialog(false)} />

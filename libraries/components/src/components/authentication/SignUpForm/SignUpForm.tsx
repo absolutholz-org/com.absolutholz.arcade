@@ -2,6 +2,7 @@ import { FormEvent } from 'react';
 
 import { ErrorMessage, Input, InputGroup } from '@arcade/library-components';
 import { useAuth } from '@arcade/library-authentication';
+
 import { SignUpFormProps } from './SignUpForm.annotations';
 
 export function SignUpForm({ formId }: SignUpFormProps): JSX.Element {

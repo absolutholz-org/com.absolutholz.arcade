@@ -1,61 +1,69 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
+import { useAuth } from '@arcade/library-authentication';
+
+import { ForgottenPasswordForm } from '../ForgottenPasswordForm';
 import { SignInForm } from '../SignInForm';
 import { SignUpForm } from '../SignUpForm';
-import { useAuth } from '@arcade/library-authentication';
 import type { AuthDialogProps } from './AuthDialog.annotations';
 import { Dialog } from '../../overlays/Dialog';
 import { ButtonGroup } from '../../buttons/ButtonGroup';
 import { Button } from '../../buttons/Button';
+import * as S from './AuthDialog.styled';
 
 export function AuthDialog({ show = false, onClose }: AuthDialogProps): JSX.Element {
-	const [showSignUpForm, setShowSignUpForm] = useState<boolean>(false);
-	const { user, loadingCreateWithEmailAndPassword, loadingSignInWithEmailAndPassword } = useAuth();
+	const { loadingCreateWithEmailAndPassword, loadingSignInWithEmailAndPassword, loadingSendPasswordResetEmail } = useAuth();
 
-	useEffect(() => {
-		if (user !== undefined && !loadingCreateWithEmailAndPassword && !loadingSignInWithEmailAndPassword) {
-		}
-	}, [user, loadingCreateWithEmailAndPassword, loadingSignInWithEmailAndPassword]);
+	const [visibleForm, setVisibleForm] = useState<'signin' | 'signup' | 'password'>('signin');
+
+	const handleClose = () => {
+		setVisibleForm('signin');
+		onClose();
+	};
 
 	return (
 		<Dialog
-			onClose={onClose}
+			onClose={handleClose}
 			show={show}
 			slotHeader={'Welcome Visitor'}
 			slotFooter={
 				<ButtonGroup>
-					{!showSignUpForm && (
+					{visibleForm === 'signin' && (
 						<>
-							<Button
+							<S.AuthDialogSecondaryButton
 								disabled={loadingSignInWithEmailAndPassword}
-								onClick={() => setShowSignUpForm(true)}
+								onClick={() => setVisibleForm('signup')}
 								type='button'
 								variant='text'>
-								Sign Up
-							</Button>
+								Not a player yet?
+							</S.AuthDialogSecondaryButton>
 							<Button disabled={loadingSignInWithEmailAndPassword} form='sign-in' type='submit'>
 								Sign In
 							</Button>
 						</>
 					)}
-					{showSignUpForm && (
-						<>
-							<Button
-								disabled={loadingCreateWithEmailAndPassword}
-								onClick={() => setShowSignUpForm(false)}
-								type='button'
-								variant='text'>
-								Sign In
-							</Button>
-							<Button disabled={loadingCreateWithEmailAndPassword} form='sign-up' type='submit'>
-								Sign Up
-							</Button>
-						</>
+					{visibleForm === 'signup' && (
+						<Button disabled={loadingCreateWithEmailAndPassword} form='sign-up' type='submit'>
+							Sign Up
+						</Button>
+					)}
+					{visibleForm === 'password' && (
+						<Button disabled={loadingSendPasswordResetEmail} form='password-forgotten' type='submit'>
+							Reset Password
+						</Button>
 					)}
 				</ButtonGroup>
 			}>
-			{!showSignUpForm && <SignInForm formId='sign-in' />}
-			{showSignUpForm && <SignUpForm formId='sign-up' />}
+			{visibleForm === 'signin' && (
+				<>
+					<SignInForm formId='sign-in' />
+					<S.AuthDialogForgottenPasswordButton onClick={() => setVisibleForm('password')} type='button' variant='text'>
+						Forgot your password?
+					</S.AuthDialogForgottenPasswordButton>
+				</>
+			)}
+			{visibleForm === 'signup' && <SignUpForm formId='sign-up' />}
+			{visibleForm === 'password' && <ForgottenPasswordForm formId='password-forgotten' />}
 		</Dialog>
 	);
 }

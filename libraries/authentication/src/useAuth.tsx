@@ -23,6 +23,10 @@ export function useAuth() {
 		createUserWithEmailAndPassword,
 		errorCreateWithEmailAndPassword,
 		loadingCreateWithEmailAndPassword,
+
+		sendPasswordResetEmail,
+		loadingSendPasswordResetEmail,
+		errorSendPasswordResetEmail,
 	} = context;
 
 	return {
@@ -39,5 +43,9 @@ export function useAuth() {
 		createUserWithEmailAndPassword,
 		errorCreateWithEmailAndPassword,
 		loadingCreateWithEmailAndPassword,
+
+		sendPasswordResetEmail,
+		loadingSendPasswordResetEmail,
+		errorSendPasswordResetEmail,
 	};
 }

@@ -16,6 +16,10 @@ type AuthContextValue = {
 	createUserWithEmailAndPassword: (email: string, password: string) => void;
 	errorCreateWithEmailAndPassword?: Error;
 	loadingCreateWithEmailAndPassword: boolean;
+
+	sendPasswordResetEmail: (email: string) => void;
+	errorSendPasswordResetEmail?: Error;
+	loadingSendPasswordResetEmail: boolean;
 };
 
 export const AuthContext = createContext<AuthContextValue>({
@@ -29,4 +33,7 @@ export const AuthContext = createContext<AuthContextValue>({
 
 	createUserWithEmailAndPassword: (email, password) => {},
 	loadingCreateWithEmailAndPassword: false,
+
+	sendPasswordResetEmail: (email) => {},
+	loadingSendPasswordResetEmail: false,
 });

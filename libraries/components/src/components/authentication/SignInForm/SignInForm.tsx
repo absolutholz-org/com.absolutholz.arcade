@@ -1,7 +1,8 @@
-import React, { FormEvent } from 'react';
+import { FormEvent } from 'react';
 
 import { ErrorMessage, Input, InputGroup } from '@arcade/library-components';
 import { useAuth } from '@arcade/library-authentication';
+
 import { SignInFormProps } from './SignInForm.annotations';
 
 export function SignInForm({ formId }: SignInFormProps): JSX.Element {

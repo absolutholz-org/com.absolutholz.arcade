@@ -68,7 +68,7 @@ export function SiteFooter({}: SiteFooterProps): JSX.Element {
 						<VerticallyPaddedContainer omit='top' spacing={50}>
 							{user && (
 								<>
-									Logged in as: {user.email}
+									Logged in as: {user.displayName}
 									<Button onClick={signOut} type='button' variant='text'>
 										Log out
 									</Button>
