@@ -14,7 +14,7 @@ export function Home() {
 	return (
 		<>
 			<main>
-				<Billboard slotBackground={<img src={game?.imgUri} srcSet={srcset} />}>
+				<Billboard slotBackground={<img aria-hidden={true} src={game?.imgUri} srcSet={srcset} />}>
 					<Link to='/'>
 						<LogoText />
 					</Link>
