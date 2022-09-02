@@ -6,6 +6,7 @@ export * from './buttons/Button';
 export * from './buttons/ButtonGroup';
 export * from './buttons/ButtonIcon';
 export * from './Card';
+export * from './Collapsible';
 export * from './ColorSchemeToggler';
 export * from './formElements/ErrorMessage';
 export * from './formElements/Input';
