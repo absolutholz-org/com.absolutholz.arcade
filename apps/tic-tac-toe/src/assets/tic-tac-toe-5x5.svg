@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg 
+   width="100" 
+   height="100" 
+   viewBox="0 0 100 100" 
+   xmlns="http://www.w3.org/2000/svg">
+   <g stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <path d="M59.443 5v90" vector-effect="non-scaling-stroke" />
+      <path d="M40.557 5v90" vector-effect="non-scaling-stroke" />
+      <path d="M78.329 5v90" vector-effect="non-scaling-stroke" />
+      <path d="M21.671 5v90" vector-effect="non-scaling-stroke" />
+      <path d="M95 59.443H5" vector-effect="non-scaling-stroke" />
+      <path d="M95 40.557H5" vector-effect="non-scaling-stroke" />
+      <path d="M95 78.329H5" vector-effect="non-scaling-stroke" />
+      <path d="M95 21.671H5" vector-effect="non-scaling-stroke" />
+   </g>
+</svg>
