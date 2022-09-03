@@ -10,6 +10,7 @@ export * from './Collapsible';
 export * from './ColorSchemeToggler';
 export * from './ConditionalWrapper';
 export * from './formElements/ErrorMessage';
+export * from './formElements/FormFooter';
 export * from './formElements/Input';
 export * from './formElements/InputGroup';
 export * from './headlines/HeadlineSection';
