@@ -10,7 +10,7 @@ export default {
 	component: VerticallyPaddedContainer,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {
-		$spacing: { control: 'radio', options: [25, 50, 100, 125, 150, 200] },
+		spacing: { control: 'radio', options: [25, 50, 100, 125, 150, 200] },
 	},
 	parameters: {
 		docs: {
@@ -29,5 +29,5 @@ const Template: ComponentStory<typeof VerticallyPaddedContainer> = (args) => (
 export const _VerticallyPaddedContainer_ = Template.bind({});
 _VerticallyPaddedContainer_.args = {
 	children: <div style={CONTENT_STYLES}>Content Area</div>,
-	$spacing: 100,
+	spacing: 100,
 };

@@ -8,6 +8,7 @@ export * from './buttons/ButtonIcon';
 export * from './Card';
 export * from './Collapsible';
 export * from './ColorSchemeToggler';
+export * from './ConditionalWrapper';
 export * from './formElements/ErrorMessage';
 export * from './formElements/Input';
 export * from './formElements/InputGroup';
