@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { FoundSymbol } from '../FoundSymbol';
+
 export const GameCardSymbol = styled.button`
 	align-items: center;
 	aspect-ratio: 1 / 1;
@@ -15,28 +17,13 @@ export const GameCardSymbol_Symbol = styled.img`
 	max-width: 100%;
 `;
 
-export const GameCardSymbol_Check = styled.svg`
-	background: radial-gradient(
-			circle,
-			white 50%,
-			currentColor 50%,
-			currentColor 70%,
-			transparent 70%
-		)
-		no-repeat white;
-	border-radius: 50vmax;
-	color: forestgreen;
+export const GameCardSymbol_FoundSymbol = styled(FoundSymbol)`
 	height: auto;
-	left: 50%;
+	inset: 0;
 	opacity: 0.85;
+	margin: auto;
 	padding: 1rem;
 	pointer-events: none;
 	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
 	width: max(70%, 15vw);
-
-	button:active & {
-		display: none;
-	}
 `;

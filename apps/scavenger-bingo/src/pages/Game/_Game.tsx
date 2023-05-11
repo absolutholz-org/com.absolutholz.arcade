@@ -10,6 +10,8 @@ import { FREE_SPACE_ID } from '../../App.constants';
 import { persistGameState, readPersistedGameState } from '../../_storage';
 import { createNewGameBoard } from '../../_createNewGameBoard';
 import { GameProvider, useGameState } from './contexts/GameContext';
+import { FoundSymbol } from './components/FoundSymbol';
+import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();
@@ -77,7 +79,7 @@ function _Game(): JSX.Element {
 												found={gameBoardField.found}
 											/>
 										) : (
-											'free'
+											<FreeSpaceSymbol />
 										)}
 									</GameBoard_Field>
 								)
