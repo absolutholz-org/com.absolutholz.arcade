@@ -7,17 +7,17 @@
     "libraries/*"
   ],
   "engines": {
-    "node": ">=16.14.0",
-    "yarn": "^1.22.17"
+    "node": ">=18.12.1",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@types/mdx": "^2.0.2",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@types/styled-components": "^5.1.24",
-    "@vitejs/plugin-react": "^2.0.0",
-    "typescript": "^4.6.3",
-    "vite": "^3.0.5",
-    "vite-plugin-svgr": "^2.2.0"
-  }
+    "@emotion/babel-plugin": "^11.11.0",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5",
+    "vite-plugin-dts": "^2.3.0"
+  },
+  "dependencies": {}
 }

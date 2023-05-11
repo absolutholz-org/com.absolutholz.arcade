@@ -1,14 +1,22 @@
-import { ReactComponent as SvgClose } from '@mdi/svg/svg/close.svg';
+// import { ReactComponent as SvgClose } from '@mdi/svg/svg/close.svg';
 
 import { IDialog } from './IDialog';
 import * as S from './Dialog.styled';
 import { Icon } from '../../Icon';
 
-export function Dialog({ children, slotHeader, slotFooter, show, isModal, onClose }: IDialog): JSX.Element {
+export function Dialog({
+	children,
+	slotHeader,
+	slotFooter,
+	show,
+	isModal,
+	onClose,
+}: IDialog): JSX.Element {
 	return (
 		<S.Dialog show={show} isModal={isModal} onClose={onClose}>
 			<S.CloseButton onClick={onClose} type='button'>
-				<Icon icon={<SvgClose />} />
+				{/* <Icon icon={<SvgClose />} /> */}
+				Close
 			</S.CloseButton>
 			{slotHeader && <S.Header>{slotHeader}</S.Header>}
 			{children}

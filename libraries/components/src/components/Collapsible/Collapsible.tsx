@@ -3,7 +3,7 @@ import { SyntheticEvent } from 'react';
 import { CollapsibleProps } from './Collapsible.annotations';
 import * as S from './Collapsible.styled';
 
-import { ReactComponent as ChevronIcon } from '@mdi/svg/svg/chevron-down.svg';
+// import { ReactComponent as ChevronIcon } from '@mdi/svg/svg/chevron-down.svg';
 
 export function Collapsible({
 	children,
@@ -24,9 +24,12 @@ export function Collapsible({
 	};
 
 	return (
-		<S.Collapsible onToggle={handleToggle} open={state === 'expanded'} {...props}>
+		<S.Collapsible
+			onToggle={handleToggle}
+			open={state === 'expanded'}
+			{...props}>
 			<S.CollapsibleSummary>
-				<S.CollapsibleSummaryIcon icon={<ChevronIcon />} />
+				{/* <S.CollapsibleSummaryIcon icon={<ChevronIcon />} /> */}
 				{slotSummary}
 			</S.CollapsibleSummary>
 			<S.CollapsibleContent>{children}</S.CollapsibleContent>
