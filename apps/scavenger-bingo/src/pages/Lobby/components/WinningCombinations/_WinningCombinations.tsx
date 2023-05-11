@@ -1,6 +1,7 @@
 import Checkbox from '@mui/material/Checkbox';
 
-import { Stack, Typography } from '@arcade/library-components';
+import { Stack } from '@arcade/library-components/src/components/Stack';
+import { Typography } from '@arcade/library-components/src/components/Typography';
 
 import { WINNING_COMBINATIONS } from '../../../../App.constants';
 import type { WinningCombinationsProps } from './_WinningCombinations.types';

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { ResetList } from '@arcade/library-components';
+import { ResetList } from '@arcade/library-components/src/components/ResetList';
 
 export const SymbolFilterGrid_List = styled(ResetList)`
 	display: grid;

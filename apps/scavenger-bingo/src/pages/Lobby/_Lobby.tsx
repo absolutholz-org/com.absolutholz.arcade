@@ -2,12 +2,11 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
-import {
-	PageGridContainer,
-	PageSection,
-	Stack,
-	Typography,
-} from '@arcade/library-components';
+import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
+import { PageSection } from '@arcade/library-components/src/components/PageSection';
+import { Stack } from '@arcade/library-components/src/components/Stack';
+import { Typography } from '@arcade/library-components/src/components/Typography';
+
 import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
 
 import { WinningCombinations } from './components/WinningCombinations';

@@ -1,6 +1,7 @@
 import Radio from '@mui/material/Radio';
 
-import { Stack, Typography } from '@arcade/library-components';
+import { Stack } from '@arcade/library-components/src/components/Stack';
+import { Typography } from '@arcade/library-components/src/components/Typography';
 
 import { FREE_SPACE_POSITIONS } from '../../../../App.constants';
 import type { FreeSpaceProps } from './_FreeSpace.types';

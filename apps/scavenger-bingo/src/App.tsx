@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Game } from './pages/Game';
 import { Lobby } from './pages/Lobby';
-import { FourOhFourPage } from '@arcade/library-components';
+import { FourOhFourPage } from '@arcade/library-components/src/components/FourOhFourPage';
 
 function App() {
 	return (
