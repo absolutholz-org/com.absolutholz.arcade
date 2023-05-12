@@ -55,8 +55,6 @@ export function Game(): JSX.Element {
 function _Game(): JSX.Element {
 	const { board, status } = useGameState();
 
-	console.log({ board, translations });
-
 	useEffect(() => {
 		if (status === 'gameWon') {
 			alert('Game Won!');

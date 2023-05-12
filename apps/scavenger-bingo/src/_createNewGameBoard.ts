@@ -34,7 +34,6 @@ export function createNewGameBoard({
 	} else if (freeSpacePosition === 'random') {
 		const row = Math.round(Math.random() * lastIndex);
 		const col = Math.round(Math.random() * lastIndex);
-		console.log({ row, col });
 		gameBoard[`${row}x${col}`] = FREE_SPACE_SYMBOL;
 	}
 

@@ -3,7 +3,7 @@ import type { GameConfig } from './App.types';
 export const STORAGE_PREFIX = 'absolutholzArcade_scavengerBingo';
 export const MINIMUM_PLAYERS_REQUIRED = 1;
 export const MAXIMUM_PLAYERS_ALLOWED = 4;
-export const IMAGE_DIRECTORY = '/symbols/optimized/';
+export const IMAGE_DIRECTORY = `${import.meta.env.BASE_URL}symbols/optimized/`;
 
 export const GAME_BOARD_SIZES = [5];
 

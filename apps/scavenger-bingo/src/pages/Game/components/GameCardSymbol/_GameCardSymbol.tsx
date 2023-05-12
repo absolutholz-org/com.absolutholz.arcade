@@ -13,7 +13,7 @@ export function GameCardSymbol({
 	const dispatch = useGameDispatch();
 	const state = useGameState();
 	const { filename } = symbols.find((symbol) => symbol.id === id)!;
-	console.log({ state });
+
 	const handleClick = () => {
 		if (!found) {
 			dispatch({
