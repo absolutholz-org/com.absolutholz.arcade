@@ -16,9 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        include:
-          - scavenger-bingo
-
+        app: [scavenger-bingo]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -39,10 +37,10 @@ jobs:
           cd apps/${{ matrix.app }}
           git fetch
           if git diff --quiet HEAD remotes/origin/main; then
-            echo "Code has not changed for ${matrix.app}"
+            echo "Code has not changed for ${{ matrix.app }}"
             echo "::set-output name=changes::false"
           else
-            echo "Code has changed for ${matrix.app}"
+          echo "Code has changed for ${{ matrix.app }}"
             echo "::set-output name=changes::true"
           fi
 
