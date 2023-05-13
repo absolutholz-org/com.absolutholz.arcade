@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ButtonGroup } from '.';
@@ -6,7 +5,7 @@ import { Button } from '../Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Components/ButtonGroup',
+	title: 'General/ButtonGroup',
 	component: ButtonGroup,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},

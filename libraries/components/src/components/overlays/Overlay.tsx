@@ -1,15 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
-import type { IOverlay } from './IOverlay';
+import type { OverlayProps } from './Overlay.annotations';
 import * as S from './Overlay.styled';
 
-export function Overlay({
-	children,
-	show = false,
-	isModal = true,
-	onClose,
-	...restProps
-}: IOverlay): JSX.Element {
+export function Overlay({ children, show = false, isModal = true, onClose, ...restProps }: OverlayProps): JSX.Element {
 	const ref = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
@@ -29,7 +23,6 @@ export function Overlay({
 	}, [show]);
 
 	return (
-		// @ts-expect-error
 		<S.Overlay onCancel={onClose} ref={ref} {...restProps}>
 			{children}
 		</S.Overlay>

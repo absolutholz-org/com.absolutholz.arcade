@@ -1,0 +1,50 @@
+name: Deploy and Release Apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'minimal | standard | verbose'
+        required: true
+        default: 'verbose'
+
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: .
+
+    strategy:
+      matrix:
+        app:
+          - working-directory: './apps/scavenger-bingo'
+            target-directory: '/scavengerbingo/'
+            package-name: '@arcade/scavenger-bingo'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Configure Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build App
+        # if: github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip ci')
+        run: |
+          cd ${{ matrix.working-directory }}
+          git diff --quiet HEAD~ HEAD --exit-code -- . ':!node_modules'
+          if [[ $? -eq 1 ]]; then
+            yarn build
+            rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete ./dist/* ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade${{ matrix.target-directory }}
+          else
+            echo "No changes to deploy."
+          fi

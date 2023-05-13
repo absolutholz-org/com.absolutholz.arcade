@@ -1,24 +1,22 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from '.';
-import { ButtonVariant } from './IButton';
+import mdx from './Button.mdx';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Components/Button',
+	title: 'General/Button',
 	component: Button,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {
 		variant: {
-			options: [
-				ButtonVariant.Elevated,
-				ButtonVariant.Filled,
-				ButtonVariant.Outlined,
-				ButtonVariant.Text,
-				ButtonVariant.Tonal,
-			],
+			options: ['elevated', 'filled', 'outlined', 'text', 'tonal'],
 			control: { type: 'radio' },
+		},
+	},
+	parameters: {
+		docs: {
+			page: mdx,
 		},
 	},
 } as ComponentMeta<typeof Button>;
@@ -26,47 +24,47 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Elevated = Template.bind({});
+export const _Elevated_ = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Elevated.args = {
+_Elevated_.args = {
 	children: 'Button',
-	variant: ButtonVariant.Elevated,
+	variant: 'elevated',
 	renderAs: 'button',
 	inline: true,
 };
 
-export const Filled = Template.bind({});
+export const _Filled_ = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Filled.args = {
+_Filled_.args = {
 	children: 'Button',
-	variant: ButtonVariant.Filled,
+	variant: 'filled',
 	renderAs: 'button',
 	inline: true,
 };
 
-export const Outlined = Template.bind({});
+export const _Outlined_ = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Outlined.args = {
+_Outlined_.args = {
 	children: 'Button',
-	variant: ButtonVariant.Outlined,
+	variant: 'outlined',
 	renderAs: 'button',
 	inline: true,
 };
 
-export const Text = Template.bind({});
+export const _Text_ = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Text.args = {
+_Text_.args = {
 	children: 'Button',
-	variant: ButtonVariant.Text,
+	variant: 'text',
 	renderAs: 'button',
 	inline: true,
 };
 
-export const Tonal = Template.bind({});
+export const _Tonal_ = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Tonal.args = {
+_Tonal_.args = {
 	children: 'Button',
-	variant: ButtonVariant.Tonal,
+	variant: 'tonal',
 	renderAs: 'button',
 	inline: true,
 };

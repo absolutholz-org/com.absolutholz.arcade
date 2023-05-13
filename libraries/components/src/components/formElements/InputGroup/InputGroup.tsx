@@ -1,4 +1,4 @@
-import { IInputGroup } from './IInputGroup';
+import { InputGroupProps } from './InputGroup.annotations';
 import * as S from './InputGroup.styled';
 
 export function InputGroup({
@@ -8,15 +8,15 @@ export function InputGroup({
 	required = false,
 	helpText,
 	...restProps
-}: IInputGroup): JSX.Element {
+}: InputGroupProps): JSX.Element {
 	return (
-		<S.Wrapper htmlFor={inputId} {...restProps}>
-			<S.Label>
+		<S.InputGroup htmlFor={inputId} {...restProps}>
+			<S.InputGroupLabel>
 				{slotLabel}
 				{!required && <> (optional)</>}
-			</S.Label>
+			</S.InputGroupLabel>
 			{slotInput}
-			{helpText && <S.HelpText>{helpText}</S.HelpText>}
-		</S.Wrapper>
+			{helpText && <S.InputGroupHelpText>{helpText}</S.InputGroupHelpText>}
+		</S.InputGroup>
 	);
 }

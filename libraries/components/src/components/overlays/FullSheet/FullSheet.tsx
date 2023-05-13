@@ -1,13 +1,7 @@
-import React from 'react';
-
 import * as S from './FullSheet.styled';
-import { IFullSheet } from './IFullSheet';
+import { FullSheetProps } from './FullSheet.annotations';
 
-export function FullSheet({
-	children,
-	show,
-	isModal,
-}: IFullSheet): JSX.Element {
+export function FullSheet({ children, show, isModal }: FullSheetProps): JSX.Element {
 	return (
 		<S.FullSheet show={show} isModal={isModal}>
 			{children}

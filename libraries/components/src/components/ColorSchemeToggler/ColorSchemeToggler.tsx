@@ -1,41 +1,67 @@
-import { useSiteColorScheme } from '../../context';
+import { useSiteColorScheme } from '../../contexts';
 
-import { IColorSchemeToggler } from './IColorSchemeToggler';
+import type { ColorSchemeTogglerProps } from './ColorSchemeToggler.annotations';
 import * as S from './ColorSchemeToggler.styled';
 
-// import SvgSchemeAuto from 'mdi-react/ThemeLightDarkIcon';
-// import SvgSchemeLight from 'mdi-react/WeatherSunnyIcon';
-// import SvgSchemeDark from 'mdi-react/WeatherNightIcon';
+// import { ReactComponent as SvgSchemeSystem } from '@mdi/svg/svg/theme-light-dark.svg';
+// import { ReactComponent as SvgSchemeLight } from '@mdi/svg/svg/weather-sunny.svg';
+// import { ReactComponent as SvgSchemeDark } from '@mdi/svg/svg/weather-night.svg';
 
 export function ColorSchemeToggler({
-	children,
+	displayMode,
 	...restProps
-}: IColorSchemeToggler): JSX.Element {
+}: ColorSchemeTogglerProps): JSX.Element {
 	const { siteColorScheme, setSiteColorScheme } = useSiteColorScheme();
-	// const [schemeIcon, setSchemeIcon] =
-	// 	useState<typeof MdiReactIconComponentType>(SvgSchemeAuto);
 
 	const toggleState = () => {
 		switch (siteColorScheme) {
-			case 'auto':
+			case 'system':
 				setSiteColorScheme('light');
 				break;
 			case 'light':
 				setSiteColorScheme('dark');
 				break;
 			default:
-				setSiteColorScheme('auto');
+				setSiteColorScheme('system');
 		}
 	};
 
 	return (
-		<S.Toggler
+		<S.ColorSchemeToggler
 			aria-label='Click to toggle light, dark or system color schemes'
 			title='Click to toggle light, dark or system color schemes'
 			onClick={toggleState}
 			{...restProps}>
-			{children}
-			{/* <Icon icon={schemeIcon} size={IconSize.x150} /> */}
-		</S.Toggler>
+			{siteColorScheme === 'light' && (
+				<>
+					{/* {displayMode !== 'textonly' && <S.ColorSchemeTogglerIcon icon={<SvgSchemeLight />} />} */}
+					{displayMode !== 'icononly' && (
+						<S.ColorSchemeTogglerText>
+							Light
+						</S.ColorSchemeTogglerText>
+					)}
+				</>
+			)}
+			{siteColorScheme === 'dark' && (
+				<>
+					{/* {displayMode !== 'textonly' && <S.ColorSchemeTogglerIcon icon={<SvgSchemeDark />} />} */}
+					{displayMode !== 'icononly' && (
+						<S.ColorSchemeTogglerText>
+							Dark
+						</S.ColorSchemeTogglerText>
+					)}
+				</>
+			)}
+			{siteColorScheme !== 'light' && siteColorScheme !== 'dark' && (
+				<>
+					{/* {displayMode !== 'textonly' && <S.ColorSchemeTogglerIcon icon={<SvgSchemeSystem />} />} */}
+					{displayMode !== 'icononly' && (
+						<S.ColorSchemeTogglerText>
+							System
+						</S.ColorSchemeTogglerText>
+					)}
+				</>
+			)}
+		</S.ColorSchemeToggler>
 	);
 }

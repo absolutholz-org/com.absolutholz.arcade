@@ -1,0 +1,9 @@
+{
+  "name": "@arcade/library-common",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "@arcade/library-components": "^1.0.0"
+  }
+}

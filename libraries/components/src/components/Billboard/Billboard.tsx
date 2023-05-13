@@ -1,22 +1,18 @@
-import { PageLayoutContainer } from '../PageLayoutContainer';
+import { ContentContainer } from '../layout/ContentContainer';
+import { Theme } from '../Theme';
+
 import { BillboardProps } from './Billboard.annotations';
 import * as S from './Billboard.styled';
 
-export function Billboard({
-	children,
-	slotHeadline,
-	imgUri,
-	...restProps
-}: BillboardProps): JSX.Element {
+export function Billboard({ children, slotBackground, ...props }: BillboardProps): JSX.Element {
 	return (
-		<S.Billboard {...restProps}>
-			<S.BillboardBackground src={imgUri} />
-			<PageLayoutContainer>
-				<S.BillboardHeadline as='h1'>
-					{slotHeadline}
-				</S.BillboardHeadline>
-				{children}
-			</PageLayoutContainer>
-		</S.Billboard>
+		<Theme $theme='image'>
+			<S.Billboard $withBackground={!slotBackground} {...props}>
+				{slotBackground && <S.BillboardBackground>{slotBackground}</S.BillboardBackground>}
+				<S.BillboardContent spacing={300}>
+					<ContentContainer>{children}</ContentContainer>
+				</S.BillboardContent>
+			</S.Billboard>
+		</Theme>
 	);
 }

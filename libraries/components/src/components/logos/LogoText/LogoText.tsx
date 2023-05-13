@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as S from './LogoText.styled';
 
 export function LogoText({ ...restProps }): JSX.Element {

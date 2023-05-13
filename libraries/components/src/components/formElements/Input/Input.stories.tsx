@@ -1,11 +1,10 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Input } from '.';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Components/Form Elements/Input',
+	title: 'General/Form Elements/Input',
 	component: Input,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {
@@ -20,7 +19,6 @@ export default {
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const _Text_ = Template.bind({});
-_Text_.displayName = 'Input';
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 _Text_.args = {
 	type: 'text',
@@ -28,7 +26,6 @@ _Text_.args = {
 };
 
 export const _Email_ = Template.bind({});
-_Email_.displayName = 'Input';
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 _Email_.args = {
 	type: 'email',
@@ -36,7 +33,6 @@ _Email_.args = {
 };
 
 export const _Password_ = Template.bind({});
-_Password_.displayName = 'Input';
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 _Password_.args = {
 	type: 'password',

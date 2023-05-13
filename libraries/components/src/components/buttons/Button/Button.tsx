@@ -30,9 +30,10 @@
 //  );
 // };
 
-import { IButtonProps } from './IButton';
-import * as S from './Button.styled';
 import { ElementType } from 'react';
+
+import type { ButtonProps } from './Button.annotations';
+import * as S from './Button.styled';
 
 export function Button<T extends ElementType = 'button'>({
 	renderAs,
@@ -40,7 +41,7 @@ export function Button<T extends ElementType = 'button'>({
 	inline,
 	variant,
 	...props
-}: IButtonProps<T>): JSX.Element {
+}: ButtonProps<T>): JSX.Element {
 	return (
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-ignore

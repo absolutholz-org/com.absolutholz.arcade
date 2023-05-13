@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as S from './LogoAbsolutholz.styled';
 
 export function LogoAbsolutholz({ ...restProps }): JSX.Element {

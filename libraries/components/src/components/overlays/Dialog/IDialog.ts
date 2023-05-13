@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { IOverlay } from '../IOverlay';
+import { OverlayProps } from '../Overlay.annotations';
 
-export interface IDialog extends IOverlay {
+export interface IDialog extends OverlayProps {
 	slotHeader?: ReactNode;
 	slotFooter?: ReactNode;
 }

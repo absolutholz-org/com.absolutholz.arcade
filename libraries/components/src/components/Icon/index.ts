@@ -1,2 +1,2 @@
+export type { IconSize } from './Icon.annotations';
 export * from './Icon';
-export * from './enums/IconSize';

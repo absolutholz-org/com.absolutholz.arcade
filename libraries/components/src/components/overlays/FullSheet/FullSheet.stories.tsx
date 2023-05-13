@@ -1,12 +1,12 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { FullSheet } from '.';
+import { LOREM_IPSUM } from '../../../loremIpsum';
 import { ExampleContent } from '../ExampleContent';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Components/Overlays/FullSheet',
+	title: 'General/Overlays/FullSheet',
 	component: FullSheet,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},
@@ -16,10 +16,7 @@ export default {
 const Template: ComponentStory<typeof FullSheet> = (args) => (
 	<>
 		<ExampleContent />
-		<FullSheet {...args}>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</FullSheet>
+		<FullSheet {...args}>${LOREM_IPSUM}</FullSheet>
 	</>
 );
 
