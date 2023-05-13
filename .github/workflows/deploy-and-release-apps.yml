@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'minimal | standard | verbose'
-        required: true
-        default: 'verbose'
+        description: 'The log level of the build script. Possible values are "silent", "error", "warn", "info", "debug", and "trace". Defaults to "info".'
+        default: 'info'
+        required: false
 
 jobs:
   deploy:
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: '18.x'
 
       - name: Install Dependencies
         run: yarn install
@@ -50,4 +50,4 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           cd apps/${{ matrix.app }}
-          yarn build --prod && rsync -azP --delete ./dist/ deploy@example.com:/var/www/${{ matrix.app }}
+          yarn build --prod --log-level ${{ github.event.inputs.logLevel }} && rsync -azP --delete ./dist/ deploy@example.com:/var/www/${{ matrix.app }}
