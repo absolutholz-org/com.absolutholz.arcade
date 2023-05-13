@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app: [scavenger-bingo]
+        app: [scavenger-bingo, tic-tac-toe, dots-and-boxes]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -37,15 +37,15 @@ jobs:
           cd apps/${{ matrix.app }}
           git fetch
           if git diff --quiet HEAD remotes/origin/main; then
-            echo "Code has not changed for ${matrix.app}"
+            echo "Code has not changed for ${{ matrix.app }}"
             echo "changes=false" >> $GITHUB_ENV
           else
-            echo "Code has changed for ${matrix.app}"
+            echo "Code has changed for ${{ matrix.app }}"
             echo "changes=true" >> $GITHUB_ENV
           fi
 
       - name: Build and Deploy App
-        if: steps.check_changes.outputs.changes == 'true'
+        if: env.changes == 'true'
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
