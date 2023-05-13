@@ -12,6 +12,7 @@ import { createNewGameBoard } from '../../_createNewGameBoard';
 import { GameProvider, useGameState } from './contexts/GameContext';
 import { FoundSymbol } from './components/FoundSymbol';
 import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
+import { PageSection } from '@arcade/library-components/src/components/PageSection';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();
@@ -63,7 +64,7 @@ function _Game(): JSX.Element {
 
 	return (
 		<SiteTemplate pageTitle={'Scavenger Bingo'}>
-			<main>
+			<PageSection>
 				<PageGridContainer>
 					{board && (
 						<GameBoard>
@@ -85,7 +86,7 @@ function _Game(): JSX.Element {
 						</GameBoard>
 					)}
 				</PageGridContainer>
-			</main>
+			</PageSection>
 		</SiteTemplate>
 	);
 }

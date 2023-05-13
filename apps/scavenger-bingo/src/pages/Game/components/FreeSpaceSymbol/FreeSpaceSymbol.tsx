@@ -5,9 +5,9 @@ export function FreeSpaceSymbol(): JSX.Element {
 		<S.FreeSpaceSymbol>
 			<S.FreeSpaceSymbol_FoundSymbol />
 			<S.FreeSpaceSymbol_FreeText>
-				FREE
+				Free
 				<br />
-				SPACE
+				Space
 			</S.FreeSpaceSymbol_FreeText>
 		</S.FreeSpaceSymbol>
 	);
