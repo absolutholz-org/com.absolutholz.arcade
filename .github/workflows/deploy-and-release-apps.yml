@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app: [scavenger-bingo, tic-tac-toe, dots-and-boxes]
+        include:
+          - scavenger-bingo
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
