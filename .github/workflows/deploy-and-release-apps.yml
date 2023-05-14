@@ -56,7 +56,7 @@ jobs:
       #     fi
 
       - name: Build and Deploy App
-        if: env.changes == 'true'
+        # if: env.changes == 'true'
         run: |
           cd apps/${{ matrix.app.localDir }}
           yarn build --prod --log-level ${{ github.event.inputs.logLevel }}
