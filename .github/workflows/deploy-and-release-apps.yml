@@ -59,6 +59,6 @@ jobs:
         # if: env.changes == 'true'
         run: |
           cd apps/${{ matrix.app.localDir }}
-          yarn build --prod --log-level ${{ github.event.inputs.logLevel }}
+          yarn build --log-level ${{ github.event.inputs.logLevel }}
           ssh-keyscan ${{ secrets.WEBGO_SFTP_HOST }} >> ~/.ssh/known_hosts
           rsync -azP --delete -e "ssh -p 22 -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
