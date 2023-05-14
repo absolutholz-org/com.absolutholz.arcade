@@ -9,17 +9,18 @@ on:
       logLevel:
         description: 'The log level of the build script.'
         default: 'info'
-        required: false
+        required: true
+        type: choice
         options:
-          info: 'Show logs for info, warning and error'
+          - info: 'Show logs for info, warning and error'
           # verbose: 'Show logs for verbose, info, warning and error'
           # debug: 'Show logs for debug, verbose, info, warning and error'
           # silly: 'Show logs for all levels'
-          error: 'Only show error logs'
+          - error: 'Only show error logs'
           # warning: 'Show logs for warning and error'
-          warn: 'Show logs for warning and error'
+          - warn: 'Show logs for warning and error'
           # none: 'Disable all logs'
-          silent: 'Disable all logs'
+          - silent: 'Disable all logs'
 
 jobs:
   deploy:
@@ -64,4 +65,4 @@ jobs:
           yarn build --l ${{ github.event.inputs.logLevel }}
           mkdir -p ~/.ssh
           ssh-keyscan ${{ secrets.WEBGO_SFTP_HOST }} >> ~/.ssh/known_hosts
-          rsync -azP --delete -e "ssh -p 22 -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
+          rsync -azP --delete -e "ssh -p 22 -i ${{ secrets.SSH_PRIVATE_KEY }} -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
