@@ -42,18 +42,18 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      - name: Check if code has changed
-        id: check_changes
-        run: |
-          cd apps/${{ matrix.app.localDir }}
-          git fetch
-          if git diff --quiet HEAD remotes/origin/main; then
-            echo "Code has not changed for ${{ matrix.app.name }}"
-            echo "changes=false" >> $GITHUB_ENV
-          else
-            echo "Code has changed for ${{ matrix.app.name }}"
-            echo "changes=true" >> $GITHUB_ENV
-          fi
+      # - name: Check if code has changed
+      #   id: check_changes
+      #   run: |
+      #     cd apps/${{ matrix.app.localDir }}
+      #     git fetch
+      #     if git diff --quiet HEAD remotes/origin/main; then
+      #       echo "Code has not changed for ${{ matrix.app.name }}"
+      #       echo "changes=false" >> $GITHUB_ENV
+      #     else
+      #       echo "Code has changed for ${{ matrix.app.name }}"
+      #       echo "changes=true" >> $GITHUB_ENV
+      #     fi
 
       - name: Build and Deploy App
         if: env.changes == 'true'
