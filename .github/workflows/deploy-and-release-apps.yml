@@ -12,12 +12,14 @@ on:
         required: false
         options:
           info: 'Show logs for info, warning and error'
-          verbose: 'Show logs for verbose, info, warning and error'
-          debug: 'Show logs for debug, verbose, info, warning and error'
-          silly: 'Show logs for all levels'
+          # verbose: 'Show logs for verbose, info, warning and error'
+          # debug: 'Show logs for debug, verbose, info, warning and error'
+          # silly: 'Show logs for all levels'
           error: 'Only show error logs'
-          warning: 'Show logs for warning and error'
-          none: 'Disable all logs'
+          # warning: 'Show logs for warning and error'
+          warn: 'Show logs for warning and error'
+          # none: 'Disable all logs'
+          silent: 'Disable all logs'
 
 jobs:
   deploy:
