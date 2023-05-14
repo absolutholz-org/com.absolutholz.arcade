@@ -29,12 +29,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         app:
           - name: scavenger-bingo
             localDir: scavenger-bingo
             serverDir: scavengerbingo
+
+    env:
+      LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -66,7 +71,7 @@ jobs:
         # if: env.changes == 'true'
         run: |
           cd apps/${{ matrix.app.localDir }}
-          yarn build --l ${{ github.event.inputs.logLevel }}
+          yarn build --l $LOG_LEVEL
           mkdir -p ~/.ssh
           ssh-keyscan ${{ secrets.WEBGO_SFTP_HOST }} >> ~/.ssh/known_hosts
           rsync -azP --delete -e "ssh -p 22 -i ${{ secrets.SSH_PRIVATE_KEY }} -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
