@@ -1,3 +1,3 @@
 export function FourOhFourPage(): JSX.Element {
-	return <></>;
+	return <>Well that's not right.</>;
 }
