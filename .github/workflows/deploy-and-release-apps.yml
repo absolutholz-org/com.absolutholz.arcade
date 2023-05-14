@@ -7,9 +7,17 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'The log level of the build script. Possible values are "silent", "error", "warn", "info", "debug", and "trace". Defaults to "info".'
+        description: 'The log level of the build script.'
         default: 'info'
         required: false
+        options:
+          info: 'Show logs for info, warning and error'
+          verbose: 'Show logs for verbose, info, warning and error'
+          debug: 'Show logs for debug, verbose, info, warning and error'
+          silly: 'Show logs for all levels'
+          error: 'Only show error logs'
+          warning: 'Show logs for warning and error'
+          none: 'Disable all logs'
 
 jobs:
   deploy:
@@ -49,9 +57,8 @@ jobs:
 
       - name: Build and Deploy App
         if: env.changes == 'true'
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           cd apps/${{ matrix.app.localDir }}
           yarn build --prod --log-level ${{ github.event.inputs.logLevel }}
-          rsync -azP --delete ./dist/ deploy@example.com:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
+          ssh-keyscan ${{ secrets.WEBGO_SFTP_HOST }} >> ~/.ssh/known_hosts
+          rsync -azP --delete -e "ssh -p 22 -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
