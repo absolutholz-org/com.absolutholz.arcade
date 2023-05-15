@@ -72,6 +72,22 @@ jobs:
         run: |
           cd apps/${{ matrix.app.localDir }}
           yarn build --l $LOG_LEVEL
-          mkdir -p ~/.ssh
-          ssh-keyscan ${{ secrets.WEBGO_SFTP_HOST }} >> ~/.ssh/known_hosts
-          rsync -avzP --delete -e "ssh -p 22 -i ${{ secrets.SSH_PRIVATE_KEY }} -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
+
+      - name: Deploy to my ❤️
+        uses: up9cloud/action-rsync@master
+        env:
+          HOST: ${{ secrets.WEBGO_SFTP_HOST }}
+          KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          TARGET: /home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
+
+          VERBOSE: true
+          USER: ubuntu
+          # PORT: 2222 # no need to set this, because of $SSH_ARGS
+          ARGS: -az --exclude=/.git/
+          SSH_ARGS: '-p 2222 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+          SOURCE: ./dist/
+
+          PRE_SCRIPT: |
+            echo start at:
+            date -u
+          POST_SCRIPT: 'echo done at: && date -u'
