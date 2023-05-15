@@ -81,7 +81,7 @@ jobs:
           TARGET: /home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
 
           VERBOSE: true
-          USER: ubuntu
+          USER: ${{ secrets.WEBGO_SFTP_USERNAME }}
           # PORT: 2222 # no need to set this, because of $SSH_ARGS
           ARGS: -az --exclude=/.git/
           SSH_ARGS: '-p 2222 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
