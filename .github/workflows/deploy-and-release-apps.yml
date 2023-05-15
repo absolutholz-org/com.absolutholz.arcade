@@ -85,7 +85,7 @@ jobs:
           # PORT: 2222 # no need to set this, because of $SSH_ARGS
           ARGS: -az --exclude=/.git/
           SSH_ARGS: '-p 22 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-          SOURCE: ./dist/
+          SOURCE: dist/
 
           PRE_SCRIPT: |
             echo start at:
