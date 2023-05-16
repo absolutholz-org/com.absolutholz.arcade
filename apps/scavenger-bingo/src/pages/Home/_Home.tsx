@@ -9,6 +9,7 @@ export function Home(): JSX.Element {
 		<AppHomeTemplate appImage='green-hills.webp' appName='Scavenger Bingo'>
 			<PageSection>
 				<PageGridContainer>
+					hello
 					<Link to='lobby'>Play now</Link>
 				</PageGridContainer>
 			</PageSection>
