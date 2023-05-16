@@ -61,6 +61,7 @@ jobs:
           filters: |
             src:
               - 'apps/${{ matrix.app.localDir }}/**'
+              - 'libraries/components/src/**'
 
       - name: Build and Deploy App
         if: steps.changes.outputs.src == 'true'
