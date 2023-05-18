@@ -19,16 +19,35 @@ const _baseStyles = css`
 		border: none;
 	}
 
-	@viewport {
+	/* @viewport {
 		width: device-width;
-	}
+	} */
 
 	:root {
-		--color-accent: hsl(206, 90%, 54%);
-		--color-accent-contrast: hsl(0, 0%, 100%);
-
 		/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles */
 		color-scheme: light dark;
+
+		--color-surface: hsl(0 0% 100%);
+		--color-surface-contrast: hsl(0 0% 10.2%);
+		--color-accent: hsl(30 100% 48%);
+		--color-accent-contrast: hsl(0 0% 100%);
+
+		&[data-color-scheme='dark'] {
+			--color-surface: hsl(0 0% 10.2%);
+			--color-surface-contrast: hsl(0 0% 100%);
+			--color-accent: hsl(30 100% 48%);
+			--color-accent-contrast: hsl(0 0% 100%);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			&:not([data-color-scheme='light']) {
+				--color-surface: hsl(0 0% 10.2%);
+				--color-surface-contrast: hsl(0 0% 100%);
+				--color-accent: hsl(30 100% 48%);
+				--color-accent-contrast: hsl(0 0% 100%);
+			}
+		}
+
 		${typographyCss}
 		${spaceCss}
 		${pageGridCss}
@@ -48,11 +67,24 @@ const _baseStyles = css`
 		${typography(0)};
 		margin: 0;
 		min-height: 100%;
+
+		accent-color: var(--color-accent);
 	}
 
 	img {
 		display: block;
 		max-width: 100%;
+
+		/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
+		[data-color-scheme='dark'] & {
+			filter: brightness(0.8) contrast(1.2);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			&:not([data-color-scheme='light']) {
+				filter: brightness(0.8) contrast(1.2);
+			}
+		}
 	}
 
 	menu,
@@ -93,6 +125,10 @@ const _baseStyles = css`
 		width: auto;
 	}
 
+	label {
+		display: inline-block;
+	}
+
 	fieldset {
 		border: 0;
 		margin: 0;
@@ -104,6 +140,25 @@ const _baseStyles = css`
 		display: block;
 		padding: 0;
 		width: 100%;
+	}
+
+	dialog {
+		background: none;
+		border: 0;
+
+		&::backdrop {
+			background: hsl(0, 0%, 0%, 0.7);
+			backdrop-filter: blur(5px);
+		}
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		max-width: 70ch;
 	}
 `;
 

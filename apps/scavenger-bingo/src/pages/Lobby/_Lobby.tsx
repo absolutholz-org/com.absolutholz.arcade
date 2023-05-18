@@ -6,8 +6,8 @@ import { PageGridContainer } from '@arcade/library-components/src/components/Pag
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
-
 import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
+import { Button } from '@arcade/library-components/src/components/buttons/Button';
 
 import { WinningCombinations } from './components/WinningCombinations';
 import { FreeSpace } from './components/FreeSpace';
@@ -96,7 +96,7 @@ export function Lobby(): JSX.Element {
 								/>
 
 								<div>
-									<button
+									<Button
 										disabled={
 											gamePlayConfig.symbolIds.length <
 												25 ||
@@ -105,7 +105,7 @@ export function Lobby(): JSX.Element {
 										}
 										type='submit'>
 										Play
-									</button>
+									</Button>
 								</div>
 							</Stack>
 						</form>
