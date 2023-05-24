@@ -1,7 +1,11 @@
 import { ReactNode } from 'react';
 
+import { ButtonSize, ButtonType, ButtonVariant } from './_Button.types';
+
 type ButtonPropsBase = {
 	children: ReactNode;
+	size?: ButtonSize;
+	variant?: ButtonVariant;
 	onClick?: () => void;
 };
 
@@ -9,7 +13,7 @@ type ButtonPropsAsButton = ButtonPropsBase & {
 	disabled?: boolean;
 	href?: never;
 	to?: never;
-	type?: 'button' | 'submit' | 'reset';
+	type?: ButtonType;
 };
 
 type ButtonPropsAsAnchor = ButtonPropsBase & {

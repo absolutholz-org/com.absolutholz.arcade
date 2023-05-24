@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
@@ -13,8 +13,10 @@ import { WinningCombinations } from './components/WinningCombinations';
 import { FreeSpace } from './components/FreeSpace';
 import type { FreeSpacePosition, WinningCombination } from '../../App.types';
 import { DEFAULT_PARAMETERS } from '../../App.constants';
-import { persistGameState } from '../../_storage';
+import { createGame, persistGameState, readGames } from '../../_storage';
 import { SymbolFilterGrid } from './components/SymbolFilterGrid/_SymbolFilterGrid';
+import { GameList } from '../../components/GameList';
+import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
@@ -26,6 +28,7 @@ export function Lobby(): JSX.Element {
 			winningCombinations: WinningCombination[];
 			symbolIds: string[];
 		}>(DEFAULT_PARAMETERS);
+	const [games, addGame] = useUnfinishedGames();
 
 	function handleComboChange(event: ChangeEvent<HTMLInputElement>) {
 		setGamePlayConfig((gamePlayConfig) => {
@@ -57,10 +60,8 @@ export function Lobby(): JSX.Element {
 
 		const gameId = nanoid(5);
 
-		// const gameBoard = createNewGameBoard({
-		// 	size: 5,
-		// 	freeSpacePosition: gamePlayConfig.freeSpacePosition,
-		// });
+		addGame(gameId);
+		// createGame(gameId);
 		persistGameState(gameId, {
 			id: gameId,
 			config: gamePlayConfig /* , gameBoard */,
@@ -103,7 +104,9 @@ export function Lobby(): JSX.Element {
 											gamePlayConfig.winningCombinations
 												.length === 0
 										}
-										type='submit'>
+										size='l'
+										type='submit'
+										variant='contained'>
 										Play
 									</Button>
 								</div>

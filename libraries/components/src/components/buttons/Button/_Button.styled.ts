@@ -1,24 +1,30 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { ButtonSize } from './_Button.types';
 
-export const _Button = styled.button<{ $outlined?: boolean }>`
+export const _Button = styled.button<{
+	$outlined?: boolean;
+	$size?: ButtonSize;
+}>`
 	align-items: center;
 	border: 4px solid transparent;
 	border-radius: 13px / 50%;
 	display: inline-flex;
-	font-size: 1.5rem;
 	font-weight: bold;
-	height: 3rem;
 	justify-content: center;
 	line-height: 1;
 	padding-bottom: 0.125em;
-	padding-inline: 2rem;
 	text-decoration: none;
 
-	${({ $outlined = false }) =>
+	font-size: ${({ $size = 's' }) => ($size === 's' ? '1.125rem' : '1.5rem')};
+	height: ${({ $size = 's' }) => ($size === 's' ? '2.25rem' : '3rem')};
+	padding-inline: ${({ $size = 's' }) => ($size === 's' ? '1rem' : '2rem')};
+
+	${({ $outlined = true }) =>
 		$outlined
 			? css`
-					color: var(--color-accent);
+					border-color: var(--color-accent);
+					color: var(--color-surface-contrast);
 			  `
 			: css`
 					background-color: var(--color-accent);
