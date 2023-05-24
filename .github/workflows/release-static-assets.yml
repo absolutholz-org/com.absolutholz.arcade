@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - working-directory: './libraries/static-assets'
+          - local-directory: 'libraries/static-assets'
             target-directory: '/arcade-assets/'
             package-name: '@arcade/static-assets'
 
@@ -31,7 +31,16 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v1
 
+      - name: Check if code has changed
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - '${{ matrix.local-directory }}/**'
+
       - name: Upload to host via FTP
+        if: steps.changes.outputs.src == 'true'
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.WEBGO_SFTP_HOST }}
@@ -39,7 +48,7 @@ jobs:
           username: ${{ secrets.WEBGO_SFTP_USERNAME }}
           password: ${{ secrets.WEBGO_SFTP_PASSWORD }}
           protocol: ftp
-          local-dir: ${{ matrix.working-directory }}/
+          local-dir: ./${{ matrix.local-directory }}/
           server-dir: /home/www/de.absolutholz.arcade${{ matrix.target-directory }}
           log-level: ${{ github.event.inputs.logLevel }}
           exclude: |
