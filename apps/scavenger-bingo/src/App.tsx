@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { FourOhFourPage } from '@arcade/library-components/src/components/FourOhFourPage';
+
 import { Home } from './pages/Home';
 import { Game } from './pages/Game';
 import { Lobby } from './pages/Lobby';
 import { Games } from './pages/Games';
-import { FourOhFourPage } from '@arcade/library-components/src/components/FourOhFourPage';
 
 function App() {
 	return (

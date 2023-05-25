@@ -17,6 +17,7 @@ import { createGame, persistGameState, readGames } from '../../_storage';
 import { SymbolFilterGrid } from './components/SymbolFilterGrid/_SymbolFilterGrid';
 import { GameList } from '../../components/GameList';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
+import { UnfinishedGameNotifier } from '../../components/UnfinishedGameNotifier';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
@@ -115,6 +116,7 @@ export function Lobby(): JSX.Element {
 					</Stack>
 				</PageGridContainer>
 			</PageSection>
+			<UnfinishedGameNotifier />
 		</SiteTemplate>
 	);
 }

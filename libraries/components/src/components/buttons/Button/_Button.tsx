@@ -20,8 +20,8 @@ export function Button({
 				as='a'
 				// @ts-ignore
 				href={href}
-				$outlined={variant === 'outlined'}
-				$size={size}>
+				outlined={variant === 'outlined'}
+				size={size}>
 				{children}
 			</S._Button>
 		);
@@ -31,8 +31,8 @@ export function Button({
 		return (
 			<S._Button
 				as={Link}
-				$outlined={variant === 'outlined'}
-				$size={size}
+				outlined={variant === 'outlined'}
+				size={size}
 				// @ts-ignore
 				to={to}>
 				{children}
@@ -44,8 +44,8 @@ export function Button({
 		<S._Button
 			disabled={disabled}
 			onClick={onClick}
-			$outlined={variant === 'outlined'}
-			$size={size}
+			outlined={variant === 'outlined'}
+			size={size}
 			type={type}>
 			{children}
 		</S._Button>

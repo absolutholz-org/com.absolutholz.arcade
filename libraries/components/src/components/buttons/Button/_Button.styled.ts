@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import { ButtonSize } from './_Button.types';
 
 export const _Button = styled.button<{
-	$outlined?: boolean;
-	$size?: ButtonSize;
+	outlined?: boolean;
+	size?: ButtonSize;
 }>`
 	align-items: center;
 	border: 4px solid transparent;
@@ -16,12 +16,12 @@ export const _Button = styled.button<{
 	padding-bottom: 0.125em;
 	text-decoration: none;
 
-	font-size: ${({ $size = 's' }) => ($size === 's' ? '1.125rem' : '1.5rem')};
-	height: ${({ $size = 's' }) => ($size === 's' ? '2.25rem' : '3rem')};
-	padding-inline: ${({ $size = 's' }) => ($size === 's' ? '1rem' : '2rem')};
+	font-size: ${({ size = 's' }) => (size === 's' ? '1.125rem' : '1.5rem')};
+	height: ${({ size = 's' }) => (size === 's' ? '2.25rem' : '3rem')};
+	padding-inline: ${({ size = 's' }) => (size === 's' ? '1rem' : '2rem')};
 
-	${({ $outlined = true }) =>
-		$outlined
+	${({ outlined = true }) =>
+		outlined
 			? css`
 					border-color: var(--color-accent);
 					color: var(--color-surface-contrast);
