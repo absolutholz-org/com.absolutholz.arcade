@@ -195,6 +195,18 @@
 		]
 	},
 	{
+		"id": "301_Vorfahrt",
+		"filename": "301_Vorfahrt.svg",
+		"frequency": "low",
+		"locations": [
+			"city",
+			"highway"
+		],
+		"tags": [
+			"danger"
+		]
+	},
+	{
 		"id": "131_lichtzeichenanlage",
 		"filename": "131_lichtzeichenanlage.svg",
 		"frequency": "low",
@@ -400,6 +412,36 @@
 		"variant": true
 	},
 	{
+		"id": "214_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_rechts",
+		"filename": "214_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_rechts.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		],
+		"tags": []
+	},
+	{
+		"id": "214-10_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_links",
+		"filename": "214-10_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_links.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		],
+		"tags": [
+			"left"
+		],
+		"variant": true
+	},
+	{
+		"id": "214-30_Vorgeschriebene_Fahrtrichtung_Rechts_oder_links",
+		"filename": "214-30_Vorgeschriebene_Fahrtrichtung_Rechts_oder_links.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		],
+		"tags": []
+	},
+	{
 		"id": "215_kreisverkehr",
 		"filename": "215_kreisverkehr.svg",
 		"frequency": "medium",
@@ -496,6 +538,37 @@
 		]
 	},
 	{
+		"id": "240_Gemeinsamer_Fuss-_und_Radweg",
+		"filename": "240_Gemeinsamer_Fuss-_und_Radweg.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		]
+	},
+	{
+		"id": "241-30_getrennter_Rad-_und_Fussweg-rechts",
+		"filename": "241-30_getrennter_Rad-_und_Fussweg-rechts.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		],
+		"tags": [
+			"right"
+		]
+	},
+	{
+		"id": "241-31_getrennter_Fuss-_und_Radweg-links",
+		"filename": "241-31_getrennter_Fuss-_und_Radweg-links.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		],
+		"tags": [
+			"left"
+		],
+		"variant": true
+	},
+	{
 		"id": "239_gehweg",
 		"filename": "239_gehweg.svg",
 		"frequency": "high",
@@ -515,6 +588,14 @@
 		"id": "242.2_fussgaengerzone-ende",
 		"filename": "242.2_fussgaengerzone-ende.svg",
 		"frequency": "medium",
+		"locations": [
+			"city"
+		]
+	},
+	{
+		"id": "238_Sonderweg_Reiter",
+		"filename": "238_Sonderweg_Reiter.svg",
+		"frequency": "low",
 		"locations": [
 			"city"
 		]
@@ -728,6 +809,14 @@
 	{
 		"id": "283_haltverbot-absolutes",
 		"filename": "283_haltverbot-absolutes.svg",
+		"frequency": "medium",
+		"locations": [
+			"city"
+		]
+	},
+	{
+		"id": "286_Eingeschraenktes_Halteverbot",
+		"filename": "286_Eingeschraenktes_Halteverbot.svg",
 		"frequency": "medium",
 		"locations": [
 			"city"

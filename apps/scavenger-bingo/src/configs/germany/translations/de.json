@@ -93,5 +93,14 @@
 	"357_sackgasse": "Sackgasse",
 	"454-10_umleitung-links": "Umleitungs­wegweiser, linksweisend",
 	"454-20_umleitung-rechts": "Umleitungs­wegweiser, rechtsweisend",
-	"720_gruenpfeil": "Grünpfeilschild"
+	"720_gruenpfeil": "Grünpfeilschild",
+	"214_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_rechts": "Vorgeschriebene Fahrtrichtung – geradeaus oder rechts",
+	"214-10_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_links": "Vorgeschriebene Fahrtrichtung – geradeaus oder links",
+	"214-30_Vorgeschriebene_Fahrtrichtung_Rechts_oder_links": "Vorgeschriebene Fahrtrichtung – rechts oder links",
+	"240_Gemeinsamer_Fuss-_und_Radweg": "Gemeinsamer Geh- und Radweg",
+	"241-30_getrennter_Rad-_und_Fussweg-rechts": "Getrennter Rad- und Gehweg, Radweg rechts",
+	"241-31_getrennter_Fuss-_und_Radweg-links": "Getrennter Rad- und Gehweg, Radweg links",
+	"238_Sonderweg_Reiter": "Reitweg",
+	"301_Vorfahrt": "Vorfahrt",
+	"286_Eingeschraenktes_Halteverbot": "Eingeschränktes Haltverbot"
 }
