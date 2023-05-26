@@ -18,6 +18,10 @@ import { SymbolFilterGrid } from './components/SymbolFilterGrid/_SymbolFilterGri
 import { GameList } from '../../components/GameList';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 import { UnfinishedGameNotifier } from '../../components/UnfinishedGameNotifier';
+import {
+	StickyFormFooter,
+	StickyFormFooter_Form,
+} from './components/StickyFormFooter';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
@@ -76,7 +80,7 @@ export function Lobby(): JSX.Element {
 					<Stack spaceLevelY='m'>
 						<Typography level={2}>Config</Typography>
 
-						<form onSubmit={handleSubmit}>
+						<StickyFormFooter_Form onSubmit={handleSubmit}>
 							<Stack spaceLevelY='s'>
 								<WinningCombinations
 									selection={
@@ -95,7 +99,7 @@ export function Lobby(): JSX.Element {
 									}
 								/>
 
-								<div>
+								<StickyFormFooter>
 									<Button
 										disabled={
 											gamePlayConfig.symbolIds.length <
@@ -108,9 +112,9 @@ export function Lobby(): JSX.Element {
 										variant='contained'>
 										Play
 									</Button>
-								</div>
+								</StickyFormFooter>
 							</Stack>
-						</form>
+						</StickyFormFooter_Form>
 					</Stack>
 				</PageGridContainer>
 			</PageSection>
