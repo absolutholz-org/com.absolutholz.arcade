@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 
-import { SymbolFilterGridProps } from './_SymbolFilterGrid.types';
-import * as S from './_SymbolFilterGrid.styled';
-import { default as ALL_SYMBOLS } from '../../../../configs/germany/symbols.json';
-import { IMAGE_DIRECTORY } from '../../../../App.constants';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 import { Stack } from '@arcade/library-components/src/components/Stack';
+
+import { SymbolFilterGridProps } from './_SymbolFilterGrid.annotations';
+import * as S from './_SymbolFilterGrid.styled';
+import { IMAGE_DIRECTORY } from '../../../../App.constants';
+
+import { default as ALL_SYMBOLS } from '../../../../configs/germany/symbols.json';
+import { SymbolPresets } from '../SymbolPresets';
 
 export function SymbolFilterGrid({
 	onSymbolSelectionChange,
@@ -32,52 +35,59 @@ export function SymbolFilterGrid({
 		setSelectedSymbolIds([]);
 	}
 
+	function handlePresetSelectionChange(symbolIds: any) {
+		setSelectedSymbolIds(symbolIds);
+	}
+
 	useEffect(() => {
 		onSymbolSelectionChange(selectedSymbolIds);
 	}, [selectedSymbolIds]);
 
 	return (
-		<Stack tag='fieldset' direction='column' spaceLevelY='m'>
-			<legend>
-				<Typography as='div' level={1}>
-					Symbols
-				</Typography>
-				<Typography as='div' level={-1}>
-					{selectedSymbolIds.length} selected
-				</Typography>
-			</legend>
+		<>
+			<SymbolPresets
+				onPresetSelectionChange={handlePresetSelectionChange}
+			/>
 
-			<S.SymbolFilterGrid_List>
-				{ALL_SYMBOLS.map(({ filename, id }) => (
-					<S.SymbolFilterGrid_Label
-						htmlFor={`symbol_${id}`}
-						key={`symbol_${id}`}>
-						<S.SymbolFilterGrid_Input
-							id={`symbol_${id}`}
-							checked={selectedSymbolIds.includes(id)}
-							name={`symbol_${id}`}
-							onChange={() => handleSymbolChange(id)}
-							type='checkbox'
-						/>
-						<S.SymbolFilterGrid_Image
-							alt={id}
-							height={50}
-							loading='lazy'
-							src={`${IMAGE_DIRECTORY}germany/${filename}`}
-							width={50}
-						/>
-					</S.SymbolFilterGrid_Label>
-				))}
-			</S.SymbolFilterGrid_List>
+			<Stack tag='fieldset' direction='column' spaceLevelY='m'>
+				<legend>
+					<Typography as='div' level={0}>
+						Custom selection
+					</Typography>
+				</legend>
 
-			<Stack direction='row' spaceLevelX='s'>
-				<button onClick={handleSelectAll} type='button'>
-					Select All
-				</button>
-				<button onClick={handleDeselectAll} type='button'>
-					Deselect All
-				</button>
+				<S.SymbolFilterGrid_List>
+					{ALL_SYMBOLS.map(({ filename, id }) => (
+						<S.SymbolFilterGrid_Label
+							htmlFor={`symbol_${id}`}
+							key={`symbol_${id}`}>
+							<S.SymbolFilterGrid_Input
+								id={`symbol_${id}`}
+								checked={selectedSymbolIds.includes(id)}
+								name={`symbol_${id}`}
+								onChange={() => handleSymbolChange(id)}
+								type='checkbox'
+							/>
+							<S.SymbolFilterGrid_Image
+								alt={id}
+								height={50}
+								loading='lazy'
+								src={`${IMAGE_DIRECTORY}germany/${filename}`}
+								width={50}
+							/>
+						</S.SymbolFilterGrid_Label>
+					))}
+				</S.SymbolFilterGrid_List>
+
+				<Stack direction='row' spaceLevelX='s'>
+					<button onClick={handleSelectAll} type='button'>
+						Select All
+					</button>
+					<button onClick={handleDeselectAll} type='button'>
+						Deselect All
+					</button>
+				</Stack>
 			</Stack>
-		</Stack>
+		</>
 	);
 }

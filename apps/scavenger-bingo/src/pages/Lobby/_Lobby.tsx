@@ -22,6 +22,7 @@ import {
 	StickyFormFooter,
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
+import { SymbolPresets } from './components/SymbolPresets';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
@@ -33,7 +34,7 @@ export function Lobby(): JSX.Element {
 			winningCombinations: WinningCombination[];
 			symbolIds: string[];
 		}>(DEFAULT_PARAMETERS);
-	const [games, addGame] = useUnfinishedGames();
+	const [, addGame] = useUnfinishedGames();
 
 	function handleComboChange(event: ChangeEvent<HTMLInputElement>) {
 		setGamePlayConfig((gamePlayConfig) => {
@@ -93,25 +94,44 @@ export function Lobby(): JSX.Element {
 									onChange={handleFreeSpaceChange}
 								/>
 
-								<SymbolFilterGrid
-									onSymbolSelectionChange={
-										handleSymbolSelectionChange
-									}
-								/>
+								<Stack
+									tag='fieldset'
+									direction='column'
+									spaceLevelY='m'>
+									<legend>
+										<Typography as='div' level={1}>
+											Symbols
+										</Typography>
+									</legend>
+
+									<SymbolFilterGrid
+										onSymbolSelectionChange={
+											handleSymbolSelectionChange
+										}
+									/>
+								</Stack>
 
 								<StickyFormFooter>
-									<Button
-										disabled={
-											gamePlayConfig.symbolIds.length <
-												25 ||
-											gamePlayConfig.winningCombinations
-												.length === 0
-										}
-										size='l'
-										type='submit'
-										variant='contained'>
-										Play
-									</Button>
+									<Stack spaceLevelY='2xs'>
+										<Typography as='div' level={-1}>
+											{gamePlayConfig.symbolIds.length}{' '}
+											symbols selected
+										</Typography>
+
+										<Button
+											disabled={
+												gamePlayConfig.symbolIds
+													.length < 25 ||
+												gamePlayConfig
+													.winningCombinations
+													.length === 0
+											}
+											size='l'
+											type='submit'
+											variant='contained'>
+											Play
+										</Button>
+									</Stack>
 								</StickyFormFooter>
 							</Stack>
 						</StickyFormFooter_Form>

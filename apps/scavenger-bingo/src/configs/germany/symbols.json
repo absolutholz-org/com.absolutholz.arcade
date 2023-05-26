@@ -442,6 +442,31 @@
 		"tags": []
 	},
 	{
+		"id": "222_vorbeifahrt-rechts",
+		"filename": "222_vorbeifahrt-rechts.svg",
+		"frequency": "medium",
+		"locations": [
+			"city",
+			"highway"
+		],
+		"tags": [
+			"right"
+		]
+	},
+	{
+		"id": "222-10_vorbeifahrt-links",
+		"filename": "222-10_vorbeifahrt-links.svg",
+		"frequency": "medium",
+		"locations": [
+			"city",
+			"highway"
+		],
+		"tags": [
+			"left"
+		],
+		"variant": true
+	},
+	{
 		"id": "215_kreisverkehr",
 		"filename": "215_kreisverkehr.svg",
 		"frequency": "medium",
@@ -466,31 +491,6 @@
 		"frequency": "medium",
 		"locations": [
 			"city"
-		],
-		"tags": [
-			"left"
-		],
-		"variant": true
-	},
-	{
-		"id": "222_vorbeifahrt-rechts",
-		"filename": "222_vorbeifahrt-rechts.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		],
-		"tags": [
-			"right"
-		]
-	},
-	{
-		"id": "222-10_vorbeifahrt-links",
-		"filename": "222-10_vorbeifahrt-links.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
 		],
 		"tags": [
 			"left"
