@@ -61,9 +61,7 @@ export function Lobby(): JSX.Element {
 
 		const gameId = nanoid(5);
 
-		addGame(gameId);
-		// createGame(gameId);
-		persistGameState(gameId, {
+		addGame(gameId, {
 			id: gameId,
 			config: gamePlayConfig /* , gameBoard */,
 		});
