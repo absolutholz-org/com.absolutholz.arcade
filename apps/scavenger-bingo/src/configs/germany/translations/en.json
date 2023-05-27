@@ -106,5 +106,14 @@
 	"highway-star": "Highway Star",
 	"my-neighborhood": "My Neighborhood",
 	"big-city": "The Big City",
-	"country-roads": "Country Roads"
+	"country-roads": "Country Roads",
+	"103-10_Kurve_links": "Curve - left",
+	"103-20_Kurve_rechts": "Curve - right",
+	"253_Verbot_fuer_Kraftfahrzeuge": "Prohibition for motor vehicles over 3.5 tons",
+	"254_Verbot_fuer_Radfahrer": "Prohibition for bicycles",
+	"257-55_Verbot_fuer_Personenkraftwagen": "Prohibition for passenger cars",
+	"259_Verbot_fuer_Fussgaenger": "Prohibition for pedestrians",
+	"328_Nothalte-_und_Pannenbucht": "Emergency stop and breakdown bay",
+	"255_Verbot_fuer_Kraftraeder_und_Mofas": "Prohibition for motorcycles",
+	"260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge": "Prohibition for motor vehicles"
 }

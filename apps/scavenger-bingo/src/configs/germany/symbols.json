@@ -2,7 +2,6 @@
 	{
 		"id": "101_gefahrstelle",
 		"file": "101_gefahrstelle.svg",
-		"frequency": "medium",
 		"tags": [
 			"danger"
 		]
@@ -10,7 +9,6 @@
 	{
 		"id": "101-11_fussgaengerueberweg-rechts",
 		"file": "101-11_fussgaengerueberweg-rechts.svg",
-		"frequency": "medium",
 		"tags": [
 			"danger",
 			"pedestrian"
@@ -19,7 +17,6 @@
 	{
 		"id": "101-21_fussgaengerueberweg-links",
 		"file": "101-21_fussgaengerueberweg-links.svg",
-		"frequency": "medium",
 		"tags": [
 			"danger",
 			"pedestrian"
@@ -202,546 +199,289 @@
 	},
 	{
 		"id": "205_vorfahrt-gewaehren",
-		"file": "205_vorfahrt-gewaehren.svg",
-		"frequency": "high",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "205_vorfahrt-gewaehren.svg"
 	},
 	{
 		"id": "206_halt",
-		"file": "206_halt.svg",
-		"frequency": "high",
-		"locations": [
-			"city"
-		]
+		"file": "206_halt.svg"
 	},
 	{
 		"id": "208_gegenverkehr-vorrang",
-		"file": "208_gegenverkehr-vorrang.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "208_gegenverkehr-vorrang.svg"
 	},
 	{
 		"id": "209_fahrtrichtung-rechts",
-		"file": "209_fahrtrichtung-rechts.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "209_fahrtrichtung-rechts.svg"
 	},
 	{
 		"id": "209-10_fahrtrichtung-links",
 		"file": "209-10_fahrtrichtung-links.svg",
-		"frequency": "medium",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "209-30_fahrtrichtung-geradeaus",
-		"file": "209-30_fahrtrichtung-geradeaus.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "209-30_fahrtrichtung-geradeaus.svg"
 	},
 	{
 		"id": "211_fahrtrichtung-hier-rechts",
-		"file": "211_fahrtrichtung-hier-rechts.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "211_fahrtrichtung-hier-rechts.svg"
 	},
 	{
 		"id": "211-10_fahrtrichtung-hier-links",
 		"file": "211-10_fahrtrichtung-hier-links.svg",
-		"frequency": "medium",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "214_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_rechts",
-		"file": "214_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_rechts.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "214_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_rechts.svg"
 	},
 	{
 		"id": "214-10_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_links",
 		"file": "214-10_Vorgeschriebene_Fahrtrichtung_Geradeaus_oder_links.svg",
-		"frequency": "medium",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "214-30_Vorgeschriebene_Fahrtrichtung_Rechts_oder_links",
-		"file": "214-30_Vorgeschriebene_Fahrtrichtung_Rechts_oder_links.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "214-30_Vorgeschriebene_Fahrtrichtung_Rechts_oder_links.svg"
 	},
 	{
 		"id": "222_vorbeifahrt-rechts",
-		"file": "222_vorbeifahrt-rechts.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "222_vorbeifahrt-rechts.svg"
 	},
 	{
 		"id": "222-10_vorbeifahrt-links",
 		"file": "222-10_vorbeifahrt-links.svg",
-		"frequency": "medium",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "215_kreisverkehr",
-		"file": "215_kreisverkehr.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "215_kreisverkehr.svg"
 	},
 	{
 		"id": "220-20_einbahnstrasse-rechts",
-		"file": "220-20_einbahnstrasse-rechts.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "220-20_einbahnstrasse-rechts.svg"
 	},
 	{
 		"id": "220-10_einbahnstrasse-links",
 		"file": "220-10_einbahnstrasse-links.svg",
-		"frequency": "medium",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "224_haltestelle",
-		"file": "224_haltestelle.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "224_haltestelle.svg"
 	},
 	{
 		"id": "229_taxenstand",
-		"file": "229_taxenstand.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "229_taxenstand.svg"
 	},
 	{
 		"id": "244.3_fahrradzone-beginn",
-		"file": "244.3_fahrradzone-beginn.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "244.3_fahrradzone-beginn.svg"
 	},
 	{
 		"id": "244.4_fahrradzone-ende",
-		"file": "244.4_fahrradzone-ende.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "244.4_fahrradzone-ende.svg"
 	},
 	{
 		"id": "237_sonderweg-radfahrer",
-		"file": "237_sonderweg-radfahrer.svg",
-		"frequency": "high",
-		"locations": [
-			"city"
-		]
+		"file": "237_sonderweg-radfahrer.svg"
 	},
 	{
 		"id": "240_Gemeinsamer_Fuss-_und_Radweg",
-		"file": "240_Gemeinsamer_Fuss-_und_Radweg.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "240_Gemeinsamer_Fuss-_und_Radweg.svg"
 	},
 	{
 		"id": "241-30_getrennter_Rad-_und_Fussweg-rechts",
-		"file": "241-30_getrennter_Rad-_und_Fussweg-rechts.svg",
-		"frequency": "medium",
-		"tags": []
+		"file": "241-30_getrennter_Rad-_und_Fussweg-rechts.svg"
 	},
 	{
 		"id": "241-31_getrennter_Fuss-_und_Radweg-links",
 		"file": "241-31_getrennter_Fuss-_und_Radweg-links.svg",
-		"frequency": "medium",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "239_gehweg",
-		"file": "239_gehweg.svg",
-		"frequency": "high",
-		"locations": [
-			"city"
-		]
+		"file": "239_gehweg.svg"
 	},
 	{
 		"id": "242.1_fussgaengerzone-beginn",
-		"file": "242.1_fussgaengerzone-beginn.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "242.1_fussgaengerzone-beginn.svg"
 	},
 	{
 		"id": "242.2_fussgaengerzone-ende",
-		"file": "242.2_fussgaengerzone-ende.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "242.2_fussgaengerzone-ende.svg"
 	},
 	{
 		"id": "238_Sonderweg_Reiter",
-		"file": "238_Sonderweg_Reiter.svg",
-		"locations": [
-			"city"
-		]
+		"file": "238_Sonderweg_Reiter.svg"
 	},
 	{
 		"id": "245_bussonderfahrstreifen",
-		"file": "245_bussonderfahrstreifen.svg",
-		"locations": [
-			"city"
-		]
+		"file": "245_bussonderfahrstreifen.svg"
 	},
 	{
 		"id": "270.1_umweltzone-beginn",
-		"file": "270.1_umweltzone-beginn.svg",
-		"locations": [
-			"city"
-		]
+		"file": "270.1_umweltzone-beginn.svg"
 	},
 	{
 		"id": "270.2_umweltzone-ende",
-		"file": "270.2_umweltzone-ende.svg",
-		"locations": [
-			"city"
-		]
+		"file": "270.2_umweltzone-ende.svg"
 	},
 	{
 		"id": "250_fahrzeuge-verbot",
-		"file": "250_fahrzeuge-verbot.svg",
-		"frequency": "high",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "250_fahrzeuge-verbot.svg"
 	},
 	{
 		"id": "267_einfahrt-verbot",
-		"file": "267_einfahrt-verbot.svg",
-		"frequency": "high",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "267_einfahrt-verbot.svg"
 	},
 	{
 		"id": "272_wendens-verbot",
-		"file": "272_wendens-verbot.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "272_wendens-verbot.svg"
 	},
 	{
 		"id": "274-30_hoechstgeschwindigkeit-30",
-		"file": "274-30_hoechstgeschwindigkeit-30.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "274-30_hoechstgeschwindigkeit-30.svg"
 	},
 	{
 		"id": "274-40_hoechstgeschwindigkeit-40",
-		"file": "274-40_hoechstgeschwindigkeit-40.svg",
-		"locations": [
-			"city"
-		]
+		"file": "274-40_hoechstgeschwindigkeit-40.svg"
 	},
 	{
 		"id": "274-50_hoechstgeschwindigkeit-50",
-		"file": "274-50_hoechstgeschwindigkeit-50.svg",
-		"frequency": "high",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "274-50_hoechstgeschwindigkeit-50.svg"
 	},
 	{
 		"id": "274-60_hoechstgeschwindigkeit-60",
-		"file": "274-60_hoechstgeschwindigkeit-60.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "274-60_hoechstgeschwindigkeit-60.svg"
 	},
 	{
 		"id": "274-70_hoechstgeschwindigkeit-70",
-		"file": "274-70_hoechstgeschwindigkeit-70.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "274-70_hoechstgeschwindigkeit-70.svg"
 	},
 	{
 		"id": "274-80_hoechstgeschwindigkeit-80",
-		"file": "274-80_hoechstgeschwindigkeit-80.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "274-80_hoechstgeschwindigkeit-80.svg"
 	},
 	{
 		"id": "274-90_hoechstgeschwindigkeit-90",
-		"file": "274-90_hoechstgeschwindigkeit-90.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "274-90_hoechstgeschwindigkeit-90.svg"
 	},
 	{
 		"id": "274-100_hoechstgeschwindigkeit-100",
-		"file": "274-100_hoechstgeschwindigkeit-100.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "274-100_hoechstgeschwindigkeit-100.svg"
 	},
 	{
 		"id": "274-110_hoechstgeschwindigkeit-110",
-		"file": "274-110_hoechstgeschwindigkeit-110.svg",
-		"frequency": "medium",
-		"locations": [
-			"highway"
-		]
+		"file": "274-110_hoechstgeschwindigkeit-110.svg"
 	},
 	{
 		"id": "274-120_hoechstgeschwindigkeit-120",
-		"file": "274-120_hoechstgeschwindigkeit-120.svg",
-		"frequency": "medium",
-		"locations": [
-			"highway"
-		]
+		"file": "274-120_hoechstgeschwindigkeit-120.svg"
 	},
 	{
 		"id": "274-130_hoechstgeschwindigkeit-130",
-		"file": "274-130_hoechstgeschwindigkeit-130.svg",
-		"frequency": "medium",
-		"locations": [
-			"highway"
-		]
+		"file": "274-130_hoechstgeschwindigkeit-130.svg"
 	},
 	{
 		"id": "282_ende-saemtlicher-verbote",
-		"file": "282_ende-saemtlicher-verbote.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "282_ende-saemtlicher-verbote.svg"
 	},
 	{
 		"id": "274.1_zone-30-beginn",
-		"file": "274.1_zone-30-beginn.svg",
-		"locations": [
-			"city"
-		]
+		"file": "274.1_zone-30-beginn.svg"
 	},
 	{
 		"id": "274.2_zone-30-ende",
-		"file": "274.2_zone-30-ende.svg",
-		"locations": [
-			"city"
-		]
+		"file": "274.2_zone-30-ende.svg"
 	},
 	{
 		"id": "276_ueberholverbot-kraftfahrzeuge",
-		"file": "276_ueberholverbot-kraftfahrzeuge.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "276_ueberholverbot-kraftfahrzeuge.svg"
 	},
 	{
 		"id": "280_ueberholverbot-kraftfahrzeuge-ende",
-		"file": "280_ueberholverbot-kraftfahrzeuge-ende.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "280_ueberholverbot-kraftfahrzeuge-ende.svg"
 	},
 	{
 		"id": "277_ueberholverbot-kraftfahrzeuge-schwer",
-		"file": "277_ueberholverbot-kraftfahrzeuge-schwer.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "277_ueberholverbot-kraftfahrzeuge-schwer.svg"
 	},
 	{
 		"id": "281_ueberholverbot-kraftfahrzeuge-schwer-ende",
-		"file": "281_ueberholverbot-kraftfahrzeuge-schwer-ende.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "281_ueberholverbot-kraftfahrzeuge-schwer-ende.svg"
 	},
 	{
 		"id": "283_haltverbot-absolutes",
-		"file": "283_haltverbot-absolutes.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "283_haltverbot-absolutes.svg"
 	},
 	{
 		"id": "286_Eingeschraenktes_Halteverbot",
-		"file": "286_Eingeschraenktes_Halteverbot.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "286_Eingeschraenktes_Halteverbot.svg"
 	},
 	{
 		"id": "290.1_zone-halteverbot-beginn",
-		"file": "290.1_zone-halteverbot-beginn.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "290.1_zone-halteverbot-beginn.svg"
 	},
 	{
 		"id": "290.2_zone-halteverbot-ende",
-		"file": "290.2_zone-halteverbot-ende.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "290.2_zone-halteverbot-ende.svg"
 	},
 	{
 		"id": "306_vorfahrtstrasse",
-		"file": "306_vorfahrtstrasse.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "306_vorfahrtstrasse.svg"
 	},
 	{
 		"id": "308_vorrang-vor-dem-gegenverkehr",
-		"file": "308_vorrang-vor-dem-gegenverkehr.svg",
-		"frequency": "medium",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "308_vorrang-vor-dem-gegenverkehr.svg"
 	},
 	{
 		"id": "314_parken",
-		"file": "314_parken.svg",
-		"frequency": "high",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "314_parken.svg"
 	},
 	{
 		"id": "314-50_parkhaus-parkgarage",
-		"file": "314-50_parkhaus-parkgarage.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "314-50_parkhaus-parkgarage.svg"
 	},
 	{
 		"id": "314.1_zone-parkraum-beginn",
-		"file": "314.1_zone-parkraum-beginn.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "314.1_zone-parkraum-beginn.svg"
 	},
 	{
 		"id": "314.2_zone-parkraum-ende",
-		"file": "314.2_zone-parkraum-ende.svg",
-		"frequency": "medium",
-		"locations": [
-			"city"
-		]
+		"file": "314.2_zone-parkraum-ende.svg"
 	},
 	{
 		"id": "325.1_verkehrsberuhigtes-bereich-beginn",
-		"file": "325.1_verkehrsberuhigtes-bereich-beginn.svg",
-		"locations": [
-			"city"
-		]
+		"file": "325.1_verkehrsberuhigtes-bereich-beginn.svg"
 	},
 	{
 		"id": "325.2_verkehrsberuhigtes-bereichs-ende",
-		"file": "325.2_verkehrsberuhigtes-bereichs-ende.svg",
-		"locations": [
-			"city"
-		]
+		"file": "325.2_verkehrsberuhigtes-bereichs-ende.svg"
 	},
 	{
 		"id": "327_tunnel",
-		"file": "327_tunnel.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "327_tunnel.svg"
 	},
 	{
 		"id": "330.1_autobahn",
-		"file": "330.1_autobahn.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "330.1_autobahn.svg"
 	},
 	{
 		"id": "330.2_autobahn-ende",
-		"file": "330.2_autobahn-ende.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "330.2_autobahn-ende.svg"
 	},
 	{
 		"id": "331.1_kraftfahrstrasse-beginn",
-		"file": "331.1_kraftfahrstrasse-beginn.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "331.1_kraftfahrstrasse-beginn.svg"
 	},
 	{
 		"id": "331.2_kraftfahrstrasse-ende",
-		"file": "331.2_kraftfahrstrasse-ende.svg",
-		"locations": [
-			"city",
-			"highway"
-		]
+		"file": "331.2_kraftfahrstrasse-ende.svg"
 	},
 	{
 		"id": "350-10_fussgaengerueberweg-rechts",
 		"file": "350-10_fussgaengerueberweg-rechts.svg",
-		"frequency": "high",
 		"tags": [
 			"pedestrian"
 		]
@@ -749,7 +489,6 @@
 	{
 		"id": "350-20_fussgaengerueberweg-links",
 		"file": "350-20_fussgaengerueberweg-links.svg",
-		"frequency": "high",
 		"tags": [
 			"pedestrian"
 		],
@@ -757,16 +496,11 @@
 	},
 	{
 		"id": "357_sackgasse",
-		"file": "357_sackgasse.svg",
-		"frequency": "high",
-		"locations": [
-			"city"
-		]
+		"file": "357_sackgasse.svg"
 	},
 	{
 		"id": "333_ausfahrt-autobahn",
 		"file": "333_ausfahrt-autobahn.svg",
-		"frequency": "high",
 		"tags": [
 			"landscape"
 		]
@@ -774,27 +508,58 @@
 	{
 		"id": "333.1_ausfahrt-nicht-autobahn",
 		"file": "333.1_ausfahrt-nicht-autobahn.svg",
-		"frequency": "high",
 		"tags": [
 			"landscape"
 		]
 	},
 	{
 		"id": "454-20_umleitung-rechts",
-		"file": "454-20_umleitung-rechts.svg",
-		"tags": []
+		"file": "454-20_umleitung-rechts.svg"
 	},
 	{
 		"id": "454-10_umleitung-links",
 		"file": "454-10_umleitung-links.svg",
-		"tags": [],
 		"variant": true
 	},
 	{
 		"id": "720_gruenpfeil",
-		"file": "720_gruenpfeil.svg",
-		"locations": [
-			"city"
-		]
+		"file": "720_gruenpfeil.svg"
+	},
+	{
+		"id": "103-10_Kurve_links",
+		"file": "103-10_Kurve_links.svg",
+		"variant": true
+	},
+	{
+		"id": "103-20_Kurve_rechts",
+		"file": "103-20_Kurve_rechts.svg"
+	},
+	{
+		"id": "253_Verbot_fuer_Kraftfahrzeuge",
+		"file": "253_Verbot_fuer_Kraftfahrzeuge.svg"
+	},
+	{
+		"id": "254_Verbot_fuer_Radfahrer",
+		"file": "254_Verbot_fuer_Radfahrer.svg"
+	},
+	{
+		"id": "257-55_Verbot_fuer_Personenkraftwagen",
+		"file": "257-55_Verbot_fuer_Personenkraftwagen.svg"
+	},
+	{
+		"id": "259_Verbot_fuer_Fussgaenger",
+		"file": "259_Verbot_fuer_Fussgaenger.svg"
+	},
+	{
+		"id": "328_Nothalte-_und_Pannenbucht",
+		"file": "328_Nothalte-_und_Pannenbucht.svg"
+	},
+	{
+		"id": "255_Verbot_fuer_Kraftraeder_und_Mofas",
+		"file": "255_Verbot_fuer_Kraftraeder_und_Mofas.svg"
+	},
+	{
+		"id": "260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge",
+		"file": "260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge.svg"
 	}
 ]

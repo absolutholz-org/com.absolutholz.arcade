@@ -10,6 +10,7 @@ export const GameCardSymbol = styled.button`
 	justify-content: center;
 	padding: min(5%, var(--space-xs));
 	position: relative;
+	width: 100%;
 `;
 
 export const GameCardSymbol_Symbol = styled.img`
