@@ -7,7 +7,7 @@ import { SymbolFilterGridProps } from './_SymbolFilterGrid.annotations';
 import * as S from './_SymbolFilterGrid.styled';
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
 
-import { default as ALL_SYMBOLS } from '../../../../configs/germany/symbols.json';
+import { default as ALL_SYMBOLS } from '../../../../configs/germany-road-signs/symbols.json';
 import { SymbolPresets } from '../SymbolPresets';
 
 export function SymbolFilterGrid({
@@ -51,9 +51,7 @@ export function SymbolFilterGrid({
 
 			<Stack tag='fieldset' direction='column' spaceLevelY='m'>
 				<legend>
-					<Typography as='div' level={0}>
-						Custom selection
-					</Typography>
+					<Typography as='div'>Custom selection</Typography>
 				</legend>
 
 				<S.SymbolFilterGrid_List>
@@ -72,7 +70,7 @@ export function SymbolFilterGrid({
 								alt={id}
 								height={50}
 								loading='lazy'
-								src={`${IMAGE_DIRECTORY}germany/${file}`}
+								src={`${IMAGE_DIRECTORY}germany-road-signs/${file}`}
 								width={50}
 							/>
 						</S.SymbolFilterGrid_Label>

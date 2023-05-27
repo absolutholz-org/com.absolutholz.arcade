@@ -10,10 +10,8 @@ export function FourOhFourPage(): JSX.Element {
 			<PageSection>
 				<PageGridContainer>
 					<Stack spaceLevelY='m'>
-						<Typography level={2}>4oh4</Typography>
-						<Typography level={0}>
-							Well that's not right.
-						</Typography>
+						<Typography size='xl'>4oh4</Typography>
+						<Typography>Well that's not right.</Typography>
 					</Stack>
 				</PageGridContainer>
 			</PageSection>

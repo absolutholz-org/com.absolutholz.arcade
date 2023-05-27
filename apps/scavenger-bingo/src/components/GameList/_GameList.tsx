@@ -26,7 +26,7 @@ export function GameList() {
 								<time dateTime={updatedOn}>
 									{new Date(updatedOn).toLocaleDateString()}
 								</time>
-								<Typography level={-1}>{gameId}</Typography>
+								<Typography size='xs'>{gameId}</Typography>
 							</div>
 							<Stack
 								direction='row'

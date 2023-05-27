@@ -12,7 +12,7 @@ export function FreeSpace({
 }: FreeSpaceProps): JSX.Element {
 	return (
 		<fieldset>
-			<Typography as='legend' level={1}>
+			<Typography as='legend' size='l'>
 				Free space
 			</Typography>
 

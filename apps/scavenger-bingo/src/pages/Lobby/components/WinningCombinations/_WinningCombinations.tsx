@@ -12,7 +12,7 @@ export function WinningCombinations({
 }: WinningCombinationsProps): JSX.Element {
 	return (
 		<fieldset>
-			<Typography as='legend' level={1}>
+			<Typography as='legend' size='l'>
 				Winning combinations
 			</Typography>
 
@@ -25,9 +25,7 @@ export function WinningCombinations({
 							onChange={onChange}
 							value={combo}
 						/>
-						<Typography as='span' level={0}>
-							{combo}
-						</Typography>
+						<Typography as='span'>{combo}</Typography>
 					</label>
 				))}
 			</Stack>

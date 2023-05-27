@@ -42,6 +42,8 @@ export function Button({
 
 	return (
 		<S._Button
+			as='button'
+			// @ts-ignore
 			disabled={disabled}
 			onClick={onClick}
 			outlined={variant === 'outlined'}

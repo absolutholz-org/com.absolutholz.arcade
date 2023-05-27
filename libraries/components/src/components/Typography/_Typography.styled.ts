@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 import { typography } from './_Typography';
-import { TypographyProps } from './_Typography.types';
+import type { TypographyProps } from './_Typography.annotations';
 
 export const Typography = styled.div<TypographyProps>`
-	${({ level = 0 }) => typography(level)};
+	${({ size = 'm' }) => typography(size)};
 `;

@@ -78,66 +78,66 @@ export function Lobby(): JSX.Element {
 		<SiteTemplate pageTitle={'Scavenger Bingo Lobby'}>
 			<PageSection>
 				<PageGridContainer>
-					<Stack spaceLevelY='m'>
-						<Typography level={2}>Config</Typography>
-
-						<StickyFormFooter_Form onSubmit={handleSubmit}>
-							<Stack spaceLevelY='s'>
-								<WinningCombinations
-									selection={
-										gamePlayConfig.winningCombinations
-									}
-									onChange={handleComboChange}
-								/>
-								<FreeSpace
-									selection={gamePlayConfig.freeSpacePosition}
-									onChange={handleFreeSpaceChange}
-								/>
-
-								<Stack
-									tag='fieldset'
-									direction='column'
-									spaceLevelY='m'>
-									<legend>
-										<Typography as='div' level={1}>
-											Symbols
-										</Typography>
-									</legend>
-
-									<SymbolFilterGrid
-										onSymbolSelectionChange={
-											handleSymbolSelectionChange
-										}
-									/>
-								</Stack>
-
-								<StickyFormFooter>
-									<Stack spaceLevelY='2xs'>
-										<Typography as='div' level={-1}>
-											{gamePlayConfig.symbolIds.length}{' '}
-											symbols selected
-										</Typography>
-
-										<Button
-											disabled={
-												gamePlayConfig.symbolIds
-													.length < 25 ||
-												gamePlayConfig
-													.winningCombinations
-													.length === 0
-											}
-											size='l'
-											type='submit'
-											variant='contained'>
-											Play
-										</Button>
-									</Stack>
-								</StickyFormFooter>
-							</Stack>
-						</StickyFormFooter_Form>
-					</Stack>
+					<Typography size='xl'>Config</Typography>
 				</PageGridContainer>
 			</PageSection>
+
+			<StickyFormFooter_Form onSubmit={handleSubmit}>
+				<PageSection>
+					<PageGridContainer>
+						<Stack spaceLevelY='s'>
+							<WinningCombinations
+								selection={gamePlayConfig.winningCombinations}
+								onChange={handleComboChange}
+							/>
+
+							<FreeSpace
+								selection={gamePlayConfig.freeSpacePosition}
+								onChange={handleFreeSpaceChange}
+							/>
+
+							<Stack
+								tag='fieldset'
+								direction='column'
+								spaceLevelY='m'>
+								<legend>
+									<Typography as='div' size='l'>
+										Symbols
+									</Typography>
+								</legend>
+
+								<SymbolFilterGrid
+									onSymbolSelectionChange={
+										handleSymbolSelectionChange
+									}
+								/>
+							</Stack>
+
+							<StickyFormFooter>
+								<Stack spaceLevelY='2xs'>
+									<Typography as='div' level={-1}>
+										{gamePlayConfig.symbolIds.length}{' '}
+										symbols selected
+									</Typography>
+
+									<Button
+										disabled={
+											gamePlayConfig.symbolIds.length <
+												25 ||
+											gamePlayConfig.winningCombinations
+												.length === 0
+										}
+										size='l'
+										type='submit'
+										variant='contained'>
+										Play
+									</Button>
+								</Stack>
+							</StickyFormFooter>
+						</Stack>
+					</PageGridContainer>
+				</PageSection>
+			</StickyFormFooter_Form>
 			<UnfinishedGameNotifier />
 		</SiteTemplate>
 	);

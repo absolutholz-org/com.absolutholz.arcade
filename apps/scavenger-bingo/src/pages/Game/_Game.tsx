@@ -5,7 +5,7 @@ import { SiteTemplate } from '@arcade/library-components/src/components/PageTemp
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
 import { GameBoard, GameBoard_Field } from './components/GameBoard';
 import { GameCardSymbol } from './components/GameCardSymbol';
-import translations from '../../configs/germany/translations/de.json';
+import translations from '../../configs/germany-road-signs/translations/de.json';
 import { FREE_SPACE_ID } from '../../App.constants';
 import { persistGameState, readPersistedGameState } from '../../_storage';
 import { createNewGameBoard } from '../../_createNewGameBoard';

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { PageGridContainer } from '../PageGrid/PageGridContainer';
+import { Typography } from '../Typography';
 
 export const PageHeadlineBillboard = styled.div`
 	align-items: end;
@@ -31,11 +32,8 @@ export const PageHeadlineBillboard_PageGridContainer = styled(
 	z-index: 1;
 `;
 
-export const PageHeadlineBillboard_h1 = styled.h1`
+export const PageHeadlineBillboard_h1 = styled(Typography)`
 	color: hsl(0deg 0% 100%);
-	font-size: var(--typo-size-5);
-	font-weight: 400;
-	line-height: 1.2;
 	margin: 0;
 	position: relative;
 

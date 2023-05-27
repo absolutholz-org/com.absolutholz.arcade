@@ -19,7 +19,7 @@ export function PageHeadlineBillboard({
 				sizes='100vw'
 			/>
 			<S.PageHeadlineBillboard_PageGridContainer>
-				<S.PageHeadlineBillboard_h1>
+				<S.PageHeadlineBillboard_h1 as='h1' size='xxxxl'>
 					{headlineText}
 				</S.PageHeadlineBillboard_h1>
 			</S.PageHeadlineBillboard_PageGridContainer>

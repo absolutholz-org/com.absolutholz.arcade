@@ -13,7 +13,7 @@ export function Games() {
 			<PageSection>
 				<PageGridContainer>
 					<Stack spaceLevelY='m'>
-						<Typography level={2}>Games</Typography>
+						<Typography size='xl'>Games</Typography>
 						<GameList />
 						<div>
 							<Button size='l' to='/lobby'>

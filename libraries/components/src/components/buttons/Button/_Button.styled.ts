@@ -1,8 +1,10 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ButtonSize } from './_Button.types';
 
-export const _Button = styled.button<{
+import { ButtonSize } from './_Button.types';
+import { Typography } from '../../Typography';
+
+export const _Button = styled(Typography)<{
 	outlined?: boolean;
 	size?: ButtonSize;
 }>`

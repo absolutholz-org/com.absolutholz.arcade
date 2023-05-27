@@ -1,6 +1,6 @@
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
 import { GameCardSymbolProps } from './_GameCardSymbol.types';
-import symbols from '../../../../configs/germany/symbols.json';
+import symbols from '../../../../configs/germany-road-signs/symbols.json';
 
 import * as S from './_GameCardSymbol.styled';
 import { useGameDispatch, useGameState } from '../../contexts/GameContext';
@@ -28,7 +28,7 @@ export function GameCardSymbol({
 	return (
 		<S.GameCardSymbol disabled={found} onClick={handleClick} type='button'>
 			<S.GameCardSymbol_Symbol
-				src={`${IMAGE_DIRECTORY}germany/${file}`}
+				src={`${IMAGE_DIRECTORY}germany-road-signs/${file}`}
 				alt={''}
 			/>
 			{found && <S.GameCardSymbol_FoundSymbol />}
