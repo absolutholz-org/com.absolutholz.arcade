@@ -75,6 +75,28 @@
 		"variant": true
 	},
 	{
+		"id": "103-10_Kurve_links",
+		"file": "103-10_Kurve_links.svg",
+		"tags": [
+			"danger"
+		],
+		"variant": true
+	},
+	{
+		"id": "103-20_Kurve_rechts",
+		"file": "103-20_Kurve_rechts.svg",
+		"tags": [
+			"danger"
+		]
+	},
+	{
+		"id": "120_verengte-fahrbahn",
+		"file": "120_verengte-fahrbahn.svg",
+		"tags": [
+			"danger"
+		]
+	},
+	{
 		"id": "112_unebene-fahrbahn",
 		"file": "112_unebene-fahrbahn.svg",
 		"tags": [
@@ -84,13 +106,6 @@
 	{
 		"id": "114_schleuder-rutschgefahr",
 		"file": "114_schleuder-rutschgefahr.svg",
-		"tags": [
-			"danger"
-		]
-	},
-	{
-		"id": "120_verengte-fahrbahn",
-		"file": "120_verengte-fahrbahn.svg",
 		"tags": [
 			"danger"
 		]
@@ -206,10 +221,6 @@
 		"file": "206_halt.svg"
 	},
 	{
-		"id": "208_gegenverkehr-vorrang",
-		"file": "208_gegenverkehr-vorrang.svg"
-	},
-	{
 		"id": "209_fahrtrichtung-rechts",
 		"file": "209_fahrtrichtung-rechts.svg"
 	},
@@ -256,23 +267,6 @@
 	{
 		"id": "215_kreisverkehr",
 		"file": "215_kreisverkehr.svg"
-	},
-	{
-		"id": "220-20_einbahnstrasse-rechts",
-		"file": "220-20_einbahnstrasse-rechts.svg"
-	},
-	{
-		"id": "220-10_einbahnstrasse-links",
-		"file": "220-10_einbahnstrasse-links.svg",
-		"variant": true
-	},
-	{
-		"id": "224_haltestelle",
-		"file": "224_haltestelle.svg"
-	},
-	{
-		"id": "229_taxenstand",
-		"file": "229_taxenstand.svg"
 	},
 	{
 		"id": "244.3_fahrradzone-beginn",
@@ -336,8 +330,36 @@
 		"file": "267_einfahrt-verbot.svg"
 	},
 	{
+		"id": "208_gegenverkehr-vorrang",
+		"file": "208_gegenverkehr-vorrang.svg"
+	},
+	{
 		"id": "272_wendens-verbot",
 		"file": "272_wendens-verbot.svg"
+	},
+	{
+		"id": "253_Verbot_fuer_Kraftfahrzeuge",
+		"file": "253_Verbot_fuer_Kraftfahrzeuge.svg"
+	},
+	{
+		"id": "254_Verbot_fuer_Radfahrer",
+		"file": "254_Verbot_fuer_Radfahrer.svg"
+	},
+	{
+		"id": "257-55_Verbot_fuer_Personenkraftwagen",
+		"file": "257-55_Verbot_fuer_Personenkraftwagen.svg"
+	},
+	{
+		"id": "259_Verbot_fuer_Fussgaenger",
+		"file": "259_Verbot_fuer_Fussgaenger.svg"
+	},
+	{
+		"id": "255_Verbot_fuer_Kraftraeder_und_Mofas",
+		"file": "255_Verbot_fuer_Kraftraeder_und_Mofas.svg"
+	},
+	{
+		"id": "260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge",
+		"file": "260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge.svg"
 	},
 	{
 		"id": "274-30_hoechstgeschwindigkeit-30",
@@ -412,6 +434,10 @@
 		"file": "281_ueberholverbot-kraftfahrzeuge-schwer-ende.svg"
 	},
 	{
+		"id": "229_taxenstand",
+		"file": "229_taxenstand.svg"
+	},
+	{
 		"id": "283_haltverbot-absolutes",
 		"file": "283_haltverbot-absolutes.svg"
 	},
@@ -426,6 +452,10 @@
 	{
 		"id": "290.2_zone-halteverbot-ende",
 		"file": "290.2_zone-halteverbot-ende.svg"
+	},
+	{
+		"id": "224_haltestelle",
+		"file": "224_haltestelle.svg"
 	},
 	{
 		"id": "306_vorfahrtstrasse",
@@ -499,6 +529,10 @@
 		"file": "357_sackgasse.svg"
 	},
 	{
+		"id": "328_Nothalte-_und_Pannenbucht",
+		"file": "328_Nothalte-_und_Pannenbucht.svg"
+	},
+	{
 		"id": "333_ausfahrt-autobahn",
 		"file": "333_ausfahrt-autobahn.svg",
 		"tags": [
@@ -506,11 +540,13 @@
 		]
 	},
 	{
-		"id": "333.1_ausfahrt-nicht-autobahn",
-		"file": "333.1_ausfahrt-nicht-autobahn.svg",
-		"tags": [
-			"landscape"
-		]
+		"id": "220-20_einbahnstrasse-rechts",
+		"file": "220-20_einbahnstrasse-rechts.svg"
+	},
+	{
+		"id": "220-10_einbahnstrasse-links",
+		"file": "220-10_einbahnstrasse-links.svg",
+		"variant": true
 	},
 	{
 		"id": "454-20_umleitung-rechts",
@@ -524,42 +560,5 @@
 	{
 		"id": "720_gruenpfeil",
 		"file": "720_gruenpfeil.svg"
-	},
-	{
-		"id": "103-10_Kurve_links",
-		"file": "103-10_Kurve_links.svg",
-		"variant": true
-	},
-	{
-		"id": "103-20_Kurve_rechts",
-		"file": "103-20_Kurve_rechts.svg"
-	},
-	{
-		"id": "253_Verbot_fuer_Kraftfahrzeuge",
-		"file": "253_Verbot_fuer_Kraftfahrzeuge.svg"
-	},
-	{
-		"id": "254_Verbot_fuer_Radfahrer",
-		"file": "254_Verbot_fuer_Radfahrer.svg"
-	},
-	{
-		"id": "257-55_Verbot_fuer_Personenkraftwagen",
-		"file": "257-55_Verbot_fuer_Personenkraftwagen.svg"
-	},
-	{
-		"id": "259_Verbot_fuer_Fussgaenger",
-		"file": "259_Verbot_fuer_Fussgaenger.svg"
-	},
-	{
-		"id": "328_Nothalte-_und_Pannenbucht",
-		"file": "328_Nothalte-_und_Pannenbucht.svg"
-	},
-	{
-		"id": "255_Verbot_fuer_Kraftraeder_und_Mofas",
-		"file": "255_Verbot_fuer_Kraftraeder_und_Mofas.svg"
-	},
-	{
-		"id": "260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge",
-		"file": "260_Verbot_fuer_Kraftraeder_Mofas_und_Kraftfahrzeuge.svg"
 	}
 ]
