@@ -64,7 +64,7 @@ const _baseStyles = css`
 	}
 
 	body {
-		${typography(0)};
+		${typography()};
 		margin: 0;
 		min-height: 100%;
 
