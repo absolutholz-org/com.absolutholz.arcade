@@ -2,7 +2,7 @@ import { WINNING_COMBINATIONS } from '../../App.constants';
 import type { GameConfig } from '../../App.types';
 
 export type GameStatus = 'playing' | 'gameWon' | 'gameLost';
-export type GameWinningCombinations = (typeof WINNING_COMBINATIONS)[number];
+export type GameWinningCombinations = typeof WINNING_COMBINATIONS[number];
 export type GameCardSymbolStatus = 'open' | 'closed';
 
 export type SymbolBasic = {
@@ -13,7 +13,7 @@ export type SymbolBasic = {
 export type SymbolComplete = SymbolBasic & {
 	col: number;
 	description: number;
-	filename: string;
+	file: string;
 	name: string;
 	position: string;
 	row: number;

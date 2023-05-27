@@ -34,7 +34,12 @@ export const Stack = styled.div<{
 	$spaceLevelY?: SpaceLevel;
 }>`
 	display: flex;
-	flex-flow: ${({ $direction = 'column' }) => $direction} wrap;
+	flex-direction: ${({ $direction = 'column' }) => $direction};
+	${({ $direction = 'column' }) =>
+		$direction === 'row' &&
+		css`
+			flex-wrap: wrap;
+		`}
 
 	${({ $spaceLevelX, $spaceLevelY }) =>
 		outputAppropriateGap($spaceLevelX, $spaceLevelY)}

@@ -8,6 +8,7 @@ import * as S from './_SymbolPresets.styled';
 
 import { default as PRESETS } from '../../../../configs/germany/presets.json';
 import { default as ALL_SYMBOLS } from '../../../../configs/germany/symbols.json';
+import { IMAGE_DIRECTORY } from '../../../../App.constants';
 
 export function SymbolPresets({
 	onPresetSelectionChange,
@@ -37,19 +38,22 @@ export function SymbolPresets({
 			</legend>
 
 			<S.SymbolPresets_List>
-				{PRESETS.map(({ id, symbols }) => (
-					<S.SymbolPresets_Label
-						htmlFor={`preset_${id}`}
-						key={`preset_${id}`}>
-						<S.SymbolPresets_Input
-							id={`preset_${id}`}
-							checked={selectedPreset.id === id}
-							name={`preset`}
-							onChange={() => handlePresetChange(id)}
-							type='radio'
-						/>
-						{id}
-					</S.SymbolPresets_Label>
+				{PRESETS.map(({ id, image }) => (
+					<S.SymbolPresets_Button
+						key={`preset_${id}`}
+						onClick={() => handlePresetChange(id)}
+						type='button'>
+						<S.SymbolPresets_Media>
+							<S.SymbolPresets_Image
+								alt={id}
+								height={50}
+								loading='lazy'
+								src={`${IMAGE_DIRECTORY}germany/${image.file}`}
+								width={50}
+							/>
+						</S.SymbolPresets_Media>
+						{/* <Typography level={0}>{id}</Typography> */}
+					</S.SymbolPresets_Button>
 				))}
 			</S.SymbolPresets_List>
 		</Stack>

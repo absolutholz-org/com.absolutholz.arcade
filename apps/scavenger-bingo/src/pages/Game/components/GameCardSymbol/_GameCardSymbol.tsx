@@ -12,7 +12,7 @@ export function GameCardSymbol({
 }: GameCardSymbolProps): JSX.Element {
 	const dispatch = useGameDispatch();
 	const state = useGameState();
-	const { filename } = symbols.find((symbol) => symbol.id === id)!;
+	const { file } = symbols.find((symbol) => symbol.id === id)!;
 
 	const handleClick = () => {
 		if (!found) {
@@ -28,7 +28,7 @@ export function GameCardSymbol({
 	return (
 		<S.GameCardSymbol disabled={found} onClick={handleClick} type='button'>
 			<S.GameCardSymbol_Symbol
-				src={`${IMAGE_DIRECTORY}germany/${filename}`}
+				src={`${IMAGE_DIRECTORY}germany/${file}`}
 				alt={''}
 			/>
 			{found && <S.GameCardSymbol_FoundSymbol />}

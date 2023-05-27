@@ -120,6 +120,7 @@ export const GlobalStyle = createGlobalStyle`
         border-radius: 0;
         margin: 0;
         padding: 0;
+        text-align: unset;
     }
 
     a {

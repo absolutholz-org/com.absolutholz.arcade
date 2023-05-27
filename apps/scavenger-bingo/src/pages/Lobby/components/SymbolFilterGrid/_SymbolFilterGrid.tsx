@@ -57,7 +57,7 @@ export function SymbolFilterGrid({
 				</legend>
 
 				<S.SymbolFilterGrid_List>
-					{ALL_SYMBOLS.map(({ filename, id }) => (
+					{ALL_SYMBOLS.map(({ file, id }) => (
 						<S.SymbolFilterGrid_Label
 							htmlFor={`symbol_${id}`}
 							key={`symbol_${id}`}>
@@ -72,7 +72,7 @@ export function SymbolFilterGrid({
 								alt={id}
 								height={50}
 								loading='lazy'
-								src={`${IMAGE_DIRECTORY}germany/${filename}`}
+								src={`${IMAGE_DIRECTORY}germany/${file}`}
 								width={50}
 							/>
 						</S.SymbolFilterGrid_Label>

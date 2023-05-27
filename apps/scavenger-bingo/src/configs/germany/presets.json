@@ -1,6 +1,10 @@
 [
     {
         "id": "highway-star",
+        "image": {
+            "file": "330.1_autobahn.svg",
+            "id": "330.1_autobahn"
+        },
         "symbols": [
             "101_gefahrstelle",
             "101-15_steinschlag-rechts",
@@ -24,11 +28,23 @@
             "327_tunnel",
             "330.1_autobahn",
             "330.2_autobahn-ende",
-            "333_ausfahrt-autobahn"
+            "333_ausfahrt-autobahn",
+            "205_vorfahrt-gewaehren",
+            "250_fahrzeuge-verbot",
+            "272_wendens-verbot",
+            "209-30_fahrtrichtung-geradeaus",
+            "211_fahrtrichtung-hier-rechts",
+            "211-10_fahrtrichtung-hier-links",
+            "222_vorbeifahrt-rechts",
+            "222-10_vorbeifahrt-links"
         ]
     },
     {
         "id": "my-neighborhood",
+        "image": {
+            "file": "325.1_verkehrsberuhigtes-bereich-beginn.svg",
+            "id": "325.1_verkehrsberuhigtes-bereich-beginn"
+        },
         "symbols": [
             "101-11_fussgaengerueberweg-rechts",
             "101-21_fussgaengerueberweg-links",
@@ -88,6 +104,10 @@
     },
     {
         "id": "big-city",
+        "image": {
+            "file": "274.1_zone-30-beginn.svg",
+            "id": "274.1_zone-30-beginn"
+        },
         "symbols": [
             "101_gefahrstelle",
             "101-11_fussgaengerueberweg-rechts",
@@ -158,6 +178,10 @@
     },
     {
         "id": "country-roads",
+        "image": {
+            "file": "142-10_wildwechsel-rechts.svg",
+            "id": "142-10_wildwechsel-rechts"
+        },
         "symbols": [
             "101_gefahrstelle",
             "101-15_steinschlag-rechts",

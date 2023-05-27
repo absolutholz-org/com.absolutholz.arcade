@@ -4,5 +4,5 @@ import { typography } from './_Typography';
 import { TypographyProps } from './_Typography.types';
 
 export const Typography = styled.div<TypographyProps>`
-	${({ level }) => typography(level)};
+	${({ level = 0 }) => typography(level)};
 `;
