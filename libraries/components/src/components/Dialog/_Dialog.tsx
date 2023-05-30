@@ -44,7 +44,7 @@ export function Dialog({
 	return (
 		<S.Dialog ref={ref}>
 			<S.Dialog_IconShell>
-				<S.Dialog_Icon path={icon} title='icon' />
+				{/* <S.Dialog_Icon path={icon} title='icon' /> */}
 			</S.Dialog_IconShell>
 			{children}
 		</S.Dialog>

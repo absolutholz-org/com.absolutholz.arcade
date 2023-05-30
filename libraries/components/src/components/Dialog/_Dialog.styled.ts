@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Icon } from '../Icon';
+// import { Icon } from '../Icon';
 
 const CORNER_SIZE = '3.5rem';
 const BORDER_SIZE = '6px';
@@ -75,7 +75,7 @@ export const Dialog_IconShell = styled.div`
 	transform: translate(-50%, -50%);
 `;
 
-export const Dialog_Icon = styled(Icon)`
+export const Dialog_Icon = styled.div`
 	background: var(--dialog-icon-surface);
 	border: 4px solid var(--dialog-icon-border);
 	border-radius: 50%;
