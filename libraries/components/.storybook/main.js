@@ -1,39 +1,32 @@
-const svgrPlugin = require("vite-plugin-svgr");
+/** @type { import('@storybook/react-vite').StorybookConfig } */
 
-module.exports = {
-	async viteFinal(config, { configType }) {
-		// customize the Vite config here
-		config.plugins = [
-			...config.plugins,
-			// The key was `.default() found in the comments
-			// https://blog.devgenius.io/react-vite-tailwind-css-twin-macro-storybook-svg-imports-as-react-component-6b44d5e2641
-			svgrPlugin({
-				svgrOptions: {
-					icon: true,
-				},
-			}),
-		];
+import { mergeConfig } from 'vite';
 
-		// return the customized config
-		return config;
-	},
-	stories: [
-		"../src/**/*.stories.mdx",
-		"../src/**/*.stories.@(js|jsx|ts|tsx)",
-	],
+const config = {
+	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
 	addons: [
-		"@storybook/addon-links",
-		"@storybook/addon-essentials",
-		"@storybook/addon-interactions",
-		"storybook-addon-jsx",
-		"storybook-dark-mode",
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@storybook/addon-interactions',
 	],
-	framework: "@storybook/react",
-	core: {
-		builder: "@storybook/builder-vite",
-		disableTelemetry: true,
+	framework: {
+		name: '@storybook/react-vite',
+		options: {},
 	},
-	features: {
-		storyStoreV7: false, // @storybook/client-api:clientApi.addDecorator was removed in storyStoreV7.
+	docs: {
+		autodocs: 'tag',
+	},
+	core: {
+		builder: '@storybook/builder-vite',
+	},
+	async viteFinal(config) {
+		// Merge custom configuration into the default config
+		return mergeConfig(config, {
+			// Add dependencies to pre-optimization
+			optimizeDeps: {
+				include: ['storybook-dark-mode'],
+			},
+		});
 	},
 };
+export default config;
