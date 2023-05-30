@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import { elevate, radiusCss, space, typoSizeCss } from '../../../foundations';
 import { Overlay } from '../Overlay';
