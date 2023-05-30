@@ -20,6 +20,7 @@ export const Dialog = styled.dialog`
 	padding: 5rem 2rem 2rem;
 	position: relative;
 	text-align: center;
+	width: 100%;
 
 	&::before {
 		border: inherit;
@@ -79,7 +80,7 @@ export const Dialog_Icon = styled(Icon)`
 	border: 4px solid var(--dialog-icon-border);
 	border-radius: 50%;
 	color: var(--dialog-icon-on-surface);
-	height: calc(100% - 4rem);
+	height: calc(100% - 3rem);
 	padding: 0.5rem;
-	width: calc(100% - 4rem);
+	width: calc(100% - 3rem);
 `;

@@ -1,8 +1,13 @@
-import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { mdiTrophyAward } from '@mdi/js';
 
 import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
+import { PageSection } from '@arcade/library-components/src/components/PageSection';
+import { Dialog } from '@arcade/library-components/src/components/Dialog';
+import { Typography } from '@arcade/library-components/src/components/Typography';
+
 import { GameBoard, GameBoard_Field } from './components/GameBoard';
 import { GameCardSymbol } from './components/GameCardSymbol';
 import translations from '../../configs/germany-road-signs/translations/de.json';
@@ -12,7 +17,9 @@ import { createNewGameBoard } from '../../_createNewGameBoard';
 import { GameProvider, useGameState } from './contexts/GameContext';
 import { FoundSymbol } from './components/FoundSymbol';
 import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
-import { PageSection } from '@arcade/library-components/src/components/PageSection';
+import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Stack } from '@arcade/library-components/src/components/Stack';
+import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();
@@ -48,45 +55,71 @@ export function Game(): JSX.Element {
 				...gameState,
 				board,
 			}}>
-			<_Game />
+			<_Game gameId={gameId} />
 		</GameProvider>
 	);
 }
 
-function _Game(): JSX.Element {
+function _Game({ gameId }: { gameId: string }): JSX.Element {
 	const { board, status } = useGameState();
+	const [showGameWonDialog, setShowGameWonDialog] = useState<boolean>(false);
+	const navigate = useNavigate();
+	const [, , , removeGame] = useUnfinishedGames();
+
+	function handlePlayAgainClick() {
+		removeGame(gameId);
+		navigate(`/lobby`);
+	}
 
 	useEffect(() => {
 		if (status === 'gameWon') {
-			alert('Game Won!');
+			setShowGameWonDialog(true);
 		}
 	}, [status]);
 
 	return (
-		<SiteTemplate pageTitle={'Scavenger Bingo'}>
-			<PageSection>
-				<PageGridContainer>
-					{board && (
-						<GameBoard>
-							{Object.entries(board).map(
-								([id, gameBoardField]) => (
-									<GameBoard_Field key={`bingo-card_${id}`}>
-										{gameBoardField.id !== FREE_SPACE_ID ? (
-											<GameCardSymbol
-												id={gameBoardField.id}
-												position={id}
-												found={gameBoardField.found}
-											/>
-										) : (
-											<FreeSpaceSymbol />
-										)}
-									</GameBoard_Field>
-								)
-							)}
-						</GameBoard>
-					)}
-				</PageGridContainer>
-			</PageSection>
-		</SiteTemplate>
+		<>
+			<SiteTemplate pageTitle={'Scavenger Bingo'}>
+				<PageSection>
+					<PageGridContainer>
+						{board && (
+							<GameBoard>
+								{Object.entries(board).map(
+									([id, gameBoardField]) => (
+										<GameBoard_Field
+											key={`bingo-card_${id}`}>
+											{gameBoardField.id !==
+											FREE_SPACE_ID ? (
+												<GameCardSymbol
+													id={gameBoardField.id}
+													position={id}
+													found={gameBoardField.found}
+												/>
+											) : (
+												<FreeSpaceSymbol />
+											)}
+										</GameBoard_Field>
+									)
+								)}
+							</GameBoard>
+						)}
+					</PageGridContainer>
+				</PageSection>
+			</SiteTemplate>
+			<Dialog
+				shouldShow={showGameWonDialog}
+				icon={mdiTrophyAward}
+				onClose={() => {}}>
+				<Stack spaceLevelY='l'>
+					<Typography size='xxxxl'>You win!</Typography>
+					<Button
+						variant='contained'
+						size='l'
+						onClick={handlePlayAgainClick}>
+						Play again
+					</Button>
+				</Stack>
+			</Dialog>
+		</>
 	);
 }
