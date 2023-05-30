@@ -1,2 +1,2 @@
-export type { IconSize } from './Icon.annotations';
-export * from './Icon';
+export type { IconSize } from './_Icon.types';
+export { Icon } from './_Icon.styled';
