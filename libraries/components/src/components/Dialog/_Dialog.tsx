@@ -30,7 +30,6 @@ export function Dialog({
 
 	useEffect(() => {
 		function handleDialogCancel(event: Event): void {
-			debugger;
 			event.preventDefault();
 			onClose();
 		}
