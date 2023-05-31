@@ -8,7 +8,7 @@ export const StickyFormFooter_Form = styled.form`
 export const StickyFormFooter = styled.div`
 	background-color: var(--color-surface);
 	bottom: 0;
-	padding-block: ${space('2xs')};
+	padding-block: ${space('xxs')};
 	position: sticky;
 	text-align: center;
 	width: 100%;

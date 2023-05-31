@@ -10,7 +10,7 @@ export const SymbolPresets_List = styled(ResetList)`
 `;
 
 export const SymbolPresets_Button = styled.button`
-	padding: ${space('2xs')};
+	padding: ${space('xxs')};
 `;
 
 export const SymbolPresets_Media = styled.div`
