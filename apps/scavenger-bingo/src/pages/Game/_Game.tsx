@@ -17,7 +17,7 @@ import { createNewGameBoard } from '../../_createNewGameBoard';
 import { GameProvider, useGameState } from './contexts/GameContext';
 import { FoundSymbol } from './components/FoundSymbol';
 import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
-import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 
@@ -119,9 +119,9 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 					<Button
 						variant='contained'
 						size='l'
-						onClick={handlePlayAgainClick}>
-						Play again
-					</Button>
+						onClick={handlePlayAgainClick}
+						text='Play again'
+					/>
 				</Stack>
 			</Dialog>
 		</>

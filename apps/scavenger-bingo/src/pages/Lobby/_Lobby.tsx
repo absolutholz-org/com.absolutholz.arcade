@@ -7,7 +7,7 @@ import { PageSection } from '@arcade/library-components/src/components/PageSecti
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
-import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Button } from '@arcade/library-components/src/components/Button';
 
 import { WinningCombinations } from './components/WinningCombinations';
 import { FreeSpace } from './components/FreeSpace';
@@ -129,9 +129,9 @@ export function Lobby(): JSX.Element {
 										}
 										size='l'
 										type='submit'
-										variant='contained'>
-										Play
-									</Button>
+										variant='contained'
+										text='Play'
+									/>
 								</Stack>
 							</StickyFormFooter>
 						</Stack>

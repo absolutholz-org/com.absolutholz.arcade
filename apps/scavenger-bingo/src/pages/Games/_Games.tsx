@@ -3,7 +3,7 @@ import { PageSection } from '@arcade/library-components/src/components/PageSecti
 import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
-import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Button } from '@arcade/library-components/src/components/Button';
 
 import { GameList } from '../../components/GameList';
 
@@ -16,9 +16,7 @@ export function Games() {
 						<Typography size='xl'>Games</Typography>
 						<GameList />
 						<div>
-							<Button size='l' to='/lobby'>
-								New Game
-							</Button>
+							<Button size='l' to='/lobby' text='New Game' />
 						</div>
 					</Stack>
 				</PageGridContainer>

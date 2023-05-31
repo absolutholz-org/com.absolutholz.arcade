@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ButtonGroup } from '.';
-import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Button } from '@arcade/library-components/src/components/Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

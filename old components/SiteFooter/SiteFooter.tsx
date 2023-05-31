@@ -11,7 +11,7 @@ import { ColorSchemeToggler } from '../ColorSchemeToggler';
 import { LogoTextInline } from '../logos/LogoTextInline';
 import { VisuallyHidden } from '../layout/VisuallyHidden';
 // import { useAuth } from '@arcade/library-authentication';
-import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Button } from '@arcade/library-components/src/components/Button';
 
 // const gameGroups = getGroupedGames();
 // const gamesSinglePlayer = gameGroups['single'];

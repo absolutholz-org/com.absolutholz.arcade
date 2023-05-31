@@ -9,6 +9,7 @@ import { IMAGE_DIRECTORY } from '../../../../App.constants';
 
 import { default as ALL_SYMBOLS } from '../../../../configs/germany-road-signs/symbols.json';
 import { SymbolPresets } from '../SymbolPresets';
+import { Button } from '@arcade/library-components/src/components/Button';
 
 export function SymbolFilterGrid({
 	onSymbolSelectionChange,
@@ -78,12 +79,16 @@ export function SymbolFilterGrid({
 				</S.SymbolFilterGrid_List>
 
 				<Stack direction='row' spaceLevelX='s'>
-					<button onClick={handleSelectAll} type='button'>
-						Select All
-					</button>
-					<button onClick={handleDeselectAll} type='button'>
-						Deselect All
-					</button>
+					<Button
+						onClick={handleSelectAll}
+						type='button'
+						text='Select All'
+					/>
+					<Button
+						onClick={handleDeselectAll}
+						type='button'
+						text='Deselect All'
+					/>
 				</Stack>
 			</Stack>
 		</>

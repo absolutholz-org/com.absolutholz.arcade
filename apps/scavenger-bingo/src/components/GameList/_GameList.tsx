@@ -1,4 +1,4 @@
-import { Button } from '@arcade/library-components/src/components/buttons/Button';
+import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
@@ -32,10 +32,11 @@ export function GameList() {
 								direction='row'
 								spaceLevelX='s'
 								spaceLevelY='s'>
-								<Button to={`/game/${gameId}`}>Play</Button>
-								<Button onClick={() => handleRemove(gameId)}>
-									Remove
-								</Button>
+								<Button to={`/game/${gameId}`} text='Play' />
+								<Button
+									onClick={() => handleRemove(gameId)}
+									text='Remove'
+								/>
 							</Stack>
 						</S.GameList_Row>
 					))}

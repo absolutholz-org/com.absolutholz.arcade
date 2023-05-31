@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import MuiButton from '@mui/base/Button';
 
 import { ButtonSize } from './_Button.types';
-import { Typography } from '@arcade/library-components/src/components/Typography';
 
-export const _Button = styled(Typography)<{
+export const Button = styled(MuiButton)<{
 	outlined?: boolean;
 	size?: ButtonSize;
 }>`

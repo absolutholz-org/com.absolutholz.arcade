@@ -1,55 +1,52 @@
 import { Link } from 'react-router-dom';
 
 import type { ButtonProps } from './_Button.annotations';
-
 import * as S from './_Button.styled';
 
 export function Button({
-	children,
+	size = 's',
+	variant = 'outlined',
+	icon,
+	text,
 	disabled = false,
 	href,
 	onClick,
-	size = 's',
 	to,
-	type,
-	variant = 'outlined',
+	type = 'button',
 }: ButtonProps): JSX.Element {
 	if (href) {
 		return (
-			<S._Button
+			<S.Button
 				as='a'
-				// @ts-ignore
 				href={href}
 				outlined={variant === 'outlined'}
 				size={size}>
-				{children}
-			</S._Button>
+				{text}
+			</S.Button>
 		);
 	}
 
 	if (to) {
 		return (
-			<S._Button
+			<S.Button
 				as={Link}
 				outlined={variant === 'outlined'}
 				size={size}
-				// @ts-ignore
 				to={to}>
-				{children}
-			</S._Button>
+				{text}
+			</S.Button>
 		);
 	}
 
 	return (
-		<S._Button
+		<S.Button
 			as='button'
-			// @ts-ignore
 			disabled={disabled}
 			onClick={onClick}
 			outlined={variant === 'outlined'}
 			size={size}
 			type={type}>
-			{children}
-		</S._Button>
+			{text}
+		</S.Button>
 	);
 }
