@@ -1,27 +1,38 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
+import { Dialog } from '@arcade/library-components/src/components/Dialog';
+import { Typography } from '@arcade/library-components/src/components/Typography';
+import { Stack } from '@arcade/library-components/src/components/Stack';
+import { Button } from '@arcade/library-components/src/components/Button';
 
 export function UnfinishedGameNotifier() {
 	const [games] = useUnfinishedGames();
 	const navigate = useNavigate();
 
-	useEffect(() => {
-		if (games.length > 0) {
-			const continuePlaying = confirm(
-				'You have unfinished games. Would you like to continue playing?'
-			);
-
-			if (continuePlaying) {
-				if (games.length === 1) {
-					navigate(`/game/${games[0].gameId}`);
-				} else {
-					navigate(`/games`);
-				}
-			}
+	function handleContinueGameClick() {
+		if (games.length === 1) {
+			navigate(`/game/${games[0].gameId}`);
+		} else {
+			navigate(`/games`);
 		}
-	}, []);
+	}
 
-	return <></>;
+	return (
+		<Dialog shouldShow={games.length > 0} onClose={() => {}}>
+			<Stack direction='column' spaceLevelY='m'>
+				<Typography size='m'>
+					You have unfinished games. Would you like to start a new one
+					or continue playing?
+				</Typography>
+				<Stack direction='row' spaceLevelX='m' spaceLevelY='m'>
+					<Button to='lobby' text='New Game' />
+					<Button
+						onClick={handleContinueGameClick}
+						text='Continue Game'
+					/>
+				</Stack>
+			</Stack>
+		</Dialog>
+	);
 }
