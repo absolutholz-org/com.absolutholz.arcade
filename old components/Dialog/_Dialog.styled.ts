@@ -1,37 +1,11 @@
 import styled from '@emotion/styled';
-import MuiModal from '@mui/base/Modal';
-
 import { space } from '@arcade/library-components/src/components/Space';
-
 // import { Icon } from '../Icon';
 
 const CORNER_SIZE = '3.5rem';
 const BORDER_SIZE = '6px';
 
-export const Modal = styled(MuiModal)`
-	align-items: center;
-	bottom: 0;
-	display: flex;
-	justify-content: center;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
-`;
-
-export const Modal_Backdrop = styled.div`
-	background-color: rgba(0, 0, 0, 0.5);
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: -1;
-	-webkit-tap-highlight-color: transparent;
-`;
-
-export const Dialog = styled.div`
+export const Dialog = styled.dialog`
 	--dialog-surface: white;
 	--dialog-on-surface: black;
 	--dialog-border: black;
@@ -85,7 +59,7 @@ export const Dialog = styled.div`
 `;
 
 export const DialogWithIcon = styled(Dialog)`
-	padding-top: clamp(2rem, calc(3rem + 5vw), 5.5rem);
+	padding-top: 5rem;
 `;
 
 export const Dialog_Content = styled.div`
@@ -104,34 +78,21 @@ export const Dialog_IconShell = styled.div`
 	background-repeat: no-repeat;
 	background-size: 100% 50%;
 	border-radius: 50%;
-	color: var(--dialog-icon-on-surface);
 	display: flex;
+	height: 10rem;
 	justify-content: center;
 	left: 50%;
-	padding: 2.5rem;
 	position: absolute;
 	top: 0;
 	transform: translate(-50%, -50%);
-	width: min(11rem, 33vw);
-	z-index: 0;
-
-	&::before {
-		background-color: var(--dialog-icon-surface);
-		border: 4px solid var(--dialog-icon-border);
-		border-radius: inherit;
-		content: '';
-		inset: min(1.25rem, 15%);
-		position: absolute;
-		z-index: -1;
-	}
-
-	> svg {
-		z-index: 3;
-	}
 `;
 
-export const Dialog_IconEffect = styled.div`
-	inset: 50%;
-	position: absolute;
-	z-index: 1;
+export const Dialog_Icon = styled.div`
+	background: var(--dialog-icon-surface);
+	border: 4px solid var(--dialog-icon-border);
+	border-radius: 50%;
+	color: var(--dialog-icon-on-surface);
+	height: calc(100% - 3rem);
+	padding: 0.5rem;
+	width: calc(100% - 3rem);
 `;

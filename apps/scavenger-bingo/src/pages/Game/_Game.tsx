@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import ConfettiExplosion from 'react-confetti-explosion';
 import { mdiTrophyAward } from '@mdi/js';
 
 import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
@@ -62,7 +62,7 @@ export function Game(): JSX.Element {
 
 function _Game({ gameId }: { gameId: string }): JSX.Element {
 	const { board, status } = useGameState();
-	const [showGameWonDialog, setShowGameWonDialog] = useState<boolean>(false);
+
 	const navigate = useNavigate();
 	const [, , , removeGame] = useUnfinishedGames();
 
@@ -70,12 +70,6 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 		removeGame(gameId);
 		navigate(`/lobby`);
 	}
-
-	useEffect(() => {
-		if (status === 'gameWon') {
-			setShowGameWonDialog(true);
-		}
-	}, [status]);
 
 	return (
 		<>
@@ -106,10 +100,20 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 					</PageGridContainer>
 				</PageSection>
 			</SiteTemplate>
+
 			<Dialog
-				shouldShow={showGameWonDialog}
+				shouldShow={status === 'gameWon'}
+				onClose={() => {}}
 				icon={mdiTrophyAward}
-				onClose={() => {}}>
+				iconEffect={
+					<ConfettiExplosion
+						force={0.5}
+						duration={8000}
+						particleCount={250}
+						width={1600}
+						zIndex={1}
+					/>
+				}>
 				<Stack spaceLevelY='l'>
 					<Typography size='xxxxl'>You win!</Typography>
 					<Button

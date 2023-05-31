@@ -1,6 +1,6 @@
 import { PageGridContainer } from '../PageGrid';
 import { PageSection } from '../PageSection';
-import { SiteTemplate } from '../PageTemplates/SiteTemplate';
+import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
 import { Stack } from '../Stack';
 import { Typography } from '../Typography';
 

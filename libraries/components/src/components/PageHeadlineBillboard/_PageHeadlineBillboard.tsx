@@ -1,4 +1,4 @@
-import { PageHeadlineBillboardProps } from './_PageHeadlineBillboard.types';
+import { PageHeadlineBillboardProps } from './_PageHeadlineBillboard.annotations';
 import * as S from './_PageHeadlineBillboard.styled';
 
 export function PageHeadlineBillboard({

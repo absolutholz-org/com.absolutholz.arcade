@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { ButtonSize } from './_Button.types';
-import { Typography } from '../../Typography';
+import { Typography } from '@arcade/library-components/src/components/Typography';
 
 export const _Button = styled(Typography)<{
 	outlined?: boolean;

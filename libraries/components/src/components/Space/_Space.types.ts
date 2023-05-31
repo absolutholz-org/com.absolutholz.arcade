@@ -1,10 +1,10 @@
 export type SpaceLevel =
-	| '3xs'
-	| '2xs'
+	| 'xxxs'
+	| 'xxs'
 	| 'xs'
 	| 's'
 	| 'm'
 	| 'l'
 	| 'xl'
-	| '2xl'
-	| '3xl';
+	| 'xxl'
+	| 'xxxl';

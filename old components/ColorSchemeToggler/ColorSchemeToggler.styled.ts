@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button } from '../buttons/Button';
+import { Button } from '@arcade/library-components/src/components/buttons/Button';
 import { Icon } from '../Icon';
 
 export const ColorSchemeToggler = styled(Button)`
