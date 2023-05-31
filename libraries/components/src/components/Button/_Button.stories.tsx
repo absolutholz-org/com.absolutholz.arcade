@@ -18,7 +18,6 @@ export const _ButtonOutlinedSmall_: Story = {
 		text: 'Lorem ipsum dolor',
 		size: 's',
 		variant: 'outlined',
-		href: '/',
 	},
 };
 
@@ -36,7 +35,7 @@ export const _ButtonContainedSmall_: Story = {
 		text: 'Lorem ipsum dolor',
 		size: 's',
 		variant: 'contained',
-		href: '/',
+		to: '/',
 	},
 };
 
@@ -45,6 +44,5 @@ export const _ButtonContainedLarge_: Story = {
 		text: 'Lorem ipsum dolor',
 		size: 'l',
 		variant: 'contained',
-		href: '/',
 	},
 };

@@ -18,6 +18,7 @@ export function Button({
 		return (
 			<S.Button
 				as='a'
+				// @ts-ignore
 				href={href}
 				outlined={variant === 'outlined'}
 				size={size}>
@@ -27,11 +28,13 @@ export function Button({
 	}
 
 	if (to) {
+		console.log({ to });
 		return (
 			<S.Button
 				as={Link}
 				outlined={variant === 'outlined'}
 				size={size}
+				// @ts-ignore
 				to={to}>
 				{text}
 			</S.Button>

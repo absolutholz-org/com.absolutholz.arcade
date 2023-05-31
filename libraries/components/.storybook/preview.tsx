@@ -1,5 +1,6 @@
 import React from 'react';
 import { Preview } from '@storybook/react';
+import { MemoryRouter } from 'react-router-dom';
 
 import { BaseStyles } from '../src/styles/BaseStyles';
 
@@ -15,10 +16,10 @@ const preview: Preview = {
 	},
 	decorators: [
 		(Story) => (
-			<>
+			<MemoryRouter>
 				<BaseStyles />
 				<Story />
-			</>
+			</MemoryRouter>
 		),
 	],
 };

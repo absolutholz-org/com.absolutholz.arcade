@@ -4,7 +4,7 @@ import MuiButton from '@mui/base/Button';
 
 import { ButtonSize } from './_Button.types';
 
-export const Button = styled(MuiButton)<{
+export const Button = styled.button<{
 	outlined?: boolean;
 	size?: ButtonSize;
 }>`
