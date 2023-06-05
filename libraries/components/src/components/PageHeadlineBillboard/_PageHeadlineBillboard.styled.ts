@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 import { PageGridContainer } from '../PageGrid/PageGridContainer';
 import { Typography } from '../Typography';
+import { space } from '../Space';
 
 export const PageHeadlineBillboard = styled.div`
 	align-items: end;
@@ -12,10 +13,9 @@ export const PageHeadlineBillboard = styled.div`
 
 export const PageHeadlineBillboard_img = styled.img`
 	height: 100%;
-	left: 0;
+	inset: 0;
 	object-fit: cover;
 	position: absolute;
-	top: 0;
 	width: 100%;
 
 	@media (prefers-color-scheme: dark) {
@@ -26,7 +26,7 @@ export const PageHeadlineBillboard_img = styled.img`
 export const PageHeadlineBillboard_PageGridContainer = styled(
 	PageGridContainer
 )`
-	padding-block: var(--space-2xl);
+	padding-block: ${space('xxl')};
 	position: relative;
 	width: 100%;
 	z-index: 1;

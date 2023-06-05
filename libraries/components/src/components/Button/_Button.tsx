@@ -14,13 +14,15 @@ export function Button({
 	to,
 	type = 'button',
 }: ButtonProps): JSX.Element {
+	const outlined: boolean = variant === 'outlined';
+
 	if (href) {
 		return (
 			<S.Button
 				as='a'
 				// @ts-ignore
 				href={href}
-				outlined={variant === 'outlined'}
+				outlined={outlined}
 				size={size}>
 				{text}
 			</S.Button>
@@ -28,11 +30,10 @@ export function Button({
 	}
 
 	if (to) {
-		console.log({ to });
 		return (
 			<S.Button
 				as={Link}
-				outlined={variant === 'outlined'}
+				outlined={outlined}
 				size={size}
 				// @ts-ignore
 				to={to}>
@@ -46,7 +47,7 @@ export function Button({
 			as='button'
 			disabled={disabled}
 			onClick={onClick}
-			outlined={variant === 'outlined'}
+			outlined={outlined}
 			size={size}
 			type={type}>
 			{text}
