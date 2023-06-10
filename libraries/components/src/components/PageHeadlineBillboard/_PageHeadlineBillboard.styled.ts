@@ -6,9 +6,14 @@ import { space } from '../Space';
 
 export const PageHeadlineBillboard = styled.div`
 	align-items: end;
+	aspect-ratio: 16 / 9;
 	display: flex;
-	min-height: 500px;
 	position: relative;
+
+	@media screen and (min-width: 800px) {
+		aspect-ratio: auto;
+		min-height: 25rem;
+	}
 `;
 
 export const PageHeadlineBillboard_img = styled.img`
@@ -33,7 +38,7 @@ export const PageHeadlineBillboard_PageGridContainer = styled(
 `;
 
 export const PageHeadlineBillboard_h1 = styled(Typography)`
-	color: hsl(0deg 0% 100%);
+	color: hsl(0 0% 100%);
 	margin: 0;
 	position: relative;
 
