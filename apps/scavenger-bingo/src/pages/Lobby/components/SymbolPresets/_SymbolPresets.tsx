@@ -32,7 +32,9 @@ export function SymbolPresets({
 	return (
 		<Stack tag='fieldset' direction='column' spaceLevelY='m'>
 			<legend>
-				<Typography as='div'>Preset Selections</Typography>
+				<Typography size='l' as='div'>
+					Preset Selections
+				</Typography>
 			</legend>
 
 			<S.SymbolPresets_List>

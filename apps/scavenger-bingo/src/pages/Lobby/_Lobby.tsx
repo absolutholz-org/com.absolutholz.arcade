@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
@@ -13,28 +13,25 @@ import { WinningCombinations } from './components/WinningCombinations';
 import { FreeSpace } from './components/FreeSpace';
 import type { FreeSpacePosition, WinningCombination } from '../../App.types';
 import { DEFAULT_PARAMETERS } from '../../App.constants';
-import { createGame, persistGameState, readGames } from '../../_storage';
 import { SymbolFilterGrid } from './components/SymbolFilterGrid/_SymbolFilterGrid';
-import { GameList } from '../../components/GameList';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
-import { UnfinishedGameNotifier } from '../../components/UnfinishedGameNotifier';
 import {
 	StickyFormFooter,
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
 import { SymbolPresets } from './components/SymbolPresets';
+import { Banner } from './components/Banner';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
 	const navigate = useNavigate();
-	const [gamePlayConfig, setGamePlayConfig] =
-		useState<{
-			freeSpacePosition: FreeSpacePosition;
-			size: number;
-			winningCombinations: WinningCombination[];
-			symbolIds: string[];
-		}>(DEFAULT_PARAMETERS);
-	const [, addGame] = useUnfinishedGames();
+	const [gamePlayConfig, setGamePlayConfig] = useState<{
+		freeSpacePosition: FreeSpacePosition;
+		size: number;
+		winningCombinations: WinningCombination[];
+		symbolIds: string[];
+	}>(DEFAULT_PARAMETERS);
+	const [games, addGame] = useUnfinishedGames();
 
 	function handleComboChange(event: ChangeEvent<HTMLInputElement>) {
 		setGamePlayConfig((gamePlayConfig) => {
@@ -78,13 +75,41 @@ export function Lobby(): JSX.Element {
 		<SiteTemplate pageTitle={'Scavenger Bingo Lobby'}>
 			<PageSection>
 				<PageGridContainer>
-					<Typography size='xl'>Config</Typography>
+					<Typography size='xxl' as='h1'>
+						Lobby
+					</Typography>
+					<p>
+						Choose how you would like to play. Select the general
+						game settings that determine how the game is played and
+						won and the symbols that you are looking for.
+					</p>
+				</PageGridContainer>
+			</PageSection>
+
+			<PageSection omitTopSpacing>
+				<PageGridContainer>
+					{games.length > 1 && (
+						<Banner>
+							<Stack>
+								<p>
+									You have unfinished games. Why not finish or
+									end them.
+								</p>
+								<div>
+									<Button to='/games' text='See Games' />
+								</div>
+							</Stack>
+						</Banner>
+					)}
 				</PageGridContainer>
 			</PageSection>
 
 			<StickyFormFooter_Form onSubmit={handleSubmit}>
-				<PageSection>
+				<PageSection omitTopSpacing>
 					<PageGridContainer>
+						<Typography size='xl' as='h1'>
+							Config
+						</Typography>
 						<Stack spaceLevelY='s'>
 							<WinningCombinations
 								selection={gamePlayConfig.winningCombinations}
@@ -101,7 +126,7 @@ export function Lobby(): JSX.Element {
 								direction='column'
 								spaceLevelY='m'>
 								<legend>
-									<Typography as='div' size='l'>
+									<Typography as='div' size='xl'>
 										Symbols
 									</Typography>
 								</legend>
@@ -138,7 +163,7 @@ export function Lobby(): JSX.Element {
 					</PageGridContainer>
 				</PageSection>
 			</StickyFormFooter_Form>
-			<UnfinishedGameNotifier />
+			{/* <UnfinishedGameNotifier /> */}
 		</SiteTemplate>
 	);
 }

@@ -52,7 +52,9 @@ export function SymbolFilterGrid({
 
 			<Stack tag='fieldset' direction='column' spaceLevelY='m'>
 				<legend>
-					<Typography as='div'>Custom selection</Typography>
+					<Typography size='l' as='div'>
+						Custom selection
+					</Typography>
 				</legend>
 
 				<S.SymbolFilterGrid_List>
