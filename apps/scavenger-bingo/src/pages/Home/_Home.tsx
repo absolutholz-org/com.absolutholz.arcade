@@ -22,7 +22,7 @@ export function Home(): JSX.Element {
 					</p>
 					<Button
 						size='l'
-						to='lobby'
+						to='/lobby'
 						variant='contained'
 						text='Play Scavenger Bingo'
 					/>

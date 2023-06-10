@@ -26,7 +26,7 @@ export function UnfinishedGameNotifier() {
 					or continue playing?
 				</Typography>
 				<Stack direction='row' spaceLevelX='m' spaceLevelY='m'>
-					<Button to='lobby' text='New Game' />
+					<Button to='/lobby' text='New Game' />
 					<Button
 						onClick={handleContinueGameClick}
 						text='Continue Game'
