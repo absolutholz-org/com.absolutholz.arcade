@@ -26,5 +26,6 @@ export const GameCardSymbol_FoundSymbol = styled(FoundSymbol)`
 	padding: 1rem;
 	pointer-events: none;
 	position: absolute;
-	width: max(70%, 15vw);
+	/* width: max(70%, 15vw); */
+	width: 100%;
 `;
