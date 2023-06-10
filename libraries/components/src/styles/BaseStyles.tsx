@@ -4,6 +4,7 @@ import { pageGridCss } from '../components/PageGrid';
 import { spaceCss } from '../components/Space/_Space.styles';
 import { typographyCss } from '../components/Typography';
 import { typography } from '../components/Typography/_Typography';
+import { themeCss } from '../components/Theme';
 
 /**
  * @link https://www.joshwcomeau.com/css/custom-css-reset/
@@ -27,27 +28,7 @@ const _baseStyles = css`
 		/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles */
 		color-scheme: light dark;
 
-		--color-surface: hsl(0 0% 100%);
-		--color-surface-contrast: hsl(0 0% 10.2%);
-		--color-accent: hsl(30 100% 48%);
-		--color-accent-contrast: hsl(0 0% 100%);
-
-		&[data-color-scheme='dark'] {
-			--color-surface: hsl(0 0% 10.2%);
-			--color-surface-contrast: hsl(0 0% 100%);
-			--color-accent: hsl(30 100% 48%);
-			--color-accent-contrast: hsl(0 0% 100%);
-		}
-
-		@media (prefers-color-scheme: dark) {
-			&:not([data-color-scheme='light']) {
-				--color-surface: hsl(0 0% 10.2%);
-				--color-surface-contrast: hsl(0 0% 100%);
-				--color-accent: hsl(30 100% 48%);
-				--color-accent-contrast: hsl(0 0% 100%);
-			}
-		}
-
+		${themeCss('default')}
 		${typographyCss}
 		${spaceCss}
 		${pageGridCss}
@@ -159,6 +140,10 @@ const _baseStyles = css`
 	h4,
 	h5 {
 		max-width: 70ch;
+	}
+
+	a {
+		color: var(--color-accent);
 	}
 `;
 
