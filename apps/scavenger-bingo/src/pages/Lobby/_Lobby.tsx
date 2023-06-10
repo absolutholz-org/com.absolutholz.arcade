@@ -88,12 +88,12 @@ export function Lobby(): JSX.Element {
 
 			<PageSection omitTopSpacing>
 				<PageGridContainer>
-					{games.length > 1 && (
+					{games.length > 0 && (
 						<Banner>
 							<Stack>
 								<p>
-									You have unfinished games. Why not finish or
-									end them.
+									You have unfinished games. Why not keep
+									playing them.
 								</p>
 								<div>
 									<Button to='/games' text='See Games' />
