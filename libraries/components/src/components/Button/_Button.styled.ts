@@ -1,13 +1,19 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import MuiButton from '@mui/base/Button';
 
 import { ButtonSize } from './_Button.types';
+import { color } from '../Theme';
+import { typography } from '../Typography';
+import { space } from '../Space';
 
 export const Button = styled.button<{
 	outlined?: boolean;
 	size?: ButtonSize;
 }>`
+	${({ size = 's' }) => typography(size === 's' ? 's' : 'm')};
+	height: ${({ size = 's' }) => (size === 's' ? '2.25rem' : '3rem')};
+	padding-inline: ${({ size = 's' }) => space(size === 's' ? 's' : 'm')};
+
 	align-items: center;
 	border: 4px solid transparent;
 	border-radius: 13px / 50%;
@@ -18,19 +24,15 @@ export const Button = styled.button<{
 	padding-bottom: 0.125em;
 	text-decoration: none;
 
-	font-size: ${({ size = 's' }) => (size === 's' ? '1.125rem' : '1.5rem')};
-	height: ${({ size = 's' }) => (size === 's' ? '2.25rem' : '3rem')};
-	padding-inline: ${({ size = 's' }) => (size === 's' ? '1rem' : '2rem')};
-
 	${({ outlined = true }) =>
 		outlined
 			? css`
-					border-color: var(--color-accent);
-					color: var(--color-surface-contrast);
+					border-color: var(--button-surface, ${color('accent')});
+					color: var(--button-surface-on, ${color('accent-on')});
 			  `
 			: css`
-					background-color: var(--color-accent);
-					color: var(--color-accent-contrast);
+					background-color: var(--button-surface, ${color('accent')});
+					color: var(--button-surface-on, ${color('accent-on')});
 			  `}
 
 	&:disabled {
