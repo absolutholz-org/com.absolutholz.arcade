@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
  */
 export const typographyCss = css`
 	--typo-size-xs: clamp(0.7rem, calc(0.81rem + -0.13vw), 0.78rem);
-	--typo-size--s: clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem);
+	--typo-size-s: clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem);
 	--typo-size-m: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
 	--typo-size-l: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
 	--typo-size-xl: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
