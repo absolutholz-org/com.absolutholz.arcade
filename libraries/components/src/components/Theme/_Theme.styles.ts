@@ -51,7 +51,10 @@ function theme(themeSet: Record<'light' | 'dark', ThemeScheme>): {
 }
 
 export function themeCss(themeSetId = 'default'): SerializedStyles {
-	const themeSet = themeConfig.themes.find(({ id }) => id === themeSetId);
+	const themeSet =
+		themeConfig.themes.find(({ id }) => id === themeSetId) ?? [];
+
+	// @ts-ignore
 	const { light, dark } = theme(themeSet);
 
 	return css`
