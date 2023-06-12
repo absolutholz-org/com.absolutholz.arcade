@@ -74,95 +74,97 @@ export function Lobby(): JSX.Element {
 	return (
 		<SiteTemplate pageTitle={'Scavenger Bingo Lobby'}>
 			<PageSection>
-				<PageGridContainer>
-					<Typography size='xxl' as='h1'>
-						Lobby
-					</Typography>
-					<p>
-						Choose how you would like to play. Select the general
-						game settings that determine how the game is played and
-						won and the symbols that you are looking for.
-					</p>
-				</PageGridContainer>
-			</PageSection>
-
-			<PageSection omitTopSpacing>
-				<PageGridContainer>
-					{games.length > 0 && (
-						<Banner>
-							<Stack>
-								<p>
-									You have unfinished games. Why not keep
-									playing them.
-								</p>
-								<div>
-									<Button to='/games' text='See Games' />
-								</div>
-							</Stack>
-						</Banner>
-					)}
-				</PageGridContainer>
-			</PageSection>
-
-			<StickyFormFooter_Form onSubmit={handleSubmit}>
-				<PageSection omitTopSpacing>
+				<Stack spaceLevelY='m'>
 					<PageGridContainer>
-						<Typography size='xl' as='h1'>
-							Config
+						<Typography size='xxl' as='h1'>
+							Lobby
 						</Typography>
-						<Stack spaceLevelY='s'>
-							<WinningCombinations
-								selection={gamePlayConfig.winningCombinations}
-								onChange={handleComboChange}
-							/>
+						<p>
+							Choose how you would like to play. Select the
+							general game settings that determine how the game is
+							played and won and the symbols that you are looking
+							for.
+						</p>
+					</PageGridContainer>
 
-							<FreeSpace
-								selection={gamePlayConfig.freeSpacePosition}
-								onChange={handleFreeSpaceChange}
-							/>
+					<PageGridContainer>
+						{games.length > 0 && (
+							<Banner>
+								<Stack spaceLevelY='s'>
+									<div>
+										You have unfinished games. Why not keep
+										playing them.
+									</div>
+									<div>
+										<Button to='/games' text='See Games' />
+									</div>
+								</Stack>
+							</Banner>
+						)}
+					</PageGridContainer>
 
-							<Stack
-								tag='fieldset'
-								direction='column'
-								spaceLevelY='m'>
-								<legend>
-									<Typography as='div' size='xl'>
-										Symbols
-									</Typography>
-								</legend>
-
-								<SymbolFilterGrid
-									onSymbolSelectionChange={
-										handleSymbolSelectionChange
+					<StickyFormFooter_Form onSubmit={handleSubmit}>
+						<PageGridContainer>
+							<Typography size='xl' as='h1'>
+								Config
+							</Typography>
+							<Stack spaceLevelY='s'>
+								<WinningCombinations
+									selection={
+										gamePlayConfig.winningCombinations
 									}
+									onChange={handleComboChange}
 								/>
-							</Stack>
 
-							<StickyFormFooter>
-								<Stack spaceLevelY='xxs'>
-									<Typography as='div' size='s'>
-										{gamePlayConfig.symbolIds.length}{' '}
-										symbols selected
-									</Typography>
+								<FreeSpace
+									selection={gamePlayConfig.freeSpacePosition}
+									onChange={handleFreeSpaceChange}
+								/>
 
-									<Button
-										disabled={
-											gamePlayConfig.symbolIds.length <
-												25 ||
-											gamePlayConfig.winningCombinations
-												.length === 0
+								<Stack
+									tag='fieldset'
+									direction='column'
+									spaceLevelY='m'>
+									<legend>
+										<Typography as='div' size='xl'>
+											Symbols
+										</Typography>
+									</legend>
+
+									<SymbolFilterGrid
+										onSymbolSelectionChange={
+											handleSymbolSelectionChange
 										}
-										size='l'
-										type='submit'
-										variant='contained'
-										text='Play'
 									/>
 								</Stack>
-							</StickyFormFooter>
-						</Stack>
-					</PageGridContainer>
-				</PageSection>
-			</StickyFormFooter_Form>
+
+								<StickyFormFooter>
+									<Stack spaceLevelY='xxs'>
+										<Typography as='div' size='s'>
+											{gamePlayConfig.symbolIds.length}{' '}
+											symbols selected
+										</Typography>
+
+										<Button
+											disabled={
+												gamePlayConfig.symbolIds
+													.length < 25 ||
+												gamePlayConfig
+													.winningCombinations
+													.length === 0
+											}
+											size='l'
+											type='submit'
+											variant='contained'
+											text='Play'
+										/>
+									</Stack>
+								</StickyFormFooter>
+							</Stack>
+						</PageGridContainer>
+					</StickyFormFooter_Form>
+				</Stack>
+			</PageSection>
 			{/* <UnfinishedGameNotifier /> */}
 		</SiteTemplate>
 	);
