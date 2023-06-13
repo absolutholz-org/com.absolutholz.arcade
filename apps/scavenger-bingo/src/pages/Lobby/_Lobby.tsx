@@ -139,7 +139,7 @@ export function Lobby(): JSX.Element {
 								</Stack>
 
 								<StickyFormFooter>
-									<Stack spaceLevelY='xxs'>
+									<Stack spaceLevelY='xxs' direction='row'>
 										<Typography as='div' size='s'>
 											{gamePlayConfig.symbolIds.length}{' '}
 											symbols selected
