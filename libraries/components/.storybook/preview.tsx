@@ -3,6 +3,7 @@ import { Preview } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import { BaseStyles } from '../src/styles/BaseStyles';
+import { SiteColorSchemeProvider } from '../src/contexts/SiteColorScheme';
 
 const preview: Preview = {
 	parameters: {
@@ -17,8 +18,10 @@ const preview: Preview = {
 	decorators: [
 		(Story) => (
 			<MemoryRouter>
-				<BaseStyles />
-				<Story />
+				<SiteColorSchemeProvider>
+					<BaseStyles />
+					<Story />
+				</SiteColorSchemeProvider>
 			</MemoryRouter>
 		),
 	],

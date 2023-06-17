@@ -8,6 +8,7 @@ const config = {
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
+		'@storybook/addon-mdx-gfm',
 	],
 	framework: {
 		name: '@storybook/react-vite',
@@ -16,9 +17,7 @@ const config = {
 	docs: {
 		autodocs: 'tag',
 	},
-	core: {
-		builder: '@storybook/builder-vite',
-	},
+	core: {},
 	async viteFinal(config) {
 		// Merge custom configuration into the default config
 		return mergeConfig(config, {
