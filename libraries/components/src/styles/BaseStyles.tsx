@@ -4,7 +4,12 @@ import { pageGridCss } from '../components/PageGrid';
 import { spaceCss } from '../components/Space/_Space.styles';
 import { typographyCss } from '../components/Typography';
 import { typography } from '../components/Typography/_Typography';
-import { themeCss } from '../components/Theme';
+import { colorSchemeCss, colorSchemesCssVars, themeCss } from '../components/Theme/theme';
+
+import theme from '../components/Theme/themes/default.theme.json';
+
+const lightCssVars = colorSchemesCssVars(theme.colors[0].light);
+const darkCssVars = colorSchemesCssVars(theme.colors[0].dark);
 
 /**
  * @link https://www.joshwcomeau.com/css/custom-css-reset/
@@ -28,10 +33,14 @@ const _baseStyles = css`
 		/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-handling-user-agent-styles */
 		color-scheme: light dark;
 
-		${themeCss('default')}
+		/* CSS vars */
+		${colorSchemeCss({lightCssVars, darkCssVars})}
 		${typographyCss}
 		${spaceCss}
 		${pageGridCss}
+
+		/* Styles */
+		${themeCss}
 	}
 
 	html {
@@ -49,7 +58,6 @@ const _baseStyles = css`
 		margin: 0;
 		min-height: 100%;
 
-		accent-color: var(--color-accent);
 	}
 
 	img {

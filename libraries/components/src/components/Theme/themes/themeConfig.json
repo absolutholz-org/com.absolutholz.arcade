@@ -3,7 +3,9 @@
         {
             "id": "default",
             "light": {
-                "surface": "hsl(0 0% 100%)",
+                "surface": [
+                    "hsl(0 0% 100%)"
+                ],
                 "onSurface": [
                     "hsl(0 0% 10%)",
                     "hsl(0 0% 15%)",
@@ -11,13 +13,17 @@
                 ],
                 "accent": [
                     {
-                        "surface": "hsl(28 89% 55%)",
+                        "surface": [
+                            "hsl(28 89% 55%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 0%)"
                         ]
                     },
                     {
-                        "surface": "hsl(279deg 65% 50%)",
+                        "surface": [
+                            "hsl(279deg 65% 50%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 100%)"
                         ]
@@ -25,7 +31,9 @@
                 ],
                 "error": [
                     {
-                        "surface": "hsl(0 68% 42%)",
+                        "surface": [
+                            "hsl(0 68% 42%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 100%)"
                         ]
@@ -33,7 +41,9 @@
                 ]
             },
             "dark": {
-                "surface": "hsl(0 0% 10%)",
+                "surface": [
+                    "hsl(0 0% 10%)"
+                ],
                 "onSurface": [
                     "hsl(0 0% 100%)",
                     "hsl(0 0% 95%)",
@@ -41,13 +51,17 @@
                 ],
                 "accent": [
                     {
-                        "surface": "hsl(28 89% 35%)",
+                        "surface": [
+                            "hsl(28 89% 35%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 100%)"
                         ]
                     },
                     {
-                        "surface": "hsl(279 65% 70%)",
+                        "surface": [
+                            "hsl(279 65% 70%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 0%)"
                         ]
@@ -55,7 +69,9 @@
                 ],
                 "error": [
                     {
-                        "surface": "hsl(0 68% 72%)",
+                        "surface": [
+                            "hsl(0 68% 72%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 0%)"
                         ]
@@ -66,7 +82,9 @@
         {
             "id": "alt",
             "light": {
-                "surface": "hsl(0 0% 80%)",
+                "surface": [
+                    "hsl(0 0% 80%)"
+                ],
                 "onSurface": [
                     "hsl(0 0% 10%)",
                     "hsl(0 0% 15%)",
@@ -74,7 +92,9 @@
                 ]
             },
             "dark": {
-                "surface": "hsl(0 0% 20%)",
+                "surface": [
+                    "hsl(0 0% 20%)"
+                ],
                 "onSurface": [
                     "hsl(0 0% 90%)",
                     "hsl(0 0% 85%)",
@@ -85,13 +105,17 @@
         {
             "id": "highlight",
             "light": {
-                "surface": "hsl(28 89% 55%)",
+                "surface": [
+                    "hsl(28 89% 55%)"
+                ],
                 "onSurface": [
                     "hsl(0 0% 0%)"
                 ],
                 "accent": [
                     {
-                        "surface": "hsl(0 0% 100%)",
+                        "surface": [
+                            "hsl(0 0% 100%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 0%)"
                         ]
@@ -99,13 +123,17 @@
                 ]
             },
             "dark": {
-                "surface": "hsl(28 89% 75%)",
+                "surface": [
+                    "hsl(28 89% 75%)"
+                ],
                 "onSurface": [
                     "hsl(0 0% 0%)"
                 ],
                 "accent": [
                     {
-                        "surface": "hsl(28 89% 55%)",
+                        "surface": [
+                            "hsl(28 89% 55%)"
+                        ],
                         "onSurface": [
                             "hsl(0 0% 0%)"
                         ]

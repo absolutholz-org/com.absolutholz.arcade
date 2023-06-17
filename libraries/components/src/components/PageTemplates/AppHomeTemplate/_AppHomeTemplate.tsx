@@ -1,19 +1,25 @@
-import { PageHeadlineBillboard } from '../../PageHeadlineBillboard';
+import { ColorSchemeToggler } from '../../ColorSchemeToggler';
+import { PageGridContainer } from '../../PageGrid/PageGridContainer';
+import { PageHeadBillboard } from '../../PageHeadBillboard';
+import { PageSection } from '../../PageSection';
 import { SiteTemplate } from '../SiteTemplate';
-import { AppHomeTemplateProps } from './_AppHomeTemplate.types';
+import type { AppHomeTemplateProps } from './_AppHomeTemplate.annotations';
 
 export function AppHomeTemplate({
-	appImage,
 	appName,
 	children,
 }: AppHomeTemplateProps): JSX.Element {
 	return (
 		<SiteTemplate pageTitle={appName}>
-			<PageHeadlineBillboard
-				backgroundImage={appImage}
-				headlineText={appName}
+			<PageHeadBillboard
+				headline={appName}
 			/>
 			{children}
+			<PageSection omitTopSpacing>
+				<PageGridContainer>
+					<ColorSchemeToggler />
+				</PageGridContainer>
+			</PageSection>
 		</SiteTemplate>
 	);
 }

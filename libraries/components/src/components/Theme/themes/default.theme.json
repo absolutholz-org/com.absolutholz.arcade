@@ -1,0 +1,141 @@
+{
+    "colors": [
+        {
+            "id": "default",
+            "light": {
+                "surface": [
+                    "white"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "orange"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ],
+                "error": [
+                    {
+                        "surface": [
+                            "firebrick"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [
+                    "black"
+                ],
+                "onSurface": [
+                    "white"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "darkorange"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ],
+                "error": [
+                    {
+                        "surface": [
+                            "firebrick"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "highlight",
+            "light": {
+                "surface": [
+                    "orange"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "DodgerBlue"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [
+                    "darkorange"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "DodgerBlue"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "highlight-alt",
+            "light": {
+                "surface": [
+                    "DodgerBlue"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "black"
+                        ],
+                        "onSurface": [
+                            "white"
+                        ]
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [
+                    "DodgerBlues"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "white"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

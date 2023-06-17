@@ -29,9 +29,9 @@ export const _Default_: Story = {
 	},
 };
 
-export const _Alt_: Story = {
+export const _Highlight_: Story = {
 	args: {
-		themeSetId: 'alt',
+		themeSetId: 'highlight',
 		children: (
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -47,9 +47,9 @@ export const _Alt_: Story = {
 	},
 };
 
-export const _Highlight_: Story = {
+export const _HighlightAlt_: Story = {
 	args: {
-		themeSetId: 'highlight',
+		themeSetId: 'highlight-alt',
 		children: (
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

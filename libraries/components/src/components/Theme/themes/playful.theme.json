@@ -1,0 +1,73 @@
+{
+    "themes": [
+        {
+            "id": "default",
+            "light": {
+                "surface": [],
+                "onSurface": [],
+                "accent": [
+                    {
+                        "surface": [],
+                        "onSurface": []
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [],
+                "onSurface": [],
+                "accent": [
+                    {
+                        "surface": [],
+                        "onSurface": []
+                    }
+                ]
+            }
+        },
+        {
+            "id": "alt",
+            "light": {
+                "surface": [],
+                "onSurface": [],
+                "accent": [
+                    {
+                        "surface": [],
+                        "onSurface": []
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [],
+                "onSurface": [],
+                "accent": [
+                    {
+                        "surface": [],
+                        "onSurface": []
+                    }
+                ]
+            }
+        },
+        {
+            "id": "highlight",
+            "light": {
+                "surface": [],
+                "onSurface": [],
+                "accent": [
+                    {
+                        "surface": [],
+                        "onSurface": []
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [],
+                "onSurface": [],
+                "accent": [
+                    {
+                        "surface": [],
+                        "onSurface": []
+                    }
+                ]
+            }
+        }
+    ]
+}

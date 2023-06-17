@@ -1,4 +1,4 @@
-import type { ColorLevel, ColorOption } from './_Color.types';
+import type { ColorLevel, ColorOption } from './_color.types';
 
 export function color(option: ColorOption, level?: ColorLevel) {
 	if (level) {
