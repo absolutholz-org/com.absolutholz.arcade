@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
+import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
 import { Stack } from '@arcade/library-components/src/components/Stack';
@@ -73,12 +74,10 @@ export function Lobby(): JSX.Element {
 
 	return (
 		<SiteTemplate pageTitle={'Scavenger Bingo Lobby'}>
+			<PageHeadBillboard headline='Lobby' headlinePrefix='Scavenger Bingo' />
 			<PageSection>
 				<Stack spaceLevelY='m'>
 					<PageGridContainer>
-						<Typography size='xxl' as='h1'>
-							Lobby
-						</Typography>
 						<p>
 							Choose how you would like to play. Select the
 							general game settings that determine how the game is
@@ -165,7 +164,6 @@ export function Lobby(): JSX.Element {
 					</StickyFormFooter_Form>
 				</Stack>
 			</PageSection>
-			{/* <UnfinishedGameNotifier /> */}
 		</SiteTemplate>
 	);
 }
