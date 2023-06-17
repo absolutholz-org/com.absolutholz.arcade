@@ -1,4 +1,4 @@
-name: Build and Deploy Apps
+name: Continuous Deployment 
 
 on:
   push:
