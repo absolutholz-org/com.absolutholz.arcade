@@ -9,6 +9,7 @@ import { space } from '../Space';
 export const Button = styled.button<{
 	outlined?: boolean;
 	size?: ButtonSize;
+	fullWidth?: boolean;
 }>`
 	${({ size = 's' }) => typography(size === 's' ? 's' : 'm')};
 	height: ${({ size = 's' }) => (size === 's' ? '2.25rem' : '3rem')};
@@ -17,12 +18,13 @@ export const Button = styled.button<{
 	align-items: center;
 	border: 4px solid transparent;
 	border-radius: 13px / 50%;
-	display: inline-flex;
+	display: ${({ fullWidth = false}) => fullWidth ? 'flex' : 'inline-flex'};
 	font-weight: bold;
 	justify-content: center;
 	line-height: 1;
 	padding-bottom: 0.125em;
 	text-decoration: none;
+	width: ${({ fullWidth = false}) => fullWidth ? '100%' : 'auto'};
 
 	${({ outlined = true }) =>
 		outlined

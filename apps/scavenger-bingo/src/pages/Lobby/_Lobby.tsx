@@ -152,6 +152,7 @@ export function Lobby(): JSX.Element {
 													.winningCombinations
 													.length === 0
 											}
+											fullWidth
 											size='l'
 											type='submit'
 											variant='contained'

@@ -7,6 +7,7 @@ type ButtonPropsBase = {
 	size?: ButtonSize;
 	text: ReactNode;
 	variant?: ButtonVariant;
+	fullWidth?: boolean;
 };
 
 type ButtonPropsAsButton = ButtonPropsBase & {

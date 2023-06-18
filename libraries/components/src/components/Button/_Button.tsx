@@ -9,6 +9,7 @@ export function Button({
 	icon,
 	text,
 	disabled = false,
+	fullWidth = false,
 	href,
 	onClick,
 	to,
@@ -20,6 +21,7 @@ export function Button({
 		return (
 			<S.Button
 				as='a'
+				fullWidth={fullWidth}
 				// @ts-ignore
 				href={href}
 				outlined={outlined}
@@ -28,11 +30,12 @@ export function Button({
 			</S.Button>
 		);
 	}
-
+	
 	if (to) {
 		return (
 			<S.Button
 				as={Link}
+				fullWidth={fullWidth}
 				outlined={outlined}
 				size={size}
 				// @ts-ignore
@@ -46,6 +49,7 @@ export function Button({
 		<S.Button
 			as='button'
 			disabled={disabled}
+			fullWidth={fullWidth}
 			onClick={onClick}
 			outlined={outlined}
 			size={size}
