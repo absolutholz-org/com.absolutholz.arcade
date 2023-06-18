@@ -20,12 +20,12 @@ export function UnfinishedGameNotifier() {
 
 	return (
 		<Dialog shouldShow={games.length > 0} onClose={() => {}}>
-			<Stack direction='column' spaceLevelY='m'>
+			<Stack direction='column' >
 				<Typography size='m'>
 					You have unfinished games. Would you like to start a new one
 					or continue playing?
 				</Typography>
-				<Stack direction='row' spaceLevelX='m' spaceLevelY='m'>
+				<Stack direction='row' spacingX='m' >
 					<Button to='/lobby' text='New Game' />
 					<Button
 						onClick={handleContinueGameClick}

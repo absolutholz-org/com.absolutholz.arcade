@@ -30,7 +30,7 @@ export function SymbolPresets({
 	}, [selectedPreset]);
 
 	return (
-		<Stack tag='fieldset' direction='column' spaceLevelY='m'>
+		<Stack tag='fieldset' direction='column' spacingY='m'>
 			<legend>
 				<Typography size='l' as='div'>
 					Preset Selections

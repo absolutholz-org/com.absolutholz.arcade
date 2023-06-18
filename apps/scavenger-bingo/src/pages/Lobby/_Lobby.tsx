@@ -76,7 +76,7 @@ export function Lobby(): JSX.Element {
 		<PageWithFooterTemplate pageTitle='Scavenger Bingo Lobby'>
 			<PageHeadBillboard headline='Lobby' headlinePrefix='Scavenger Bingo' />
 			<PageSection>
-				<Stack spaceLevelY='m'>
+				<Stack spacingY='m'>
 					<PageGridContainer>
 						<p>
 							Choose how you would like to play. Select the
@@ -89,7 +89,7 @@ export function Lobby(): JSX.Element {
 					<PageGridContainer>
 						{games.length > 0 && (
 							<Banner>
-								<Stack spaceLevelY='s'>
+								<Stack >
 									<div>
 										You have unfinished games. Why not keep
 										playing them.
@@ -107,7 +107,7 @@ export function Lobby(): JSX.Element {
 							<Typography size='xl'>
 								Config
 							</Typography>
-							<Stack spaceLevelY='m'>
+							<Stack spacingY='m'>
 								<WinningCombinations
 									selection={
 										gamePlayConfig.winningCombinations
@@ -123,7 +123,7 @@ export function Lobby(): JSX.Element {
 								<Stack
 									tag='fieldset'
 									direction='column'
-									spaceLevelY='s'>
+									>
 									<legend>
 										<Typography as='div' size='xl'>
 											Symbols
@@ -138,7 +138,7 @@ export function Lobby(): JSX.Element {
 								</Stack>
 
 								<StickyFormFooter>
-									<Stack spaceLevelY='xxs' direction='row'>
+									<Stack spacingY='xxs' direction='row'>
 										<Typography as='div' size='s'>
 											{gamePlayConfig.symbolIds.length}{' '}
 											symbols selected

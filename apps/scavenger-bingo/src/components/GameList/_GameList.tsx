@@ -15,13 +15,13 @@ export function GameList() {
 	return (
 		<>
 			{games.length > 0 ? (
-				<Stack shouldResetList spaceLevelY='m' tag='ol'>
+				<Stack shouldResetList spacingY='m' tag='ol'>
 					{games.map(({ gameId, updatedOn }) => (
 						<S.GameList_Row
 							direction='row'
 							key={`game_${gameId}`}
-							spaceLevelX='s'
-							spaceLevelY='xs'>
+							spacingX='s'
+							spacingY='xs'>
 							<div>
 								<time dateTime={updatedOn}>
 									{new Date(updatedOn).toLocaleDateString()}
@@ -30,8 +30,8 @@ export function GameList() {
 							</div>
 							<Stack
 								direction='row'
-								spaceLevelX='s'
-								spaceLevelY='s'>
+								spacingX='s'
+								>
 								<Button to={`/game/${gameId}`} text='Play' />
 								<Button
 									onClick={() => handleRemove(gameId)}

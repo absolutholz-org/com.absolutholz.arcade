@@ -114,7 +114,7 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 						zIndex={1}
 					/>
 				}>
-				<Stack spaceLevelY='l'>
+				<Stack spacingY='l'>
 					<Typography size='xxxxl'>You win!</Typography>
 					<Button
 						variant='contained'

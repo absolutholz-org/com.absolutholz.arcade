@@ -1,37 +1,37 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { space } from '../Space';
 
+import { space } from '../Space';
 import type { SpaceLevel } from '../Space/_Space.types';
 import type { StackDirection } from './_Stack.types';
 
 function outputAppropriateGap(
-	spaceLevelX?: SpaceLevel,
-	spaceLevelY?: SpaceLevel
+	spacingX?: SpaceLevel,
+	spacingY?: SpaceLevel
 ) {
-	if (spaceLevelX && spaceLevelY) {
+	if (spacingX && spacingY) {
 		return css`
-			gap: ${space(spaceLevelY)} ${space(spaceLevelX)};
+			gap: ${space(spacingY)} ${space(spacingX)};
 		`;
 	}
 
-	if (spaceLevelX) {
+	if (spacingX) {
 		return css`
-			column-gap: ${space(spaceLevelX)};
+			column-gap: ${space(spacingX)};
 		`;
 	}
 
-	if (spaceLevelY) {
+	if (spacingY) {
 		return css`
-			row-gap: ${space(spaceLevelY)};
+			row-gap: ${space(spacingY)};
 		`;
 	}
 }
 
 export const Stack = styled.div<{
 	$direction?: StackDirection;
-	$spaceLevelX?: SpaceLevel;
-	$spaceLevelY?: SpaceLevel;
+	$spacingX: SpaceLevel;
+	$spacingY: SpaceLevel;
 }>`
 	display: flex;
 	flex-direction: ${({ $direction = 'column' }) => $direction};
@@ -41,6 +41,7 @@ export const Stack = styled.div<{
 			flex-wrap: wrap;
 		`}
 
-	${({ $spaceLevelX, $spaceLevelY }) =>
-		outputAppropriateGap($spaceLevelX, $spaceLevelY)}
+	${({ $spacingX, $spacingY }) => css`
+		gap: ${space($spacingY)} ${space($spacingX)};
+	`}
 `;

@@ -16,7 +16,7 @@ export function FreeSpace({
 				Free space
 			</Typography>
 
-			<Stack direction='row' spaceLevelX='s'>
+			<Stack direction='row' spacingX='s'>
 				{FREE_SPACE_POSITIONS.map((space) => (
 					<label
 						htmlFor={`free-space_${space}`}

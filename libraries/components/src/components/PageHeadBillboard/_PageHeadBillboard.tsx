@@ -10,7 +10,7 @@ export function PageHeadBillboard ({headline, headlinePrefix, headlineSuffix, ch
             <PageGridContainer>
                 <S.PageHeadBillboard_H1 size='xxxxl' as='h1'>
                     {headlinePrefix && <Typography size='l'>{headlinePrefix}</Typography>}
-                    <Stack spaceLevelY='s'>
+                    <Stack>
                         {headline}
                         {headlineSuffix && <Typography size='l'>{headlineSuffix}</Typography>}
                     </Stack>

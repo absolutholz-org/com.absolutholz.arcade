@@ -14,10 +14,10 @@ export function SiteFooter({ appName }: SiteFooterProps): JSX.Element {
 			<Theme themeSetId='highlight-alt'>
 				<S.SiteFooter>
 					<PageSection>
-						<Stack spaceLevelY='l'>
-							<Stack spaceLevelY='s' tag='nav'>
+						<Stack spacingY='l'>
+							<Stack  tag='nav'>
 								<Typography size='l'>{ appName }</Typography>
-								<Stack direction='row' shouldResetList spaceLevelX='m' spaceLevelY='xxs' tag='ul'>
+								<Stack direction='row' shouldResetList spacingX='m' spacingY='xxs' tag='ul'>
 									<Link to='/'>Home</Link>
 									<Link to='/lobby/'>New Game Lobby</Link>
 									<Link to='/games/'>Unfinished Games</Link>

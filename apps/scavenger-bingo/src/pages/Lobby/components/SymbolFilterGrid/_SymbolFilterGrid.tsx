@@ -50,7 +50,7 @@ export function SymbolFilterGrid({
 				onPresetSelectionChange={handlePresetSelectionChange}
 			/>
 
-			<Stack tag='fieldset' direction='column' spaceLevelY='m'>
+			<Stack tag='fieldset' direction='column' spacingY='m'>
 				<legend>
 					<Typography size='l' as='div'>
 						Custom selection
@@ -80,7 +80,7 @@ export function SymbolFilterGrid({
 					))}
 				</S.SymbolFilterGrid_List>
 
-				<Stack direction='row' spaceLevelX='s'>
+				<Stack direction='row' spacingX='s'>
 					<Button
 						onClick={handleSelectAll}
 						type='button'

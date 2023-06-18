@@ -16,7 +16,7 @@ export function WinningCombinations({
 				Winning combinations
 			</Typography>
 
-			<Stack direction='row' spaceLevelX='s'>
+			<Stack direction='row' spacingX='s'>
 				{WINNING_COMBINATIONS.map((combo) => (
 					<label key={`combos_${combo}`} htmlFor={`combos_${combo}`}>
 						<Checkbox

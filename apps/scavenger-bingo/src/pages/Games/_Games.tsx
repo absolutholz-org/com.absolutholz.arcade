@@ -14,7 +14,7 @@ export function Games() {
 
 			<PageSection>
 				<PageGridContainer>
-					<Stack spaceLevelY='m'>
+					<Stack spacingY='m'>
 						<GameList />
 						<div>
 							<Button size='l' to='/lobby' text='New Game' />

@@ -9,7 +9,7 @@ export function FourOhFourPage(): JSX.Element {
 		<SiteTemplate pageTitle={'Page not found'}>
 			<PageSection>
 				<PageGridContainer>
-					<Stack spaceLevelY='m'>
+					<Stack spacingY='m'>
 						<Typography size='xl'>4oh4</Typography>
 						<Typography>Well that's not right.</Typography>
 					</Stack>
