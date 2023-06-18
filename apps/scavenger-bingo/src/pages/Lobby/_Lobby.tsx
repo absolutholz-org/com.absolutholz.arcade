@@ -104,10 +104,10 @@ export function Lobby(): JSX.Element {
 
 					<StickyFormFooter_Form onSubmit={handleSubmit}>
 						<PageGridContainer>
-							<Typography size='xl' as='h1'>
+							<Typography size='xl'>
 								Config
 							</Typography>
-							<Stack spaceLevelY='s'>
+							<Stack spaceLevelY='m'>
 								<WinningCombinations
 									selection={
 										gamePlayConfig.winningCombinations
@@ -123,7 +123,7 @@ export function Lobby(): JSX.Element {
 								<Stack
 									tag='fieldset'
 									direction='column'
-									spaceLevelY='m'>
+									spaceLevelY='s'>
 									<legend>
 										<Typography as='div' size='xl'>
 											Symbols
