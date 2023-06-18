@@ -28,7 +28,7 @@ export const Button = styled.button<{
 		outlined
 			? css`
 					border-color: var(--button-surface, ${color('accent')});
-					color: var(--button-surface-on, ${color('accent-on')});
+					color: var(--button-surface-on, ${color('surface-on')});
 			  `
 			: css`
 					background-color: var(--button-surface, ${color('accent')});
