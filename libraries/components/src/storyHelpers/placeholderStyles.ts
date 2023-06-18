@@ -1,4 +1,4 @@
-import { color } from './foundations/colors/color';
+import { color } from "../components/Theme/color";
 
 export const SPACING_STYLES = {
 	backgroundImage:

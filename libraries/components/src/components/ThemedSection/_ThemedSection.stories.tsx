@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { ThemedSection } from '.';
-import { LOREM_IPSUM } from '../../loremIpsum';
 import { PageGridContainer } from '../PageGrid/PageGridContainer';
+import { LOREM_IPSUM } from '../../storyHelpers/placeholderText';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {

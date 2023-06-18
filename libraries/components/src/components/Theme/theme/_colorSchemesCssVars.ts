@@ -10,7 +10,6 @@ export function colorSchemesCssVars (colorScheme: ColorScheme): SerializedStyles
     
     const schemePairs = Object.entries(colorSchemeRest).map(([name, colorPairs]) => {
         return colorPairs.map((colorPair) => {
-            console.log({name, colorPair});
             return colorPairCssVars(name, colorPair)
         });
     });

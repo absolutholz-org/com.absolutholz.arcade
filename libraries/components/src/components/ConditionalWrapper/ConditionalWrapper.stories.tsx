@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ReactNode } from 'react';
 
 import { ConditionalWrapper } from '.';
-import { LOREM_IPSUM, LOREM_IPSUM_SENTENCE } from '../../loremIpsum';
+import { LOREM_IPSUM } from '../../storyHelpers/placeholderText';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

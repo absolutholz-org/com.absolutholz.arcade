@@ -7,7 +7,6 @@ import { PageGridContainer } from '@arcade/library-components/src/components/Pag
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
-import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
 import { Button } from '@arcade/library-components/src/components/Button';
 
 import { WinningCombinations } from './components/WinningCombinations';
@@ -22,6 +21,7 @@ import {
 } from './components/StickyFormFooter';
 import { SymbolPresets } from './components/SymbolPresets';
 import { Banner } from './components/Banner';
+import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
@@ -73,7 +73,7 @@ export function Lobby(): JSX.Element {
 	}
 
 	return (
-		<SiteTemplate pageTitle={'Scavenger Bingo Lobby'}>
+		<PageWithFooterTemplate pageTitle='Scavenger Bingo Lobby'>
 			<PageHeadBillboard headline='Lobby' headlinePrefix='Scavenger Bingo' />
 			<PageSection>
 				<Stack spaceLevelY='m'>
@@ -164,6 +164,6 @@ export function Lobby(): JSX.Element {
 					</StickyFormFooter_Form>
 				</Stack>
 			</PageSection>
-		</SiteTemplate>
+		</PageWithFooterTemplate>
 	);
 }

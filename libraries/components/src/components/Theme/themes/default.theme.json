@@ -60,6 +60,124 @@
             }
         },
         {
+            "id": "alt",
+            "light": {
+                "surface": [
+                    "#efefef"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "orange"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ],
+                "error": [
+                    {
+                        "surface": [
+                            "firebrick"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [
+                    "#1a1a1a"
+                ],
+                "onSurface": [
+                    "white"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "darkorange"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ],
+                "error": [
+                    {
+                        "surface": [
+                            "firebrick"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "alt2",
+            "light": {
+                "surface": [
+                    "#ddd"
+                ],
+                "onSurface": [
+                    "black"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "orange"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ],
+                "error": [
+                    {
+                        "surface": [
+                            "firebrick"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            },
+            "dark": {
+                "surface": [
+                    "#333"
+                ],
+                "onSurface": [
+                    "white"
+                ],
+                "accent": [
+                    {
+                        "surface": [
+                            "darkorange"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ],
+                "error": [
+                    {
+                        "surface": [
+                            "firebrick"
+                        ],
+                        "onSurface": [
+                            "black"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
             "id": "highlight",
             "light": {
                 "surface": [

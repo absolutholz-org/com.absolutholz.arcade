@@ -1,15 +1,15 @@
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
-import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
 
 import { GameList } from '../../components/GameList';
+import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 
 export function Games() {
 	return (
-		<SiteTemplate pageTitle={'Scavenger Bingo Unfinished Games'}>
+		<PageWithFooterTemplate pageTitle='Scavenger Bingo Unfinished Games'>
 			<PageHeadBillboard headline='Unfinished Games' headlinePrefix='Scavenger Bingo' />
 
 			<PageSection>
@@ -22,6 +22,6 @@ export function Games() {
 					</Stack>
 				</PageGridContainer>
 			</PageSection>
-		</SiteTemplate>
+		</PageWithFooterTemplate>
 	);
 }

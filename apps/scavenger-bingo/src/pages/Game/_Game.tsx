@@ -2,8 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ConfettiExplosion from 'react-confetti-explosion';
 import { mdiTrophyAward } from '@mdi/js';
 
-import { SiteTemplate } from '@arcade/library-components/src/components/PageTemplates/SiteTemplate';
-import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
+import { SiteTemplate } from '@arcade/library-components/src/components/templates/SiteTemplate';
+import { PageGridContainer } from '@arcade/library-components/src/components/PageGridContainer';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
 import { Dialog } from '@arcade/library-components/src/components/Dialog';
 import { Typography } from '@arcade/library-components/src/components/Typography';

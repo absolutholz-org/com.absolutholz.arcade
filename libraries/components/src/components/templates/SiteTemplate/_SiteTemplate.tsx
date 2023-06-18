@@ -1,8 +1,8 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import { BaseStyles } from '../../../styles/BaseStyles';
-import { SiteTemplateProps } from './_SiteTemplate.types';
 import { SiteColorSchemeProvider } from '../../../contexts/SiteColorScheme';
+import type { SiteTemplateProps } from './_SiteTemplate.annotations';
 
 export function SiteTemplate({ children, pageTitle }: SiteTemplateProps) {
 	return (
