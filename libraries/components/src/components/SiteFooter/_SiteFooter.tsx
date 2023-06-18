@@ -11,7 +11,7 @@ import { Theme } from '../Theme';
 export function SiteFooter({ appName }: SiteFooterProps): JSX.Element {
 	return (
 		<>
-			<Theme themeSetId='alt'>
+			<Theme themeSetId='highlight-alt'>
 				<S.SiteFooter>
 					<PageSection>
 						<Stack spaceLevelY='l'>
@@ -30,7 +30,7 @@ export function SiteFooter({ appName }: SiteFooterProps): JSX.Element {
 					</PageSection>
 				</S.SiteFooter>
 			</Theme>
-			<Theme themeSetId='alt2'>
+			<Theme themeSetId='highlight'>
 				<S.SiteFooter>
 					<PageSection>
 						<a href='https://arcade.absolutholz.de/'>absolutholz Arcade</a>

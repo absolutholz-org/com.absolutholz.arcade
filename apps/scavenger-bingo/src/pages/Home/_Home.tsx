@@ -12,6 +12,14 @@ export function Home(): JSX.Element {
 		<PageWithFooterTemplate pageTitle='Scavenger Bingo'>
 			<PageHeadBillboard
 				headline='Scavenger Bingo'
+				headlineSuffix={
+					<Button
+						size='l'
+						to='/lobby'
+						variant='contained'
+						text='New Game'
+					/>
+				}
 			/>
 
 			<PageSection>

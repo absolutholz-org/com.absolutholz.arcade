@@ -189,10 +189,10 @@
                 "accent": [
                     {
                         "surface": [
-                            "DodgerBlue"
+                            "white"
                         ],
                         "onSurface": [
-                            "black"
+                            "orange"
                         ]
                     }
                 ]
@@ -207,10 +207,10 @@
                 "accent": [
                     {
                         "surface": [
-                            "DodgerBlue"
+                            "black"
                         ],
                         "onSurface": [
-                            "black"
+                            "white"
                         ]
                     }
                 ]
@@ -238,10 +238,10 @@
             },
             "dark": {
                 "surface": [
-                    "DodgerBlues"
+                    "royalblue"
                 ],
                 "onSurface": [
-                    "black"
+                    "white"
                 ],
                 "accent": [
                     {
