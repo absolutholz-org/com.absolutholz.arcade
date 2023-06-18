@@ -19,6 +19,7 @@ export function SiteTemplate({ children, pageTitle }: SiteTemplateProps) {
 						/>
 					<meta name='robots' content='noindex,nofollow' />
 					<meta name='color-scheme' content='dark light' />
+					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 				</Helmet>
 				<BaseStyles />
 				{children}
