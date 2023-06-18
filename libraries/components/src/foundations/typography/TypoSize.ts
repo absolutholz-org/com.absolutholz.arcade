@@ -1,4 +1,4 @@
-import { css, DefaultTheme, ThemedCssFunction } from 'styled-components';
+import { css } from "@emotion/react";
 
 type TypoSize = 80 | 100 | 112.5 | 125 | 150 | 200 | 300 | 400;
 

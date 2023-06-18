@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "@emotion/react";
 
 export const TypoFamily = {
 	Body: `system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif`,
