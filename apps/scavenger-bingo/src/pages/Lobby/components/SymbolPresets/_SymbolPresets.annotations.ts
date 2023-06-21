@@ -1,3 +1,3 @@
 export type SymbolPresetsProps = {
-	onPresetSelectionChange: (symbols: any) => void;
+	onPresetSelectionChange: (symbols: string[]) => void;
 };

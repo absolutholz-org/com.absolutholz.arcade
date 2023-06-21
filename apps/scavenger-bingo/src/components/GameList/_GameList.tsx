@@ -6,10 +6,10 @@ import * as S from './_GameList.styled';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 
 export function GameList() {
-	const [games, , , removeGame] = useUnfinishedGames();
+	const {games, deleteGame} = useUnfinishedGames();
 
 	function handleRemove(gameId: string) {
-		removeGame(gameId);
+		deleteGame(gameId);
 	}
 
 	return (

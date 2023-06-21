@@ -7,7 +7,7 @@ import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Button } from '@arcade/library-components/src/components/Button';
 
 export function UnfinishedGameNotifier() {
-	const [games] = useUnfinishedGames();
+	const {games} = useUnfinishedGames();
 	const navigate = useNavigate();
 
 	function handleContinueGameClick() {

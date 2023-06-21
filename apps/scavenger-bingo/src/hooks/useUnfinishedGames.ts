@@ -9,28 +9,39 @@ export type UnfinishedGame = {
 	updatedOn: string;
 };
 
+export type ExtendedGameInfo = GameState & { createdOn: string; updatedOn: string; };
+
 const STORAGE_GAMES = `${STORAGE_PREFIX}_games`;
 
 function storageName(gameId: string): string {
 	return `${STORAGE_PREFIX}_${gameId}`;
 }
 
-export function useUnfinishedGames(): [
-	UnfinishedGame[],
-	(gameId: string, state: GameState) => void,
-	(gameId: string, state: GameState) => void,
-	(gameId: string) => void
-] {
+export function useUnfinishedGames(): {
+	games: UnfinishedGame[],
+	createGame: (gameId: string, state: GameState) => void,
+	readGame: (gameId: string) => GameState | undefined,
+	updateGame: (gameId: string, state: GameState) => void,
+	deleteGame: (gameId: string) => void,
+} {
 	const [games, setGames] = useLocalStorage<UnfinishedGame[]>(
 		STORAGE_GAMES,
 		[]
 	);
 
-	const readGame = (gameId: string) => {
-		return games.find((game) => game.gameId === gameId);
+	const readGame = (gameId: string): ExtendedGameInfo | undefined => {
+		const unparsedGame = localStorage.getItem(`${STORAGE_PREFIX}_${gameId}`);
+		if (!unparsedGame) return undefined;
+		const game = JSON.parse(unparsedGame || '');
+
+		const unfinishedGame = games.find((game) => game.gameId === gameId);
+		if (!unfinishedGame) return undefined;
+		const {updatedOn, createdOn} = unfinishedGame;
+		
+		return {...game, updatedOn, createdOn};
 	};
 
-	const addGame = (gameId: string, state: GameState) => {
+	const createGame = (gameId: string, state: GameState) => {
 		localStorage.setItem(storageName(gameId), JSON.stringify(state));
 		setGames((games) => {
 			return [
@@ -59,10 +70,10 @@ export function useUnfinishedGames(): [
 		);
 	};
 
-	const removeGame = (gameId: string) => {
+	const deleteGame = (gameId: string) => {
 		localStorage.removeItem(storageName(gameId));
 		setGames((games) => games.filter((game) => game.gameId !== gameId));
 	};
 
-	return [games, addGame, updateGame, removeGame];
+	return {games, createGame, readGame, updateGame, deleteGame};
 }

@@ -10,12 +10,14 @@ import { IMAGE_DIRECTORY } from '../../../../App.constants';
 import { default as ALL_SYMBOLS } from '../../../../configs/germany-road-signs/symbols.json';
 import { SymbolPresets } from '../SymbolPresets';
 import { Button } from '@arcade/library-components/src/components/Button';
+import { useGamePlayConfig } from '../../hooks/useGamePlayConfig';
 
 export function SymbolFilterGrid({
 	onSymbolSelectionChange,
 }: SymbolFilterGridProps) {
-	const [selectedSymbolIds, setSelectedSymbolIds] = useState(
-		ALL_SYMBOLS.filter(({ variant }) => !variant).map(({ id }) => id)
+	const { gamePlayConfig } = useGamePlayConfig();
+	const [selectedSymbolIds, setSelectedSymbolIds] = useState<string[]>(
+		 gamePlayConfig.symbolIds.length > 0 ? gamePlayConfig.symbolIds : ALL_SYMBOLS.filter(({ variant }) => !variant).map(({ id }) => id)
 	);
 
 	function handleSymbolChange(id: string) {

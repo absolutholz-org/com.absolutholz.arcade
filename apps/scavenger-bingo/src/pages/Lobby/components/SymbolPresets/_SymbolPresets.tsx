@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
@@ -13,21 +11,14 @@ import { IMAGE_DIRECTORY } from '../../../../App.constants';
 export function SymbolPresets({
 	onPresetSelectionChange,
 }: SymbolPresetsProps): JSX.Element {
-	const [selectedPreset, setSelectedPreset] = useState(PRESETS[0]);
-
 	function handlePresetChange(selectedPresetId: string) {
-		setSelectedPreset(
-			PRESETS.find(({ id }) => selectedPresetId === id) || PRESETS[0]
-		);
-	}
-
-	useEffect(() => {
+		const selectedPreset = PRESETS.find(({ id }) => selectedPresetId === id);
 		onPresetSelectionChange(
 			ALL_SYMBOLS.filter((symbol) =>
-				selectedPreset.symbols.includes(symbol.id)
+				selectedPreset!.symbols.includes(symbol.id)
 			).map(({ id }) => id)
 		);
-	}, [selectedPreset]);
+	}
 
 	return (
 		<Stack tag='fieldset' direction='column' spacingY='m'>

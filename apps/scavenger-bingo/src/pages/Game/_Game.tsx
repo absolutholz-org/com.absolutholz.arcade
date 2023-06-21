@@ -64,10 +64,10 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 	const { board, status } = useGameState();
 
 	const navigate = useNavigate();
-	const [, , , removeGame] = useUnfinishedGames();
+	const {deleteGame} = useUnfinishedGames();
 
 	function handlePlayAgainClick() {
-		removeGame(gameId);
+		deleteGame(gameId);
 		navigate(`/lobby`);
 	}
 

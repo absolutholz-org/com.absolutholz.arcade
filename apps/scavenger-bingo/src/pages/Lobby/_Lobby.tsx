@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
@@ -12,51 +12,39 @@ import { Button } from '@arcade/library-components/src/components/Button';
 import { WinningCombinations } from './components/WinningCombinations';
 import { FreeSpace } from './components/FreeSpace';
 import type { FreeSpacePosition, WinningCombination } from '../../App.types';
-import { DEFAULT_PARAMETERS } from '../../App.constants';
 import { SymbolFilterGrid } from './components/SymbolFilterGrid/_SymbolFilterGrid';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 import {
 	StickyFormFooter,
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
-import { SymbolPresets } from './components/SymbolPresets';
 import { Banner } from './components/Banner';
 import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
+import { useGamePlayConfig } from './hooks/useGamePlayConfig';
 // import { createNewGameBoard } from '../../_createNewGameBoard';
 
 export function Lobby(): JSX.Element {
+	const {games, createGame} = useUnfinishedGames();
+	const {gamePlayConfig, setGamePlayConfig} = useGamePlayConfig();
 	const navigate = useNavigate();
-	const [gamePlayConfig, setGamePlayConfig] = useState<{
-		freeSpacePosition: FreeSpacePosition;
-		size: number;
-		winningCombinations: WinningCombination[];
-		symbolIds: string[];
-	}>(DEFAULT_PARAMETERS);
-	const [games, addGame] = useUnfinishedGames();
 
 	function handleComboChange(event: ChangeEvent<HTMLInputElement>) {
-		setGamePlayConfig((gamePlayConfig) => {
-			const selectedCombo = event.target.value as WinningCombination;
-			const winningCombinations = event.target.checked
-				? [...gamePlayConfig.winningCombinations, selectedCombo]
-				: gamePlayConfig.winningCombinations.filter(
-						(combo) => combo !== selectedCombo
-				  );
-			return { ...gamePlayConfig, winningCombinations };
-		});
+		const selectedCombo = event.target.value as WinningCombination;
+		const winningCombinations = event.target.checked
+			? [...gamePlayConfig.winningCombinations, selectedCombo]
+			: gamePlayConfig.winningCombinations.filter(
+					(combo) => combo !== selectedCombo
+			  );
+		setGamePlayConfig({ winningCombinations });
 	}
 
 	function handleFreeSpaceChange(event: ChangeEvent<HTMLInputElement>) {
 		const freeSpacePosition = event.target.value as FreeSpacePosition;
-		setGamePlayConfig((gamePlayConfig) => {
-			return { ...gamePlayConfig, freeSpacePosition };
-		});
+		setGamePlayConfig({ freeSpacePosition });
 	}
 
-	function handleSymbolSelectionChange(symbolIds: any) {
-		setGamePlayConfig((gamePlayConfig) => {
-			return { ...gamePlayConfig, symbolIds };
-		});
+	function handleSymbolSelectionChange(symbolIds: string[]) {
+		setGamePlayConfig({ symbolIds });
 	}
 
 	function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -64,7 +52,7 @@ export function Lobby(): JSX.Element {
 
 		const gameId = nanoid(5);
 
-		addGame(gameId, {
+		createGame(gameId, {
 			id: gameId,
 			config: gamePlayConfig /* , gameBoard */,
 		});
