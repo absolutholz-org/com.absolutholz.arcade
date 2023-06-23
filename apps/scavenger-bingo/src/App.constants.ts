@@ -20,11 +20,9 @@ Object.freeze(FREE_SPACE_POSITIONS);
 
 export const FREE_SPACE_ID = 'free-space';
 
-export const DEFAULT_PARAMETERS: GameConfig = {
+export const DEFAULT_GAME_CONFIG: GameConfig = {
 	winningCombinations: ['rows', 'columns', 'diagonals', 'corners'],
 	freeSpacePosition: 'center',
 	size: 5,
 	symbolIds: [],
 };
-
-export const DEFAULT_CONFIG: GameConfig = DEFAULT_PARAMETERS;

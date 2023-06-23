@@ -3,7 +3,7 @@ import { ReactNode, createContext, useContext } from 'react';
 import { useLocalStorage } from '@arcade/library-components/src/hooks/useLocalStorage';
 
 import type { FreeSpacePosition, WinningCombination } from '../../../../App.types';
-import { DEFAULT_CONFIG, STORAGE_PREFIX } from '../../../../App.constants';
+import { DEFAULT_GAME_CONFIG, STORAGE_PREFIX } from '../../../../App.constants';
 
 type GameConfig = {
     freeSpacePosition: FreeSpacePosition;
@@ -29,7 +29,7 @@ export function ConfigProvider({
 }) {
     const [ gameConfig, storeGameConfig ] = useLocalStorage<GameConfig>(
 		STORAGE_KEY,
-		DEFAULT_CONFIG
+		DEFAULT_GAME_CONFIG
 	);
 
     function setGameConfig ({ freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) {
