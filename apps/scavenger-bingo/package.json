@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "symbols:generate:germany-license-plates": "node ./src/configs/germany-license-plates/createPlates.mjs",
+    "symbols:optimize:germany-license-plates": "svgo -f ./public/symbols/originals/germany-license-plates -o ./public/symbols/optimized/germany-license-plates"
   },
   "dependencies": {
     "@arcade/library-common": "^1.0.0",
@@ -22,5 +24,8 @@
     "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1"
+  },
+  "devDependencies": {
+    "svgo": "^3.0.2"
   }
 }
