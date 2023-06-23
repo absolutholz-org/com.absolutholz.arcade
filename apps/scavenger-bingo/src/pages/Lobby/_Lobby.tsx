@@ -1,7 +1,7 @@
-import { ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
+import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
@@ -11,7 +11,6 @@ import { Button } from '@arcade/library-components/src/components/Button';
 
 import { WinningCombinations } from './components/WinningCombinations';
 import { FreeSpace } from './components/FreeSpace';
-import type { FreeSpacePosition, WinningCombination } from '../../App.types';
 import { SymbolFilterGrid } from './components/SymbolFilterGrid/_SymbolFilterGrid';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 import {
@@ -19,33 +18,12 @@ import {
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
 import { Banner } from './components/Banner';
-import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
-import { useGamePlayConfig } from './hooks/useGamePlayConfig';
-// import { createNewGameBoard } from '../../_createNewGameBoard';
+import { ConfigProvider, useGameConfig } from './contexts/ConfigContext';
 
-export function Lobby(): JSX.Element {
-	const {games, createGame} = useUnfinishedGames();
-	const {gamePlayConfig, setGamePlayConfig} = useGamePlayConfig();
+function _Lobby(): JSX.Element {
+	const { games, createGame } = useUnfinishedGames();
+	const { gameConfig } = useGameConfig();
 	const navigate = useNavigate();
-
-	function handleComboChange(event: ChangeEvent<HTMLInputElement>) {
-		const selectedCombo = event.target.value as WinningCombination;
-		const winningCombinations = event.target.checked
-			? [...gamePlayConfig.winningCombinations, selectedCombo]
-			: gamePlayConfig.winningCombinations.filter(
-					(combo) => combo !== selectedCombo
-			  );
-		setGamePlayConfig({ winningCombinations });
-	}
-
-	function handleFreeSpaceChange(event: ChangeEvent<HTMLInputElement>) {
-		const freeSpacePosition = event.target.value as FreeSpacePosition;
-		setGamePlayConfig({ freeSpacePosition });
-	}
-
-	function handleSymbolSelectionChange(symbolIds: string[]) {
-		setGamePlayConfig({ symbolIds });
-	}
 
 	function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
@@ -54,7 +32,7 @@ export function Lobby(): JSX.Element {
 
 		createGame(gameId, {
 			id: gameId,
-			config: gamePlayConfig /* , gameBoard */,
+			config: gameConfig,
 		});
 
 		navigate(`/game/${gameId}`);
@@ -96,17 +74,9 @@ export function Lobby(): JSX.Element {
 								Config
 							</Typography>
 							<Stack spacingY='m'>
-								<WinningCombinations
-									selection={
-										gamePlayConfig.winningCombinations
-									}
-									onChange={handleComboChange}
-								/>
+								<WinningCombinations />
 
-								<FreeSpace
-									selection={gamePlayConfig.freeSpacePosition}
-									onChange={handleFreeSpaceChange}
-								/>
+								<FreeSpace />
 
 								<Stack
 									tag='fieldset'
@@ -118,25 +88,21 @@ export function Lobby(): JSX.Element {
 										</Typography>
 									</legend>
 
-									<SymbolFilterGrid
-										onSymbolSelectionChange={
-											handleSymbolSelectionChange
-										}
-									/>
+									<SymbolFilterGrid />
 								</Stack>
 
 								<StickyFormFooter>
 									<Stack spacingY='xxs' direction='row'>
 										<Typography as='div' size='s'>
-											{gamePlayConfig.symbolIds.length}{' '}
+											{gameConfig.symbolIds.length}{' '}
 											symbols selected
 										</Typography>
 
 										<Button
 											disabled={
-												gamePlayConfig.symbolIds
+												gameConfig.symbolIds
 													.length < 25 ||
-												gamePlayConfig
+												gameConfig
 													.winningCombinations
 													.length === 0
 											}
@@ -156,3 +122,13 @@ export function Lobby(): JSX.Element {
 		</PageWithFooterTemplate>
 	);
 }
+
+function LobbyProviderWrapper (): JSX.Element {
+	return (
+		<ConfigProvider>
+			<_Lobby />
+		</ConfigProvider>
+	)
+}
+
+export { LobbyProviderWrapper as Lobby };

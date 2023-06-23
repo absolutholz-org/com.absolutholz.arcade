@@ -26,3 +26,5 @@ export const DEFAULT_PARAMETERS: GameConfig = {
 	size: 5,
 	symbolIds: [],
 };
+
+export const DEFAULT_CONFIG: GameConfig = DEFAULT_PARAMETERS;

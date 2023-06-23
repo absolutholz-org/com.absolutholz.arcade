@@ -3,13 +3,20 @@ import Checkbox from '@mui/material/Checkbox';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
+import { useGameConfig } from '../../contexts/ConfigContext';
 import { WINNING_COMBINATIONS } from '../../../../App.constants';
-import type { WinningCombinationsProps } from './_WinningCombinations.types';
+import type { WinningCombination } from '../../../../App.types';
 
-export function WinningCombinations({
-	selection,
-	onChange,
-}: WinningCombinationsProps): JSX.Element {
+export function WinningCombinations(): JSX.Element {
+	const {gameConfig, setGameConfig} = useGameConfig();
+
+	function handleChange(combo: WinningCombination) {
+		const winningCombinations = gameConfig.winningCombinations.includes(combo) 
+			? gameConfig.winningCombinations.filter((winningCombination) => winningCombination != combo)
+			: [...gameConfig.winningCombinations, combo];
+		setGameConfig({ winningCombinations });
+	}
+
 	return (
 		<fieldset>
 			<Typography as='legend' size='l'>
@@ -20,9 +27,9 @@ export function WinningCombinations({
 				{WINNING_COMBINATIONS.map((combo) => (
 					<label key={`combos_${combo}`} htmlFor={`combos_${combo}`}>
 						<Checkbox
-							checked={selection.includes(combo)}
+							checked={gameConfig.winningCombinations.includes(combo)}
 							id={`combos_${combo}`}
-							onChange={onChange}
+							onChange={() => handleChange(combo)}
 							value={combo}
 						/>
 						<Typography as='span'>{combo}</Typography>

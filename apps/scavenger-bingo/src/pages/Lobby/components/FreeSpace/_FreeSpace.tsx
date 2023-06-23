@@ -3,13 +3,17 @@ import Radio from '@mui/material/Radio';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
+import { useGameConfig } from '../../contexts/ConfigContext';
 import { FREE_SPACE_POSITIONS } from '../../../../App.constants';
-import type { FreeSpaceProps } from './_FreeSpace.types';
+import type { FreeSpacePosition } from '../../../../App.types';
 
-export function FreeSpace({
-	selection,
-	onChange,
-}: FreeSpaceProps): JSX.Element {
+export function FreeSpace(): JSX.Element {
+	const {gameConfig, setGameConfig} = useGameConfig();
+
+	function handleChange(space: FreeSpacePosition) {
+		setGameConfig({ freeSpacePosition: space });
+	}
+
 	return (
 		<fieldset>
 			<Typography as='legend' size='l'>
@@ -22,10 +26,10 @@ export function FreeSpace({
 						htmlFor={`free-space_${space}`}
 						key={`free-space_${space}`}>
 						<Radio
-							checked={selection === space}
+							checked={gameConfig.freeSpacePosition === space}
 							id={`free-space_${space}`}
 							name='free-space'
-							onChange={onChange}
+							onChange={() => handleChange(space)}
 							value={space}
 						/>
 						{space}

@@ -1,50 +1,34 @@
-import { useEffect, useState } from 'react';
-
 import { Typography } from '@arcade/library-components/src/components/Typography';
 import { Stack } from '@arcade/library-components/src/components/Stack';
+import { Button } from '@arcade/library-components/src/components/Button';
 
-import { SymbolFilterGridProps } from './_SymbolFilterGrid.annotations';
 import * as S from './_SymbolFilterGrid.styled';
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
-
 import { default as ALL_SYMBOLS } from '../../../../configs/germany-road-signs/symbols.json';
 import { SymbolPresets } from '../SymbolPresets';
-import { Button } from '@arcade/library-components/src/components/Button';
-import { useGamePlayConfig } from '../../hooks/useGamePlayConfig';
+import { useGameConfig } from '../../contexts/ConfigContext';
 
-export function SymbolFilterGrid({
-	onSymbolSelectionChange,
-}: SymbolFilterGridProps) {
-	const { gamePlayConfig } = useGamePlayConfig();
-	const [selectedSymbolIds, setSelectedSymbolIds] = useState<string[]>(
-		 gamePlayConfig.symbolIds.length > 0 ? gamePlayConfig.symbolIds : ALL_SYMBOLS.filter(({ variant }) => !variant).map(({ id }) => id)
-	);
+export function SymbolFilterGrid() {
+	const { gameConfig, setGameConfig } = useGameConfig();
 
 	function handleSymbolChange(id: string) {
-		setSelectedSymbolIds((selectedSymbolIds) => {
-			if (selectedSymbolIds.includes(id)) {
-				return selectedSymbolIds.filter((symbolId) => symbolId !== id);
-			} else {
-				return [...selectedSymbolIds, id];
-			}
-		});
+		const symbolIds = gameConfig.symbolIds.includes(id)
+			? gameConfig.symbolIds.filter((symbolId) => symbolId !== id)
+			: [...gameConfig.symbolIds, id];
+		setGameConfig({ symbolIds });
 	}
-
+	
 	function handleSelectAll() {
-		setSelectedSymbolIds(ALL_SYMBOLS.map(({ id }) => id));
+		setGameConfig({ symbolIds: ALL_SYMBOLS.map(({ id }) => id) });
 	}
-
+	
 	function handleDeselectAll() {
-		setSelectedSymbolIds([]);
+		setGameConfig({ symbolIds: [] });
 	}
 
-	function handlePresetSelectionChange(symbolIds: any) {
-		setSelectedSymbolIds(symbolIds);
+	function handlePresetSelectionChange(symbolIds: string[]) {
+		setGameConfig({ symbolIds });
 	}
-
-	useEffect(() => {
-		onSymbolSelectionChange(selectedSymbolIds);
-	}, [selectedSymbolIds]);
 
 	return (
 		<>
@@ -66,7 +50,7 @@ export function SymbolFilterGrid({
 							key={`symbol_${id}`}>
 							<S.SymbolFilterGrid_Input
 								id={`symbol_${id}`}
-								checked={selectedSymbolIds.includes(id)}
+								checked={gameConfig.symbolIds.includes(id)}
 								name={`symbol_${id}`}
 								onChange={() => handleSymbolChange(id)}
 								type='checkbox'
