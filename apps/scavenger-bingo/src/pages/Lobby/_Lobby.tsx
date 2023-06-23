@@ -19,10 +19,13 @@ import {
 } from './components/StickyFormFooter';
 import { Banner } from './components/Banner';
 import { ConfigProvider, useGameConfig } from './contexts/ConfigContext';
+import { useEffect } from 'react';
+
+import { default as ALL_SYMBOLS } from '../../configs/germany-road-signs/symbols.json';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
-	const { gameConfig } = useGameConfig();
+	const { gameConfig, setGameConfig } = useGameConfig();
 	const navigate = useNavigate();
 
 	function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -37,6 +40,12 @@ function _Lobby(): JSX.Element {
 
 		navigate(`/game/${gameId}`);
 	}
+
+	useEffect(() => {
+		if (gameConfig.symbolIds.length === 0) {
+			setGameConfig({ symbolIds: ALL_SYMBOLS.filter((symbol) => !symbol.variant).map(({ id }) => id) });
+		}
+	}, []);
 
 	return (
 		<PageWithFooterTemplate pageTitle='Scavenger Bingo Lobby'>
