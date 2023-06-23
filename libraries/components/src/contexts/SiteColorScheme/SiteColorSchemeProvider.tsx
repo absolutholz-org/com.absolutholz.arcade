@@ -1,8 +1,10 @@
 import { ReactNode, useEffect, useState } from 'react';
 
+import { STORAGE_PREFIX_ARCADE } from '@arcade/library-common/src/constants';
+
 import { ColorScheme, SiteColorSchemeContext } from './SiteColorSchemeContext';
 
-const STORAGE_KEY = 'absolutholz.arcade:color-scheme';
+const STORAGE_KEY = `${STORAGE_PREFIX_ARCADE}_colorscheme`;
 const HTML_SCHEME_ATTRIBUTE = 'data-color-scheme';
 
 const elHtml = document.querySelector('html');

@@ -1,6 +1,6 @@
 import { useLocalStorage } from '@arcade/library-components/src/hooks/useLocalStorage';
 
-import { STORAGE_PREFIX } from '../App.constants';
+import { STORAGE_APP_PREFIX } from '../App.constants';
 import type { GameState } from '../pages/Game/_Game.types';
 
 export type UnfinishedGame = {
@@ -11,10 +11,10 @@ export type UnfinishedGame = {
 
 export type ExtendedGameInfo = GameState & { createdOn: string; updatedOn: string; };
 
-const STORAGE_GAMES = `${STORAGE_PREFIX}_games`;
+const STORAGE_GAMES = `${STORAGE_APP_PREFIX}_games`;
 
 function storageName(gameId: string): string {
-	return `${STORAGE_PREFIX}_${gameId}`;
+	return `${STORAGE_APP_PREFIX}_${gameId}`;
 }
 
 export function useUnfinishedGames(): {
@@ -30,7 +30,7 @@ export function useUnfinishedGames(): {
 	);
 
 	const readGame = (gameId: string): ExtendedGameInfo | undefined => {
-		const unparsedGame = localStorage.getItem(`${STORAGE_PREFIX}_${gameId}`);
+		const unparsedGame = localStorage.getItem(storageName(gameId));
 		if (!unparsedGame) return undefined;
 		const game = JSON.parse(unparsedGame || '');
 

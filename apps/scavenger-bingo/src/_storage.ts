@@ -1,10 +1,10 @@
-import { STORAGE_PREFIX } from './App.constants';
+import { STORAGE_APP_PREFIX } from './App.constants';
 import { GameState } from './pages/Game/_Game.types';
 
-const STORAGE_GAMES = `${STORAGE_PREFIX}_games`;
+const STORAGE_GAMES = `${STORAGE_APP_PREFIX}_games`;
 
 function storageName(gameId: string): string {
-	return `${STORAGE_PREFIX}_${gameId}`;
+	return `${STORAGE_APP_PREFIX}_${gameId}`;
 }
 
 export function persistGameState(gameId: string, state: GameState) {

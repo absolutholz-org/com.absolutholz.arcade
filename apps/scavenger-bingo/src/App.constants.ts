@@ -1,6 +1,8 @@
+import { STORAGE_PREFIX_ARCADE } from '@arcade/library-common/src/constants';
+
 import type { GameConfig } from './App.types';
 
-export const STORAGE_PREFIX = 'absolutholzArcade_scavengerBingo';
+export const STORAGE_APP_PREFIX = `${STORAGE_PREFIX_ARCADE}_scavengerBingo`;
 export const MINIMUM_PLAYERS_REQUIRED = 1;
 export const MAXIMUM_PLAYERS_ALLOWED = 4;
 export const IMAGE_DIRECTORY = `${import.meta.env.BASE_URL}symbols/optimized/`;
