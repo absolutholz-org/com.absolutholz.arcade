@@ -2,7 +2,7 @@
     {
         "id": "a",
         "name": "augsburg",
-        "file": "",
+        "file": "a.svg",
         "tags": [
             "bayern"
         ]
@@ -10,7 +10,7 @@
     {
         "id": "aa",
         "name": "aalen ostalbkreis",
-        "file": "",
+        "file": "aa.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -18,7 +18,7 @@
     {
         "id": "ab",
         "name": "aschaffenburg",
-        "file": "",
+        "file": "ab.svg",
         "tags": [
             "bayern"
         ]
@@ -26,7 +26,7 @@
     {
         "id": "abi",
         "name": "anhalt-bitterfeld",
-        "file": "",
+        "file": "abi.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -34,7 +34,7 @@
     {
         "id": "abg",
         "name": "altenburger land",
-        "file": "",
+        "file": "abg.svg",
         "tags": [
             "thueringen"
         ]
@@ -42,7 +42,7 @@
     {
         "id": "ac",
         "name": "aachen",
-        "file": "",
+        "file": "ac.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -50,7 +50,7 @@
     {
         "id": "ae",
         "name": "auerbach",
-        "file": "",
+        "file": "ae.svg",
         "tags": [
             "sachsen"
         ]
@@ -58,7 +58,7 @@
     {
         "id": "aic",
         "name": "aichach-friedberg",
-        "file": "",
+        "file": "aic.svg",
         "tags": [
             "bayern"
         ]
@@ -66,7 +66,7 @@
     {
         "id": "ak",
         "name": "altenkirchen/westerwald",
-        "file": "",
+        "file": "ak.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -74,7 +74,7 @@
     {
         "id": "am",
         "name": "amberg",
-        "file": "",
+        "file": "am.svg",
         "tags": [
             "bayern"
         ]
@@ -82,7 +82,7 @@
     {
         "id": "an",
         "name": "ansbach",
-        "file": "",
+        "file": "an.svg",
         "tags": [
             "bayern"
         ]
@@ -90,7 +90,7 @@
     {
         "id": "aoe",
         "name": "altoetting",
-        "file": "",
+        "file": "aoe.svg",
         "tags": [
             "bayern"
         ]
@@ -98,7 +98,7 @@
     {
         "id": "ap",
         "name": "apolda - weimarer land",
-        "file": "",
+        "file": "ap.svg",
         "tags": [
             "thueringen"
         ]
@@ -106,7 +106,7 @@
     {
         "id": "as",
         "name": "amberg-sulzbach",
-        "file": "",
+        "file": "as.svg",
         "tags": [
             "bayern"
         ]
@@ -114,7 +114,7 @@
     {
         "id": "aur",
         "name": "aurich",
-        "file": "",
+        "file": "aur.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -122,7 +122,7 @@
     {
         "id": "aw",
         "name": "bad neuenahr-ahrweiler",
-        "file": "",
+        "file": "aw.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -130,7 +130,7 @@
     {
         "id": "az",
         "name": "alzey-worms",
-        "file": "",
+        "file": "az.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -138,7 +138,7 @@
     {
         "id": "b",
         "name": "berlin",
-        "file": "",
+        "file": "b.svg",
         "tags": [
             "berlin"
         ]
@@ -146,7 +146,7 @@
     {
         "id": "ba",
         "name": "bamberg",
-        "file": "",
+        "file": "ba.svg",
         "tags": [
             "bayern"
         ]
@@ -154,7 +154,7 @@
     {
         "id": "bad",
         "name": "baden-baden",
-        "file": "",
+        "file": "bad.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -162,7 +162,7 @@
     {
         "id": "bar",
         "name": "barnim",
-        "file": "",
+        "file": "bar.svg",
         "tags": [
             "brandenburg"
         ]
@@ -170,7 +170,7 @@
     {
         "id": "bb",
         "name": "boeblingen",
-        "file": "",
+        "file": "bb.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -178,7 +178,7 @@
     {
         "id": "bc",
         "name": "biberach/riss",
-        "file": "",
+        "file": "bc.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -186,7 +186,7 @@
     {
         "id": "bd",
         "name": "bundestag, bundesrat, bundesregierung",
-        "file": "",
+        "file": "bd.svg",
         "tags": [
             ""
         ]
@@ -194,7 +194,7 @@
     {
         "id": "bgl",
         "name": "berchtesgadener land",
-        "file": "",
+        "file": "bgl.svg",
         "tags": [
             "bayern"
         ]
@@ -202,7 +202,7 @@
     {
         "id": "bi",
         "name": "bielefeld",
-        "file": "",
+        "file": "bi.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -210,7 +210,7 @@
     {
         "id": "bir",
         "name": "birkenfeld/nahe und idar-oberstein",
-        "file": "",
+        "file": "bir.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -218,7 +218,7 @@
     {
         "id": "bit",
         "name": "bitburg-pruem",
-        "file": "",
+        "file": "bit.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -226,7 +226,7 @@
     {
         "id": "bk",
         "name": "bochum",
-        "file": "",
+        "file": "bk.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -234,7 +234,7 @@
     {
         "id": "bl",
         "name": "zollernalbkreis / balingen",
-        "file": "",
+        "file": "bl.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -242,7 +242,7 @@
     {
         "id": "blk",
         "name": "burgenlandkreis",
-        "file": "",
+        "file": "blk.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -250,7 +250,7 @@
     {
         "id": "bm",
         "name": "erftkreis / bergheim",
-        "file": "",
+        "file": "bm.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -258,7 +258,7 @@
     {
         "id": "bn",
         "name": "bonn",
-        "file": "",
+        "file": "bn.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -266,7 +266,7 @@
     {
         "id": "bo",
         "name": "bochum",
-        "file": "",
+        "file": "bo.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -274,7 +274,7 @@
     {
         "id": "bor",
         "name": "borken / ahaus",
-        "file": "",
+        "file": "bor.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -282,7 +282,7 @@
     {
         "id": "bot",
         "name": "bottrop",
-        "file": "",
+        "file": "bot.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -290,7 +290,7 @@
     {
         "id": "bp",
         "name": "bundespolizei",
-        "file": "",
+        "file": "bp.svg",
         "tags": [
             ""
         ]
@@ -298,7 +298,7 @@
     {
         "id": "bra",
         "name": "wesermarsch / brake",
-        "file": "",
+        "file": "bra.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -306,7 +306,7 @@
     {
         "id": "brb",
         "name": "brandenburg",
-        "file": "",
+        "file": "brb.svg",
         "tags": [
             "brandenburg"
         ]
@@ -314,7 +314,7 @@
     {
         "id": "bs",
         "name": "braunschweig",
-        "file": "",
+        "file": "bs.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -322,7 +322,7 @@
     {
         "id": "bt",
         "name": "bayreuth",
-        "file": "",
+        "file": "bt.svg",
         "tags": [
             "bayern"
         ]
@@ -330,7 +330,7 @@
     {
         "id": "btf",
         "name": "bitterfeld",
-        "file": "",
+        "file": "btf.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -338,7 +338,7 @@
     {
         "id": "bues",
         "name": "buesingen am hochrhein",
-        "file": "",
+        "file": "bues.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -346,7 +346,7 @@
     {
         "id": "bw",
         "name": "bundes-wasser- und schiffahrtsverwaltung",
-        "file": "",
+        "file": "bw.svg",
         "tags": [
             ""
         ]
@@ -354,7 +354,7 @@
     {
         "id": "bwl",
         "name": "baden-wuerttemberg landesregierung und landtag",
-        "file": "",
+        "file": "bwl.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -362,7 +362,7 @@
     {
         "id": "byl",
         "name": "bayern landesregierung und landtag",
-        "file": "",
+        "file": "byl.svg",
         "tags": [
             ""
         ]
@@ -370,7 +370,7 @@
     {
         "id": "bz",
         "name": "bautzen",
-        "file": "",
+        "file": "bz.svg",
         "tags": [
             "sachsen"
         ]
@@ -378,7 +378,7 @@
     {
         "id": "c",
         "name": "chemnitz",
-        "file": "",
+        "file": "c.svg",
         "tags": [
             "sachsen"
         ]
@@ -386,7 +386,7 @@
     {
         "id": "cb",
         "name": "cottbus",
-        "file": "",
+        "file": "cb.svg",
         "tags": [
             "brandenburg"
         ]
@@ -394,7 +394,7 @@
     {
         "id": "ce",
         "name": "celle",
-        "file": "",
+        "file": "ce.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -402,7 +402,7 @@
     {
         "id": "cha",
         "name": "cham",
-        "file": "",
+        "file": "cha.svg",
         "tags": [
             "bayern"
         ]
@@ -410,7 +410,7 @@
     {
         "id": "co",
         "name": "coburg",
-        "file": "",
+        "file": "co.svg",
         "tags": [
             "bayern"
         ]
@@ -418,7 +418,7 @@
     {
         "id": "coc",
         "name": "cochem-zell",
-        "file": "",
+        "file": "coc.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -426,7 +426,7 @@
     {
         "id": "coe",
         "name": "coesfeld",
-        "file": "",
+        "file": "coe.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -434,7 +434,7 @@
     {
         "id": "cux",
         "name": "cuxhaven",
-        "file": "",
+        "file": "cux.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -442,7 +442,7 @@
     {
         "id": "cw",
         "name": "calw",
-        "file": "",
+        "file": "cw.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -450,7 +450,7 @@
     {
         "id": "d",
         "name": "duesseldorf",
-        "file": "",
+        "file": "d.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -458,7 +458,7 @@
     {
         "id": "da",
         "name": "darmstadt-dieburg",
-        "file": "",
+        "file": "da.svg",
         "tags": [
             "hessen"
         ]
@@ -466,7 +466,7 @@
     {
         "id": "dah",
         "name": "dachau",
-        "file": "",
+        "file": "dah.svg",
         "tags": [
             "bayern"
         ]
@@ -474,7 +474,7 @@
     {
         "id": "dan",
         "name": "luechow-dannenberg",
-        "file": "",
+        "file": "dan.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -482,7 +482,7 @@
     {
         "id": "dau",
         "name": "daun (eifel)",
-        "file": "",
+        "file": "dau.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -490,7 +490,7 @@
     {
         "id": "dbr",
         "name": "bad doberan",
-        "file": "",
+        "file": "dbr.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -498,7 +498,7 @@
     {
         "id": "dd",
         "name": "dresden",
-        "file": "",
+        "file": "dd.svg",
         "tags": [
             "sachsen"
         ]
@@ -506,7 +506,7 @@
     {
         "id": "de",
         "name": "dessau-rosslau",
-        "file": "",
+        "file": "de.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -514,7 +514,7 @@
     {
         "id": "deg",
         "name": "deggendorf",
-        "file": "",
+        "file": "deg.svg",
         "tags": [
             "bayern"
         ]
@@ -522,7 +522,7 @@
     {
         "id": "del",
         "name": "delmenhorst",
-        "file": "",
+        "file": "del.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -530,7 +530,7 @@
     {
         "id": "dgf",
         "name": "dingolfing-landau",
-        "file": "",
+        "file": "dgf.svg",
         "tags": [
             "bayern"
         ]
@@ -538,7 +538,7 @@
     {
         "id": "dh",
         "name": "diepholz-syke",
-        "file": "",
+        "file": "dh.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -546,7 +546,7 @@
     {
         "id": "dl",
         "name": "doebeln",
-        "file": "",
+        "file": "dl.svg",
         "tags": [
             "sachsen"
         ]
@@ -554,7 +554,7 @@
     {
         "id": "dlg",
         "name": "dillingen",
-        "file": "",
+        "file": "dlg.svg",
         "tags": [
             "bayern"
         ]
@@ -562,7 +562,7 @@
     {
         "id": "dn",
         "name": "dueren",
-        "file": "",
+        "file": "dn.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -570,7 +570,7 @@
     {
         "id": "do",
         "name": "dortmund",
-        "file": "",
+        "file": "do.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -578,7 +578,7 @@
     {
         "id": "don",
         "name": "donauwoerth",
-        "file": "",
+        "file": "don.svg",
         "tags": [
             "bayern"
         ]
@@ -586,7 +586,7 @@
     {
         "id": "du",
         "name": "duisburg",
-        "file": "",
+        "file": "du.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -594,7 +594,7 @@
     {
         "id": "duew",
         "name": "bad duerkheim / neustadt/weinstrasse",
-        "file": "",
+        "file": "duew.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -602,7 +602,7 @@
     {
         "id": "e",
         "name": "essen",
-        "file": "",
+        "file": "e.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -610,7 +610,7 @@
     {
         "id": "ea",
         "name": "eisenach",
-        "file": "",
+        "file": "ea.svg",
         "tags": [
             "thueringen"
         ]
@@ -618,7 +618,7 @@
     {
         "id": "eb",
         "name": "eilenburg",
-        "file": "",
+        "file": "eb.svg",
         "tags": [
             "sachsen"
         ]
@@ -626,7 +626,7 @@
     {
         "id": "ebe",
         "name": "ebersberg",
-        "file": "",
+        "file": "ebe.svg",
         "tags": [
             "bayern"
         ]
@@ -634,7 +634,7 @@
     {
         "id": "ed",
         "name": "erding",
-        "file": "",
+        "file": "ed.svg",
         "tags": [
             "bayern"
         ]
@@ -642,7 +642,7 @@
     {
         "id": "ee",
         "name": "elbe-elsterkreis",
-        "file": "",
+        "file": "ee.svg",
         "tags": [
             "brandenburg"
         ]
@@ -650,7 +650,7 @@
     {
         "id": "ef",
         "name": "erfurt",
-        "file": "",
+        "file": "ef.svg",
         "tags": [
             "thueringen"
         ]
@@ -658,7 +658,7 @@
     {
         "id": "ei",
         "name": "eichstaett",
-        "file": "",
+        "file": "ei.svg",
         "tags": [
             "bayern"
         ]
@@ -666,7 +666,7 @@
     {
         "id": "eic",
         "name": "eichsfeld",
-        "file": "",
+        "file": "eic.svg",
         "tags": [
             "thueringen"
         ]
@@ -674,7 +674,7 @@
     {
         "id": "el",
         "name": "emsland",
-        "file": "",
+        "file": "el.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -682,7 +682,7 @@
     {
         "id": "em",
         "name": "emmendingen",
-        "file": "",
+        "file": "em.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -690,7 +690,7 @@
     {
         "id": "emd",
         "name": "emden",
-        "file": "",
+        "file": "emd.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -698,7 +698,7 @@
     {
         "id": "ems",
         "name": "bad ems/lahn-kreis",
-        "file": "",
+        "file": "ems.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -706,7 +706,7 @@
     {
         "id": "en",
         "name": "ennepe-ruhr-kreis",
-        "file": "",
+        "file": "en.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -714,7 +714,7 @@
     {
         "id": "er",
         "name": "erlangen",
-        "file": "",
+        "file": "er.svg",
         "tags": [
             "bayern"
         ]
@@ -722,7 +722,7 @@
     {
         "id": "erb",
         "name": "erbach/odenwaldkreis",
-        "file": "",
+        "file": "erb.svg",
         "tags": [
             "hessen"
         ]
@@ -730,7 +730,7 @@
     {
         "id": "erh",
         "name": "erlangen-hoechstadt",
-        "file": "",
+        "file": "erh.svg",
         "tags": [
             "bayern"
         ]
@@ -738,7 +738,7 @@
     {
         "id": "erz",
         "name": "erzgebirgskreis",
-        "file": "",
+        "file": "erz.svg",
         "tags": [
             "sachsen"
         ]
@@ -746,7 +746,7 @@
     {
         "id": "es",
         "name": "esslingen",
-        "file": "",
+        "file": "es.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -754,7 +754,7 @@
     {
         "id": "esw",
         "name": "eschwege",
-        "file": "",
+        "file": "esw.svg",
         "tags": [
             "hessen"
         ]
@@ -762,7 +762,7 @@
     {
         "id": "eu",
         "name": "euskirchen",
-        "file": "",
+        "file": "eu.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -770,7 +770,7 @@
     {
         "id": "f",
         "name": "frankfurt/main",
-        "file": "",
+        "file": "f.svg",
         "tags": [
             "hessen"
         ]
@@ -778,7 +778,7 @@
     {
         "id": "fb",
         "name": "friedberg/wetteraukreis",
-        "file": "",
+        "file": "fb.svg",
         "tags": [
             "hessen"
         ]
@@ -786,7 +786,7 @@
     {
         "id": "fd",
         "name": "fulda",
-        "file": "",
+        "file": "fd.svg",
         "tags": [
             "hessen"
         ]
@@ -794,7 +794,7 @@
     {
         "id": "fds",
         "name": "freudenstadt",
-        "file": "",
+        "file": "fds.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -802,7 +802,7 @@
     {
         "id": "ff",
         "name": "frankfurt/oder",
-        "file": "",
+        "file": "ff.svg",
         "tags": [
             "brandenburg"
         ]
@@ -810,7 +810,7 @@
     {
         "id": "ffb",
         "name": "fuerstenfeldbruck",
-        "file": "",
+        "file": "ffb.svg",
         "tags": [
             "bayern"
         ]
@@ -818,7 +818,7 @@
     {
         "id": "fg",
         "name": "freiberg",
-        "file": "",
+        "file": "fg.svg",
         "tags": [
             "sachsen"
         ]
@@ -826,7 +826,7 @@
     {
         "id": "fl",
         "name": "flensburg",
-        "file": "",
+        "file": "fl.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -834,7 +834,7 @@
     {
         "id": "fn",
         "name": "friedrichshafen/bodenseekreis",
-        "file": "",
+        "file": "fn.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -842,7 +842,7 @@
     {
         "id": "fo",
         "name": "forchheim",
-        "file": "",
+        "file": "fo.svg",
         "tags": [
             "bayern"
         ]
@@ -850,7 +850,7 @@
     {
         "id": "fr",
         "name": "freiburg",
-        "file": "",
+        "file": "fr.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -858,7 +858,7 @@
     {
         "id": "frg",
         "name": "freyung-grafenau",
-        "file": "",
+        "file": "frg.svg",
         "tags": [
             "bayern"
         ]
@@ -866,7 +866,7 @@
     {
         "id": "fri",
         "name": "friesland",
-        "file": "",
+        "file": "fri.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -874,7 +874,7 @@
     {
         "id": "fs",
         "name": "freising",
-        "file": "",
+        "file": "fs.svg",
         "tags": [
             "bayern"
         ]
@@ -882,7 +882,7 @@
     {
         "id": "ft",
         "name": "frankenthal",
-        "file": "",
+        "file": "ft.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -890,7 +890,7 @@
     {
         "id": "fue",
         "name": "fuerth",
-        "file": "",
+        "file": "fue.svg",
         "tags": [
             "bayern"
         ]
@@ -898,7 +898,7 @@
     {
         "id": "g",
         "name": "gera",
-        "file": "",
+        "file": "g.svg",
         "tags": [
             "thueringen"
         ]
@@ -906,7 +906,7 @@
     {
         "id": "gap",
         "name": "garmisch-partenkirchen",
-        "file": "",
+        "file": "gap.svg",
         "tags": [
             "bayern"
         ]
@@ -914,7 +914,7 @@
     {
         "id": "ge",
         "name": "gelsenkirchen",
-        "file": "",
+        "file": "ge.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -922,7 +922,7 @@
     {
         "id": "ger",
         "name": "germersheim",
-        "file": "",
+        "file": "ger.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -930,7 +930,7 @@
     {
         "id": "gf",
         "name": "gifhorn",
-        "file": "",
+        "file": "gf.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -938,7 +938,7 @@
     {
         "id": "gg",
         "name": "gross-gerau",
-        "file": "",
+        "file": "gg.svg",
         "tags": [
             "hessen"
         ]
@@ -946,7 +946,7 @@
     {
         "id": "gi",
         "name": "giessen",
-        "file": "",
+        "file": "gi.svg",
         "tags": [
             "hessen"
         ]
@@ -954,7 +954,7 @@
     {
         "id": "gl",
         "name": "bergisch gladbach",
-        "file": "",
+        "file": "gl.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -962,7 +962,7 @@
     {
         "id": "gm",
         "name": "gummersbach",
-        "file": "",
+        "file": "gm.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -970,7 +970,7 @@
     {
         "id": "goe",
         "name": "goettingen",
-        "file": "",
+        "file": "goe.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -978,7 +978,7 @@
     {
         "id": "gp",
         "name": "goeppingen",
-        "file": "",
+        "file": "gp.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -986,7 +986,7 @@
     {
         "id": "gr",
         "name": "goerlitz",
-        "file": "",
+        "file": "gr.svg",
         "tags": [
             "sachsen"
         ]
@@ -994,7 +994,7 @@
     {
         "id": "grz",
         "name": "greiz",
-        "file": "",
+        "file": "grz.svg",
         "tags": [
             "thueringen"
         ]
@@ -1002,7 +1002,7 @@
     {
         "id": "gs",
         "name": "goslar",
-        "file": "",
+        "file": "gs.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1010,7 +1010,7 @@
     {
         "id": "gt",
         "name": "guetersloh",
-        "file": "",
+        "file": "gt.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1018,7 +1018,7 @@
     {
         "id": "gth",
         "name": "gotha",
-        "file": "",
+        "file": "gth.svg",
         "tags": [
             "thueringen"
         ]
@@ -1026,7 +1026,7 @@
     {
         "id": "gue",
         "name": "guestrow",
-        "file": "",
+        "file": "gue.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1034,7 +1034,7 @@
     {
         "id": "gz",
         "name": "guenzburg",
-        "file": "",
+        "file": "gz.svg",
         "tags": [
             "bayern"
         ]
@@ -1042,7 +1042,7 @@
     {
         "id": "h",
         "name": "hannover",
-        "file": "",
+        "file": "h.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1050,7 +1050,7 @@
     {
         "id": "ha",
         "name": "hagen",
-        "file": "",
+        "file": "ha.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1058,7 +1058,7 @@
     {
         "id": "hal",
         "name": "halle",
-        "file": "",
+        "file": "hal.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -1066,7 +1066,7 @@
     {
         "id": "ham",
         "name": "hamm",
-        "file": "",
+        "file": "ham.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1074,7 +1074,7 @@
     {
         "id": "has",
         "name": "hassberge / hassfurt",
-        "file": "",
+        "file": "has.svg",
         "tags": [
             "bayern"
         ]
@@ -1082,7 +1082,7 @@
     {
         "id": "hb",
         "name": "hansestadt bremen/bremerhaven",
-        "file": "",
+        "file": "hb.svg",
         "tags": [
             "bremen"
         ]
@@ -1090,7 +1090,7 @@
     {
         "id": "hbn",
         "name": "hildburghausen",
-        "file": "",
+        "file": "hbn.svg",
         "tags": [
             "thueringen"
         ]
@@ -1098,7 +1098,7 @@
     {
         "id": "hd",
         "name": "heidelberg",
-        "file": "",
+        "file": "hd.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1106,7 +1106,7 @@
     {
         "id": "hdh",
         "name": "heidenheim",
-        "file": "",
+        "file": "hdh.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1114,7 +1114,7 @@
     {
         "id": "he",
         "name": "helmstedt",
-        "file": "",
+        "file": "he.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1122,7 +1122,7 @@
     {
         "id": "hef",
         "name": "bad hersfeld",
-        "file": "",
+        "file": "hef.svg",
         "tags": [
             "hessen"
         ]
@@ -1130,7 +1130,7 @@
     {
         "id": "hei",
         "name": "heide",
-        "file": "",
+        "file": "hei.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -1138,7 +1138,7 @@
     {
         "id": "hel",
         "name": "hessen landesregierung und landtag",
-        "file": "",
+        "file": "hel.svg",
         "tags": [
             "hessen"
         ]
@@ -1146,7 +1146,7 @@
     {
         "id": "her",
         "name": "herne",
-        "file": "",
+        "file": "her.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1154,7 +1154,7 @@
     {
         "id": "hf",
         "name": "herford",
-        "file": "",
+        "file": "hf.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1162,7 +1162,7 @@
     {
         "id": "hg",
         "name": "bad homburg",
-        "file": "",
+        "file": "hg.svg",
         "tags": [
             "hessen"
         ]
@@ -1170,7 +1170,7 @@
     {
         "id": "hgw",
         "name": "hansestadt greifswald",
-        "file": "",
+        "file": "hgw.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1178,7 +1178,7 @@
     {
         "id": "hh",
         "name": "hansestadt hamburg",
-        "file": "",
+        "file": "hh.svg",
         "tags": [
             "hamburg"
         ]
@@ -1186,7 +1186,7 @@
     {
         "id": "hi",
         "name": "hildesheim",
-        "file": "",
+        "file": "hi.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1194,7 +1194,7 @@
     {
         "id": "hl",
         "name": "hansestadt luebeck",
-        "file": "",
+        "file": "hl.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -1202,7 +1202,7 @@
     {
         "id": "hm",
         "name": "hameln-pyrmont",
-        "file": "",
+        "file": "hm.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1210,7 +1210,7 @@
     {
         "id": "hn",
         "name": "heilbronn",
-        "file": "",
+        "file": "hn.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1218,7 +1218,7 @@
     {
         "id": "ho",
         "name": "hof",
-        "file": "",
+        "file": "ho.svg",
         "tags": [
             "bayern"
         ]
@@ -1226,7 +1226,7 @@
     {
         "id": "hol",
         "name": "holzminden",
-        "file": "",
+        "file": "hol.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1234,7 +1234,7 @@
     {
         "id": "hom",
         "name": "homburg",
-        "file": "",
+        "file": "hom.svg",
         "tags": [
             "saarland"
         ]
@@ -1242,7 +1242,7 @@
     {
         "id": "hp",
         "name": "heppenheim",
-        "file": "",
+        "file": "hp.svg",
         "tags": [
             "hessen"
         ]
@@ -1250,7 +1250,7 @@
     {
         "id": "hr",
         "name": "homberg",
-        "file": "",
+        "file": "hr.svg",
         "tags": [
             "hessen"
         ]
@@ -1258,7 +1258,7 @@
     {
         "id": "hro",
         "name": "hansestadt rostock",
-        "file": "",
+        "file": "hro.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1266,7 +1266,7 @@
     {
         "id": "hs",
         "name": "heinsberg",
-        "file": "",
+        "file": "hs.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1274,7 +1274,7 @@
     {
         "id": "hsk",
         "name": "hochsauerlandkreis",
-        "file": "",
+        "file": "hsk.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1282,7 +1282,7 @@
     {
         "id": "hst",
         "name": "hansestadt stralsund",
-        "file": "",
+        "file": "hst.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1290,7 +1290,7 @@
     {
         "id": "hu",
         "name": "hanau",
-        "file": "",
+        "file": "hu.svg",
         "tags": [
             "hessen"
         ]
@@ -1298,7 +1298,7 @@
     {
         "id": "hvl",
         "name": "havelland",
-        "file": "",
+        "file": "hvl.svg",
         "tags": [
             "brandenburg"
         ]
@@ -1306,7 +1306,7 @@
     {
         "id": "hwi",
         "name": "hansestadt wismar",
-        "file": "",
+        "file": "hwi.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1314,7 +1314,7 @@
     {
         "id": "hx",
         "name": "hoexter",
-        "file": "",
+        "file": "hx.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1322,7 +1322,7 @@
     {
         "id": "hz",
         "name": "harz",
-        "file": "",
+        "file": "hz.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -1330,7 +1330,7 @@
     {
         "id": "igb",
         "name": "st. ingbert",
-        "file": "",
+        "file": "igb.svg",
         "tags": [
             "saarland"
         ]
@@ -1338,7 +1338,7 @@
     {
         "id": "ik",
         "name": "ilm-kreis",
-        "file": "",
+        "file": "ik.svg",
         "tags": [
             "thueringen"
         ]
@@ -1346,7 +1346,7 @@
     {
         "id": "in",
         "name": "ingolstadt",
-        "file": "",
+        "file": "in.svg",
         "tags": [
             "bayern"
         ]
@@ -1354,7 +1354,7 @@
     {
         "id": "iz",
         "name": "itzehoe",
-        "file": "",
+        "file": "iz.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -1362,7 +1362,7 @@
     {
         "id": "j",
         "name": "jena",
-        "file": "",
+        "file": "j.svg",
         "tags": [
             "thueringen"
         ]
@@ -1370,7 +1370,7 @@
     {
         "id": "jl",
         "name": "jerichower land",
-        "file": "",
+        "file": "jl.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -1378,7 +1378,7 @@
     {
         "id": "k",
         "name": "koeln",
-        "file": "",
+        "file": "k.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1386,7 +1386,7 @@
     {
         "id": "ka",
         "name": "karlsruhe",
-        "file": "",
+        "file": "ka.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1394,7 +1394,7 @@
     {
         "id": "kb",
         "name": "korbach",
-        "file": "",
+        "file": "kb.svg",
         "tags": [
             "hessen"
         ]
@@ -1402,7 +1402,7 @@
     {
         "id": "kc",
         "name": "kronach",
-        "file": "",
+        "file": "kc.svg",
         "tags": [
             "bayern"
         ]
@@ -1410,7 +1410,7 @@
     {
         "id": "ke",
         "name": "kempten",
-        "file": "",
+        "file": "ke.svg",
         "tags": [
             "bayern"
         ]
@@ -1418,7 +1418,7 @@
     {
         "id": "keh",
         "name": "kelheim",
-        "file": "",
+        "file": "keh.svg",
         "tags": [
             "bayern"
         ]
@@ -1426,7 +1426,7 @@
     {
         "id": "kf",
         "name": "kaufbeuren",
-        "file": "",
+        "file": "kf.svg",
         "tags": [
             "bayern"
         ]
@@ -1434,7 +1434,7 @@
     {
         "id": "kg",
         "name": "bad kissingen",
-        "file": "",
+        "file": "kg.svg",
         "tags": [
             "bayern"
         ]
@@ -1442,7 +1442,7 @@
     {
         "id": "kh",
         "name": "bad kreuznach",
-        "file": "",
+        "file": "kh.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1450,7 +1450,7 @@
     {
         "id": "ki",
         "name": "kiel",
-        "file": "",
+        "file": "ki.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -1458,7 +1458,7 @@
     {
         "id": "kib",
         "name": "kirchheimbolanden",
-        "file": "",
+        "file": "kib.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1466,7 +1466,7 @@
     {
         "id": "kl",
         "name": "kaiserslautern",
-        "file": "",
+        "file": "kl.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1474,7 +1474,7 @@
     {
         "id": "kle",
         "name": "kleve",
-        "file": "",
+        "file": "kle.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1482,7 +1482,7 @@
     {
         "id": "kn",
         "name": "konstanz",
-        "file": "",
+        "file": "kn.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1490,7 +1490,7 @@
     {
         "id": "ko",
         "name": "koblenz",
-        "file": "",
+        "file": "ko.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1498,7 +1498,7 @@
     {
         "id": "kr",
         "name": "krefeld",
-        "file": "",
+        "file": "kr.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1506,7 +1506,7 @@
     {
         "id": "ks",
         "name": "kassel",
-        "file": "",
+        "file": "ks.svg",
         "tags": [
             "hessen"
         ]
@@ -1514,7 +1514,7 @@
     {
         "id": "kt",
         "name": "kitzingen",
-        "file": "",
+        "file": "kt.svg",
         "tags": [
             "bayern"
         ]
@@ -1522,7 +1522,7 @@
     {
         "id": "ku",
         "name": "kulmbach",
-        "file": "",
+        "file": "ku.svg",
         "tags": [
             "bayern"
         ]
@@ -1530,7 +1530,7 @@
     {
         "id": "kuen",
         "name": "kuenzelsau",
-        "file": "",
+        "file": "kuen.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1538,7 +1538,7 @@
     {
         "id": "kus",
         "name": "kusel",
-        "file": "",
+        "file": "kus.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1546,7 +1546,7 @@
     {
         "id": "kyf",
         "name": "kyffhaeuserkreis",
-        "file": "",
+        "file": "kyf.svg",
         "tags": [
             "thueringen"
         ]
@@ -1554,7 +1554,7 @@
     {
         "id": "l",
         "name": "leipzig",
-        "file": "",
+        "file": "l.svg",
         "tags": [
             "sachsen"
         ]
@@ -1562,7 +1562,7 @@
     {
         "id": "la",
         "name": "landshut",
-        "file": "",
+        "file": "la.svg",
         "tags": [
             "bayern"
         ]
@@ -1570,7 +1570,7 @@
     {
         "id": "lau",
         "name": "lauf/nuernberger land",
-        "file": "",
+        "file": "lau.svg",
         "tags": [
             "bayern"
         ]
@@ -1578,7 +1578,7 @@
     {
         "id": "lb",
         "name": "ludwigsburg",
-        "file": "",
+        "file": "lb.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1586,7 +1586,7 @@
     {
         "id": "ld",
         "name": "landau",
-        "file": "",
+        "file": "ld.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1594,7 +1594,7 @@
     {
         "id": "ldk",
         "name": "lahn-dill-kreis",
-        "file": "",
+        "file": "ldk.svg",
         "tags": [
             "hessen"
         ]
@@ -1602,7 +1602,7 @@
     {
         "id": "lds",
         "name": "dahme-spreewald",
-        "file": "",
+        "file": "lds.svg",
         "tags": [
             "brandenburg"
         ]
@@ -1610,7 +1610,7 @@
     {
         "id": "ler",
         "name": "leer/ostfriesland",
-        "file": "",
+        "file": "ler.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1618,7 +1618,7 @@
     {
         "id": "lev",
         "name": "leverkusen",
-        "file": "",
+        "file": "lev.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1626,7 +1626,7 @@
     {
         "id": "lg",
         "name": "lueneburg",
-        "file": "",
+        "file": "lg.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -1634,7 +1634,7 @@
     {
         "id": "li",
         "name": "lindau",
-        "file": "",
+        "file": "li.svg",
         "tags": [
             "bayern"
         ]
@@ -1642,7 +1642,7 @@
     {
         "id": "lif",
         "name": "lichtenfels",
-        "file": "",
+        "file": "lif.svg",
         "tags": [
             "bayern"
         ]
@@ -1650,7 +1650,7 @@
     {
         "id": "lip",
         "name": "lippe",
-        "file": "",
+        "file": "lip.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1658,7 +1658,7 @@
     {
         "id": "ll",
         "name": "landsberg/lech",
-        "file": "",
+        "file": "ll.svg",
         "tags": [
             "bayern"
         ]
@@ -1666,7 +1666,7 @@
     {
         "id": "lm",
         "name": "limburg-weilburg",
-        "file": "",
+        "file": "lm.svg",
         "tags": [
             "hessen"
         ]
@@ -1674,7 +1674,7 @@
     {
         "id": "loe",
         "name": "loerrach",
-        "file": "",
+        "file": "loe.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1682,7 +1682,7 @@
     {
         "id": "los",
         "name": "oder-spree-kreis beeskow",
-        "file": "",
+        "file": "los.svg",
         "tags": [
             "brandenburg"
         ]
@@ -1690,7 +1690,7 @@
     {
         "id": "lro",
         "name": "landkreis rostock",
-        "file": "",
+        "file": "lro.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1698,7 +1698,7 @@
     {
         "id": "lsa",
         "name": "sachsen-anhalt landesregierung und landtag",
-        "file": "",
+        "file": "lsa.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -1706,7 +1706,7 @@
     {
         "id": "lsn",
         "name": "sachsen landesregierung und landtag",
-        "file": "",
+        "file": "lsn.svg",
         "tags": [
             "sachsen"
         ]
@@ -1714,7 +1714,7 @@
     {
         "id": "lu",
         "name": "ludwigshafen",
-        "file": "",
+        "file": "lu.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1722,7 +1722,7 @@
     {
         "id": "lwl",
         "name": "ludwigslust",
-        "file": "",
+        "file": "lwl.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1730,7 +1730,7 @@
     {
         "id": "m",
         "name": "muenchen",
-        "file": "",
+        "file": "m.svg",
         "tags": [
             "bayern"
         ]
@@ -1738,7 +1738,7 @@
     {
         "id": "ma",
         "name": "mannheim",
-        "file": "",
+        "file": "ma.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1746,7 +1746,7 @@
     {
         "id": "mb",
         "name": "miesbach",
-        "file": "",
+        "file": "mb.svg",
         "tags": [
             "bayern"
         ]
@@ -1754,7 +1754,7 @@
     {
         "id": "md",
         "name": "magdeburg",
-        "file": "",
+        "file": "md.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -1762,7 +1762,7 @@
     {
         "id": "me",
         "name": "mettmann",
-        "file": "",
+        "file": "me.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1770,7 +1770,7 @@
     {
         "id": "mei",
         "name": "meissen",
-        "file": "",
+        "file": "mei.svg",
         "tags": [
             "sachsen"
         ]
@@ -1778,7 +1778,7 @@
     {
         "id": "mg",
         "name": "moenchengladbach",
-        "file": "",
+        "file": "mg.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1786,7 +1786,7 @@
     {
         "id": "mi",
         "name": "minden-luebbecke",
-        "file": "",
+        "file": "mi.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1794,7 +1794,7 @@
     {
         "id": "mil",
         "name": "miltenberg",
-        "file": "",
+        "file": "mil.svg",
         "tags": [
             "bayern"
         ]
@@ -1802,7 +1802,7 @@
     {
         "id": "mk",
         "name": "maerkischer kreis",
-        "file": "",
+        "file": "mk.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1810,7 +1810,7 @@
     {
         "id": "mkk",
         "name": "main-kinzig-kreis",
-        "file": "",
+        "file": "mkk.svg",
         "tags": [
             "hessen"
         ]
@@ -1818,7 +1818,7 @@
     {
         "id": "mm",
         "name": "memmingen",
-        "file": "",
+        "file": "mm.svg",
         "tags": [
             "bayern"
         ]
@@ -1826,7 +1826,7 @@
     {
         "id": "mn",
         "name": "mindelheim",
-        "file": "",
+        "file": "mn.svg",
         "tags": [
             "bayern"
         ]
@@ -1834,7 +1834,7 @@
     {
         "id": "mol",
         "name": "maerkisch-oderland",
-        "file": "",
+        "file": "mol.svg",
         "tags": [
             "brandenburg"
         ]
@@ -1842,7 +1842,7 @@
     {
         "id": "mos",
         "name": "mosbach",
-        "file": "",
+        "file": "mos.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1850,7 +1850,7 @@
     {
         "id": "mr",
         "name": "marburg-biedenkopf",
-        "file": "",
+        "file": "mr.svg",
         "tags": [
             "hessen"
         ]
@@ -1858,7 +1858,7 @@
     {
         "id": "ms",
         "name": "muenster",
-        "file": "",
+        "file": "ms.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1866,7 +1866,7 @@
     {
         "id": "msh",
         "name": "mansfeld-suedharz",
-        "file": "",
+        "file": "msh.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -1874,7 +1874,7 @@
     {
         "id": "msp",
         "name": "main-spessart-kreis",
-        "file": "",
+        "file": "msp.svg",
         "tags": [
             "bayern"
         ]
@@ -1882,7 +1882,7 @@
     {
         "id": "mst",
         "name": "mecklenburg-strelitz",
-        "file": "",
+        "file": "mst.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1890,7 +1890,7 @@
     {
         "id": "mtk",
         "name": "main-taunus-kreis",
-        "file": "",
+        "file": "mtk.svg",
         "tags": [
             "hessen"
         ]
@@ -1898,7 +1898,7 @@
     {
         "id": "mue",
         "name": "muehldorf am inn",
-        "file": "",
+        "file": "mue.svg",
         "tags": [
             "bayern"
         ]
@@ -1906,7 +1906,7 @@
     {
         "id": "muer",
         "name": "mueritz",
-        "file": "",
+        "file": "muer.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1914,7 +1914,7 @@
     {
         "id": "mvl",
         "name": "mecklenburg-vorpommern landesregierung und landtag",
-        "file": "",
+        "file": "mvl.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1922,7 +1922,7 @@
     {
         "id": "myk",
         "name": "mayen-koblenz",
-        "file": "",
+        "file": "myk.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1930,7 +1930,7 @@
     {
         "id": "mz",
         "name": "mainz",
-        "file": "",
+        "file": "mz.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -1938,7 +1938,7 @@
     {
         "id": "mzg",
         "name": "merzig-wadern",
-        "file": "",
+        "file": "mzg.svg",
         "tags": [
             "saarland"
         ]
@@ -1946,7 +1946,7 @@
     {
         "id": "n",
         "name": "nuernberg",
-        "file": "",
+        "file": "n.svg",
         "tags": [
             "bayern"
         ]
@@ -1954,7 +1954,7 @@
     {
         "id": "nb",
         "name": "neubrandenburg",
-        "file": "",
+        "file": "nb.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -1962,7 +1962,7 @@
     {
         "id": "nd",
         "name": "neuburg-schrobenhausen",
-        "file": "",
+        "file": "nd.svg",
         "tags": [
             "bayern"
         ]
@@ -1970,7 +1970,7 @@
     {
         "id": "ndh",
         "name": "nordhausen",
-        "file": "",
+        "file": "ndh.svg",
         "tags": [
             "thueringen"
         ]
@@ -1978,7 +1978,7 @@
     {
         "id": "ne",
         "name": "neuss",
-        "file": "",
+        "file": "ne.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -1986,7 +1986,7 @@
     {
         "id": "nea",
         "name": "neustadt-bad windsheim/aisch",
-        "file": "",
+        "file": "nea.svg",
         "tags": [
             "bayern"
         ]
@@ -1994,7 +1994,7 @@
     {
         "id": "nes",
         "name": "bad neustadt/saale",
-        "file": "",
+        "file": "nes.svg",
         "tags": [
             "bayern"
         ]
@@ -2002,7 +2002,7 @@
     {
         "id": "new",
         "name": "neustadt/waldnaab",
-        "file": "",
+        "file": "new.svg",
         "tags": [
             "bayern"
         ]
@@ -2010,7 +2010,7 @@
     {
         "id": "nf",
         "name": "nordfriesland",
-        "file": "",
+        "file": "nf.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2018,7 +2018,7 @@
     {
         "id": "ni",
         "name": "nienburg",
-        "file": "",
+        "file": "ni.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2026,7 +2026,7 @@
     {
         "id": "nk",
         "name": "neunkirchen",
-        "file": "",
+        "file": "nk.svg",
         "tags": [
             "saarland"
         ]
@@ -2034,7 +2034,7 @@
     {
         "id": "nl",
         "name": "niedersachsen landesregierung und landtag",
-        "file": "",
+        "file": "nl.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2042,7 +2042,7 @@
     {
         "id": "nm",
         "name": "neumarkt/oberpfalz",
-        "file": "",
+        "file": "nm.svg",
         "tags": [
             "bayern"
         ]
@@ -2050,7 +2050,7 @@
     {
         "id": "nms",
         "name": "neumuenster",
-        "file": "",
+        "file": "nms.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2058,7 +2058,7 @@
     {
         "id": "noh",
         "name": "nordhorn",
-        "file": "",
+        "file": "noh.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2066,7 +2066,7 @@
     {
         "id": "nom",
         "name": "northeim",
-        "file": "",
+        "file": "nom.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2074,7 +2074,7 @@
     {
         "id": "nr",
         "name": "neuwied",
-        "file": "",
+        "file": "nr.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2082,7 +2082,7 @@
     {
         "id": "nordrhein-westfalen",
         "name": "nordrhein-westfalen landesregierung und landtag",
-        "file": "",
+        "file": "nordrhein-westfalen.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2090,7 +2090,7 @@
     {
         "id": "nu",
         "name": "neu-ulm",
-        "file": "",
+        "file": "nu.svg",
         "tags": [
             "bayern"
         ]
@@ -2098,7 +2098,7 @@
     {
         "id": "nvp",
         "name": "nordvorpommern",
-        "file": "",
+        "file": "nvp.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2106,7 +2106,7 @@
     {
         "id": "nw",
         "name": "neustadt/weinstrasse",
-        "file": "",
+        "file": "nw.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2114,7 +2114,7 @@
     {
         "id": "nwm",
         "name": "nordwestmecklenburg",
-        "file": "",
+        "file": "nwm.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2122,7 +2122,7 @@
     {
         "id": "oa",
         "name": "oberallgaeu / sonthofen",
-        "file": "",
+        "file": "oa.svg",
         "tags": [
             "bayern"
         ]
@@ -2130,7 +2130,7 @@
     {
         "id": "oal",
         "name": "ostallgaeu",
-        "file": "",
+        "file": "oal.svg",
         "tags": [
             "bayern"
         ]
@@ -2138,7 +2138,7 @@
     {
         "id": "ob",
         "name": "oberhausen",
-        "file": "",
+        "file": "ob.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2146,7 +2146,7 @@
     {
         "id": "od",
         "name": "bad oldesloe",
-        "file": "",
+        "file": "od.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2154,7 +2154,7 @@
     {
         "id": "oe",
         "name": "olpe",
-        "file": "",
+        "file": "oe.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2162,7 +2162,7 @@
     {
         "id": "of",
         "name": "offenbach/main",
-        "file": "",
+        "file": "of.svg",
         "tags": [
             "hessen"
         ]
@@ -2170,7 +2170,7 @@
     {
         "id": "og",
         "name": "offenburg",
-        "file": "",
+        "file": "og.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2178,7 +2178,7 @@
     {
         "id": "oh",
         "name": "ostholstein / eutin",
-        "file": "",
+        "file": "oh.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2186,7 +2186,7 @@
     {
         "id": "oha",
         "name": "osterode/harz",
-        "file": "",
+        "file": "oha.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2194,7 +2194,7 @@
     {
         "id": "ohv",
         "name": "oberhavel",
-        "file": "",
+        "file": "ohv.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2202,7 +2202,7 @@
     {
         "id": "ohz",
         "name": "osterholz-scharmbeck",
-        "file": "",
+        "file": "ohz.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2210,7 +2210,7 @@
     {
         "id": "ol",
         "name": "oldenburg",
-        "file": "",
+        "file": "ol.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2218,7 +2218,7 @@
     {
         "id": "opr",
         "name": "ostprignitz-ruppin",
-        "file": "",
+        "file": "opr.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2226,7 +2226,7 @@
     {
         "id": "os",
         "name": "osnabrueck",
-        "file": "",
+        "file": "os.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2234,7 +2234,7 @@
     {
         "id": "osl",
         "name": "oberspreewald-lausitz",
-        "file": "",
+        "file": "osl.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2242,7 +2242,7 @@
     {
         "id": "ovp",
         "name": "ostvorpommern",
-        "file": "",
+        "file": "ovp.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2250,7 +2250,7 @@
     {
         "id": "p",
         "name": "potsdam",
-        "file": "",
+        "file": "p.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2258,7 +2258,7 @@
     {
         "id": "pa",
         "name": "passau",
-        "file": "",
+        "file": "pa.svg",
         "tags": [
             "bayern"
         ]
@@ -2266,7 +2266,7 @@
     {
         "id": "paf",
         "name": "pfaffenhofen",
-        "file": "",
+        "file": "paf.svg",
         "tags": [
             "bayern"
         ]
@@ -2274,7 +2274,7 @@
     {
         "id": "pan",
         "name": "pfarrkirchen",
-        "file": "",
+        "file": "pan.svg",
         "tags": [
             "bayern"
         ]
@@ -2282,7 +2282,7 @@
     {
         "id": "pb",
         "name": "paderborn",
-        "file": "",
+        "file": "pb.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2290,7 +2290,7 @@
     {
         "id": "pch",
         "name": "parchim",
-        "file": "",
+        "file": "pch.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2298,7 +2298,7 @@
     {
         "id": "pe",
         "name": "peine",
-        "file": "",
+        "file": "pe.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2306,7 +2306,7 @@
     {
         "id": "pf",
         "name": "pforzheim",
-        "file": "",
+        "file": "pf.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2314,7 +2314,7 @@
     {
         "id": "pi",
         "name": "pinneberg",
-        "file": "",
+        "file": "pi.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2322,7 +2322,7 @@
     {
         "id": "pir",
         "name": "pirna/saechsische schweiz",
-        "file": "",
+        "file": "pir.svg",
         "tags": [
             "sachsen"
         ]
@@ -2330,7 +2330,7 @@
     {
         "id": "ploe",
         "name": "ploen",
-        "file": "",
+        "file": "ploe.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2338,7 +2338,7 @@
     {
         "id": "pm",
         "name": "potsdam-mittelmark",
-        "file": "",
+        "file": "pm.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2346,7 +2346,7 @@
     {
         "id": "pr",
         "name": "prignitz / perleberg",
-        "file": "",
+        "file": "pr.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2354,7 +2354,7 @@
     {
         "id": "ps",
         "name": "pirmasens",
-        "file": "",
+        "file": "ps.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2362,7 +2362,7 @@
     {
         "id": "r",
         "name": "regensburg",
-        "file": "",
+        "file": "r.svg",
         "tags": [
             "bayern"
         ]
@@ -2370,7 +2370,7 @@
     {
         "id": "ra",
         "name": "rastatt",
-        "file": "",
+        "file": "ra.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2378,7 +2378,7 @@
     {
         "id": "rd",
         "name": "rendsburg-eckernfoerde",
-        "file": "",
+        "file": "rd.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2386,7 +2386,7 @@
     {
         "id": "re",
         "name": "recklinghausen",
-        "file": "",
+        "file": "re.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2394,7 +2394,7 @@
     {
         "id": "reg",
         "name": "regen",
-        "file": "",
+        "file": "reg.svg",
         "tags": [
             "bayern"
         ]
@@ -2402,7 +2402,7 @@
     {
         "id": "ro",
         "name": "rosenheim",
-        "file": "",
+        "file": "ro.svg",
         "tags": [
             "bayern"
         ]
@@ -2410,7 +2410,7 @@
     {
         "id": "ros",
         "name": "rostock/landkreis",
-        "file": "",
+        "file": "ros.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2418,7 +2418,7 @@
     {
         "id": "row",
         "name": "rotenburg/wuemme",
-        "file": "",
+        "file": "row.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2426,7 +2426,7 @@
     {
         "id": "rp",
         "name": "rhein-pfalz-kreis",
-        "file": "",
+        "file": "rp.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2434,7 +2434,7 @@
     {
         "id": "rpl",
         "name": "rheinland-pfalzlz landesregierung und landtag",
-        "file": "",
+        "file": "rpl.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2442,7 +2442,7 @@
     {
         "id": "rs",
         "name": "remscheid",
-        "file": "",
+        "file": "rs.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2450,7 +2450,7 @@
     {
         "id": "rt",
         "name": "reutlingen",
-        "file": "",
+        "file": "rt.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2458,7 +2458,7 @@
     {
         "id": "rued",
         "name": "ruedesheim",
-        "file": "",
+        "file": "rued.svg",
         "tags": [
             "hessen"
         ]
@@ -2466,7 +2466,7 @@
     {
         "id": "rueg",
         "name": "ruegen",
-        "file": "",
+        "file": "rueg.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2474,7 +2474,7 @@
     {
         "id": "rv",
         "name": "ravensburg",
-        "file": "",
+        "file": "rv.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2482,7 +2482,7 @@
     {
         "id": "rw",
         "name": "rottweil",
-        "file": "",
+        "file": "rw.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2490,7 +2490,7 @@
     {
         "id": "rz",
         "name": "ratzeburg",
-        "file": "",
+        "file": "rz.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2498,7 +2498,7 @@
     {
         "id": "s",
         "name": "stuttgart",
-        "file": "",
+        "file": "s.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2506,7 +2506,7 @@
     {
         "id": "sad",
         "name": "schwandorf",
-        "file": "",
+        "file": "sad.svg",
         "tags": [
             "bayern"
         ]
@@ -2514,7 +2514,7 @@
     {
         "id": "sal",
         "name": "saarland landesregierung und landtag",
-        "file": "",
+        "file": "sal.svg",
         "tags": [
             "saarland"
         ]
@@ -2522,7 +2522,7 @@
     {
         "id": "saw",
         "name": "salzwedel",
-        "file": "",
+        "file": "saw.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -2530,7 +2530,7 @@
     {
         "id": "sb",
         "name": "saarbruecken",
-        "file": "",
+        "file": "sb.svg",
         "tags": [
             "saarland"
         ]
@@ -2538,7 +2538,7 @@
     {
         "id": "sc",
         "name": "schwabach",
-        "file": "",
+        "file": "sc.svg",
         "tags": [
             "bayern"
         ]
@@ -2546,7 +2546,7 @@
     {
         "id": "sdl",
         "name": "stendal",
-        "file": "",
+        "file": "sdl.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -2554,7 +2554,7 @@
     {
         "id": "se",
         "name": "bad segeberg",
-        "file": "",
+        "file": "se.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2562,7 +2562,7 @@
     {
         "id": "sg",
         "name": "solingen",
-        "file": "",
+        "file": "sg.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2570,7 +2570,7 @@
     {
         "id": "sh",
         "name": "schleswig-holstein landesregierung und landtag",
-        "file": "",
+        "file": "sh.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2578,7 +2578,7 @@
     {
         "id": "sha",
         "name": "schwaebisch hall",
-        "file": "",
+        "file": "sha.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2586,7 +2586,7 @@
     {
         "id": "shg",
         "name": "stadthagen",
-        "file": "",
+        "file": "shg.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2594,7 +2594,7 @@
     {
         "id": "shk",
         "name": "saale-holzlandkreis",
-        "file": "",
+        "file": "shk.svg",
         "tags": [
             "thueringen"
         ]
@@ -2602,7 +2602,7 @@
     {
         "id": "shl",
         "name": "suhl",
-        "file": "",
+        "file": "shl.svg",
         "tags": [
             "thueringen"
         ]
@@ -2610,7 +2610,7 @@
     {
         "id": "si",
         "name": "siegen-wittgenstein",
-        "file": "",
+        "file": "si.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2618,7 +2618,7 @@
     {
         "id": "sig",
         "name": "sigmaringen",
-        "file": "",
+        "file": "sig.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2626,7 +2626,7 @@
     {
         "id": "sim",
         "name": "rhein-hunsrueck-kreis",
-        "file": "",
+        "file": "sim.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2634,7 +2634,7 @@
     {
         "id": "sk",
         "name": "saalkreis",
-        "file": "",
+        "file": "sk.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -2642,7 +2642,7 @@
     {
         "id": "sl",
         "name": "schleswig-flensburg",
-        "file": "",
+        "file": "sl.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2650,7 +2650,7 @@
     {
         "id": "slf",
         "name": "saalfeld-rudolstadt",
-        "file": "",
+        "file": "slf.svg",
         "tags": [
             "thueringen"
         ]
@@ -2658,7 +2658,7 @@
     {
         "id": "slk",
         "name": "salzlandkreis",
-        "file": "",
+        "file": "slk.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -2666,7 +2666,7 @@
     {
         "id": "sls",
         "name": "saarlouis",
-        "file": "",
+        "file": "sls.svg",
         "tags": [
             "saarland"
         ]
@@ -2674,7 +2674,7 @@
     {
         "id": "sm",
         "name": "schmalkalden-meiningen",
-        "file": "",
+        "file": "sm.svg",
         "tags": [
             "thueringen"
         ]
@@ -2682,7 +2682,7 @@
     {
         "id": "sn",
         "name": "schwerin",
-        "file": "",
+        "file": "sn.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2690,7 +2690,7 @@
     {
         "id": "so",
         "name": "soest",
-        "file": "",
+        "file": "so.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2698,7 +2698,7 @@
     {
         "id": "sok",
         "name": "saale-orla-kreis",
-        "file": "",
+        "file": "sok.svg",
         "tags": [
             "thueringen"
         ]
@@ -2706,7 +2706,7 @@
     {
         "id": "soem",
         "name": "soemmerda",
-        "file": "",
+        "file": "soem.svg",
         "tags": [
             "thueringen"
         ]
@@ -2714,7 +2714,7 @@
     {
         "id": "son",
         "name": "sonneberg",
-        "file": "",
+        "file": "son.svg",
         "tags": [
             "thueringen"
         ]
@@ -2722,7 +2722,7 @@
     {
         "id": "sp",
         "name": "speyer",
-        "file": "",
+        "file": "sp.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2730,7 +2730,7 @@
     {
         "id": "spn",
         "name": "spree-neisse",
-        "file": "",
+        "file": "spn.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2738,7 +2738,7 @@
     {
         "id": "sr",
         "name": "straubing-bogen",
-        "file": "",
+        "file": "sr.svg",
         "tags": [
             "bayern"
         ]
@@ -2746,7 +2746,7 @@
     {
         "id": "st",
         "name": "steinfurt",
-        "file": "",
+        "file": "st.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2754,7 +2754,7 @@
     {
         "id": "sta",
         "name": "starnberg",
-        "file": "",
+        "file": "sta.svg",
         "tags": [
             "bayern"
         ]
@@ -2762,7 +2762,7 @@
     {
         "id": "std",
         "name": "stade",
-        "file": "",
+        "file": "std.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2770,7 +2770,7 @@
     {
         "id": "su",
         "name": "siegburg",
-        "file": "",
+        "file": "su.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2778,7 +2778,7 @@
     {
         "id": "suew",
         "name": "suedliche weinstrasse",
-        "file": "",
+        "file": "suew.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2786,7 +2786,7 @@
     {
         "id": "sw",
         "name": "schweinfurt",
-        "file": "",
+        "file": "sw.svg",
         "tags": [
             "bayern"
         ]
@@ -2794,7 +2794,7 @@
     {
         "id": "sz",
         "name": "salzgitter",
-        "file": "",
+        "file": "sz.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2802,7 +2802,7 @@
     {
         "id": "tdo",
         "name": "nordsachsen",
-        "file": "",
+        "file": "tdo.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -2810,7 +2810,7 @@
     {
         "id": "tbb",
         "name": "tauberbischofsheim",
-        "file": "",
+        "file": "tbb.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2818,7 +2818,7 @@
     {
         "id": "tf",
         "name": "teltow-flaeming",
-        "file": "",
+        "file": "tf.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2826,7 +2826,7 @@
     {
         "id": "tg",
         "name": "torgau",
-        "file": "",
+        "file": "tg.svg",
         "tags": [
             "sachsen"
         ]
@@ -2834,7 +2834,7 @@
     {
         "id": "thl",
         "name": "thueringen landesregierung und landtag",
-        "file": "",
+        "file": "thl.svg",
         "tags": [
             "thueringen"
         ]
@@ -2842,7 +2842,7 @@
     {
         "id": "thw",
         "name": "technisches hilfswerk",
-        "file": "",
+        "file": "thw.svg",
         "tags": [
             ""
         ]
@@ -2850,7 +2850,7 @@
     {
         "id": "tir",
         "name": "tirschenreuth",
-        "file": "",
+        "file": "tir.svg",
         "tags": [
             "bayern"
         ]
@@ -2858,7 +2858,7 @@
     {
         "id": "toel",
         "name": "bad toelz",
-        "file": "",
+        "file": "toel.svg",
         "tags": [
             "bayern"
         ]
@@ -2866,7 +2866,7 @@
     {
         "id": "tr",
         "name": "trier",
-        "file": "",
+        "file": "tr.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2874,7 +2874,7 @@
     {
         "id": "ts",
         "name": "traunstein",
-        "file": "",
+        "file": "ts.svg",
         "tags": [
             "bayern"
         ]
@@ -2882,7 +2882,7 @@
     {
         "id": "tue",
         "name": "tuebingen",
-        "file": "",
+        "file": "tue.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2890,7 +2890,7 @@
     {
         "id": "tut",
         "name": "tuttlingen",
-        "file": "",
+        "file": "tut.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2898,7 +2898,7 @@
     {
         "id": "ue",
         "name": "uelzen",
-        "file": "",
+        "file": "ue.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2906,7 +2906,7 @@
     {
         "id": "ul",
         "name": "ulm",
-        "file": "",
+        "file": "ul.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2914,7 +2914,7 @@
     {
         "id": "um",
         "name": "uckermark",
-        "file": "",
+        "file": "um.svg",
         "tags": [
             "brandenburg"
         ]
@@ -2922,7 +2922,7 @@
     {
         "id": "un",
         "name": "unna",
-        "file": "",
+        "file": "un.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2930,7 +2930,7 @@
     {
         "id": "v",
         "name": "vogtlandkreis",
-        "file": "",
+        "file": "v.svg",
         "tags": [
             "sachsen"
         ]
@@ -2938,7 +2938,7 @@
     {
         "id": "vb",
         "name": "vogelsbergkreis",
-        "file": "",
+        "file": "vb.svg",
         "tags": [
             "hessen"
         ]
@@ -2946,7 +2946,7 @@
     {
         "id": "vec",
         "name": "vechta",
-        "file": "",
+        "file": "vec.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2954,7 +2954,7 @@
     {
         "id": "ver",
         "name": "verden",
-        "file": "",
+        "file": "ver.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -2962,7 +2962,7 @@
     {
         "id": "vie",
         "name": "viersen",
-        "file": "",
+        "file": "vie.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -2970,7 +2970,7 @@
     {
         "id": "vk",
         "name": "voelklingen",
-        "file": "",
+        "file": "vk.svg",
         "tags": [
             "saarland"
         ]
@@ -2978,7 +2978,7 @@
     {
         "id": "vr",
         "name": "vorpommern-ruegen",
-        "file": "",
+        "file": "vr.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2986,7 +2986,7 @@
     {
         "id": "vs",
         "name": "villingen-schwenningen",
-        "file": "",
+        "file": "vs.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2994,7 +2994,7 @@
     {
         "id": "w",
         "name": "wuppertal",
-        "file": "",
+        "file": "w.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -3002,7 +3002,7 @@
     {
         "id": "waf",
         "name": "warendorf",
-        "file": "",
+        "file": "waf.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -3010,7 +3010,7 @@
     {
         "id": "wak",
         "name": "wartburgkreis",
-        "file": "",
+        "file": "wak.svg",
         "tags": [
             "thueringen"
         ]
@@ -3018,7 +3018,7 @@
     {
         "id": "wb",
         "name": "wittenberg",
-        "file": "",
+        "file": "wb.svg",
         "tags": [
             "sachsen-anhalt"
         ]
@@ -3026,7 +3026,7 @@
     {
         "id": "we",
         "name": "weimar",
-        "file": "",
+        "file": "we.svg",
         "tags": [
             "thueringen"
         ]
@@ -3034,7 +3034,7 @@
     {
         "id": "wen",
         "name": "weiden",
-        "file": "",
+        "file": "wen.svg",
         "tags": [
             "bayern"
         ]
@@ -3042,7 +3042,7 @@
     {
         "id": "wes",
         "name": "wesel",
-        "file": "",
+        "file": "wes.svg",
         "tags": [
             "nordrhein-westfalen"
         ]
@@ -3050,7 +3050,7 @@
     {
         "id": "wf",
         "name": "wolfenbuettel",
-        "file": "",
+        "file": "wf.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -3058,7 +3058,7 @@
     {
         "id": "whv",
         "name": "wilhelmshaven",
-        "file": "",
+        "file": "whv.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -3066,7 +3066,7 @@
     {
         "id": "wi",
         "name": "wiesbaden",
-        "file": "",
+        "file": "wi.svg",
         "tags": [
             "hessen"
         ]
@@ -3074,7 +3074,7 @@
     {
         "id": "wil",
         "name": "wittlich",
-        "file": "",
+        "file": "wil.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -3082,7 +3082,7 @@
     {
         "id": "wl",
         "name": "winsen/luhe",
-        "file": "",
+        "file": "wl.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -3090,7 +3090,7 @@
     {
         "id": "wm",
         "name": "weilheim-schongau",
-        "file": "",
+        "file": "wm.svg",
         "tags": [
             "bayern"
         ]
@@ -3098,7 +3098,7 @@
     {
         "id": "wn",
         "name": "waiblingen",
-        "file": "",
+        "file": "wn.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -3106,7 +3106,7 @@
     {
         "id": "wnd",
         "name": "st. wendel",
-        "file": "",
+        "file": "wnd.svg",
         "tags": [
             "saarland"
         ]
@@ -3114,7 +3114,7 @@
     {
         "id": "wo",
         "name": "worms",
-        "file": "",
+        "file": "wo.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -3122,7 +3122,7 @@
     {
         "id": "wob",
         "name": "wolfsburg",
-        "file": "",
+        "file": "wob.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -3130,7 +3130,7 @@
     {
         "id": "wst",
         "name": "westerstede",
-        "file": "",
+        "file": "wst.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -3138,7 +3138,7 @@
     {
         "id": "wt",
         "name": "waldshut-tiengen",
-        "file": "",
+        "file": "wt.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -3146,7 +3146,7 @@
     {
         "id": "wtm",
         "name": "wittmund",
-        "file": "",
+        "file": "wtm.svg",
         "tags": [
             "niedersachsen"
         ]
@@ -3154,7 +3154,7 @@
     {
         "id": "wue",
         "name": "wuerzburg",
-        "file": "",
+        "file": "wue.svg",
         "tags": [
             "bayern"
         ]
@@ -3162,7 +3162,7 @@
     {
         "id": "wug",
         "name": "weissenburg-gunzenhausen",
-        "file": "",
+        "file": "wug.svg",
         "tags": [
             "bayern"
         ]
@@ -3170,7 +3170,7 @@
     {
         "id": "wun",
         "name": "wunsiedel",
-        "file": "",
+        "file": "wun.svg",
         "tags": [
             "bayern"
         ]
@@ -3178,7 +3178,7 @@
     {
         "id": "ww",
         "name": "westerwald",
-        "file": "",
+        "file": "ww.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -3186,7 +3186,7 @@
     {
         "id": "wz",
         "name": "wetzlar",
-        "file": "",
+        "file": "wz.svg",
         "tags": [
             "hessen"
         ]
@@ -3194,7 +3194,7 @@
     {
         "id": "y",
         "name": "bundeswehr",
-        "file": "",
+        "file": "y.svg",
         "tags": [
             ""
         ]
@@ -3202,7 +3202,7 @@
     {
         "id": "z",
         "name": "zwickau",
-        "file": "",
+        "file": "z.svg",
         "tags": [
             "sachsen"
         ]
@@ -3210,7 +3210,7 @@
     {
         "id": "zw",
         "name": "zweibruecken",
-        "file": "",
+        "file": "zw.svg",
         "tags": [
             "rheinland-pfalz"
         ]
