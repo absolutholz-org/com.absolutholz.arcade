@@ -1,1 +1,1 @@
-export { PageGridRow } from './PageGridRow';
+export { PageGridRow } from './_PageGridRow.styled';

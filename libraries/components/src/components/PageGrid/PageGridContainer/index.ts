@@ -1,1 +1,1 @@
-export { PageGridContainer } from './PageGridContainer';
+export { PageGridContainer } from './_PageGridContainer.styled';

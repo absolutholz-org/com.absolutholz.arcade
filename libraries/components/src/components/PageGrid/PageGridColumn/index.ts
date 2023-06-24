@@ -1,1 +1,1 @@
-export { PageGridColumn } from './PageGridColumn';
+export { PageGridColumn } from './_PageGridColumn.styled';
