@@ -88,9 +88,9 @@
         ]
     },
     {
-        "id": "aoe",
+        "id": "aö",
         "name": "altoetting",
-        "file": "aoe.svg",
+        "file": "aö.svg",
         "tags": [
             "bayern"
         ]
@@ -169,7 +169,7 @@
     },
     {
         "id": "bb",
-        "name": "boeblingen",
+        "name": "böblingen",
         "file": "bb.svg",
         "tags": [
             "baden-wuerttemberg"
@@ -592,9 +592,9 @@
         ]
     },
     {
-        "id": "duew",
+        "id": "düw",
         "name": "bad duerkheim / neustadt/weinstrasse",
-        "file": "duew.svg",
+        "file": "düw.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -809,7 +809,7 @@
     },
     {
         "id": "ffb",
-        "name": "fuerstenfeldbruck",
+        "name": "fürstenfeldbruck",
         "file": "ffb.svg",
         "tags": [
             "bayern"
@@ -888,9 +888,9 @@
         ]
     },
     {
-        "id": "fue",
-        "name": "fuerth",
-        "file": "fue.svg",
+        "id": "fü",
+        "name": "fürth",
+        "file": "fü.svg",
         "tags": [
             "bayern"
         ]
@@ -968,16 +968,16 @@
         ]
     },
     {
-        "id": "goe",
-        "name": "goettingen",
-        "file": "goe.svg",
+        "id": "gö",
+        "name": "göttingen",
+        "file": "gö.svg",
         "tags": [
             "niedersachsen"
         ]
     },
     {
         "id": "gp",
-        "name": "goeppingen",
+        "name": "göppingen",
         "file": "gp.svg",
         "tags": [
             "baden-wuerttemberg"
@@ -985,7 +985,7 @@
     },
     {
         "id": "gr",
-        "name": "goerlitz",
+        "name": "görlitz",
         "file": "gr.svg",
         "tags": [
             "sachsen"
@@ -1009,7 +1009,7 @@
     },
     {
         "id": "gt",
-        "name": "guetersloh",
+        "name": "gütersloh",
         "file": "gt.svg",
         "tags": [
             "nordrhein-westfalen"
@@ -1024,16 +1024,16 @@
         ]
     },
     {
-        "id": "gue",
-        "name": "guestrow",
-        "file": "gue.svg",
+        "id": "gü",
+        "name": "güstrow",
+        "file": "gü.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
     },
     {
         "id": "gz",
-        "name": "guenzburg",
+        "name": "günzburg",
         "file": "gz.svg",
         "tags": [
             "bayern"
@@ -1528,9 +1528,9 @@
         ]
     },
     {
-        "id": "kuen",
-        "name": "kuenzelsau",
-        "file": "kuen.svg",
+        "id": "kün",
+        "name": "künzelsau",
+        "file": "kün.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1672,9 +1672,9 @@
         ]
     },
     {
-        "id": "loe",
-        "name": "loerrach",
-        "file": "loe.svg",
+        "id": "lö",
+        "name": "lörrach",
+        "file": "lö.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -1729,7 +1729,7 @@
     },
     {
         "id": "m",
-        "name": "muenchen",
+        "name": "münchen",
         "file": "m.svg",
         "tags": [
             "bayern"
@@ -1857,7 +1857,7 @@
     },
     {
         "id": "ms",
-        "name": "muenster",
+        "name": "münster",
         "file": "ms.svg",
         "tags": [
             "nordrhein-westfalen"
@@ -1896,17 +1896,17 @@
         ]
     },
     {
-        "id": "mue",
-        "name": "muehldorf am inn",
-        "file": "mue.svg",
+        "id": "mü",
+        "name": "mühldorf am inn",
+        "file": "mü.svg",
         "tags": [
             "bayern"
         ]
     },
     {
-        "id": "muer",
-        "name": "mueritz",
-        "file": "muer.svg",
+        "id": "mür",
+        "name": "müritz",
+        "file": "mür.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2328,9 +2328,9 @@
         ]
     },
     {
-        "id": "ploe",
-        "name": "ploen",
-        "file": "ploe.svg",
+        "id": "plö",
+        "name": "plön",
+        "file": "plö.svg",
         "tags": [
             "schleswig-holstein"
         ]
@@ -2456,17 +2456,17 @@
         ]
     },
     {
-        "id": "rued",
-        "name": "ruedesheim",
-        "file": "rued.svg",
+        "id": "rüd",
+        "name": "rüdesheim",
+        "file": "rüd.svg",
         "tags": [
             "hessen"
         ]
     },
     {
-        "id": "rueg",
-        "name": "ruegen",
-        "file": "rueg.svg",
+        "id": "rüg",
+        "name": "rügen",
+        "file": "rüg.svg",
         "tags": [
             "mecklenburg-vorpommern"
         ]
@@ -2704,9 +2704,9 @@
         ]
     },
     {
-        "id": "soem",
-        "name": "soemmerda",
-        "file": "soem.svg",
+        "id": "söm",
+        "name": "sömmerda",
+        "file": "söm.svg",
         "tags": [
             "thueringen"
         ]
@@ -2776,9 +2776,9 @@
         ]
     },
     {
-        "id": "suew",
+        "id": "süw",
         "name": "suedliche weinstrasse",
-        "file": "suew.svg",
+        "file": "süw.svg",
         "tags": [
             "rheinland-pfalz"
         ]
@@ -2856,9 +2856,9 @@
         ]
     },
     {
-        "id": "toel",
-        "name": "bad toelz",
-        "file": "toel.svg",
+        "id": "töl",
+        "name": "bad tölz",
+        "file": "töl.svg",
         "tags": [
             "bayern"
         ]
@@ -2880,9 +2880,9 @@
         ]
     },
     {
-        "id": "tue",
-        "name": "tuebingen",
-        "file": "tue.svg",
+        "id": "tü",
+        "name": "tübingen",
+        "file": "tü.svg",
         "tags": [
             "baden-wuerttemberg"
         ]
@@ -2977,7 +2977,7 @@
     },
     {
         "id": "vr",
-        "name": "vorpommern-ruegen",
+        "name": "vorpommern-rügen",
         "file": "vr.svg",
         "tags": [
             "mecklenburg-vorpommern"
@@ -3152,9 +3152,9 @@
         ]
     },
     {
-        "id": "wue",
-        "name": "wuerzburg",
-        "file": "wue.svg",
+        "id": "wü",
+        "name": "würzburg",
+        "file": "wü.svg",
         "tags": [
             "bayern"
         ]
