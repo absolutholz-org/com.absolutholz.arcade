@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "symbols:generate:germany-license-plates": "node ./src/configs/germany-license-plates/createPlates.mjs",
-    "symbols:optimize:germany-license-plates": "svgo -f ./public/symbols/originals/germany-license-plates -o ./public/symbols/optimized/germany-license-plates"
+    "germany-license-plates": "node ./src/configs/germany-license-plates/processSource.mjs && svgo -f ./public/symbols/originals/germany-license-plates -o ./public/symbols/optimized/germany-license-plates"
   },
   "dependencies": {
     "@arcade/library-common": "^1.0.0",

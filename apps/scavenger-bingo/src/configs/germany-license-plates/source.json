@@ -1,0 +1,2012 @@
+[
+    {
+        "Kennzeichen": "A",
+        "Stadt-Landkreis": "Augsburg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "AA",
+        "Stadt-Landkreis": "Aalen Ostalbkreis",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "AB",
+        "Stadt-Landkreis": "Aschaffenburg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "ABI",
+        "Stadt-Landkreis": "Anhalt-Bitterfeld",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "ABG",
+        "Stadt-Landkreis": "Altenburger Land",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "AC",
+        "Stadt-Landkreis": "Aachen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "AE",
+        "Stadt-Landkreis": "Auerbach",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "AIC",
+        "Stadt-Landkreis": "Aichach-Friedberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "AK",
+        "Stadt-Landkreis": "Altenkirchen/Westerwald",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "AM",
+        "Stadt-Landkreis": "Amberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "AN",
+        "Stadt-Landkreis": "Ansbach",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "AÖ",
+        "Stadt-Landkreis": "Altötting",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "AP",
+        "Stadt-Landkreis": "Apolda - Weimarer Land",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "AS",
+        "Stadt-Landkreis": "Amberg-Sulzbach",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "AUR",
+        "Stadt-Landkreis": "Aurich",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "AW",
+        "Stadt-Landkreis": "Bad Neuenahr-Ahrweiler",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "AZ",
+        "Stadt-Landkreis": "Alzey-Worms",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "B",
+        "Stadt-Landkreis": "Berlin",
+        "Bundesland": "Berlin"
+    },
+    {
+        "Kennzeichen": "BA",
+        "Stadt-Landkreis": "Bamberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "BAD",
+        "Stadt-Landkreis": "Baden-Baden",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "BAR",
+        "Stadt-Landkreis": "Barnim",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "BB",
+        "Stadt-Landkreis": "Böblingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "BC",
+        "Stadt-Landkreis": "Biberach/Riß",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "BD",
+        "Stadt-Landkreis": "Bundestag, Bundesrat, Bundesregierung",
+        "Bundesland": ""
+    },
+    {
+        "Kennzeichen": "BGL",
+        "Stadt-Landkreis": "Berchtesgadener Land",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "BI",
+        "Stadt-Landkreis": "Bielefeld",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "BIR",
+        "Stadt-Landkreis": "Birkenfeld/Nahe und Idar-Oberstein",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "BIT",
+        "Stadt-Landkreis": "Bitburg-Prüm",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "BK",
+        "Stadt-Landkreis": "Bochum",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "BL",
+        "Stadt-Landkreis": "Zollernalbkreis / Balingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "BLK",
+        "Stadt-Landkreis": "Burgenlandkreis",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "BM",
+        "Stadt-Landkreis": "Erftkreis / Bergheim",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "BN",
+        "Stadt-Landkreis": "Bonn",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "BO",
+        "Stadt-Landkreis": "Bochum",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "BOR",
+        "Stadt-Landkreis": "Borken / Ahaus",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "BOT",
+        "Stadt-Landkreis": "Bottrop",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "BP",
+        "Stadt-Landkreis": "Bundespolizei",
+        "Bundesland": ""
+    },
+    {
+        "Kennzeichen": "BRA",
+        "Stadt-Landkreis": "Wesermarsch / Brake",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "BRB",
+        "Stadt-Landkreis": "Brandenburg",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "BS",
+        "Stadt-Landkreis": "Braunschweig",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "BT",
+        "Stadt-Landkreis": "Bayreuth",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "BTF",
+        "Stadt-Landkreis": "Bitterfeld",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "BÜS",
+        "Stadt-Landkreis": "Büsingen am Hochrhein",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "BW",
+        "Stadt-Landkreis": "Bundes-Wasser- und Schiffahrtsverwaltung",
+        "Bundesland": ""
+    },
+    {
+        "Kennzeichen": "BWL",
+        "Stadt-Landkreis": "Baden-Württemberg Landesregierung und Landtag",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "BYL",
+        "Stadt-Landkreis": "Bayern Landesregierung und Landtag",
+        "Bundesland": ""
+    },
+    {
+        "Kennzeichen": "BZ",
+        "Stadt-Landkreis": "Bautzen",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "C",
+        "Stadt-Landkreis": "Chemnitz",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "CB",
+        "Stadt-Landkreis": "Cottbus",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "CE",
+        "Stadt-Landkreis": "Celle",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "CHA",
+        "Stadt-Landkreis": "Cham",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "CO",
+        "Stadt-Landkreis": "Coburg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "COC",
+        "Stadt-Landkreis": "Cochem-Zell",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "COE",
+        "Stadt-Landkreis": "Coesfeld",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "CUX",
+        "Stadt-Landkreis": "Cuxhaven",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "CW",
+        "Stadt-Landkreis": "Calw",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "D",
+        "Stadt-Landkreis": "Düsseldorf",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "DA",
+        "Stadt-Landkreis": "Darmstadt-Dieburg",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "DAH",
+        "Stadt-Landkreis": "Dachau",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "DAN",
+        "Stadt-Landkreis": "Lüchow-Dannenberg",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "DAU",
+        "Stadt-Landkreis": "Daun (Eifel)",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "DBR",
+        "Stadt-Landkreis": "Bad Doberan",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "DD",
+        "Stadt-Landkreis": "Dresden",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "DE",
+        "Stadt-Landkreis": "Dessau-Roßlau",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "DEG",
+        "Stadt-Landkreis": "Deggendorf",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "DEL",
+        "Stadt-Landkreis": "Delmenhorst",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "DGF",
+        "Stadt-Landkreis": "Dingolfing-Landau",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "DH",
+        "Stadt-Landkreis": "Diepholz-Syke",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "DL",
+        "Stadt-Landkreis": "Döbeln",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "DLG",
+        "Stadt-Landkreis": "Dillingen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "DN",
+        "Stadt-Landkreis": "Düren",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "Do",
+        "Stadt-Landkreis": "Dortmund",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "DON",
+        "Stadt-Landkreis": "Donauwörth",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "DU",
+        "Stadt-Landkreis": "Duisburg",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "DÜW",
+        "Stadt-Landkreis": "Bad Dürkheim / Neustadt/Weinstraße",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "E",
+        "Stadt-Landkreis": "Essen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "EA",
+        "Stadt-Landkreis": "Eisenach",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "EB",
+        "Stadt-Landkreis": "Eilenburg",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "EBE",
+        "Stadt-Landkreis": "Ebersberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "ED",
+        "Stadt-Landkreis": "Erding",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "EE",
+        "Stadt-Landkreis": "Elbe-Elsterkreis",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "EF",
+        "Stadt-Landkreis": "Erfurt",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "EI",
+        "Stadt-Landkreis": "Eichstätt",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "EIC",
+        "Stadt-Landkreis": "Eichsfeld",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "EL",
+        "Stadt-Landkreis": "Emsland",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "EM",
+        "Stadt-Landkreis": "Emmendingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "EMD",
+        "Stadt-Landkreis": "Emden",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "EMS",
+        "Stadt-Landkreis": "Bad Ems/Lahn-Kreis",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "EN",
+        "Stadt-Landkreis": "Ennepe-Ruhr-Kreis",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "ER",
+        "Stadt-Landkreis": "Erlangen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "ERB",
+        "Stadt-Landkreis": "Erbach/Odenwaldkreis",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "ERH",
+        "Stadt-Landkreis": "Erlangen-Höchstadt",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "ERZ",
+        "Stadt-Landkreis": "Erzgebirgskreis",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "ES",
+        "Stadt-Landkreis": "Esslingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "ESW",
+        "Stadt-Landkreis": "Eschwege",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "EU",
+        "Stadt-Landkreis": "Euskirchen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "F",
+        "Stadt-Landkreis": "Frankfurt/Main",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "FB",
+        "Stadt-Landkreis": "Friedberg/Wetteraukreis",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "FD",
+        "Stadt-Landkreis": "Fulda",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "FDS",
+        "Stadt-Landkreis": "Freudenstadt",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "FF",
+        "Stadt-Landkreis": "Frankfurt/Oder",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "FFB",
+        "Stadt-Landkreis": "Fürstenfeldbruck",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "FG",
+        "Stadt-Landkreis": "Freiberg",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "FL",
+        "Stadt-Landkreis": "Flensburg",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "FN",
+        "Stadt-Landkreis": "Friedrichshafen/Bodenseekreis",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "FO",
+        "Stadt-Landkreis": "Forchheim",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "FR",
+        "Stadt-Landkreis": "Freiburg",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "FRG",
+        "Stadt-Landkreis": "Freyung-Grafenau",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "FRI",
+        "Stadt-Landkreis": "Friesland",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "FS",
+        "Stadt-Landkreis": "Freising",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "FT",
+        "Stadt-Landkreis": "Frankenthal",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "FÜ",
+        "Stadt-Landkreis": "Fürth",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "G",
+        "Stadt-Landkreis": "Gera",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "GAP",
+        "Stadt-Landkreis": "Garmisch-Partenkirchen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "GE",
+        "Stadt-Landkreis": "Gelsenkirchen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "GER",
+        "Stadt-Landkreis": "Germersheim",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "GF",
+        "Stadt-Landkreis": "Gifhorn",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "GG",
+        "Stadt-Landkreis": "Groß-Gerau",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "GI",
+        "Stadt-Landkreis": "Gießen",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "GL",
+        "Stadt-Landkreis": "Bergisch Gladbach",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "GM",
+        "Stadt-Landkreis": "Gummersbach",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "GÖ",
+        "Stadt-Landkreis": "Göttingen",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "GP",
+        "Stadt-Landkreis": "Göppingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "GR",
+        "Stadt-Landkreis": "Görlitz",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "GRZ",
+        "Stadt-Landkreis": "Greiz",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "GS",
+        "Stadt-Landkreis": "Goslar",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "GT",
+        "Stadt-Landkreis": "Gütersloh",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "GTH",
+        "Stadt-Landkreis": "Gotha",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "GÜ",
+        "Stadt-Landkreis": "Güstrow",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "GZ",
+        "Stadt-Landkreis": "Günzburg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "H",
+        "Stadt-Landkreis": "Hannover",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "HA",
+        "Stadt-Landkreis": "Hagen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HAL",
+        "Stadt-Landkreis": "Halle",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "HAM",
+        "Stadt-Landkreis": "Hamm",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HAS",
+        "Stadt-Landkreis": "Haßberge / Haßfurt",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "HB",
+        "Stadt-Landkreis": "Hansestadt Bremen/Bremerhaven",
+        "Bundesland": "Bremen"
+    },
+    {
+        "Kennzeichen": "HBN",
+        "Stadt-Landkreis": "Hildburghausen",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "HD",
+        "Stadt-Landkreis": "Heidelberg",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "HDH",
+        "Stadt-Landkreis": "Heidenheim",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "HE",
+        "Stadt-Landkreis": "Helmstedt",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "HEF",
+        "Stadt-Landkreis": "Bad Hersfeld",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "HEI",
+        "Stadt-Landkreis": "Heide",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "HEL",
+        "Stadt-Landkreis": "Hessen Landesregierung und Landtag",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "HER",
+        "Stadt-Landkreis": "Herne",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HF",
+        "Stadt-Landkreis": "Herford",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HG",
+        "Stadt-Landkreis": "Bad Homburg",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "HGW",
+        "Stadt-Landkreis": "Hansestadt Greifswald",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "HH",
+        "Stadt-Landkreis": "Hansestadt Hamburg",
+        "Bundesland": "Hamburg"
+    },
+    {
+        "Kennzeichen": "HI",
+        "Stadt-Landkreis": "Hildesheim",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "HL",
+        "Stadt-Landkreis": "Hansestadt Lübeck",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "HM",
+        "Stadt-Landkreis": "Hameln-Pyrmont",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "HN",
+        "Stadt-Landkreis": "Heilbronn",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "HO",
+        "Stadt-Landkreis": "Hof",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "HOL",
+        "Stadt-Landkreis": "Holzminden",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "HOM",
+        "Stadt-Landkreis": "Homburg",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "HP",
+        "Stadt-Landkreis": "Heppenheim",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "HR",
+        "Stadt-Landkreis": "Homberg",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "HRO",
+        "Stadt-Landkreis": "Hansestadt Rostock",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "HS",
+        "Stadt-Landkreis": "Heinsberg",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HSK",
+        "Stadt-Landkreis": "Hochsauerlandkreis",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HST",
+        "Stadt-Landkreis": "Hansestadt Stralsund",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "HU",
+        "Stadt-Landkreis": "Hanau",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "HVL",
+        "Stadt-Landkreis": "Havelland",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "HWI",
+        "Stadt-Landkreis": "Hansestadt Wismar",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "HX",
+        "Stadt-Landkreis": "Höxter",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "HZ",
+        "Stadt-Landkreis": "Harz",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "IGB",
+        "Stadt-Landkreis": "St. Ingbert",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "IK",
+        "Stadt-Landkreis": "Ilm-Kreis",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "IN",
+        "Stadt-Landkreis": "Ingolstadt",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "IZ",
+        "Stadt-Landkreis": "Itzehoe",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "J",
+        "Stadt-Landkreis": "Jena",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "JL",
+        "Stadt-Landkreis": "Jerichower Land",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "K",
+        "Stadt-Landkreis": "Köln",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "KA",
+        "Stadt-Landkreis": "Karlsruhe",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "KB",
+        "Stadt-Landkreis": "Korbach",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "KC",
+        "Stadt-Landkreis": "Kronach",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KE",
+        "Stadt-Landkreis": "Kempten",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KEH",
+        "Stadt-Landkreis": "Kelheim",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KF",
+        "Stadt-Landkreis": "Kaufbeuren",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KG",
+        "Stadt-Landkreis": "Bad Kissingen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KH",
+        "Stadt-Landkreis": "Bad Kreuznach",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "KI",
+        "Stadt-Landkreis": "Kiel",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "KIB",
+        "Stadt-Landkreis": "Kirchheimbolanden",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "KL",
+        "Stadt-Landkreis": "Kaiserslautern",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "KLE",
+        "Stadt-Landkreis": "Kleve",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "KN",
+        "Stadt-Landkreis": "Konstanz",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "KO",
+        "Stadt-Landkreis": "Koblenz",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "KR",
+        "Stadt-Landkreis": "Krefeld",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "KS",
+        "Stadt-Landkreis": "Kassel",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "KT",
+        "Stadt-Landkreis": "Kitzingen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KU",
+        "Stadt-Landkreis": "Kulmbach",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "KÜN",
+        "Stadt-Landkreis": "Künzelsau",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "KUS",
+        "Stadt-Landkreis": "Kusel",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "KYF",
+        "Stadt-Landkreis": "Kyffhäuserkreis",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "L",
+        "Stadt-Landkreis": "Leipzig",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "LA",
+        "Stadt-Landkreis": "Landshut",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "LAU",
+        "Stadt-Landkreis": "Lauf/Nürnberger Land",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "LB",
+        "Stadt-Landkreis": "Ludwigsburg",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "LD",
+        "Stadt-Landkreis": "Landau",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "LDK",
+        "Stadt-Landkreis": "Lahn-Dill-Kreis",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "LDS",
+        "Stadt-Landkreis": "Dahme-Spreewald",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "LER",
+        "Stadt-Landkreis": "Leer/Ostfriesland",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "LEV",
+        "Stadt-Landkreis": "Leverkusen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "LG",
+        "Stadt-Landkreis": "Lüneburg",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "LI",
+        "Stadt-Landkreis": "Lindau",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "LIF",
+        "Stadt-Landkreis": "Lichtenfels",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "LIP",
+        "Stadt-Landkreis": "Lippe",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "LL",
+        "Stadt-Landkreis": "Landsberg/Lech",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "LM",
+        "Stadt-Landkreis": "Limburg-Weilburg",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "LÖ",
+        "Stadt-Landkreis": "Lörrach",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "LOS",
+        "Stadt-Landkreis": "Oder-Spree-Kreis Beeskow",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "LRO",
+        "Stadt-Landkreis": "Landkreis Rostock",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "LSA",
+        "Stadt-Landkreis": "Sachsen-Anhalt Landesregierung und Landtag",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "LSN",
+        "Stadt-Landkreis": "Sachsen Landesregierung und Landtag",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "LU",
+        "Stadt-Landkreis": "Ludwigshafen",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "LWL",
+        "Stadt-Landkreis": "Ludwigslust",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "M",
+        "Stadt-Landkreis": "München",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MA",
+        "Stadt-Landkreis": "Mannheim",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "MB",
+        "Stadt-Landkreis": "Miesbach",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MD",
+        "Stadt-Landkreis": "Magdeburg",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "ME",
+        "Stadt-Landkreis": "Mettmann",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "MEI",
+        "Stadt-Landkreis": "Meißen",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "MG",
+        "Stadt-Landkreis": "Mönchengladbach",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "MI",
+        "Stadt-Landkreis": "Minden-Lübbecke",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "MIL",
+        "Stadt-Landkreis": "Miltenberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MK",
+        "Stadt-Landkreis": "Märkischer Kreis",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "MKK",
+        "Stadt-Landkreis": "Main-Kinzig-Kreis",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "MM",
+        "Stadt-Landkreis": "Memmingen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MN",
+        "Stadt-Landkreis": "Mindelheim",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MOL",
+        "Stadt-Landkreis": "Märkisch-Oderland",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "MOS",
+        "Stadt-Landkreis": "Mosbach",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "MR",
+        "Stadt-Landkreis": "Marburg-Biedenkopf",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "MS",
+        "Stadt-Landkreis": "Münster",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "MSH",
+        "Stadt-Landkreis": "Mansfeld-Südharz",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "MSP",
+        "Stadt-Landkreis": "Main-Spessart-Kreis",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MST",
+        "Stadt-Landkreis": "Mecklenburg-Strelitz",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "MTK",
+        "Stadt-Landkreis": "Main-Taunus-Kreis",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "MÜ",
+        "Stadt-Landkreis": "Mühldorf am Inn",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "MÜR",
+        "Stadt-Landkreis": "Müritz",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "MVL",
+        "Stadt-Landkreis": "Mecklenburg-Vorpommern Landesregierung und Landtag",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "MYK",
+        "Stadt-Landkreis": "Mayen-Koblenz",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "MZ",
+        "Stadt-Landkreis": "Mainz",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "MZG",
+        "Stadt-Landkreis": "Merzig-Wadern",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "N",
+        "Stadt-Landkreis": "Nürnberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NB",
+        "Stadt-Landkreis": "Neubrandenburg",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "ND",
+        "Stadt-Landkreis": "Neuburg-Schrobenhausen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NDH",
+        "Stadt-Landkreis": "Nordhausen",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "NE",
+        "Stadt-Landkreis": "Neuss",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "NEA",
+        "Stadt-Landkreis": "Neustadt-Bad Windsheim/Aisch",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NES",
+        "Stadt-Landkreis": "Bad Neustadt/Saale",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NEW",
+        "Stadt-Landkreis": "Neustadt/Waldnaab",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NF",
+        "Stadt-Landkreis": "Nordfriesland",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "NI",
+        "Stadt-Landkreis": "Nienburg",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "NK",
+        "Stadt-Landkreis": "Neunkirchen",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "NL",
+        "Stadt-Landkreis": "Niedersachsen Landesregierung und Landtag",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "NM",
+        "Stadt-Landkreis": "Neumarkt/Oberpfalz",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NMS",
+        "Stadt-Landkreis": "Neumünster",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "NOH",
+        "Stadt-Landkreis": "Nordhorn",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "NOM",
+        "Stadt-Landkreis": "Northeim",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "NR",
+        "Stadt-Landkreis": "Neuwied",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "Nordrhein-Westfalen",
+        "Stadt-Landkreis": "Nordrhein-Westfalen Landesregierung und Landtag",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "NU",
+        "Stadt-Landkreis": "Neu-Ulm",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "NVP",
+        "Stadt-Landkreis": "Nordvorpommern",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "NW",
+        "Stadt-Landkreis": "Neustadt/Weinstraße",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "NWM",
+        "Stadt-Landkreis": "Nordwestmecklenburg",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "OA",
+        "Stadt-Landkreis": "Oberallgäu / Sonthofen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "OAL",
+        "Stadt-Landkreis": "Ostallgäu",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "OB",
+        "Stadt-Landkreis": "Oberhausen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "OD",
+        "Stadt-Landkreis": "Bad Oldesloe",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "OE",
+        "Stadt-Landkreis": "Olpe",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "OF",
+        "Stadt-Landkreis": "Offenbach/Main",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "OG",
+        "Stadt-Landkreis": "Offenburg",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "OH",
+        "Stadt-Landkreis": "Ostholstein / Eutin",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "OHA",
+        "Stadt-Landkreis": "Osterode/Harz",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "OHV",
+        "Stadt-Landkreis": "Oberhavel",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "OHZ",
+        "Stadt-Landkreis": "Osterholz-Scharmbeck",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "OL",
+        "Stadt-Landkreis": "Oldenburg",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "OPR",
+        "Stadt-Landkreis": "Ostprignitz-Ruppin",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "OS",
+        "Stadt-Landkreis": "Osnabrück",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "OSL",
+        "Stadt-Landkreis": "Oberspreewald-Lausitz",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "OVP",
+        "Stadt-Landkreis": "Ostvorpommern",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "P",
+        "Stadt-Landkreis": "Potsdam",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "PA",
+        "Stadt-Landkreis": "Passau",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "PAF",
+        "Stadt-Landkreis": "Pfaffenhofen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "PAN",
+        "Stadt-Landkreis": "Pfarrkirchen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "PB",
+        "Stadt-Landkreis": "Paderborn",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "PCH",
+        "Stadt-Landkreis": "Parchim",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "PE",
+        "Stadt-Landkreis": "Peine",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "PF",
+        "Stadt-Landkreis": "Pforzheim",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "PI",
+        "Stadt-Landkreis": "Pinneberg",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "PIR",
+        "Stadt-Landkreis": "Pirna/Sächsische Schweiz",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "PLÖ",
+        "Stadt-Landkreis": "Plön",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "PM",
+        "Stadt-Landkreis": "Potsdam-Mittelmark",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "PR",
+        "Stadt-Landkreis": "Prignitz / Perleberg",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "PS",
+        "Stadt-Landkreis": "Pirmasens",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "R",
+        "Stadt-Landkreis": "Regensburg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "RA",
+        "Stadt-Landkreis": "Rastatt",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "RD",
+        "Stadt-Landkreis": "Rendsburg-Eckernförde",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "RE",
+        "Stadt-Landkreis": "Recklinghausen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "REG",
+        "Stadt-Landkreis": "Regen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "RO",
+        "Stadt-Landkreis": "Rosenheim",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "ROS",
+        "Stadt-Landkreis": "Rostock/Landkreis",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "ROW",
+        "Stadt-Landkreis": "Rotenburg/Wümme",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "RP",
+        "Stadt-Landkreis": "Rhein-Pfalz-Kreis",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "RPL",
+        "Stadt-Landkreis": "Rheinland-Pfalzlz Landesregierung und Landtag",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "RS",
+        "Stadt-Landkreis": "Remscheid",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "RT",
+        "Stadt-Landkreis": "Reutlingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "RÜD",
+        "Stadt-Landkreis": "Rüdesheim",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "RÜG",
+        "Stadt-Landkreis": "Rügen",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "RV",
+        "Stadt-Landkreis": "Ravensburg",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "RW",
+        "Stadt-Landkreis": "Rottweil",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "RZ",
+        "Stadt-Landkreis": "Ratzeburg",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "S",
+        "Stadt-Landkreis": "Stuttgart",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "SAD",
+        "Stadt-Landkreis": "Schwandorf",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "SAL",
+        "Stadt-Landkreis": "Saarland Landesregierung und Landtag",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "SAW",
+        "Stadt-Landkreis": "Salzwedel",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "SB",
+        "Stadt-Landkreis": "Saarbrücken",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "SC",
+        "Stadt-Landkreis": "Schwabach",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "SDL",
+        "Stadt-Landkreis": "Stendal",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "SE",
+        "Stadt-Landkreis": "Bad Segeberg",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "SG",
+        "Stadt-Landkreis": "Solingen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "SH",
+        "Stadt-Landkreis": "Schleswig-Holstein Landesregierung und Landtag",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "SHA",
+        "Stadt-Landkreis": "Schwäbisch Hall",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "SHG",
+        "Stadt-Landkreis": "Stadthagen",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "SHK",
+        "Stadt-Landkreis": "Saale-Holzlandkreis",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SHL",
+        "Stadt-Landkreis": "Suhl",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SI",
+        "Stadt-Landkreis": "Siegen-Wittgenstein",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "SIG",
+        "Stadt-Landkreis": "Sigmaringen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "SIM",
+        "Stadt-Landkreis": "Rhein-Hunsrück-Kreis",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "SK",
+        "Stadt-Landkreis": "Saalkreis",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "SL",
+        "Stadt-Landkreis": "Schleswig-Flensburg",
+        "Bundesland": "Schleswig-Holstein"
+    },
+    {
+        "Kennzeichen": "SLF",
+        "Stadt-Landkreis": "Saalfeld-Rudolstadt",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SLK",
+        "Stadt-Landkreis": "Salzlandkreis",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "SLS",
+        "Stadt-Landkreis": "Saarlouis",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "SM",
+        "Stadt-Landkreis": "Schmalkalden-Meiningen",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SN",
+        "Stadt-Landkreis": "Schwerin",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "SO",
+        "Stadt-Landkreis": "Soest",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "SOK",
+        "Stadt-Landkreis": "Saale-Orla-Kreis",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SÖM",
+        "Stadt-Landkreis": "Sömmerda",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SON",
+        "Stadt-Landkreis": "Sonneberg",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "SP",
+        "Stadt-Landkreis": "Speyer",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "SPN",
+        "Stadt-Landkreis": "Spree-Neiße",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "SR",
+        "Stadt-Landkreis": "Straubing-Bogen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "ST",
+        "Stadt-Landkreis": "Steinfurt",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "STA",
+        "Stadt-Landkreis": "Starnberg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "STD",
+        "Stadt-Landkreis": "Stade",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "SU",
+        "Stadt-Landkreis": "Siegburg",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "SÜW",
+        "Stadt-Landkreis": "Südliche Weinstraße",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "SW",
+        "Stadt-Landkreis": "Schweinfurt",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "SZ",
+        "Stadt-Landkreis": "Salzgitter",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "TDO",
+        "Stadt-Landkreis": "Nordsachsen",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "TBB",
+        "Stadt-Landkreis": "Tauberbischofsheim",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "TF",
+        "Stadt-Landkreis": "Teltow-Fläming",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "TG",
+        "Stadt-Landkreis": "Torgau",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "THL",
+        "Stadt-Landkreis": "Thüringen Landesregierung und Landtag",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "THW",
+        "Stadt-Landkreis": "Technisches Hilfswerk",
+        "Bundesland": ""
+    },
+    {
+        "Kennzeichen": "TIR",
+        "Stadt-Landkreis": "Tirschenreuth",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "TÖL",
+        "Stadt-Landkreis": "Bad Tölz",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "TR",
+        "Stadt-Landkreis": "Trier",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "TS",
+        "Stadt-Landkreis": "Traunstein",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "TÜ",
+        "Stadt-Landkreis": "Tübingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "TUT",
+        "Stadt-Landkreis": "Tuttlingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "UE",
+        "Stadt-Landkreis": "Uelzen",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "UL",
+        "Stadt-Landkreis": "Ulm",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "UM",
+        "Stadt-Landkreis": "Uckermark",
+        "Bundesland": "Brandenburg"
+    },
+    {
+        "Kennzeichen": "UN",
+        "Stadt-Landkreis": "Unna",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "V",
+        "Stadt-Landkreis": "Vogtlandkreis",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "VB",
+        "Stadt-Landkreis": "Vogelsbergkreis",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "VEC",
+        "Stadt-Landkreis": "Vechta",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "VER",
+        "Stadt-Landkreis": "Verden",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "VIE",
+        "Stadt-Landkreis": "Viersen",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "VK",
+        "Stadt-Landkreis": "Völklingen",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "VR",
+        "Stadt-Landkreis": "Vorpommern-Rügen",
+        "Bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+        "Kennzeichen": "VS",
+        "Stadt-Landkreis": "Villingen-Schwenningen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "W",
+        "Stadt-Landkreis": "Wuppertal",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "WAF",
+        "Stadt-Landkreis": "Warendorf",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "WAK",
+        "Stadt-Landkreis": "Wartburgkreis",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "WB",
+        "Stadt-Landkreis": "Wittenberg",
+        "Bundesland": "Sachsen-Anhalt"
+    },
+    {
+        "Kennzeichen": "WE",
+        "Stadt-Landkreis": "Weimar",
+        "Bundesland": "Thüringen"
+    },
+    {
+        "Kennzeichen": "WEN",
+        "Stadt-Landkreis": "Weiden",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "WES",
+        "Stadt-Landkreis": "Wesel",
+        "Bundesland": "Nordrhein-Westfalen"
+    },
+    {
+        "Kennzeichen": "WF",
+        "Stadt-Landkreis": "Wolfenbüttel",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "WHV",
+        "Stadt-Landkreis": "Wilhelmshaven",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "WI",
+        "Stadt-Landkreis": "Wiesbaden",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "WIL",
+        "Stadt-Landkreis": "Wittlich",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "WL",
+        "Stadt-Landkreis": "Winsen/Luhe",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "WM",
+        "Stadt-Landkreis": "Weilheim-Schongau",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "WN",
+        "Stadt-Landkreis": "Waiblingen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "WND",
+        "Stadt-Landkreis": "St. Wendel",
+        "Bundesland": "Saarland"
+    },
+    {
+        "Kennzeichen": "WO",
+        "Stadt-Landkreis": "Worms",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "WOB",
+        "Stadt-Landkreis": "Wolfsburg",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "WST",
+        "Stadt-Landkreis": "Westerstede",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "WT",
+        "Stadt-Landkreis": "Waldshut-Tiengen",
+        "Bundesland": "Baden-Württemberg"
+    },
+    {
+        "Kennzeichen": "WTM",
+        "Stadt-Landkreis": "Wittmund",
+        "Bundesland": "Niedersachsen"
+    },
+    {
+        "Kennzeichen": "WÜ",
+        "Stadt-Landkreis": "Würzburg",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "WUG",
+        "Stadt-Landkreis": "Weißenburg-Gunzenhausen",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "WUN",
+        "Stadt-Landkreis": "Wunsiedel",
+        "Bundesland": "Bayern"
+    },
+    {
+        "Kennzeichen": "WW",
+        "Stadt-Landkreis": "Westerwald",
+        "Bundesland": "Rheinland-Pfalz"
+    },
+    {
+        "Kennzeichen": "WZ",
+        "Stadt-Landkreis": "Wetzlar",
+        "Bundesland": "Hessen"
+    },
+    {
+        "Kennzeichen": "Y",
+        "Stadt-Landkreis": "Bundeswehr",
+        "Bundesland": ""
+    },
+    {
+        "Kennzeichen": "Z",
+        "Stadt-Landkreis": "Zwickau",
+        "Bundesland": "Sachsen"
+    },
+    {
+        "Kennzeichen": "ZW",
+        "Stadt-Landkreis": "Zweibrücken",
+        "Bundesland": "Rheinland-Pfalz"
+    }
+]
