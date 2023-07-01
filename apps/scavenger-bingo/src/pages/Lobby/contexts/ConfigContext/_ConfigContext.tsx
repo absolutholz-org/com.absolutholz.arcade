@@ -1,16 +1,22 @@
-import { ReactNode, createContext, useContext } from 'react';
+import { ReactNode, createContext, useContext, useEffect, useState } from 'react';
 
 import { useLocalStorage } from '@arcade/library-components/src/hooks/useLocalStorage';
 
 import { DEFAULT_GAME_CONFIG, STORAGE_APP_PREFIX } from '../../../../App.constants';
-import { GameConfig } from '../../../../App.types';
+import type { GameConfig, SymbolConfig, SymbolPreset } from '../../../../App.types';
 
 const STORAGE_KEY = `${STORAGE_APP_PREFIX}_lastconfig`;
 
-export const ConfigContext = createContext<{
+interface ConfigContext {
+    symbols: SymbolConfig[];
+    presets: SymbolPreset[];
     gameConfig?: GameConfig;
     setGameConfig: ({ freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) => void;
-}>({
+};
+
+export const ConfigContext = createContext<ConfigContext>({
+    symbols: [],
+    presets: [],
 	gameConfig: undefined,
 	setGameConfig: () => null,
 });
@@ -24,6 +30,8 @@ export function ConfigProvider({
 		STORAGE_KEY,
 		DEFAULT_GAME_CONFIG
 	);
+    const [ symbols, setSymbols ] = useState<SymbolConfig[]>([]);
+    const [ presets, setPresets ] = useState<SymbolPreset[]>([]);
 
     function setGameConfig ({ gameConfigId, freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) {
         const newGameConfigId =  gameConfigId ?? gameConfig.gameConfigId;
@@ -45,22 +53,40 @@ export function ConfigProvider({
         });
     }
 
+    async function loadConfig (id: string) {
+		const { default: config } = await import(`../../../../configs/${id}/config.json`);
+        const symbols: SymbolConfig[] = config.symbols;
+        const presets: SymbolPreset[] = config.presets;
+		setSymbols(symbols);
+		setPresets(presets);
+        // debugger;
+        // if (gameConfig.gameConfigId !== id) {
+        //     setGameConfig({ symbolIds: symbols.filter((symbol) => !symbol.variant).map(({ id }) => id) });
+        // }
+	} 
+
+    useEffect(() => {
+		loadConfig(gameConfig.gameConfigId);
+	}, [gameConfig.gameConfigId]);
+
+
 	return (
-		<ConfigContext.Provider value={{ gameConfig, setGameConfig }}>
+		<ConfigContext.Provider value={{ symbols, presets, gameConfig, setGameConfig }}>
 			{children}
 		</ConfigContext.Provider>
 	);
 }
 
-export function useGameConfig(): {
+interface ConfigContextMandatory extends ConfigContext {
     gameConfig: GameConfig;
-    setGameConfig: ({ gameConfigId, freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) => void;
-} {
-	const { gameConfig, setGameConfig } = useContext(ConfigContext);
+}
+
+export function useGameConfig(): ConfigContextMandatory {
+	const { symbols, presets, gameConfig, setGameConfig } = useContext(ConfigContext);
 
 	if (gameConfig === undefined) {
 		throw new Error('useGameState must be used within a GameProvider');
 	}
 
-	return { gameConfig, setGameConfig };
+	return { symbols, presets, gameConfig, setGameConfig };
 }

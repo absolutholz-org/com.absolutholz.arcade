@@ -1,32 +1,10 @@
-import { useEffect, useState } from 'react';
-
 import type { SymbolPresetsProps } from './_SymbolPresets.annotations';
 import * as S from './_SymbolPresets.styled';
-
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
 import { useGameConfig } from '../../contexts/ConfigContext';
 
-type Preset = {
-	id: string;
-	image: {
-		id: string;
-		file: string;
-	};
-	symbols: string[];
-}
-
 export function SymbolPresets({}: SymbolPresetsProps): JSX.Element {
-	const { gameConfig, setGameConfig } = useGameConfig();
-    const [ presets, setPresets ] = useState<Preset[]>([]);
-
-    async function loadConfig (id: string) {
-		const { default: config } = await import(`../../../../configs/${id}/config.json`);
-		setPresets(config.presets);
-	} 
-
-    useEffect(() => {
-		loadConfig(gameConfig.gameConfigId);
-	}, [gameConfig.gameConfigId]);
+	const { presets, gameConfig, setGameConfig } = useGameConfig();
 
 	function handleSelection(id: string) {
 		const preset = presets.find((preset) => preset.id === id);

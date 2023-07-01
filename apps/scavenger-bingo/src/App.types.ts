@@ -24,3 +24,12 @@ export type SymbolConfig = {
 	tags?: string[];
 	variant?: boolean;
 }
+
+export type SymbolPreset = {
+	id: string;
+	image: {
+		id: string;
+		file: string;
+	};
+	symbols: string[];
+}

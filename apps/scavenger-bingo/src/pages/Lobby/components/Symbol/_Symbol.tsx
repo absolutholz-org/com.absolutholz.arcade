@@ -3,7 +3,7 @@ import { useGameConfig } from '../../contexts/ConfigContext';
 import type { SymbolProps } from './_Symbol.annotations';
 import * as S from './_Symbol.styled';
 
-export function Symbol ({ file, id, allSymbols }: SymbolProps): JSX.Element {
+export function Symbol ({ file, id }: SymbolProps): JSX.Element {
     const { gameConfig, setGameConfig } = useGameConfig();
 
     const imgSrc = `${IMAGE_DIRECTORY}${gameConfig.gameConfigId}/${file}`;
