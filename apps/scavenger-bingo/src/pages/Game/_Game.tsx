@@ -10,16 +10,16 @@ import { Typography } from '@arcade/library-components/src/components/Typography
 
 import { GameBoard, GameBoard_Field } from './components/GameBoard';
 import { GameCardSymbol } from './components/GameCardSymbol';
-import translations from '../../configs/germany-road-signs/translations/de.json';
+// import translations from '../../configs/germany-road-signs/translations/de.json';
 import { FREE_SPACE_ID } from '../../App.constants';
 import { persistGameState, readPersistedGameState } from '../../_storage';
 import { createNewGameBoard } from '../../_createNewGameBoard';
 import { GameProvider, useGameState } from './contexts/GameContext';
-import { FoundSymbol } from './components/FoundSymbol';
 import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
+import { ConfigProvider } from '../Lobby/contexts/ConfigContext';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();
@@ -50,13 +50,15 @@ export function Game(): JSX.Element {
 	}
 
 	return (
-		<GameProvider
-			initialState={{
-				...gameState,
-				board,
-			}}>
-			<_Game gameId={gameId} />
-		</GameProvider>
+		<ConfigProvider>
+			<GameProvider
+				initialState={{
+					...gameState,
+					board,
+				}}>
+				<_Game gameId={gameId} />
+			</GameProvider>
+		</ConfigProvider>
 	);
 }
 

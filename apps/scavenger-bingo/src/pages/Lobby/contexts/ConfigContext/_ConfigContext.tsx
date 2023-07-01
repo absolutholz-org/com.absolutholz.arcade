@@ -57,12 +57,15 @@ export function ConfigProvider({
 		const { default: config } = await import(`../../../../configs/${id}/config.json`);
         const symbols: SymbolConfig[] = config.symbols;
         const presets: SymbolPreset[] = config.presets;
+        storeGameConfig((gameConfig) => {
+            const newConfig = { 
+                ...gameConfig, 
+                symbolIds: symbols.filter((symbol) => !symbol.variant).map((symbol) => symbol.id),
+            }
+            return newConfig;
+        });
 		setSymbols(symbols);
 		setPresets(presets);
-        // debugger;
-        // if (gameConfig.gameConfigId !== id) {
-        //     setGameConfig({ symbolIds: symbols.filter((symbol) => !symbol.variant).map(({ id }) => id) });
-        // }
 	} 
 
     useEffect(() => {

@@ -21,6 +21,7 @@ import { ConfigProvider, useGameConfig } from './contexts/ConfigContext';
 
 import { SymbolGrid } from './components/SymbolGrid';
 import { SymbolPresets } from './components/SymbolPresets';
+import { SetList } from './components/SetList';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
@@ -90,6 +91,18 @@ function _Lobby(): JSX.Element {
 											Symbols
 										</Typography>
 									</legend>
+
+									<Stack
+										tag='fieldset'
+										direction='column'
+										>
+										<legend>
+											<Typography as='div' size='l'>
+												Set
+											</Typography>
+										</legend>
+										<SetList />
+									</Stack>
 
 									<Stack
 										tag='fieldset'

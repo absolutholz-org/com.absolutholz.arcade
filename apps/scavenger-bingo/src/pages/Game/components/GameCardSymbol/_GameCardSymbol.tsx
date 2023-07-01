@@ -1,9 +1,9 @@
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
 import { GameCardSymbolProps } from './_GameCardSymbol.types';
-import symbols from '../../../../configs/germany-road-signs/symbols.json';
 
 import * as S from './_GameCardSymbol.styled';
-import { useGameDispatch, useGameState } from '../../contexts/GameContext';
+import { useGameDispatch } from '../../contexts/GameContext';
+import { useGameConfig } from '../../../Lobby/contexts/ConfigContext';
 
 export function GameCardSymbol({
 	id,
@@ -11,8 +11,12 @@ export function GameCardSymbol({
 	found = false,
 }: GameCardSymbolProps): JSX.Element {
 	const dispatch = useGameDispatch();
-	const state = useGameState();
+	const { symbols, gameConfig } = useGameConfig();
+
+	if (!symbols || symbols.length === 0) return <></>;
+
 	const { file } = symbols.find((symbol) => symbol.id === id)!;
+    const imgSrc = `${IMAGE_DIRECTORY}${gameConfig.gameConfigId}/${file}`;
 
 	const handleClick = () => {
 		if (!found) {
@@ -28,7 +32,7 @@ export function GameCardSymbol({
 	return (
 		<S.GameCardSymbol disabled={found} onClick={handleClick} type='button'>
 			<S.GameCardSymbol_Symbol
-				src={`${IMAGE_DIRECTORY}germany-road-signs/${file}`}
+				src={imgSrc}
 				alt={''}
 			/>
 			{found && <S.GameCardSymbol_FoundSymbol />}
