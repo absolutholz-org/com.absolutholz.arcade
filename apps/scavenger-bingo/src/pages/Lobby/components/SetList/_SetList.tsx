@@ -1,6 +1,6 @@
 import * as S from './_SetList.styled';
 import { CONFIGS } from '../../../../configs';
-import { useGameConfig } from '../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 
 export function SetList (): JSX.Element {
     const { gameConfig, setGameConfig } = useGameConfig();

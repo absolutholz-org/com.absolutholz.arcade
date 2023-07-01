@@ -1,5 +1,5 @@
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
-import { useGameConfig } from '../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 import type { SymbolProps } from './_Symbol.annotations';
 import * as S from './_Symbol.styled';
 

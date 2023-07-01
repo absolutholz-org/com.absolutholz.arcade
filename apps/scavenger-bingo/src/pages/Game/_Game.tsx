@@ -19,7 +19,7 @@ import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
-import { ConfigProvider } from '../Lobby/contexts/ConfigContext';
+import { ConfigProvider } from '../../contexts/ConfigContext';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();

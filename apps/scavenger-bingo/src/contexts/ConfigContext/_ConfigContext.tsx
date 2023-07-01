@@ -2,8 +2,8 @@ import { ReactNode, createContext, useContext, useEffect, useState } from 'react
 
 import { useLocalStorage } from '@arcade/library-components/src/hooks/useLocalStorage';
 
-import { DEFAULT_GAME_CONFIG, STORAGE_APP_PREFIX } from '../../../../App.constants';
-import type { GameConfig, SymbolConfig, SymbolPreset } from '../../../../App.types';
+import { DEFAULT_GAME_CONFIG, STORAGE_APP_PREFIX } from '../../App.constants';
+import type { GameConfig, SymbolConfig, SymbolPreset } from '../../App.types';
 
 const STORAGE_KEY = `${STORAGE_APP_PREFIX}_lastconfig`;
 
@@ -54,7 +54,7 @@ export function ConfigProvider({
     }
 
     async function loadConfig (id: string) {
-		const { default: config } = await import(`../../../../configs/${id}/config.json`);
+		const { default: config } = await import(`../../configs/${id}/config.json`);
         const symbols: SymbolConfig[] = config.symbols;
         const presets: SymbolPreset[] = config.presets;
         storeGameConfig((gameConfig) => {

@@ -3,7 +3,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
-import { useGameConfig } from '../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 import { WINNING_COMBINATIONS } from '../../../../App.constants';
 import type { WinningCombination } from '../../../../App.types';
 

@@ -1,7 +1,7 @@
 import type { SymbolPresetsProps } from './_SymbolPresets.annotations';
 import * as S from './_SymbolPresets.styled';
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
-import { useGameConfig } from '../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 
 export function SymbolPresets({}: SymbolPresetsProps): JSX.Element {
 	const { presets, gameConfig, setGameConfig } = useGameConfig();

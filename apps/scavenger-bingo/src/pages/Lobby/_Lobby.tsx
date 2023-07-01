@@ -17,7 +17,7 @@ import {
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
 import { Banner } from './components/Banner';
-import { ConfigProvider, useGameConfig } from './contexts/ConfigContext';
+import { ConfigProvider, useGameConfig } from '../../contexts/ConfigContext';
 
 import { SymbolGrid } from './components/SymbolGrid';
 import { SymbolPresets } from './components/SymbolPresets';

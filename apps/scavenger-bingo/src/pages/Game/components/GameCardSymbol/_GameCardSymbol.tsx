@@ -3,7 +3,7 @@ import { GameCardSymbolProps } from './_GameCardSymbol.types';
 
 import * as S from './_GameCardSymbol.styled';
 import { useGameDispatch } from '../../contexts/GameContext';
-import { useGameConfig } from '../../../Lobby/contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 
 export function GameCardSymbol({
 	id,

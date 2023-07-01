@@ -3,7 +3,7 @@ import { Stack } from '@arcade/library-components/src/components/Stack';
 import type { SymbolGridProps } from './_SymbolGrid.annotations';
 import * as S from './_SymbolGrid.styled';
 import { Symbol } from '../Symbol';
-import { useGameConfig } from '../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 
 export function SymbolGrid ({}: SymbolGridProps): JSX.Element {
     const { symbols, setGameConfig } = useGameConfig();

@@ -3,7 +3,7 @@ import Radio from '@mui/material/Radio';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
-import { useGameConfig } from '../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/ConfigContext';
 import { FREE_SPACE_POSITIONS } from '../../../../App.constants';
 import type { FreeSpacePosition } from '../../../../App.types';
 
