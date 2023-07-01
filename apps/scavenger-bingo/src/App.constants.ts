@@ -1,5 +1,7 @@
 import { STORAGE_PREFIX_ARCADE } from '@arcade/library-common/src/constants';
 
+import { CONFIGS } from './configs';
+
 import type { GameConfig } from './App.types';
 
 export const STORAGE_APP_PREFIX = `${STORAGE_PREFIX_ARCADE}_scavengerBingo`;
@@ -23,6 +25,7 @@ Object.freeze(FREE_SPACE_POSITIONS);
 export const FREE_SPACE_ID = 'free-space';
 
 export const DEFAULT_GAME_CONFIG: GameConfig = {
+	gameConfigId: CONFIGS[0].id,
 	winningCombinations: ['rows', 'columns', 'diagonals', 'corners'],
 	freeSpacePosition: 'center',
 	size: 5,

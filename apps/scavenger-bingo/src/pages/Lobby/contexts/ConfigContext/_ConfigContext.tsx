@@ -2,15 +2,8 @@ import { ReactNode, createContext, useContext } from 'react';
 
 import { useLocalStorage } from '@arcade/library-components/src/hooks/useLocalStorage';
 
-import type { FreeSpacePosition, WinningCombination } from '../../../../App.types';
 import { DEFAULT_GAME_CONFIG, STORAGE_APP_PREFIX } from '../../../../App.constants';
-
-type GameConfig = {
-    freeSpacePosition: FreeSpacePosition;
-    size: number;
-    winningCombinations: WinningCombination[];
-    symbolIds: string[];
-};
+import { GameConfig } from '../../../../App.types';
 
 const STORAGE_KEY = `${STORAGE_APP_PREFIX}_lastconfig`;
 
@@ -32,7 +25,8 @@ export function ConfigProvider({
 		DEFAULT_GAME_CONFIG
 	);
 
-    function setGameConfig ({ freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) {
+    function setGameConfig ({ gameConfigId, freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) {
+        const newGameConfigId =  gameConfigId ?? gameConfig.gameConfigId;
         const newFreeSpacePosition =  freeSpacePosition ?? gameConfig.freeSpacePosition;
         const newSize =  size ?? gameConfig.size;
         const newWinningCombinations =  winningCombinations ?? gameConfig.winningCombinations;
@@ -41,6 +35,7 @@ export function ConfigProvider({
         storeGameConfig((gameConfig) => {
             const newConfig = { 
                 ...gameConfig, 
+                gameConfigId: newGameConfigId, 
                 freeSpacePosition: newFreeSpacePosition, 
                 size: newSize, 
                 winningCombinations: newWinningCombinations, 
@@ -59,7 +54,7 @@ export function ConfigProvider({
 
 export function useGameConfig(): {
     gameConfig: GameConfig;
-    setGameConfig: ({ freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) => void;
+    setGameConfig: ({ gameConfigId, freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) => void;
 } {
 	const { gameConfig, setGameConfig } = useContext(ConfigContext);
 

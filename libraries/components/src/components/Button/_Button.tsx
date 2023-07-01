@@ -21,11 +21,11 @@ export function Button({
 		return (
 			<S.Button
 				as='a'
-				fullWidth={fullWidth}
+				$fullWidth={fullWidth}
 				// @ts-ignore
 				href={href}
-				outlined={outlined}
-				size={size}>
+				$outlined={outlined}
+				$size={size}>
 				{text}
 			</S.Button>
 		);
@@ -35,9 +35,9 @@ export function Button({
 		return (
 			<S.Button
 				as={Link}
-				fullWidth={fullWidth}
-				outlined={outlined}
-				size={size}
+				$fullWidth={fullWidth}
+				$outlined={outlined}
+				$size={size}
 				// @ts-ignore
 				to={to}>
 				{text}
@@ -49,10 +49,10 @@ export function Button({
 		<S.Button
 			as='button'
 			disabled={disabled}
-			fullWidth={fullWidth}
+			$fullWidth={fullWidth}
 			onClick={onClick}
-			outlined={outlined}
-			size={size}
+			$outlined={outlined}
+			$size={size}
 			type={type}>
 			{text}
 		</S.Button>

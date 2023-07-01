@@ -22,6 +22,8 @@ import { ConfigProvider, useGameConfig } from './contexts/ConfigContext';
 import { useEffect } from 'react';
 
 import { default as ALL_SYMBOLS } from '../../configs/germany-road-signs/symbols.json';
+import { SymbolGrid } from './components/SymbolGrid';
+import { SymbolPresets } from './components/SymbolPresets';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
@@ -64,7 +66,7 @@ function _Lobby(): JSX.Element {
 					<PageGridContainer>
 						{games.length > 0 && (
 							<Banner>
-								<Stack >
+								<Stack>
 									<div>
 										You have unfinished games. Why not keep
 										playing them.
@@ -82,6 +84,7 @@ function _Lobby(): JSX.Element {
 							<Typography size='xl'>
 								Config
 							</Typography>
+
 							<Stack spacingY='m'>
 								<WinningCombinations />
 
@@ -97,7 +100,31 @@ function _Lobby(): JSX.Element {
 										</Typography>
 									</legend>
 
-									<SymbolFilterGrid />
+									<Stack
+										tag='fieldset'
+										direction='column'
+										>
+										<legend>
+											<Typography as='div' size='l'>
+												Presets
+											</Typography>
+										</legend>
+										<SymbolPresets />
+									</Stack>
+
+									<Stack
+										tag='fieldset'
+										direction='column'
+										>
+										<legend>
+											<Typography as='div' size='l'>
+												Your selection
+											</Typography>
+										</legend>
+										<SymbolGrid />
+									</Stack>
+
+									{/* <SymbolFilterGrid /> */}
 								</Stack>
 
 								<StickyFormFooter>
