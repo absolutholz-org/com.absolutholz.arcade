@@ -1,0 +1,1 @@
+export type SymbolSize = 0 | 1 | 2;
