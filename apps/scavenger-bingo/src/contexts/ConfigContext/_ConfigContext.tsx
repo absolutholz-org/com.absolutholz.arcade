@@ -4,6 +4,7 @@ import { useLocalStorage } from '@arcade/library-components/src/hooks/useLocalSt
 
 import { DEFAULT_GAME_CONFIG, STORAGE_APP_PREFIX } from '../../App.constants';
 import type { GameConfig, SymbolConfig, SymbolPreset } from '../../App.types';
+import { useSetConfig } from '../SetContext/_SetContext';
 
 const STORAGE_KEY = `${STORAGE_APP_PREFIX}_lastconfig`;
 
@@ -26,6 +27,7 @@ export function ConfigProvider({
 }: {
 	children: ReactNode;
 }) {
+    const { setId } = useSetConfig();
     const [ gameConfig, storeGameConfig ] = useLocalStorage<GameConfig>(
 		STORAGE_KEY,
 		DEFAULT_GAME_CONFIG
@@ -33,8 +35,7 @@ export function ConfigProvider({
     const [ symbols, setSymbols ] = useState<SymbolConfig[]>([]);
     const [ presets, setPresets ] = useState<SymbolPreset[]>([]);
 
-    function setGameConfig ({ gameConfigId, freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) {
-        const newGameConfigId =  gameConfigId ?? gameConfig.gameConfigId;
+    function setGameConfig ({ freeSpacePosition, size, winningCombinations, symbolIds }: Partial<GameConfig>) {
         const newFreeSpacePosition =  freeSpacePosition ?? gameConfig.freeSpacePosition;
         const newSize =  size ?? gameConfig.size;
         const newWinningCombinations =  winningCombinations ?? gameConfig.winningCombinations;
@@ -43,7 +44,6 @@ export function ConfigProvider({
         storeGameConfig((gameConfig) => {
             const newConfig = { 
                 ...gameConfig, 
-                gameConfigId: newGameConfigId, 
                 freeSpacePosition: newFreeSpacePosition, 
                 size: newSize, 
                 winningCombinations: newWinningCombinations, 
@@ -60,6 +60,7 @@ export function ConfigProvider({
         storeGameConfig((gameConfig) => {
             const newConfig = { 
                 ...gameConfig, 
+                gameConfigId: id,
                 symbolIds: symbols.filter((symbol) => !symbol.variant).map((symbol) => symbol.id),
             }
             return newConfig;
@@ -69,9 +70,10 @@ export function ConfigProvider({
 	} 
 
     useEffect(() => {
-		loadConfig(gameConfig.gameConfigId);
-	}, [gameConfig.gameConfigId]);
-
+        if (setId) {
+    		loadConfig(setId);
+        }
+	}, [setId]);
 
 	return (
 		<ConfigContext.Provider value={{ symbols, presets, gameConfig, setGameConfig }}>

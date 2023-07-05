@@ -1,14 +1,12 @@
 import * as S from './_SetList.styled';
 import { CONFIGS } from '../../../../configs';
-import { useGameConfig } from '../../../../contexts/ConfigContext';
+import { useSetConfig } from '../../../../contexts/SetContext/_SetContext';
 
 export function SetList (): JSX.Element {
-    const { gameConfig, setGameConfig } = useGameConfig();
+    const { setSetId } = useSetConfig();
 
     function handleSelect (id: string) {
-        setGameConfig({
-            gameConfigId: id
-        });
+        setSetId(id);
     }
 
     return (

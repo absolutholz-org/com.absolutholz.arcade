@@ -22,6 +22,8 @@ import { ConfigProvider, useGameConfig } from '../../contexts/ConfigContext';
 import { SymbolGrid } from './components/SymbolGrid';
 import { SymbolPresets } from './components/SymbolPresets';
 import { SetList } from './components/SetList';
+import { SetConfigProvider } from '../../contexts/SetContext/_SetContext';
+import { SymbolPresetsCustom } from './components/SymbolPresetsCustom';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
@@ -85,7 +87,7 @@ function _Lobby(): JSX.Element {
 								<Stack
 									tag='fieldset'
 									direction='column'
-									>
+								>
 									<legend>
 										<Typography as='div' size='xl'>
 											Symbols
@@ -95,7 +97,7 @@ function _Lobby(): JSX.Element {
 									<Stack
 										tag='fieldset'
 										direction='column'
-										>
+									>
 										<legend>
 											<Typography as='div' size='l'>
 												Set
@@ -107,13 +109,41 @@ function _Lobby(): JSX.Element {
 									<Stack
 										tag='fieldset'
 										direction='column'
+										spacingY='s'
 										>
 										<legend>
 											<Typography as='div' size='l'>
 												Presets
 											</Typography>
 										</legend>
-										<SymbolPresets />
+
+										<Stack
+											tag='fieldset'
+											direction='column'
+											spacingY='s'
+											>
+											<legend>
+												<Typography as='div' size='m'>
+													Custom
+												</Typography>
+											</legend>
+											
+											<SymbolPresetsCustom />
+										</Stack>
+
+										<Stack
+											tag='fieldset'
+											direction='column'
+											spacingY='s'
+										>
+											<legend>
+												<Typography as='div' size='m'>
+													Preconfigured
+												</Typography>
+											</legend>
+											
+											<SymbolPresets />
+										</Stack>
 									</Stack>
 
 									<Stack
@@ -163,9 +193,11 @@ function _Lobby(): JSX.Element {
 
 function LobbyProviderWrapper (): JSX.Element {
 	return (
-		<ConfigProvider>
-			<_Lobby />
-		</ConfigProvider>
+		<SetConfigProvider>
+			<ConfigProvider>
+				<_Lobby />
+			</ConfigProvider>
+		</SetConfigProvider>
 	)
 }
 

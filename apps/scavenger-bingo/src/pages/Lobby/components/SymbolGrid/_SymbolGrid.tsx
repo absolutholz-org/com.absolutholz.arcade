@@ -8,21 +8,34 @@ import type { SymbolSize } from './_SymbolGrid.types';
 import * as S from './_SymbolGrid.styled';
 import { Symbol } from '../Symbol';
 import { useGameConfig } from '../../../../contexts/ConfigContext';
+import { useSetConfig } from '../../../../contexts/SetContext/_SetContext';
 
 export function SymbolGrid ({}: SymbolGridProps): JSX.Element {
-    const { symbols, setGameConfig } = useGameConfig();
+    const { symbols, gameConfig, setGameConfig } = useGameConfig();
+    const { addCustomPreset} = useSetConfig();
     const [ symbolSize, setSymbolSize ] = useState<SymbolSize>(0);
 
-    function handleSelectAll() {
+    function handleSelectAll(): void {
 		setGameConfig({ symbolIds: symbols.map(({ id }) => id) });
 	}
 	
-	function handleDeselectAll() {
+	function handleDeselectAll(): void {
 		setGameConfig({ symbolIds: [] });
 	}
 
-    function handleSizeChange(size: number) {
+    function handleSizeChange(size: number): void {
         setSymbolSize(size as SymbolSize)
+    }
+
+    function handleSavePreset (): void {
+        const name = prompt('name your preset');
+
+        if (name) {
+            addCustomPreset({
+                name,
+                symbols: gameConfig.symbolIds,
+            })
+        }
     }
 
     return (
@@ -31,6 +44,24 @@ export function SymbolGrid ({}: SymbolGridProps): JSX.Element {
                 <span>Preview size: </span>
                 <Slider max={2} onChange={handleSizeChange} />
             </S.SymbolGrid_SymbolSize>
+
+            <S.SymbolGrid_Actions direction='row' spacingX='s'>
+                <button
+                    onClick={handleSelectAll}
+                    type='button'
+                >Select All</button>
+
+                <button
+                    onClick={handleDeselectAll}
+                    type='button'
+                >Deselect All</button>
+
+                <button
+                    disabled={symbols.length === gameConfig.symbolIds.length || gameConfig.symbolIds.length === 0}
+                    onClick={handleSavePreset}
+                    type='button'
+                >Save Selection</button>
+            </S.SymbolGrid_Actions>
 
             <div>
                 {
@@ -42,18 +73,6 @@ export function SymbolGrid ({}: SymbolGridProps): JSX.Element {
                     </S.SymbolGrid_List>
                 }
             </div>
-
-            <Stack direction='row' spacingX='s'>
-                <button
-                    onClick={handleSelectAll}
-                    type='button'
-                >Select All</button>
-
-                <button
-                    onClick={handleDeselectAll}
-                    type='button'
-                >Deselect All</button>
-            </Stack>
         </Stack>
     );
 }
