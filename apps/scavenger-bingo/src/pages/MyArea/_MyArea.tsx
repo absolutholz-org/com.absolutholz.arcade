@@ -7,7 +7,7 @@ import { PageHeadBillboard } from '@arcade/library-components/src/components/Pag
 import { GameList } from '../../components/GameList';
 import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 
-export function Games() {
+export function MyArea() {
 	return (
 		<PageWithFooterTemplate pageTitle='Scavenger Bingo Unfinished Games'>
 			<PageHeadBillboard headline='Unfinished Games' headlinePrefix='Scavenger Bingo' />
@@ -17,7 +17,7 @@ export function Games() {
 					<Stack spacingY='m'>
 						<GameList />
 						<div>
-							<Button size='l' to='/lobby' text='New Game' />
+							<Button size='l' to='/lobby/' text='New Game' />
 						</div>
 					</Stack>
 				</PageGridContainer>

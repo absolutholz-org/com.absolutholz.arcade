@@ -5,7 +5,7 @@ import { FourOhFourPage } from '@arcade/library-components/src/components/FourOh
 import { Home } from './pages/Home';
 import { Game } from './pages/Game';
 import { Lobby } from './pages/Lobby';
-import { Games } from './pages/Games';
+import { MyArea } from './pages/MyArea';
 
 function App() {
 	return (
@@ -14,7 +14,7 @@ function App() {
 				<Route path='/'>
 					<Route index element={<Home />} />
 					<Route path='/lobby' element={<Lobby />} />
-					<Route path='/games' element={<Games />} />
+					<Route path='/myarea' element={<MyArea />} />
 					<Route path='/game/:gameId' element={<Game />} />
 					<Route path='*' element={<FourOhFourPage />} />
 				</Route>

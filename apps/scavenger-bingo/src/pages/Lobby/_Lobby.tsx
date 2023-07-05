@@ -40,7 +40,7 @@ function _Lobby(): JSX.Element {
 			config: gameConfig,
 		});
 
-		navigate(`/game/${gameId}`);
+		navigate(`/game/${gameId}/`);
 	}
 
 	return (
@@ -66,7 +66,7 @@ function _Lobby(): JSX.Element {
 										playing them.
 									</div>
 									<div>
-										<Button to='/games' text='See Games' />
+										<Button to='/myarea/' text='See Games' />
 									</div>
 								</Stack>
 							</Banner>

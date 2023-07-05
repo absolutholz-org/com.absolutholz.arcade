@@ -12,9 +12,9 @@ export function UnfinishedGameNotifier() {
 
 	function handleContinueGameClick() {
 		if (games.length === 1) {
-			navigate(`/game/${games[0].gameId}`);
+			navigate(`/game/${games[0].gameId}/`);
 		} else {
-			navigate(`/games`);
+			navigate(`/myarea/`);
 		}
 	}
 
@@ -26,7 +26,7 @@ export function UnfinishedGameNotifier() {
 					or continue playing?
 				</Typography>
 				<Stack direction='row' spacingX='m' >
-					<Button to='/lobby' text='New Game' />
+					<Button to='/lobby/' text='New Game' />
 					<Button
 						onClick={handleContinueGameClick}
 						text='Continue Game'

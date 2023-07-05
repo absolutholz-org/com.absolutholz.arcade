@@ -70,7 +70,7 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 
 	function handlePlayAgainClick() {
 		deleteGame(gameId);
-		navigate(`/lobby`);
+		navigate(`/lobby/`);
 	}
 
 	return (

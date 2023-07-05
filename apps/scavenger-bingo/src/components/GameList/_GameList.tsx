@@ -32,7 +32,7 @@ export function GameList() {
 								direction='row'
 								spacingX='s'
 								>
-								<Button to={`/game/${gameId}`} text='Play' />
+								<Button to={`/game/${gameId}/`} text='Play' />
 								<Button
 									onClick={() => handleRemove(gameId)}
 									text='Remove'

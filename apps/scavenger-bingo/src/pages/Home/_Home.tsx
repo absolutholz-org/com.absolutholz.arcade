@@ -15,7 +15,7 @@ export function Home(): JSX.Element {
 				headlineSuffix={
 					<Button
 						size='l'
-						to='/lobby'
+						to='/lobby/'
 						variant='contained'
 						text='New Game'
 					/>
@@ -35,7 +35,7 @@ export function Home(): JSX.Element {
 					</p>
 					<Button
 						size='l'
-						to='/lobby'
+						to='/lobby/'
 						variant='contained'
 						text='Play Scavenger Bingo'
 					/>
@@ -48,7 +48,7 @@ export function Home(): JSX.Element {
 					</Typography>
 					<p>
 						Would you like to{' '}
-						<Link to='games'>keep playing them</Link>?
+						<Link to='/myarea/'>keep playing them</Link>?
 					</p>
 				</PageGridContainer>
 			</PageSection>

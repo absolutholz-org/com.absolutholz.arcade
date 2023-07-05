@@ -20,7 +20,7 @@ export function SiteFooter({ appName }: SiteFooterProps): JSX.Element {
 								<Stack direction='row' shouldResetList spacingX='m' spacingY='xxs' tag='ul'>
 									<Link to='/'>Home</Link>
 									<Link to='/lobby/'>New Game Lobby</Link>
-									<Link to='/games/'>Unfinished Games</Link>
+									<Link to='/myarea/'>Unfinished Games</Link>
 								</Stack>
 							</Stack>
 							<div>
