@@ -19,7 +19,8 @@ import { FreeSpaceSymbol } from './components/FreeSpaceSymbol';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
-import { ConfigProvider } from '../../contexts/ConfigContext';
+import { GameConfigProvider } from '../../contexts/GameConfigContext';
+import { GameSetProvider, useGameSet } from '../../contexts/GameSetContext/_GameSetContext';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();
@@ -35,9 +36,8 @@ export function Game(): JSX.Element {
 	let board = gameState?.board;
 
 	if (!board) {
-		const { size, freeSpacePosition, symbolIds } = gameState.config;
+		const { freeSpacePosition, symbolIds } = gameState.config;
 		board = createNewGameBoard({
-			size,
 			freeSpacePosition,
 			symbolIds,
 		});
@@ -50,24 +50,26 @@ export function Game(): JSX.Element {
 	}
 
 	return (
-		<ConfigProvider>
-			<GameProvider
-				initialState={{
-					...gameState,
-					board,
-				}}>
-				<_Game gameId={gameId} />
-			</GameProvider>
-		</ConfigProvider>
+		<GameSetProvider>
+			<GameConfigProvider>
+				<GameProvider
+					initialState={{
+						...gameState,
+						board,
+					}}>
+					<_Game gameId={gameId} />
+				</GameProvider>
+			</GameConfigProvider>
+		</GameSetProvider>
 	);
 }
 
 function _Game({ gameId }: { gameId: string }): JSX.Element {
-	const { board, status } = useGameState();
-
+	const { board, status, config } = useGameState();
+	
 	const navigate = useNavigate();
 	const {deleteGame} = useUnfinishedGames();
-
+	
 	function handlePlayAgainClick() {
 		deleteGame(gameId);
 		navigate(`/lobby/`);

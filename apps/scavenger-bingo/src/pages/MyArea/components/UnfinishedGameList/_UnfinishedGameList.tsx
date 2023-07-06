@@ -2,10 +2,11 @@ import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 
-import * as S from './_GameList.styled';
-import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
+import * as S from './_UnfinishedGameList.styled';
+import { useUnfinishedGames } from '../../../../hooks/useUnfinishedGames';
+import { useEffect } from 'react';
 
-export function GameList() {
+export function UnfinishedGameList() {
 	const {games, deleteGame} = useUnfinishedGames();
 
 	function handleRemove(gameId: string) {
@@ -17,7 +18,7 @@ export function GameList() {
 			{games.length > 0 ? (
 				<Stack shouldResetList spacingY='m' tag='ol'>
 					{games.map(({ gameId, updatedOn }) => (
-						<S.GameList_Row
+						<S.UnfinishedGameList_Row
 							direction='row'
 							key={`game_${gameId}`}
 							spacingX='s'
@@ -38,7 +39,7 @@ export function GameList() {
 									text='Remove'
 								/>
 							</Stack>
-						</S.GameList_Row>
+						</S.UnfinishedGameList_Row>
 					))}
 				</Stack>
 			) : (

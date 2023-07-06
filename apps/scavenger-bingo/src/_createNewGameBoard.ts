@@ -1,7 +1,7 @@
 import { shuffle } from './Array.functions';
 import type { GameBoard, SymbolBasic } from './pages/Game/_Game.types';
 import { FREE_SPACE_ID } from './App.constants';
-import type { FreeSpacePosition, GameBoardSize } from './App.types';
+import type { FreeSpacePosition } from './Game.types';
 
 const FREE_SPACE_SYMBOL: SymbolBasic = {
 	id: FREE_SPACE_ID,
@@ -9,14 +9,13 @@ const FREE_SPACE_SYMBOL: SymbolBasic = {
 };
 
 export function createNewGameBoard({
-	size,
 	freeSpacePosition,
 	symbolIds,
 }: {
-	size: GameBoardSize;
 	freeSpacePosition: FreeSpacePosition;
 	symbolIds: string[];
 }): GameBoard {
+	const size = 5;
 	const gameBoard = shuffle(symbolIds)
 		.slice(0, size ** 2)
 		.reduce((acc, symbol, index) => {

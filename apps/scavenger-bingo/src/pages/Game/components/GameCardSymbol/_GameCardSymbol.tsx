@@ -3,7 +3,9 @@ import { GameCardSymbolProps } from './_GameCardSymbol.types';
 
 import * as S from './_GameCardSymbol.styled';
 import { useGameDispatch } from '../../contexts/GameContext';
-import { useGameConfig } from '../../../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/GameConfigContext';
+import { useGameSet } from '../../../../contexts/GameSetContext';
+import { useEffect, useState } from 'react';
 
 export function GameCardSymbol({
 	id,
@@ -11,13 +13,11 @@ export function GameCardSymbol({
 	found = false,
 }: GameCardSymbolProps): JSX.Element {
 	const dispatch = useGameDispatch();
-	const { symbols, gameConfig } = useGameConfig();
+	const { gameSetId } = useGameConfig();
+	const { symbols } = useGameSet();
 
-	if (!symbols || symbols.length === 0) return <></>;
-
-	const { file } = symbols.find((symbol) => symbol.id === id)!;
-    const imgSrc = `${IMAGE_DIRECTORY}${gameConfig.gameConfigId}/${file}`;
-
+	const [ imgSrc, setImgSrc ] = useState<string | undefined>();
+	
 	const handleClick = () => {
 		if (!found) {
 			dispatch({
@@ -28,6 +28,12 @@ export function GameCardSymbol({
 			});
 		}
 	};
+	
+	useEffect(() => {
+		if (!symbols || symbols.length === 0) return;
+		const { file } = symbols.find((symbol) => symbol.id === id)!;
+		setImgSrc(`${IMAGE_DIRECTORY}${gameSetId}/${file}`);
+	}, [symbols]);
 
 	return (
 		<S.GameCardSymbol disabled={found} onClick={handleClick} type='button'>

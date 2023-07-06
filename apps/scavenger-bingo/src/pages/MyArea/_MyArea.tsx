@@ -3,19 +3,26 @@ import { PageSection } from '@arcade/library-components/src/components/PageSecti
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
-
-import { GameList } from '../../components/GameList';
 import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 
-export function MyArea() {
+import { UnfinishedGameList } from './components/UnfinishedGameList';
+import { CustomPresetList } from './components/CustomPresetList';
+import { CustomPresetsProvider } from '../../contexts/CustomPresetsContext';
+
+export function _MyArea() {
 	return (
-		<PageWithFooterTemplate pageTitle='Scavenger Bingo Unfinished Games'>
-			<PageHeadBillboard headline='Unfinished Games' headlinePrefix='Scavenger Bingo' />
+		<PageWithFooterTemplate pageTitle='Scavenger Bingo Personal Area'>
+			<PageHeadBillboard headline='Personal Area' headlinePrefix='Scavenger Bingo' />
 
 			<PageSection>
 				<PageGridContainer>
 					<Stack spacingY='m'>
-						<GameList />
+						<h2>Unfinished Games</h2>
+						<UnfinishedGameList />
+
+						<h2>Your saved presets</h2>
+						<CustomPresetList />
+						
 						<div>
 							<Button size='l' to='/lobby/' text='New Game' />
 						</div>
@@ -25,3 +32,15 @@ export function MyArea() {
 		</PageWithFooterTemplate>
 	);
 }
+
+
+
+function MyAreaProviderWrapper (): JSX.Element {
+	return (
+		<CustomPresetsProvider>
+			<_MyArea />
+		</CustomPresetsProvider>
+	)
+}
+
+export { MyAreaProviderWrapper as MyArea };

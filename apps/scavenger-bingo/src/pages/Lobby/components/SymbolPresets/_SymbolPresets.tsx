@@ -1,10 +1,12 @@
 import type { SymbolPresetsProps } from './_SymbolPresets.annotations';
 import * as S from './_SymbolPresets.styled';
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
-import { useGameConfig } from '../../../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/GameConfigContext';
+import { useGameSet } from '../../../../contexts/GameSetContext';
 
 export function SymbolPresets({}: SymbolPresetsProps): JSX.Element {
-	const { presets, gameConfig, setGameConfig } = useGameConfig();
+	const { id: gameSetId, presets } = useGameSet();
+	const { setGameConfig } = useGameConfig();
 
 	function handleSelection(id: string) {
 		const preset = presets.find((preset) => preset.id === id);
@@ -26,7 +28,7 @@ export function SymbolPresets({}: SymbolPresetsProps): JSX.Element {
 							alt={id}
 							height={50}
 							loading='lazy'
-							src={`${IMAGE_DIRECTORY}${gameConfig.gameConfigId}/${image.file}`}
+							src={`${IMAGE_DIRECTORY}${gameSetId}/${image.file}`}
 							width={50}
 						/>
 					</S.SymbolPresets_Media>

@@ -1,20 +1,22 @@
 import { IMAGE_DIRECTORY } from '../../../../App.constants';
-import { useGameConfig } from '../../../../contexts/ConfigContext';
+import { useGameConfig } from '../../../../contexts/GameConfigContext';
+import { useGameSet } from '../../../../contexts/GameSetContext';
 import type { SymbolProps } from './_Symbol.annotations';
 import * as S from './_Symbol.styled';
 
 export function Symbol ({ file, id }: SymbolProps): JSX.Element {
-    const { gameConfig, setGameConfig } = useGameConfig();
+    const { id: gameSetId } = useGameSet();
+    const { symbolIds, setGameConfig } = useGameConfig();
 
-    const imgSrc = `${IMAGE_DIRECTORY}${gameConfig.gameConfigId}/${file}`;
-    const isChecked = gameConfig.symbolIds.includes(id);
+    const imgSrc = `${IMAGE_DIRECTORY}${gameSetId}/${file}`;
+    const isChecked = symbolIds.includes(id);
     const htmlId = `symbol_${id}`;
 
     function handleChange () {
         setGameConfig({
-            symbolIds: gameConfig.symbolIds.includes(id)
-                ? gameConfig.symbolIds.filter((symbolId) => symbolId !== id)
-                : [...gameConfig.symbolIds, id]
+            symbolIds: symbolIds.includes(id)
+                ? symbolIds.filter((symbolId) => symbolId !== id)
+                : [...symbolIds, id]
         });
     }
 

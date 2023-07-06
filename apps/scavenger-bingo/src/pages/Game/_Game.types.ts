@@ -1,8 +1,6 @@
-import { WINNING_COMBINATIONS } from '../../App.constants';
-import type { GameConfig } from '../../App.types';
+import type { GameConfig } from '../../GameConfig.types';
 
 export type GameStatus = 'playing' | 'gameWon' | 'gameLost';
-export type GameWinningCombinations = typeof WINNING_COMBINATIONS[number];
 export type GameCardSymbolStatus = 'open' | 'closed';
 
 export type SymbolBasic = {

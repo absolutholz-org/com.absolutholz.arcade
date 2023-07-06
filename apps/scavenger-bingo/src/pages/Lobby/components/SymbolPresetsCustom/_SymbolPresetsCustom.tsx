@@ -1,10 +1,10 @@
 import type { SymbolPresetsCustomProps } from './_SymbolPresetsCustom.annotations';
 import * as S from './_SymbolPresetsCustom.styled';
-import { useGameConfig } from '../../../../contexts/ConfigContext';
-import { useSetConfig } from '../../../../contexts/SetContext/_SetContext';
+import { useGameConfig } from '../../../../contexts/GameConfigContext';
+import { useGameSet } from '../../../../contexts/GameSetContext';
 
 export function SymbolPresetsCustom({}: SymbolPresetsCustomProps): JSX.Element {
-	const { customPresets } = useSetConfig();
+	const { customPresets } = useGameSet();
 	const { setGameConfig } = useGameConfig();
 
 	function handleSelection(id: string) {

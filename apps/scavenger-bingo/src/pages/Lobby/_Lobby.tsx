@@ -17,17 +17,17 @@ import {
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
 import { Banner } from './components/Banner';
-import { ConfigProvider, useGameConfig } from '../../contexts/ConfigContext';
+import { GameConfigProvider, useGameConfig } from '../../contexts/GameConfigContext';
 
 import { SymbolGrid } from './components/SymbolGrid';
 import { SymbolPresets } from './components/SymbolPresets';
 import { SetList } from './components/SetList';
-import { SetConfigProvider } from '../../contexts/SetContext/_SetContext';
+import { GameSetProvider } from '../../contexts/GameSetContext/_GameSetContext';
 import { SymbolPresetsCustom } from './components/SymbolPresetsCustom';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
-	const { gameConfig } = useGameConfig();
+	const { symbolIds, freeSpacePosition, gameSetId, winningCombinations } = useGameConfig();
 	const navigate = useNavigate();
 
 	function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -37,7 +37,12 @@ function _Lobby(): JSX.Element {
 
 		createGame(gameId, {
 			id: gameId,
-			config: gameConfig,
+			config: {
+				symbolIds,
+				freeSpacePosition,
+				gameSetId,
+				winningCombinations,
+			},
 		});
 
 		navigate(`/game/${gameId}/`);
@@ -57,129 +62,97 @@ function _Lobby(): JSX.Element {
 						</p>
 					</PageGridContainer>
 
-					<PageGridContainer>
-						{games.length > 0 && (
-							<Banner>
-								<Stack>
-									<div>
-										You have unfinished games. Why not keep
-										playing them.
-									</div>
-									<div>
-										<Button to='/myarea/' text='See Games' />
-									</div>
-								</Stack>
-							</Banner>
-						)}
-					</PageGridContainer>
+					{/* {games.length > 0 && (
+						<PageGridContainer>
+								<Banner>
+									<Stack>
+										<div>
+											You have unfinished games. Why not keep
+											playing them.
+										</div>
+										<div>
+											<Button to='/myarea/' text='See Games' />
+										</div>
+									</Stack>
+								</Banner>
+						</PageGridContainer>
+					)} */}
 
 					<StickyFormFooter_Form onSubmit={handleSubmit}>
 						<PageGridContainer>
-							<Typography size='xl'>
-								Config
-							</Typography>
+							<Typography size='xl'>Config</Typography>
 
 							<Stack spacingY='m'>
-								<WinningCombinations />
-
-								<FreeSpace />
+								<Stack
+									tag='fieldset'
+									direction='column'
+								>
+									<Typography as='legend' size='l'>Winning combinations</Typography>
+									<WinningCombinations />
+								</Stack>
 
 								<Stack
 									tag='fieldset'
 									direction='column'
 								>
-									<legend>
-										<Typography as='div' size='xl'>
-											Symbols
-										</Typography>
-									</legend>
+									<Typography as='legend' size='l'>Free space</Typography>
+									<FreeSpace />
+								</Stack>
 
-									<Stack
-										tag='fieldset'
-										direction='column'
+								<Stack
+									tag='fieldset'
+									direction='column'
+								>
+									<Typography as='legend' size='l'>Set</Typography>
+									<SetList />
+								</Stack>
+
+								<Stack
+									tag='fieldset'
+									direction='column'
+									spacingY='s'
+								>
+									<Typography as='legend' size='l'>Symbol Collections</Typography>
+									<SymbolPresets />
+								</Stack>
+
+								<Stack
+									tag='fieldset'
+									direction='column'
+									spacingY='s'
+								>
+									<Typography as='legend' size='l'>Your Symbol Collections</Typography>
+									<SymbolPresetsCustom />
+								</Stack>
+
+								<Stack
+									tag='fieldset'
+									direction='column'
 									>
-										<legend>
-											<Typography as='div' size='l'>
-												Set
-											</Typography>
-										</legend>
-										<SetList />
-									</Stack>
-
-									<Stack
-										tag='fieldset'
-										direction='column'
-										spacingY='s'
-										>
-										<legend>
-											<Typography as='div' size='l'>
-												Presets
-											</Typography>
-										</legend>
-
-										<Stack
-											tag='fieldset'
-											direction='column'
-											spacingY='s'
-											>
-											<legend>
-												<Typography as='div' size='m'>
-													Custom
-												</Typography>
-											</legend>
-											
-											<SymbolPresetsCustom />
-										</Stack>
-
-										<Stack
-											tag='fieldset'
-											direction='column'
-											spacingY='s'
-										>
-											<legend>
-												<Typography as='div' size='m'>
-													Preconfigured
-												</Typography>
-											</legend>
-											
-											<SymbolPresets />
-										</Stack>
-									</Stack>
-
-									<Stack
-										tag='fieldset'
-										direction='column'
-										>
-										<legend>
-											<Typography as='div' size='l'>
-												Your selection
-											</Typography>
-										</legend>
-										<SymbolGrid />
-									</Stack>
+									<Typography as='legend' size='l'>Your selection</Typography>
+									<SymbolGrid />
 								</Stack>
 
 								<StickyFormFooter>
 									<Stack spacingY='xxs' direction='row'>
-										<Typography as='div' size='s'>
+										{/* <Typography as='div' size='s'>
 											{gameConfig.symbolIds.length}{' '}
 											symbols selected
-										</Typography>
+										</Typography> */}
 
-										<Button
+										<button
 											disabled={
-												gameConfig.symbolIds
+												symbolIds
 													.length < 25 ||
-												gameConfig
-													.winningCombinations
+												winningCombinations
 													.length === 0
 											}
-											fullWidth
-											size='l'
+											// fullWidth
+											// size='l'
 											type='submit'
-											variant='contained'
-											text='Play'
-										/>
+											// variant='contained'
+											// text='Play'
+										>Play</button>
 									</Stack>
 								</StickyFormFooter>
 							</Stack>
@@ -193,11 +166,11 @@ function _Lobby(): JSX.Element {
 
 function LobbyProviderWrapper (): JSX.Element {
 	return (
-		<SetConfigProvider>
-			<ConfigProvider>
+		<GameSetProvider>
+			<GameConfigProvider>
 				<_Lobby />
-			</ConfigProvider>
-		</SetConfigProvider>
+			</GameConfigProvider>
+		</GameSetProvider>
 	)
 }
 
