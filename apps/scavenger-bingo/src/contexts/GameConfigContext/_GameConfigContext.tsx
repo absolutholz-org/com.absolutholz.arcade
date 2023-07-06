@@ -43,17 +43,6 @@ export function GameConfigProvider({
         setGameSetId(gameConfig.gameSetId);
     }, []);
     
-    // useEffect(() => {
-    //     console.log({symbols});
-        
-    //     if (symbols.length === 0) {
-    //         storeGameConfig((gameConfig) => ({
-    //             ...gameConfig, 
-    //             symbolIds: symbols.filter(( symbol ) => symbol.variant !== true).map(({ id }) => id),
-    //         }));
-    //     }
-    // }, [symbols]);
-
 	return (
 		<GameConfigContext.Provider value={{ 
             gameSetId: gameConfig.gameSetId,

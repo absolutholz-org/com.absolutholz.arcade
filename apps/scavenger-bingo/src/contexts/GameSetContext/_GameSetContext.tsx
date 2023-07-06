@@ -37,10 +37,12 @@ export function GameSetProvider({
 		}
 	}, [id]);
 
-	function setId (id:string): void {
+	function setId (newId:string): void {
+		if (newId === id) return;
+		
 		setSymbols([]);
 		setPresets([]);
-		_setId(id);
+		_setId(newId);
 	}
 
 	function addCustomPreset ({ name, symbols }: AddCustomPresetArgs): void | GameSetPresetCustom {

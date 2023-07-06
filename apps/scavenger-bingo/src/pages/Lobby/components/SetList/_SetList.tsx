@@ -6,6 +6,7 @@ export function SetList (): JSX.Element {
     const { setGameConfig } = useGameConfig();
 
     function handleSelect (id: string) {
+        // remove last config symbol id selection
         setGameConfig({ gameSetId: id, symbolIds: [] });
     }
 

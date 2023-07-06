@@ -15,12 +15,14 @@ export function SymbolGrid ({}: SymbolGridProps): JSX.Element {
     const { symbols } = useGameSet();
     const { addCustomPreset} = useGameSet();
     const [ symbolSize, setSymbolSize ] = useState<SymbolSize>(0);
+    const [ deselectAllSymbols, setDeselectAllSymbols ] = useState(false);
 
     function handleSelectAll(): void {
 		setGameConfig({ symbolIds: symbols.map(({ id }) => id) });
 	}
 	
 	function handleDeselectAll(): void {
+        setDeselectAllSymbols(true);
 		setGameConfig({ symbolIds: [] });
 	}
 
@@ -40,10 +42,12 @@ export function SymbolGrid ({}: SymbolGridProps): JSX.Element {
     }
 
     useEffect(() => {
-        if (symbols.length > 0 && symbolIds.length === 0) {
+        if (!deselectAllSymbols && symbols.length > 0 && symbolIds.length === 0) {
             setGameConfig({
                 symbolIds: symbols.filter(( symbol ) => symbol.variant !== true).map(({ id }) => id),
             });
+        } else {
+            setDeselectAllSymbols(false);
         }
     }, [symbols, symbolIds]);
 
