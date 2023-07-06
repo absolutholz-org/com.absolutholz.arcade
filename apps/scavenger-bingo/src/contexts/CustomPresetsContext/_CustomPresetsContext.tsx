@@ -5,7 +5,7 @@ import { useLocalStorage } from "@arcade/library-components/src/hooks/useLocalSt
 import type { AddCustomPresetArgs, CustomPresetsContext } from "./_CustomPresetsContext.annotations";
 import { STORAGE_APP_PREFIX } from "../../App.constants";
 import { nanoid } from "nanoid";
-import { SetPresetCustom } from "../GameSetContext/_SetContext.types";
+import type { GameSetPresetCustom } from "../../GameSet.types";
 
 const STORAGE_KEY = `${STORAGE_APP_PREFIX}_customPresets`;
 
@@ -20,12 +20,12 @@ export function CustomPresetsProvider({
 }: {
 	children: ReactNode;
 }) {
-	const [ customPresets, storeCustomPresets ] = useLocalStorage<SetPresetCustom[]>(
+	const [ customPresets, storeCustomPresets ] = useLocalStorage<GameSetPresetCustom[]>(
 		`${STORAGE_KEY}`,
 		[]
 	);
 
-	function addCustomPreset ({ setId, name, symbols }: AddCustomPresetArgs): void | SetPresetCustom {
+	function addCustomPreset ({ setId, name, symbols }: AddCustomPresetArgs): void | GameSetPresetCustom {
 		if (!setId) return;
 
 		const customPreset = {

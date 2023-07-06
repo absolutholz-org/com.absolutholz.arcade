@@ -1,4 +1,4 @@
-import { SetPresetCustom } from "../GameSetContext/_SetContext.types";
+import { GameSetPresetCustom } from "../../GameSet.types";
 
 export type AddCustomPresetArgs = {
     setId: string;
@@ -7,7 +7,7 @@ export type AddCustomPresetArgs = {
 }
 
 export type CustomPresetsContext = {
-    customPresets: SetPresetCustom[];
+    customPresets: GameSetPresetCustom[];
     addCustomPreset: ({ name, symbols }: AddCustomPresetArgs) => void;
 	removeCustomPreset: (id: string) => void;
 };

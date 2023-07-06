@@ -1,7 +1,7 @@
 import { shuffle } from './Array.functions';
 import type { GameBoard, SymbolBasic } from './pages/Game/_Game.types';
 import { FREE_SPACE_ID } from './App.constants';
-import type { FreeSpacePosition } from './Game.types';
+import type { FreeSpacePosition } from './GameConfig.types';
 
 const FREE_SPACE_SYMBOL: SymbolBasic = {
 	id: FREE_SPACE_ID,

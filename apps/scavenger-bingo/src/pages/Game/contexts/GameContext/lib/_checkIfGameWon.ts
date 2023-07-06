@@ -1,4 +1,4 @@
-import { WinningCombination } from '../../../../../App.types';
+import type { WinningCombination } from '../../../../../GameConfig.types';
 import type { GameBoard } from '../../../_Game.types';
 import { isCompleteColumn } from './_isCompleteColumn';
 import { isCompleteCorner } from './_isCompleteCorner';

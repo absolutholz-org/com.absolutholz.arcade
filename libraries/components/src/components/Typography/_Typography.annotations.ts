@@ -1,4 +1,4 @@
-import { TypographySize } from './_Typography.types';
+import type { TypographySize, TypographyWeight } from './_Typography.types';
 
 export type TypographyProps = {
 	size?: TypographySize;
