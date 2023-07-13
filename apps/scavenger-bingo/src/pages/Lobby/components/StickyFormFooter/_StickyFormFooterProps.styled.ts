@@ -12,4 +12,5 @@ export const StickyFormFooter = styled.div`
 	position: sticky;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
 `;

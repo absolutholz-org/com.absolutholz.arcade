@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
+import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 
 import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
@@ -146,19 +147,16 @@ function _Lobby(): JSX.Element {
 											symbols selected
 										</Typography> */}
 
-										<button
+										<Button
 											disabled={
 												symbolIds.length < 25 ||
 												winningCombinations.length === 0
 											}
-											// fullWidth
-											// size='l'
+											icon={PlayArrowRoundedIcon}
+											text='Play'
 											type='submit'
-											// variant='contained'
-											// text='Play'
-										>
-											Play
-										</button>
+											width='context'
+										/>
 									</Stack>
 								</StickyFormFooter>
 							</Stack>

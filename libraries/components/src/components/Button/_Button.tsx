@@ -1,60 +1,45 @@
-import { Link } from 'react-router-dom';
-
-import type { ButtonProps } from './_Button.annotations';
 import * as S from './_Button.styled';
+import type { IButton } from './_Button.types';
 
 export function Button({
-	size = 's',
-	variant = 'outlined',
 	icon,
-	text,
 	disabled = false,
-	fullWidth = false,
 	href,
 	onClick,
+	width = 'content',
+	text,
 	to,
 	type = 'button',
-}: ButtonProps): JSX.Element {
-	const outlined: boolean = variant === 'outlined';
+}: IButton): JSX.Element {
+	const props = {
+		fullWidth: width === 'context',
+	};
+	const content = (
+		<>
+			{icon && <S.Button_Icon as={icon} theme='filled' />}
+			{text && <S.Button_Text>{text}</S.Button_Text>}
+		</>
+	);
 
 	if (href) {
 		return (
-			<S.Button
-				as='a'
-				$fullWidth={fullWidth}
-				// @ts-ignore
-				href={href}
-				$outlined={outlined}
-				$size={size}>
-				{text}
-			</S.Button>
+			<S.ButtonAsAnchor {...props} href={href}>
+				{content}
+			</S.ButtonAsAnchor>
 		);
 	}
-	
+
 	if (to) {
 		return (
-			<S.Button
-				as={Link}
-				$fullWidth={fullWidth}
-				$outlined={outlined}
-				$size={size}
-				// @ts-ignore
-				to={to}>
-				{text}
-			</S.Button>
+			<S.ButtonAsLink {...props} to={to}>
+				{content}
+			</S.ButtonAsLink>
 		);
 	}
 
 	return (
-		<S.Button
-			as='button'
-			disabled={disabled}
-			$fullWidth={fullWidth}
-			onClick={onClick}
-			$outlined={outlined}
-			$size={size}
-			type={type}>
-			{text}
+		<S.Button {...props} disabled={disabled} onClick={onClick} type={type}>
+			{content}
 		</S.Button>
 	);
 }

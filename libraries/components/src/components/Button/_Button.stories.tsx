@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
 import { Button } from '.';
 
@@ -13,36 +14,25 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
-export const _ButtonOutlinedSmall_: Story = {
+export const _Button_: Story = {
 	args: {
+		icon: PlayCircleOutlineRoundedIcon,
 		text: 'Lorem ipsum dolor',
-		size: 's',
-		variant: 'outlined',
 	},
 };
 
-export const _ButtonOutlinedLarge_: Story = {
+export const _AsAnchor_: Story = {
 	args: {
+		icon: PlayCircleOutlineRoundedIcon,
 		text: 'Lorem ipsum dolor',
-		size: 'l',
-		variant: 'outlined',
 		href: '/',
 	},
 };
 
-export const _ButtonContainedSmall_: Story = {
+export const _AsLink_: Story = {
 	args: {
+		icon: PlayCircleOutlineRoundedIcon,
 		text: 'Lorem ipsum dolor',
-		size: 's',
-		variant: 'contained',
 		to: '/',
-	},
-};
-
-export const _ButtonContainedLarge_: Story = {
-	args: {
-		text: 'Lorem ipsum dolor',
-		size: 'l',
-		variant: 'contained',
 	},
 };
