@@ -17,17 +17,22 @@ import {
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
 import { Banner } from './components/Banner';
-import { GameConfigProvider, useGameConfig } from '../../contexts/GameConfigContext';
+import {
+	GameConfigProvider,
+	useGameConfig,
+} from '../../contexts/GameConfigContext';
 
 import { SymbolGrid } from './components/SymbolGrid';
 import { SymbolPresets } from './components/SymbolPresets';
 import { SetList } from './components/SetList';
 import { GameSetProvider } from '../../contexts/GameSetContext/_GameSetContext';
 import { SymbolPresetsCustom } from './components/SymbolPresetsCustom';
+import { CustomPresetsProvider } from '../../contexts/CustomPresetsContext';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
-	const { symbolIds, freeSpacePosition, gameSetId, winningCombinations } = useGameConfig();
+	const { symbolIds, freeSpacePosition, gameSetId, winningCombinations } =
+		useGameConfig();
 	const navigate = useNavigate();
 
 	function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -50,7 +55,10 @@ function _Lobby(): JSX.Element {
 
 	return (
 		<PageWithFooterTemplate pageTitle='Scavenger Bingo Lobby'>
-			<PageHeadBillboard headline='Lobby' headlinePrefix='Scavenger Bingo' />
+			<PageHeadBillboard
+				headline='Lobby'
+				headlinePrefix='Scavenger Bingo'
+			/>
 			<PageSection>
 				<Stack spacingY='m'>
 					<PageGridContainer>
@@ -83,53 +91,51 @@ function _Lobby(): JSX.Element {
 							<Typography size='xl'>Config</Typography>
 
 							<Stack spacingY='m'>
-								<Stack
-									tag='fieldset'
-									direction='column'
-								>
-									<Typography as='legend' size='l'>Winning combinations</Typography>
+								<Stack tag='fieldset' direction='column'>
+									<Typography as='legend' size='l'>
+										Winning combinations
+									</Typography>
 									<WinningCombinations />
 								</Stack>
 
-								<Stack
-									tag='fieldset'
-									direction='column'
-								>
-									<Typography as='legend' size='l'>Free space</Typography>
+								<Stack tag='fieldset' direction='column'>
+									<Typography as='legend' size='l'>
+										Free space
+									</Typography>
 									<FreeSpace />
 								</Stack>
 
-								<Stack
-									tag='fieldset'
-									direction='column'
-								>
-									<Typography as='legend' size='l'>Set</Typography>
+								<Stack tag='fieldset' direction='column'>
+									<Typography as='legend' size='l'>
+										Set
+									</Typography>
 									<SetList />
 								</Stack>
 
 								<Stack
 									tag='fieldset'
 									direction='column'
-									spacingY='s'
-								>
-									<Typography as='legend' size='l'>Symbol Collections</Typography>
+									spacingY='s'>
+									<Typography as='legend' size='l'>
+										Symbol Collections
+									</Typography>
 									<SymbolPresets />
 								</Stack>
 
 								<Stack
 									tag='fieldset'
 									direction='column'
-									spacingY='s'
-								>
-									<Typography as='legend' size='l'>Your Symbol Collections</Typography>
+									spacingY='s'>
+									<Typography as='legend' size='l'>
+										Your Symbol Collections
+									</Typography>
 									<SymbolPresetsCustom />
 								</Stack>
 
-								<Stack
-									tag='fieldset'
-									direction='column'
-									>
-									<Typography as='legend' size='l'>Your selection</Typography>
+								<Stack tag='fieldset' direction='column'>
+									<Typography as='legend' size='l'>
+										Your selection
+									</Typography>
 									<SymbolGrid />
 								</Stack>
 
@@ -142,17 +148,17 @@ function _Lobby(): JSX.Element {
 
 										<button
 											disabled={
-												symbolIds
-													.length < 25 ||
-												winningCombinations
-													.length === 0
+												symbolIds.length < 25 ||
+												winningCombinations.length === 0
 											}
 											// fullWidth
 											// size='l'
 											type='submit'
 											// variant='contained'
 											// text='Play'
-										>Play</button>
+										>
+											Play
+										</button>
 									</Stack>
 								</StickyFormFooter>
 							</Stack>
@@ -164,14 +170,16 @@ function _Lobby(): JSX.Element {
 	);
 }
 
-function LobbyProviderWrapper (): JSX.Element {
+function LobbyProviderWrapper(): JSX.Element {
 	return (
-		<GameSetProvider>
-			<GameConfigProvider>
-				<_Lobby />
-			</GameConfigProvider>
-		</GameSetProvider>
-	)
+		<CustomPresetsProvider>
+			<GameSetProvider>
+				<GameConfigProvider>
+					<_Lobby />
+				</GameConfigProvider>
+			</GameSetProvider>
+		</CustomPresetsProvider>
+	);
 }
 
 export { LobbyProviderWrapper as Lobby };

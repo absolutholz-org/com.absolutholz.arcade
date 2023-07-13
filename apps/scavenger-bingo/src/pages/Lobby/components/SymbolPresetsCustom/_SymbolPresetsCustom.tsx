@@ -4,7 +4,7 @@ import { useGameConfig } from '../../../../contexts/GameConfigContext';
 import { useGameSet } from '../../../../contexts/GameSetContext';
 
 export function SymbolPresetsCustom({}: SymbolPresetsCustomProps): JSX.Element {
-	const { customPresets } = useGameSet();
+	const { customPresets, id: gameSetId } = useGameSet();
 	const { setGameConfig } = useGameConfig();
 
 	function handleSelection(id: string) {
@@ -15,15 +15,20 @@ export function SymbolPresetsCustom({}: SymbolPresetsCustomProps): JSX.Element {
 		setGameConfig({ symbolIds: preset.symbols });
 	}
 
-	return customPresets.length > 0 
-		? <S.SymbolPresetsCustom_List>
-			{customPresets.map(({ id, name }) => (
-				<S.SymbolPresetsCustom_Button
-					key={`preset_${id}`}
-					onClick={() => handleSelection(id)}
-					type='button'>{ name }
-				</S.SymbolPresetsCustom_Button>
-			))}
+	return customPresets.length > 0 ? (
+		<S.SymbolPresetsCustom_List>
+			{customPresets
+				.filter(({ setId }) => setId === gameSetId)
+				.map(({ id, name }) => (
+					<S.SymbolPresetsCustom_Button
+						key={`preset_${id}`}
+						onClick={() => handleSelection(id)}
+						type='button'>
+						{name}
+					</S.SymbolPresetsCustom_Button>
+				))}
 		</S.SymbolPresetsCustom_List>
-		: <></>;
+	) : (
+		<></>
+	);
 }
