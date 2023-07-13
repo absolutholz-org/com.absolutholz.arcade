@@ -12,14 +12,7 @@ export function Home(): JSX.Element {
 		<PageWithFooterTemplate pageTitle='Scavenger Bingo'>
 			<PageHeadBillboard
 				headline='Scavenger Bingo'
-				headlineSuffix={
-					<Button
-						size='l'
-						to='/lobby/'
-						variant='contained'
-						text='New Game'
-					/>
-				}
+				headlineSuffix={<Button to='/lobby/' text='New Game' />}
 			/>
 
 			<PageSection>
@@ -33,12 +26,7 @@ export function Home(): JSX.Element {
 						problem-solving ability while having a great time with
 						your family and friends.
 					</p>
-					<Button
-						size='l'
-						to='/lobby/'
-						variant='contained'
-						text='Play Scavenger Bingo'
-					/>
+					<Button to='/lobby/' text='Play Scavenger Bingo' />
 				</PageGridContainer>
 			</PageSection>
 			<PageSection omitTopSpacing>

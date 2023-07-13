@@ -20,7 +20,10 @@ import { Button } from '@arcade/library-components/src/components/Button';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { useUnfinishedGames } from '../../hooks/useUnfinishedGames';
 import { GameConfigProvider } from '../../contexts/GameConfigContext';
-import { GameSetProvider, useGameSet } from '../../contexts/GameSetContext/_GameSetContext';
+import {
+	GameSetProvider,
+	useGameSet,
+} from '../../contexts/GameSetContext/_GameSetContext';
 
 export function Game(): JSX.Element {
 	const { gameId } = useParams();
@@ -66,10 +69,10 @@ export function Game(): JSX.Element {
 
 function _Game({ gameId }: { gameId: string }): JSX.Element {
 	const { board, status, config } = useGameState();
-	
+
 	const navigate = useNavigate();
-	const {deleteGame} = useUnfinishedGames();
-	
+	const { deleteGame } = useUnfinishedGames();
+
 	function handlePlayAgainClick() {
 		deleteGame(gameId);
 		navigate(`/lobby/`);
@@ -120,12 +123,7 @@ function _Game({ gameId }: { gameId: string }): JSX.Element {
 				}>
 				<Stack spacingY='l'>
 					<Typography size='xxxxl'>You win!</Typography>
-					<Button
-						variant='contained'
-						size='l'
-						onClick={handlePlayAgainClick}
-						text='Play again'
-					/>
+					<Button onClick={handlePlayAgainClick} text='Play again' />
 				</Stack>
 			</Dialog>
 		</>
