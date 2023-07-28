@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "germany-license-plates": "node ./src/configs/germany-license-plates/processSource.mjs && svgo -f ./public/symbols/originals/germany-license-plates -o ./public/symbols/optimized/germany-license-plates"
+    "germany-license-plates": "node ./src/configs/germany-license-plates/processSource.mjs",
+    "optimize-svgs": "svgo -r -f ./public/symbols/originals/ -o ./public/symbols/optimized/"
   },
   "dependencies": {
     "@arcade/library-common": "^1.0.0",
