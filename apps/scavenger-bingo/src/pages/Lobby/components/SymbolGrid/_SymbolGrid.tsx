@@ -64,12 +64,12 @@ export function SymbolGrid({}: SymbolGridProps): JSX.Element {
 	return (
 		<Stack direction='column' spacingY='m'>
 			<S.SymbolGrid_Actions direction='row' spacingX='s'>
-				<S.SymbolGrid_Action onClick={handleSelectAll}>
+				<S.SymbolGrid_Action onClick={handleSelectAll} type='button'>
 					<S.SymbolGrid_ActionIcon as={LibraryAddCheckRoundedIcon} />
 					<Typography size='xs'>Select All</Typography>
 				</S.SymbolGrid_Action>
 
-				<S.SymbolGrid_Action onClick={handleDeselectAll}>
+				<S.SymbolGrid_Action onClick={handleDeselectAll} type='button'>
 					<S.SymbolGrid_ActionIcon as={FilterNoneRoundedIcon} />
 					<Typography size='xs'>Deselect All</Typography>
 				</S.SymbolGrid_Action>
@@ -79,7 +79,8 @@ export function SymbolGrid({}: SymbolGridProps): JSX.Element {
 						symbols.length === symbolIds.length ||
 						symbolIds.length === 0
 					}
-					onClick={handleSavePreset}>
+					onClick={handleSavePreset}
+					type='button'>
 					<S.SymbolGrid_ActionIcon
 						as={CollectionsBookmarkRoundedIcon}
 					/>
