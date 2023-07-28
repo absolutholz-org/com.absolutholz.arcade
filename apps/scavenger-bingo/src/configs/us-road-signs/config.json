@@ -1,0 +1,289 @@
+{
+    "symbols": [
+        {
+            "id": "MUTCD_R1-1_stop",
+            "file": "MUTCD_R1-1_stop.svg"
+        },
+        {
+            "id": "MUTCD_R1-2_yield",
+            "file": "MUTCD_R1-2_yield.svg"
+        },
+        {
+            "id": "MUTCD_R5-1_do-not-enter",
+            "file": "MUTCD_R5-1_do-not-enter.svg"
+        },
+        {
+            "id": "MUTCD_R5-1a_wrong-way",
+            "file": "MUTCD_R5-1a_wrong-way.svg"
+        },
+        {
+            "id": "I-1_interstate-route",
+            "file": "I-1_interstate-route.svg"
+        },
+        {
+            "id": "US_1_us-route",
+            "file": "US_1_us-route.svg"
+        },
+        {
+            "id": "Ohio_State_Route_88",
+            "file": "Ohio_State_Route_88.svg"
+        },
+        {
+            "id": "M1-5-24_ohio-turnpike",
+            "file": "M1-5-24_ohio-turnpike.svg"
+        },
+        {
+            "id": "MUTCD_E5-1_exit",
+            "file": "MUTCD_E5-1_exit.svg"
+        },
+        {
+            "id": "MUTCD_D8-3_weigh-station",
+            "file": "MUTCD_D8-3_weigh-station.svg"
+        },
+        {
+            "id": "Hospital_sign",
+            "file": "Hospital_sign.svg"
+        },
+        {
+            "id": "MUTCD_D9-10_info",
+            "file": "MUTCD_D9-10_info.svg"
+        },
+        {
+            "id": "MUTCD_D9-14_police",
+            "file": "MUTCD_D9-14_police.svg"
+        },
+        {
+            "id": "MUTCD_D9-1_telephone",
+            "file": "MUTCD_D9-1_telephone.svg"
+        },
+        {
+            "id": "MUTCD_D9-3_camping",
+            "file": "MUTCD_D9-3_camping.svg"
+        },
+        {
+            "id": "MUTCD_D9-3a_trailer-camping",
+            "file": "MUTCD_D9-3a_trailer-camping.svg"
+        },
+        {
+            "id": "MUTCD_D9-7_gas",
+            "file": "MUTCD_D9-7_gas.svg"
+        },
+        {
+            "id": "MUTCD_D9-8_food",
+            "file": "MUTCD_D9-8_food.svg"
+        },
+        {
+            "id": "MUTCD_D9-9_lodging",
+            "file": "MUTCD_D9-9_lodging.svg"
+        },
+        {
+            "id": "MUTCD_R7-1_no-parking-any-time",
+            "file": "MUTCD_R7-1_no-parking-any-time.svg"
+        },
+        {
+            "id": "MUTCD_R7-4_no-standing-any-time",
+            "file": "MUTCD_R7-4_no-standing-any-time.svg"
+        },
+        {
+            "id": "MUTCD_R8-3_no-parking",
+            "file": "MUTCD_R8-3_no-parking.svg"
+        },
+        {
+            "id": "MUTCD_R3-1_no-right-turn",
+            "file": "MUTCD_R3-1_no-right-turn.svg"
+        },
+        {
+            "id": "MUTCD_R3-2_no-left-turn",
+            "file": "MUTCD_R3-2_no-left-turn.svg"
+        },
+        {
+            "id": "MUTCD_R3-4_no-u-turn",
+            "file": "MUTCD_R3-4_no-u-turn.svg"
+        },
+        {
+            "id": "MUTCD_R3-5L_mandatory-movement-lane-left",
+            "file": "MUTCD_R3-5L_mandatory-movement-lane-left.svg"
+        },
+        {
+            "id": "MUTCD_R3-5R_mandatory-movement-lane-right",
+            "file": "MUTCD_R3-5R_mandatory-movement-lane-right.svg"
+        },
+        {
+            "id": "MUTCD_R3-5a_mandatory-movement-lane-straight",
+            "file": "MUTCD_R3-5a_mandatory-movement-lane-straight.svg"
+        },
+        {
+            "id": "MUTCD_R3-6L_optional-movement-lane-left",
+            "file": "MUTCD_R3-6L_optional-movement-lane-left.svg"
+        },
+        {
+            "id": "MUTCD_R3-6R_optional-movement-lane-right",
+            "file": "MUTCD_R3-6R_optional-movement-lane-right.svg"
+        },
+        {
+            "id": "MUTCD_R6-5P_roundabout",
+            "file": "MUTCD_R6-5P_roundabout.svg"
+        },
+        {
+            "id": "MUTCD_R4-7_keep-right",
+            "file": "MUTCD_R4-7_keep-right.svg"
+        },
+        {
+            "id": "MUTCD_R4-8_keep-left",
+            "file": "MUTCD_R4-8_keep-left.svg"
+        },
+        {
+            "id": "MUTCD_R4-1_do-not-pass",
+            "file": "MUTCD_R4-1_do-not-pass.svg"
+        },
+        {
+            "id": "MUTCD_R4-2_pass-with-care",
+            "file": "MUTCD_R4-2_pass-with-care.svg"
+        },
+        {
+            "id": "MUTCD_R6-2L_one-way-alt",
+            "file": "MUTCD_R6-2L_one-way-alt.svg"
+        },
+        {
+            "id": "MUTCD_R6-1L_one-way",
+            "file": "MUTCD_R6-1L_one-way.svg"
+        },
+        {
+            "id": "MUTCD_S1-1_school-crossing",
+            "file": "MUTCD_S1-1_school-crossing.svg"
+        },
+        {
+            "id": "MUTCD_W1-7_two-direction-arrow",
+            "file": "MUTCD_W1-7_two-direction-arrow.svg"
+        },
+        {
+            "id": "MUTCD_W1-1L_sharp-turn-left",
+            "file": "MUTCD_W1-1L_sharp-turn-left.svg"
+        },
+        {
+            "id": "MUTCD_W1-1R_sharp-turn-right",
+            "file": "MUTCD_W1-1R_sharp-turn-right.svg"
+        },
+        {
+            "id": "MUTCD_W1-2L_curve-left",
+            "file": "MUTCD_W1-2L_curve-left.svg"
+        },
+        {
+            "id": "MUTCD_W1-2R_curve-right",
+            "file": "MUTCD_W1-2R_curve-right.svg"
+        },
+        {
+            "id": "MUTCD_W1-4L_reverse-curves-left",
+            "file": "MUTCD_W1-4L_reverse-curves-left.svg"
+        },
+        {
+            "id": "MUTCD_W1-4R_reverse-curves-right",
+            "file": "MUTCD_W1-4R_reverse-curves-right.svg"
+        },
+        {
+            "id": "MUTCD_W11-11_golf-cart",
+            "file": "MUTCD_W11-11_golf-cart.svg"
+        },
+        {
+            "id": "MUTCD_W11-14_horse-drawn-vehicle",
+            "file": "MUTCD_W11-14_horse-drawn-vehicle.svg"
+        },
+        {
+            "id": "MUTCD_W11-2-ped-crossing",
+            "file": "MUTCD_W11-2-ped-crossing.svg"
+        },
+        {
+            "id": "MUTCD_W11-3_deer-crossing",
+            "file": "MUTCD_W11-3_deer-crossing.svg"
+        },
+        {
+            "id": "MUTCD_W14-1_dead-end",
+            "file": "MUTCD_W14-1_dead-end.svg"
+        },
+        {
+            "id": "MUTCD_W14-2_no-outlet",
+            "file": "MUTCD_W14-2_no-outlet.svg"
+        },
+        {
+            "id": "MUTCD_W15-1_playground",
+            "file": "MUTCD_W15-1_playground.svg"
+        },
+        {
+            "id": "MUTCD_W3-1_stop-ahead",
+            "file": "MUTCD_W3-1_stop-ahead.svg"
+        },
+        {
+            "id": "MUTCD_W3-2_yield-ahead",
+            "file": "MUTCD_W3-2_yield-ahead.svg"
+        },
+        {
+            "id": "MUTCD_W3-3_traffic-light-ahead",
+            "file": "MUTCD_W3-3_traffic-light-ahead.svg"
+        },
+        {
+            "id": "MUTCD_W8-5_slippery-when-wet",
+            "file": "MUTCD_W8-5_slippery-when-wet.svg"
+        },
+        {
+            "id": "MUTCD_W10-1_railroad",
+            "file": "MUTCD_W10-1_railroad.svg"
+        },
+        {
+            "id": "MUTCD_R15-1_railroad-crossing",
+            "file": "MUTCD_R15-1_railroad-crossing.svg"
+        },
+        {
+            "id": "Speed_Limit_20_sign",
+            "file": "Speed_Limit_20_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_25_sign",
+            "file": "Speed_Limit_25_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_30_sign",
+            "file": "Speed_Limit_30_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_35_sign",
+            "file": "Speed_Limit_35_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_40_sign",
+            "file": "Speed_Limit_40_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_45_sign",
+            "file": "Speed_Limit_45_sign.svg"
+        },
+        {
+            "id": "Speed_limit_50_sign",
+            "file": "Speed_limit_50_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_55_sign",
+            "file": "Speed_Limit_55_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_60_sign",
+            "file": "Speed_Limit_60_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_65_sign",
+            "file": "Speed_Limit_65_sign.svg"
+        },
+        {
+            "id": "Speed_Limit_70_sign",
+            "file": "Speed_Limit_70_sign.svg"
+        },
+        {
+            "id": "Speed_limit_75_sign",
+            "file": "Speed_limit_75_sign.svg"
+        },
+        {
+            "id": "Speed_limit_80_sign",
+            "file": "Speed_limit_80_sign.svg"
+        }
+    ],
+    "presets": []
+}
