@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import { LinkProps } from 'react-router-dom';
-import { SvgIconComponent } from '@mui/icons-material';
+import type { SvgIconComponent } from '@mui/icons-material';
 
 type ButtonWidth = 'content' | 'context';
 
