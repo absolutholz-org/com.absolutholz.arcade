@@ -1,10 +1,14 @@
 import { css, Global } from '@emotion/react';
 
 import { pageGridCss } from '../components/PageGrid';
-import { spaceCss } from '../components/Space/_Space.styles';
+import { spaceCss } from '../foundations/spacing/spaceCSS';
 import { typographyCss } from '../components/Typography';
 import { typography } from '../components/Typography/_Typography';
-import { colorSchemeCss, colorSchemesCssVars, themeCss } from '../components/Theme/theme';
+import {
+	colorSchemeCss,
+	colorSchemesCssVars,
+	themeCss,
+} from '../components/Theme/theme';
 
 import theme from '../components/Theme/themes/default.theme.json';
 
@@ -34,7 +38,7 @@ const _baseStyles = css`
 		color-scheme: light dark;
 
 		/* CSS vars */
-		${colorSchemeCss({lightCssVars, darkCssVars})}
+		${colorSchemeCss({ lightCssVars, darkCssVars })}
 		${typographyCss}
 		${spaceCss}
 		${pageGridCss}
@@ -57,7 +61,6 @@ const _baseStyles = css`
 		${typography()};
 		margin: 0;
 		min-height: 100%;
-
 	}
 
 	img {

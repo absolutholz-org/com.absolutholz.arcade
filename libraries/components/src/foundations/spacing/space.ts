@@ -1,5 +1,5 @@
-export type Space = 25 | 50 | 100 | 125 | 150 | 200 | 300;
+import { SpaceLevel } from './space.types';
 
-export function space(size: Space): string {
-	return `${size / 100}rem`;
+export function space(level: SpaceLevel) {
+	return `var(--space-${level})`;
 }

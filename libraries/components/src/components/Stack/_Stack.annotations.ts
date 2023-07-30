@@ -1,6 +1,6 @@
 import type { ComponentType, ReactNode } from 'react';
 
-import type { SpaceLevel } from '../Space/_Space.types';
+import type { SpaceLevel } from '../../foundations/spacing/space.types';
 import type { StackDirection } from './_Stack.types';
 
 type StackPropsBase = {

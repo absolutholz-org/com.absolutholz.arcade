@@ -4,7 +4,7 @@ import { Slider } from '.';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-	title: 'Components/Slider',
+	title: 'Base Components/Input/Slider',
 	component: Slider,
 	argTypes: { onChange: { action: 'changed' } },
 } satisfies Meta<typeof Slider>;

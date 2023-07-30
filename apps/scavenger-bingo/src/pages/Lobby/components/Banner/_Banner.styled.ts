@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-import { space } from '@arcade/library-components/src/components/Space';
 import { color } from '@arcade/library-components/src/components/Theme';
+import { space } from '@arcade/library-components/src/foundations/spacing/space';
 
 export const Banner = styled.div`
 	background-color: color-mix(in hsl, ${color('accent')}, transparent 90%);

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-type RadiusShape = 'equal' | 'elliptical';
+import type { RadiusShape } from './radius.types';
 
 export function radiusCss(style: RadiusShape) {
 	return css`

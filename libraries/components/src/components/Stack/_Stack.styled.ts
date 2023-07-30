@@ -1,14 +1,11 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { space } from '../Space';
-import type { SpaceLevel } from '../Space/_Space.types';
+import { space } from '../../foundations/spacing/space';
+import type { SpaceLevel } from '../../foundations/spacing/space.types';
 import type { StackDirection } from './_Stack.types';
 
-function outputAppropriateGap(
-	spacingX?: SpaceLevel,
-	spacingY?: SpaceLevel
-) {
+function outputAppropriateGap(spacingX?: SpaceLevel, spacingY?: SpaceLevel) {
 	if (spacingX && spacingY) {
 		return css`
 			gap: ${space(spacingY)} ${space(spacingX)};

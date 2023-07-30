@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { space } from '../../Space';
+import { space } from '../../../foundations/spacing/space';
 import { Typography } from '../../Typography';
 import { color, transparentColor } from '../../Theme/color';
 

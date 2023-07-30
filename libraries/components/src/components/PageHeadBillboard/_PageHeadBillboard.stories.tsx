@@ -4,7 +4,7 @@ import { PageHeadBillboard } from '.';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-	title: 'Components/PageHeadBillboard',
+	title: 'Base Components/PageHeadBillboard',
 	component: PageHeadBillboard,
 } satisfies Meta<typeof PageHeadBillboard>;
 
@@ -12,9 +12,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
-export const _HeadlineOnly_: Story = {
+export const _WithHeadlineOnly_: Story = {
 	args: {
-		headline: 'Scavenger Bingo'
+		headline: 'Scavenger Bingo',
 	},
 };
 

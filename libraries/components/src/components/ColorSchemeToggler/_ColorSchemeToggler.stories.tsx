@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ColorSchemeToggler } from '.';
 
 const meta: Meta<typeof ColorSchemeToggler> = {
-	title: 'Patterns/ColorSchemeToggler',
+	title: 'Composite Components/ColorSchemeToggler',
 	component: ColorSchemeToggler,
 };
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { ResetList } from '@arcade/library-components/src/components/ResetList';
-import { space } from '@arcade/library-components/src/components/Space';
+import { space } from '@arcade/library-components/src/foundations/spacing/space';
 
 export const SymbolPresets_List = styled(ResetList)`
 	display: flex;

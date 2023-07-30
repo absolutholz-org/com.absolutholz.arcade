@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Stack } from './_Stack';
-import { CONTENT_STYLES, SPACING_STYLES } from '../../storyHelpers/placeholderStyles';
+import {
+	CONTENT_STYLES,
+	SPACING_STYLES,
+} from '../../storyHelpers/placeholderStyles';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-	title: 'Components/Stack',
+	title: 'Base Components/Layout/Stack',
 	component: Stack,
 	decorators: [
 		(Story) => (
@@ -20,7 +23,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
-export const _Column_: Story = {
+export const _AsColumn_: Story = {
 	args: {
 		children: (
 			<>
@@ -32,7 +35,7 @@ export const _Column_: Story = {
 	},
 };
 
-export const _Row_: Story = {
+export const _AsRow_: Story = {
 	args: {
 		children: (
 			<>
@@ -52,7 +55,7 @@ export const _Row_: Story = {
 	},
 };
 
-export const _List_: Story = {
+export const _AsList_: Story = {
 	args: {
 		children: (
 			<>

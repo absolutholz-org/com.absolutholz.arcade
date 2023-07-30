@@ -5,7 +5,7 @@ import { Button } from '.';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-	title: 'Components/Button',
+	title: 'Base Components/Button',
 	component: Button,
 	argTypes: { onClick: { action: 'click' } },
 } satisfies Meta<typeof Button>;

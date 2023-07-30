@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import MuiModal from '@mui/base/Modal';
 
-import { space } from '@arcade/library-components/src/components/Space';
+import { space } from '../../foundations/spacing/space';
 
 // import { Icon } from '../Icon';
 

@@ -6,7 +6,7 @@ import { LOREM_IPSUM } from '../../storyHelpers/placeholderText';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'General/ConditionalWrapper',
+	title: 'Utility Components/ConditionalWrapper',
 	component: ConditionalWrapper,
 	// More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 	argTypes: {},

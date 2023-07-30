@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { color } from '../Theme';
 import { typography } from '../Typography';
-import { space } from '../Space';
+import { space } from '../../foundations/spacing/space';
 
 function buttonStyles(fullWidth?: boolean) {
 	return css`

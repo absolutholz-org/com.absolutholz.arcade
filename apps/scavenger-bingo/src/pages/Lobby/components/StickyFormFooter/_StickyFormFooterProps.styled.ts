@@ -1,5 +1,6 @@
-import { space } from '@arcade/library-components/src/components/Space';
 import styled from '@emotion/styled';
+
+import { space } from '@arcade/library-components/src/foundations/spacing/space';
 
 export const StickyFormFooter_Form = styled.form`
 	position: relative;

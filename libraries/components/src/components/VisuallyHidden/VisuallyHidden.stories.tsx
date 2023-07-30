@@ -5,7 +5,7 @@ import { LOREM_IPSUM_SENTENCE } from '../../storyHelpers/placeholderText';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-	title: 'Components/VisuallyHidden',
+	title: 'Utility Components/VisuallyHidden',
 	component: VisuallyHidden,
 } satisfies Meta<typeof VisuallyHidden>;
 

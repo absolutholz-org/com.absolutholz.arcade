@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { PageGridContainer } from '../PageGrid/PageGridContainer';
 import { Typography } from '../Typography';
-import { space } from '../Space';
+import { space } from '../../foundations/spacing/space';
 
 export const PageHeadlineBillboard = styled.div`
 	align-items: end;
