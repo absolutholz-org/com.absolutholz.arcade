@@ -1,1 +1,1 @@
-export { color } from './_color';
+export { color, transparentColor } from './_color';

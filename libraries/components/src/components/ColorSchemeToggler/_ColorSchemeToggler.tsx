@@ -1,39 +1,44 @@
-import { useSiteColorScheme } from '../../contexts';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import SettingsIcon from '@mui/icons-material/Settings';
 
-import type { ColorSchemeTogglerProps } from './_ColorSchemeToggler.annotations';
+import { ColorScheme, useSiteColorScheme } from '../../contexts';
+import { SegmentedControl } from '../SegmentedControl';
+
+import type { IColorSchemeToggler } from './_ColorSchemeToggler.types';
 
 export function ColorSchemeToggler({
-}: ColorSchemeTogglerProps): JSX.Element {
+	isTextVisible = true,
+}: IColorSchemeToggler): JSX.Element {
 	const { siteColorScheme, setSiteColorScheme } = useSiteColorScheme();
 
-	const toggleState = () => {
-		switch (siteColorScheme) {
-			case 'system':
-				setSiteColorScheme('light');
-				break;
-			case 'light':
-				setSiteColorScheme('dark');
-				break;
-			default:
-				setSiteColorScheme('system');
-		}
+	const toggleState = (scheme: string) => {
+		setSiteColorScheme(scheme as ColorScheme);
 	};
 
 	return (
-		<button
-			aria-label='Click to toggle light, dark or system color schemes'
-			title='Click to toggle light, dark or system color schemes'
+		<SegmentedControl
+			controls={[
+				{
+					icon: SettingsIcon,
+					isSelected: siteColorScheme === 'system',
+					text: isTextVisible ? 'System' : undefined,
+					value: 'system',
+				},
+				{
+					icon: LightModeIcon,
+					isSelected: siteColorScheme === 'light',
+					text: isTextVisible ? 'Light' : undefined,
+					value: 'light',
+				},
+				{
+					icon: DarkModeIcon,
+					isSelected: siteColorScheme === 'dark',
+					text: isTextVisible ? 'Dark' : undefined,
+					value: 'dark',
+				},
+			]}
 			onClick={toggleState}
-		>
-			{siteColorScheme === 'light' && (
-				'Light'
-			)}
-			{siteColorScheme === 'dark' && (
-				'Dark'
-			)}
-			{siteColorScheme !== 'light' && siteColorScheme !== 'dark' && (
-				'System'
-			)}
-		</button>
+		/>
 	);
 }

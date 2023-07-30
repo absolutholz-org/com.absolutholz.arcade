@@ -4,56 +4,76 @@
             "id": "default",
             "light": {
                 "surface": [
-                    "white"
+                    "hsl(0deg 0% 100%)"
                 ],
                 "onSurface": [
-                    "black"
+                    "hsl(0deg 0% 10%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "orange"
+                            "hsl(38.82deg 100% 50%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ],
                 "error": [
                     {
                         "surface": [
-                            "firebrick"
+                            "hsl(0deg 67.92% 41.57%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
+                        ]
+                    }
+                ],
+                "secondary": [
+                    {
+                        "surface": [
+                            "hsl(0deg 0% 40%)"
+                        ],
+                        "onSurface": [
+                            "hsl(0deg 0% 100%)"
                         ]
                     }
                 ]
             },
             "dark": {
                 "surface": [
-                    "black"
+                    "hsl(0deg 0% 10%)"
                 ],
                 "onSurface": [
-                    "white"
+                    "hsl(0deg 0% 100%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "darkorange"
+                            "hsl(32.94deg 100% 50%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ],
                 "error": [
                     {
                         "surface": [
-                            "firebrick"
+                            "hsl(0deg 67.92% 41.57%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
+                        ]
+                    }
+                ],
+                "secondary": [
+                    {
+                        "surface": [
+                            "hsl(0deg 0% 100%)"
+                        ],
+                        "onSurface": [
+                            "hsl(0deg 0% 20%)"
                         ]
                     }
                 ]
@@ -63,56 +83,56 @@
             "id": "alt",
             "light": {
                 "surface": [
-                    "#efefef"
+                    "hsl(0deg 0% 93.73%)"
                 ],
                 "onSurface": [
-                    "black"
+                    "hsl(0deg 0% 0%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "orange"
+                            "hsl(38.82deg 100% 50%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ],
                 "error": [
                     {
                         "surface": [
-                            "firebrick"
+                            "hsl(0deg 67.92% 41.57%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ]
             },
             "dark": {
                 "surface": [
-                    "#1a1a1a"
+                    "hsl(0deg 0% 10%)"
                 ],
                 "onSurface": [
-                    "white"
+                    "hsl(0deg 0% 100%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "darkorange"
+                            "hsl(32.94deg 100% 50%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ],
                 "error": [
                     {
                         "surface": [
-                            "firebrick"
+                            "hsl(0deg 67.92% 41.57%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ]
@@ -122,56 +142,56 @@
             "id": "alt2",
             "light": {
                 "surface": [
-                    "#ddd"
+                    "hsl(0deg 0% 86.67%)"
                 ],
                 "onSurface": [
-                    "black"
+                    "hsl(0deg 0% 0%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "orange"
+                            "hsl(38.82deg 100% 50%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ],
                 "error": [
                     {
                         "surface": [
-                            "firebrick"
+                            "hsl(0deg 67.92% 41.57%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ]
             },
             "dark": {
                 "surface": [
-                    "#333"
+                    "hsl(0deg 0% 20%)"
                 ],
                 "onSurface": [
-                    "white"
+                    "hsl(0deg 0% 100%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "darkorange"
+                            "hsl(32.94deg 100% 50%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ],
                 "error": [
                     {
                         "surface": [
-                            "firebrick"
+                            "hsl(0deg 67.92% 41.57%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ]
@@ -181,36 +201,36 @@
             "id": "highlight",
             "light": {
                 "surface": [
-                    "orange"
+                    "hsl(38.82deg 100% 50%)"
                 ],
                 "onSurface": [
-                    "black"
+                    "hsl(0deg 0% 0%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "white"
+                            "hsl(0deg 0% 100%)"
                         ],
                         "onSurface": [
-                            "orange"
+                            "hsl(38.82deg 100% 50%)"
                         ]
                     }
                 ]
             },
             "dark": {
                 "surface": [
-                    "darkorange"
+                    "hsl(32.94deg 100% 50%)"
                 ],
                 "onSurface": [
-                    "black"
+                    "hsl(0deg 0% 0%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ],
                         "onSurface": [
-                            "white"
+                            "hsl(0deg 0% 100%)"
                         ]
                     }
                 ]
@@ -220,36 +240,36 @@
             "id": "highlight-alt",
             "light": {
                 "surface": [
-                    "DodgerBlue"
+                    "hsl(209.6deg 100% 55.88%)"
                 ],
                 "onSurface": [
-                    "black"
+                    "hsl(0deg 0% 0%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "black"
+                            "hsl(0deg 0% 100%)"
                         ],
                         "onSurface": [
-                            "white"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ]
             },
             "dark": {
                 "surface": [
-                    "royalblue"
+                    "hsl(225deg 72.73% 56.86%)"
                 ],
                 "onSurface": [
-                    "white"
+                    "hsl(0deg 0% 100%)"
                 ],
                 "accent": [
                     {
                         "surface": [
-                            "white"
+                            "hsl(0deg 0% 100%)"
                         ],
                         "onSurface": [
-                            "black"
+                            "hsl(0deg 0% 0%)"
                         ]
                     }
                 ]

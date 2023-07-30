@@ -1,21 +1,28 @@
-import { type SerializedStyles, css } from "@emotion/react";
+import { type SerializedStyles, css } from '@emotion/react';
 
-import type { ColorScheme } from "../color/_color.types";
-import { colorPairCssVars } from "./_colorPairCssVars";
+import type { ColorScheme } from '../color/_color.types';
+import { generateColorPairCssVars } from './_colorPairCssVars';
 
-export function colorSchemesCssVars (colorScheme: ColorScheme): SerializedStyles {
-    const { surface, onSurface, ...colorSchemeRest } = colorScheme;
+export function colorSchemesCssVars(
+	colorScheme: ColorScheme
+): SerializedStyles {
+	const { surface, onSurface, ...colorSchemeRest } = colorScheme;
 
-    const basePairs = colorPairCssVars('surface', { surface, onSurface });
-    
-    const schemePairs = Object.entries(colorSchemeRest).map(([name, colorPairs]) => {
-        return colorPairs.map((colorPair) => {
-            return colorPairCssVars(name, colorPair)
-        });
-    });
+	const basePairs = generateColorPairCssVars('surface', {
+		surface,
+		onSurface,
+	});
 
-    return css`
-        ${basePairs}
-        ${schemePairs}
-    `;
+	const schemePairs = Object.entries(colorSchemeRest).map(
+		([name, colorPairs]) => {
+			return colorPairs.map((colorPair) => {
+				return generateColorPairCssVars(name, colorPair);
+			});
+		}
+	);
+
+	return css`
+		${basePairs}
+		${schemePairs}
+	`;
 }

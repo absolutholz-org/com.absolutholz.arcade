@@ -19,7 +19,6 @@ function buttonStyles(fullWidth?: boolean) {
 		gap: ${space('xxs')};
 		height: 3rem;
 		justify-content: center;
-		line-height: 1;
 		max-width: 100%;
 		padding-bottom: 0.125em;
 		padding-inline: ${space('s')};

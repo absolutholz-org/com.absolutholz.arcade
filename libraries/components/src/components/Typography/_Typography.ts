@@ -32,7 +32,7 @@ export function typography(size: TypographySize = 'm'): SerializedStyles {
 	}
 
 	return css`
-		font: var(--typo-size-${size}) / ${1.5 - level / 10}
+		font: var(--typo-size-${size}) / ${1.4 - level / 10}
 			var(--typo-family, var(--typo-family-native));
 	`;
 }
