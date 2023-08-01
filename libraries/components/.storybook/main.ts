@@ -9,6 +9,7 @@ const config = {
 		getAbsolutePath('@storybook/addon-essentials'),
 		getAbsolutePath('@storybook/addon-interactions'),
 		getAbsolutePath('@storybook/addon-mdx-gfm'),
+		getAbsolutePath('@storybook/addon-mdx-gfm'),
 	],
 	framework: {
 		name: getAbsolutePath('@storybook/react-vite'),
@@ -28,6 +29,7 @@ const config = {
 		});
 	},
 };
+
 export default config;
 /**
  * This function is used to resolve the absolute path of a package.
