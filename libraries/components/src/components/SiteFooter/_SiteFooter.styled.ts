@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
-import { color, space } from '../../foundations';
+import { space } from '../../foundations/spacing/space';
+import { color } from '../../foundations/colors/color';
 import { PageGridContainer } from '../PageGrid/PageGridContainer';
 
 export const SiteFooter = styled(PageGridContainer)`

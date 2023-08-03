@@ -5,8 +5,6 @@ import { Stack } from '@arcade/library-components/src/components/Stack';
 import { color } from '@arcade/library-components/src/components/Theme';
 
 import { SymbolSize } from './_SymbolGrid.types';
-import { Slider } from '@arcade/library-components/src/components/Slider';
-import { space } from '@arcade/library-components/src/foundations';
 
 export const SymbolGrid_List = styled(ResetList)<{ symbolSize: SymbolSize }>`
 	display: grid;
