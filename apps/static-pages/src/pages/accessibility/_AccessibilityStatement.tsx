@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import { ArcadePage } from '@arcade/library-components/src/components/ArcadePage';
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
+import { PageSection } from '@arcade/library-components/src/components/PageSection';
 
 import { IAccessibilityStatement } from './_AccessibilityStatement.types';
 
@@ -13,7 +14,9 @@ export function AccessibilityStatement({
 		<ArcadePage pageTitle='Accessibility Statement'>
 			<PageHeadBillboard headline='Accessibility Statement'></PageHeadBillboard>
 			<PageGridContainer>
-				<MDXRemote {...source}></MDXRemote>
+				<PageSection>
+					<MDXRemote {...source}></MDXRemote>
+				</PageSection>
 			</PageGridContainer>
 		</ArcadePage>
 	);

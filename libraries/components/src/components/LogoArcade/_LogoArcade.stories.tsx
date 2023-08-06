@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ArcadeFooter } from '.';
+import { LogoArcade } from '.';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-	title: 'Composite Components/ArcadeFooter',
-	component: ArcadeFooter,
-} satisfies Meta<typeof ArcadeFooter>;
+	title: 'Base Components/Logos/LogoArcade',
+	component: LogoArcade,
+} satisfies Meta<typeof LogoArcade>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
-export const _ArcadeFooter_: Story = {
+export const _LogoArcade_: Story = {
 	args: {},
 };

@@ -153,6 +153,32 @@ const _baseStyles = css`
 		max-width: 70ch;
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 0.5em;
+		margin-top: 1.5em;
+	}
+
+	h2 {
+		${typography('xxl')};
+	}
+	íÍ h3 {
+		${typography('xl')};
+	}
+
+	h4 {
+		${typography('l')};
+		font-weight: bold;
+	}
+
+	h5 {
+		${typography('m')};
+		font-weight: bold;
+	}
+
 	a {
 		color: var(--color-accent);
 	}
