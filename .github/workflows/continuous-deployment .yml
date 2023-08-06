@@ -70,7 +70,7 @@ jobs:
         if: steps.changes.outputs.src == 'true'
         run: |
           cd apps/${{ matrix.app.localDir }}
-          yarn build --l $LOG_LEVEL
+          yarn build
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
