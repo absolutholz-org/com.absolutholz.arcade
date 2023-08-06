@@ -1,0 +1,18 @@
+import { MDXRemote } from 'next-mdx-remote';
+
+import { ArcadePage } from '@arcade/library-components/src/components/ArcadePage';
+import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
+import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
+
+import { IPrivacyStatement } from './_PrivacyStatement.types';
+
+export function PrivacyStatement({ source }: IPrivacyStatement): JSX.Element {
+	return (
+		<ArcadePage pageTitle='Privacy Statement'>
+			<PageHeadBillboard headline='Privacy Statement'></PageHeadBillboard>
+			<PageGridContainer>
+				<MDXRemote {...source}></MDXRemote>
+			</PageGridContainer>
+		</ArcadePage>
+	);
+}
