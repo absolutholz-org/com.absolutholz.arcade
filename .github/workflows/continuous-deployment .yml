@@ -36,6 +36,10 @@ jobs:
           - name: scavenger-bingo
             localDir: scavenger-bingo
             serverDir: scavengerbingo
+        app:
+          - name: static-pages
+            localDir: static-pages
+            serverDir: staticpages
 
     env:
       LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
