@@ -6,7 +6,7 @@ import * as S from './_ArcadeFooter.styled';
 
 export function ArcadeFooter(): JSX.Element {
 	return (
-		<S.ArcadeFooter as='footer'>
+		<S.ArcadeFooter as='footer' themeSetId='highlight-alt'>
 			<PageGridContainer>
 				<PageSection>
 					<Stack direction='row'>
