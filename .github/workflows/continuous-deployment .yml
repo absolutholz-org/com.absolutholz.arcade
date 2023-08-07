@@ -75,4 +75,4 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan ${{ secrets.WEBGO_SFTP_HOST }} >> ~/.ssh/known_hosts
-          rsync -avzP --delete -e "ssh -p 22 -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}
+          rsync -avzP -e "ssh -p 22 -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.WEBGO_SFTP_USERNAME }}@${{ secrets.WEBGO_SFTP_HOST }}:/home/www/de.absolutholz.arcade/${{ matrix.app.serverDir }}

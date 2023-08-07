@@ -18,7 +18,6 @@ export function ArcadeFooter(): JSX.Element {
 					</Stack>
 				</PageSection>
 			</PageGridContainer>
-			-
 		</S.ArcadeFooter>
 	);
 }
