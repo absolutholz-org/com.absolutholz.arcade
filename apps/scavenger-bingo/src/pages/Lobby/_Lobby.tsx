@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 
-import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
@@ -17,7 +16,6 @@ import {
 	StickyFormFooter,
 	StickyFormFooter_Form,
 } from './components/StickyFormFooter';
-import { Banner } from './components/Banner';
 import {
 	GameConfigProvider,
 	useGameConfig,
@@ -29,6 +27,7 @@ import { SetList } from './components/SetList';
 import { GameSetProvider } from '../../contexts/GameSetContext/_GameSetContext';
 import { SymbolPresetsCustom } from './components/SymbolPresetsCustom';
 import { CustomPresetsProvider } from '../../contexts/CustomPresetsContext';
+import { ScavengerBingoPage } from '../../components/ScavengerBingoPage';
 
 function _Lobby(): JSX.Element {
 	const { games, createGame } = useUnfinishedGames();
@@ -55,7 +54,7 @@ function _Lobby(): JSX.Element {
 	}
 
 	return (
-		<PageWithFooterTemplate pageTitle='Scavenger Bingo Lobby'>
+		<ScavengerBingoPage pageTitle='Scavenger Bingo Lobby'>
 			<PageHeadBillboard
 				headline='Lobby'
 				headlinePrefix='Scavenger Bingo'
@@ -164,7 +163,7 @@ function _Lobby(): JSX.Element {
 					</StickyFormFooter_Form>
 				</Stack>
 			</PageSection>
-		</PageWithFooterTemplate>
+		</ScavengerBingoPage>
 	);
 }
 

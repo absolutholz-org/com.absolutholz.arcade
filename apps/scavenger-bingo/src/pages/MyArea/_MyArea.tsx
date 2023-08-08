@@ -3,15 +3,15 @@ import { PageSection } from '@arcade/library-components/src/components/PageSecti
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
-import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 
 import { UnfinishedGameList } from './components/UnfinishedGameList';
 import { CustomPresetList } from './components/CustomPresetList';
 import { CustomPresetsProvider } from '../../contexts/CustomPresetsContext';
+import { ScavengerBingoPage } from '../../components/ScavengerBingoPage';
 
 export function _MyArea() {
 	return (
-		<PageWithFooterTemplate pageTitle='Scavenger Bingo Personal Area'>
+		<ScavengerBingoPage pageTitle='Scavenger Bingo Personal Area'>
 			<PageHeadBillboard
 				headline='Personal Area'
 				headlinePrefix='Scavenger Bingo'
@@ -32,7 +32,7 @@ export function _MyArea() {
 					</Stack>
 				</PageGridContainer>
 			</PageSection>
-		</PageWithFooterTemplate>
+		</ScavengerBingoPage>
 	);
 }
 

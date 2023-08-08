@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { Button } from '@arcade/library-components/src/components/Button';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
 import { PageGridContainer } from '@arcade/library-components/src/components/PageGrid/PageGridContainer';
-import { PageWithFooterTemplate } from '@arcade/library-components/src/components/templates/PageWithFooterTemplate';
 import { Typography } from '@arcade/library-components/src/components/Typography';
 import { PageHeadBillboard } from '@arcade/library-components/src/components/PageHeadBillboard';
+import { ScavengerBingoPage } from '../../components/ScavengerBingoPage';
 
 export function Home(): JSX.Element {
 	return (
-		<PageWithFooterTemplate pageTitle='Scavenger Bingo'>
+		<ScavengerBingoPage pageTitle='Scavenger Bingo'>
 			<PageHeadBillboard
 				headline='Scavenger Bingo'
 				headlineSuffix={<Button to='/lobby/' text='New Game' />}
@@ -40,6 +40,6 @@ export function Home(): JSX.Element {
 					</p>
 				</PageGridContainer>
 			</PageSection>
-		</PageWithFooterTemplate>
+		</ScavengerBingoPage>
 	);
 }
