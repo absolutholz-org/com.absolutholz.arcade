@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-import type { StackProps } from './_Stack.annotations';
 import * as S from './_Stack.styled';
 import { ConditionalWrapper } from '../ConditionalWrapper';
 import { ResetList } from '../ResetList/_ResetList.styled';
+import type { IStack } from './_Stack.types';
 
 export function Stack({
 	children,
@@ -13,7 +13,7 @@ export function Stack({
 	spacingX = 'm',
 	spacingY = 's',
 	tag = 'div',
-}: StackProps): JSX.Element {
+}: IStack): JSX.Element {
 	const isResettableList = tag === 'ol' || tag === 'ul' || tag === 'menu';
 
 	const as = tag === 'fieldset' ? 'div' : tag;

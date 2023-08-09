@@ -28,10 +28,6 @@ export function ScavengerBingoFooter({}: IScavengerBingoFooter): JSX.Element {
 								<Link to='/myarea/'>Unfinished Games</Link>
 							</Stack>
 						</Stack>
-						<div>
-							Site Color Scheme:{' '}
-							<ColorSchemeToggler isTextVisible={false} />
-						</div>
 					</Stack>
 				</PageSection>
 			</PageGridContainer>

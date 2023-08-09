@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
 import { typography } from './_Typography';
-import type { TypographyProps } from './_Typography.annotations';
-import { TypographyWeight } from './_Typography.types';
+import type { ITypography, TypographyWeight } from './_Typography.types';
 
 function fontWeight(key: TypographyWeight): number {
 	switch (key) {
@@ -18,7 +17,7 @@ function fontWeight(key: TypographyWeight): number {
 	return 400;
 }
 
-export const Typography = styled.div<TypographyProps>`
+export const Typography = styled.div<ITypography>`
 	${({ size = 'm' }) => typography(size)};
 	${({ weight = 'regular' }) =>
 		weight !== 'regular' &&

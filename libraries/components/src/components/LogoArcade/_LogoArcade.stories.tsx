@@ -12,6 +12,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
-export const _LogoArcade_: Story = {
+export const _AsTwoLines_: Story = {
 	args: {},
+};
+
+// More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
+export const _AsOneLine_: Story = {
+	args: {
+		isSingleLine: true,
+	},
 };
