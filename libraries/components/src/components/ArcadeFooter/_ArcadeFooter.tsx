@@ -6,12 +6,11 @@ import { PageGridContainer } from '../PageGrid/PageGridContainer';
 import { PageSection } from '../PageSection';
 import { Stack } from '../Stack';
 import { Typography } from '../Typography';
-
-import * as S from './_ArcadeFooter.styled';
+import { Theme } from '../Theme';
 
 export function ArcadeFooter(): JSX.Element {
 	return (
-		<S.ArcadeFooter as='footer' themeSetId='highlight-alt'>
+		<Theme as='footer' themeSetId='highlight-alt'>
 			<PageGridContainer>
 				<PageSection>
 					<Stack spacingY='l'>
@@ -21,7 +20,7 @@ export function ArcadeFooter(): JSX.Element {
 						</div>
 						<Stack direction='row'>
 							<a href={ARCADE_URL}>
-								<LogoArcade />
+								<LogoArcade isSingleLine />
 							</a>
 							<a href='/accessibility/'>
 								Accessibility Statement
@@ -31,6 +30,6 @@ export function ArcadeFooter(): JSX.Element {
 					</Stack>
 				</PageSection>
 			</PageGridContainer>
-		</S.ArcadeFooter>
+		</Theme>
 	);
 }
