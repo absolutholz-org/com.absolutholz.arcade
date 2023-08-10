@@ -24,4 +24,5 @@ export const Typography = styled.div<ITypography>`
 		css`
 			font-weight: ${fontWeight(weight)};
 		`};
+	margin-block: 0;
 `;
