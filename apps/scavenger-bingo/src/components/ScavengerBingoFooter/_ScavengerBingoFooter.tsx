@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { ColorSchemeToggler } from '@arcade/library-components/src/components/ColorSchemeToggler';
+import { LinkList } from '@arcade/library-components/src/components/LinkList';
 import { PageSection } from '@arcade/library-components/src/components/PageSection';
 import { Stack } from '@arcade/library-components/src/components/Stack';
 import { Typography } from '@arcade/library-components/src/components/Typography';
@@ -17,16 +17,11 @@ export function ScavengerBingoFooter({}: IScavengerBingoFooter): JSX.Element {
 					<Stack spacingY='l'>
 						<Stack tag='nav'>
 							<Typography size='l'>Scavenger Bingo</Typography>
-							<Stack
-								direction='row'
-								shouldResetList
-								spacingX='m'
-								spacingY='xxs'
-								tag='ul'>
+							<LinkList>
 								<Link to='/'>Home</Link>
 								<Link to='/lobby/'>New Game Lobby</Link>
 								<Link to='/myarea/'>Unfinished Games</Link>
-							</Stack>
+							</LinkList>
 						</Stack>
 					</Stack>
 				</PageSection>

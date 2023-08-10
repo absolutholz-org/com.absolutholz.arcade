@@ -12,12 +12,14 @@ export function AccessibilityStatement({
 }: IAccessibilityStatement): JSX.Element {
 	return (
 		<ArcadePage pageTitle='Accessibility Statement'>
-			<PageHeadBillboard headline='Accessibility Statement'></PageHeadBillboard>
-			<PageGridContainer>
-				<PageSection>
-					<MDXRemote {...source}></MDXRemote>
-				</PageSection>
-			</PageGridContainer>
+			<main>
+				<PageHeadBillboard headline='Accessibility Statement'></PageHeadBillboard>
+				<PageGridContainer>
+					<PageSection>
+						<MDXRemote {...source}></MDXRemote>
+					</PageSection>
+				</PageGridContainer>
+			</main>
 		</ArcadePage>
 	);
 }

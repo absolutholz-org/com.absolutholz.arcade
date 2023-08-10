@@ -29,7 +29,7 @@ export function Home(): JSX.Element {
 					<Button to='/lobby/' text='Play Scavenger Bingo' />
 				</PageGridContainer>
 			</PageSection>
-			<PageSection omitTopSpacing>
+			<PageSection omitSpacing='top'>
 				<PageGridContainer>
 					<Typography size='l' as='h2'>
 						It looks like you have some unfinished games.

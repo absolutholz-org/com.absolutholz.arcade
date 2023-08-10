@@ -10,12 +10,14 @@ import { IPrivacyStatement } from './_PrivacyStatement.types';
 export function PrivacyStatement({ source }: IPrivacyStatement): JSX.Element {
 	return (
 		<ArcadePage pageTitle='Privacy Statement'>
-			<PageHeadBillboard headline='Privacy Statement'></PageHeadBillboard>
-			<PageGridContainer>
-				<PageSection>
-					<MDXRemote {...source}></MDXRemote>
-				</PageSection>
-			</PageGridContainer>
+			<main>
+				<PageHeadBillboard headline='Privacy Statement'></PageHeadBillboard>
+				<PageGridContainer>
+					<PageSection>
+						<MDXRemote {...source}></MDXRemote>
+					</PageSection>
+				</PageGridContainer>
+			</main>
 		</ArcadePage>
 	);
 }

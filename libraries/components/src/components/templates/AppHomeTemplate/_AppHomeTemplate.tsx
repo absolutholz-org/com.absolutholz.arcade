@@ -11,11 +11,9 @@ export function AppHomeTemplate({
 }: AppHomeTemplateProps): JSX.Element {
 	return (
 		<SiteTemplate pageTitle={appName}>
-			<PageHeadBillboard
-				headline={appName}
-			/>
+			<PageHeadBillboard headline={appName} />
 			{children}
-			<PageSection omitTopSpacing>
+			<PageSection omitSpacing='top'>
 				<PageGridContainer>
 					<ColorSchemeToggler />
 				</PageGridContainer>

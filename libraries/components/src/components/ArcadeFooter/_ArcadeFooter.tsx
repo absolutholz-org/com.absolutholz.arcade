@@ -5,31 +5,35 @@ import { LogoArcade } from '../LogoArcade';
 import { PageGridContainer } from '../PageGrid/PageGridContainer';
 import { PageSection } from '../PageSection';
 import { Stack } from '../Stack';
-import { Typography } from '../Typography';
-import { Theme } from '../Theme';
+
+import { VisuallyHidden } from '../VisuallyHidden';
+import * as S from './_ArcadeFooter.styled';
+import { LinkList } from '../LinkList';
 
 export function ArcadeFooter(): JSX.Element {
 	return (
-		<Theme as='footer' themeSetId='highlight-alt'>
+		<S.ArcadeFooter as='footer' themeSetId='highlight-alt'>
 			<PageGridContainer>
 				<PageSection>
-					<Stack spacingY='l'>
+					<Stack spacingY='m'>
 						<div>
-							<Typography size='s'>Site Color Scheme</Typography>
-							<ColorSchemeToggler isTextVisible={false} />
-						</div>
-						<Stack direction='row'>
 							<a href={ARCADE_URL}>
 								<LogoArcade isSingleLine />
 							</a>
+						</div>
+						<div>
+							<VisuallyHidden>Site Color Scheme</VisuallyHidden>
+							<ColorSchemeToggler isTextVisible={false} />
+						</div>
+						<LinkList>
 							<a href='/accessibility/'>
 								Accessibility Statement
 							</a>
 							<a href='/privacy/'>Privacy Statement</a>
-						</Stack>
+						</LinkList>
 					</Stack>
 				</PageSection>
 			</PageGridContainer>
-		</Theme>
+		</S.ArcadeFooter>
 	);
 }

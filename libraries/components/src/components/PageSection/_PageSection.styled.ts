@@ -1,11 +1,17 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-export const PageSection = styled.div<{ omitTopSpacing?: boolean }>`
-	padding-block: var(--space-xl);
-	${({ omitTopSpacing = false }) =>
-		omitTopSpacing &&
+import { OmitSpacing, SpacingSize } from './_PageSection.types';
+import { space } from '../../foundations/spacing/space';
+
+export const PageSection = styled.div<{
+	omitSpacing?: OmitSpacing;
+	spacingSize: SpacingSize;
+}>`
+	padding-block: ${({ spacingSize }) => space(spacingSize)};
+	${({ omitSpacing }) =>
+		omitSpacing &&
 		css`
-			padding-top: 0;
+			padding-${omitSpacing}: 0;
 		`}
 `;
