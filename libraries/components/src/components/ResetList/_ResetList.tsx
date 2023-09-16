@@ -5,11 +5,11 @@ import * as S from './_ResetList.styled';
 
 export function ResetList({
 	children,
-	className,
-	tag,
+	tag = 'ul',
+	...restProps
 }: IResetList): JSX.Element {
 	return (
-		<S.ResetList as={tag} className={className} role='list'>
+		<S.ResetList as={tag} role='list' {...restProps}>
 			{Children.map(children, (child, index) => (
 				<li key={`listitem_${index}`}>{child}</li>
 			))}
